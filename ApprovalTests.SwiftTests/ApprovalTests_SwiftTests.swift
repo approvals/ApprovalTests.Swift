@@ -14,7 +14,7 @@ class ApprovalTests_SwiftTests: XCTestCase {
     override func setUp() {
         super.setUp()
         let fileManager = FileManager.default
-        let testDir = "/Users/industriallogic/Documents/Playgrounds/ApprovalTests.Swift"
+        let testDir = "/Users/industriallogic/Documents/Playgrounds/ApprovalTests.Swift/ApprovalTests.SwiftTests"
         fileManager.changeCurrentDirectoryPath(testDir)
 
     }
