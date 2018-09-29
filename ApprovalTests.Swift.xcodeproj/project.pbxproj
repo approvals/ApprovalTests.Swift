@@ -10,6 +10,9 @@
 		168C962E216023F9008F354C /* ApprovalTests_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168C9624216023F9008F354C /* ApprovalTests_Swift.framework */; };
 		168C9633216023F9008F354C /* ApprovalTests_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168C9632216023F9008F354C /* ApprovalTests_SwiftTests.swift */; };
 		168C9635216023F9008F354C /* ApprovalTests_Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 168C9627216023F9008F354C /* ApprovalTests_Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9730831E48E94420935703AA /* ApprovalNamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973082AC1A3E4EB029167842 /* ApprovalNamer.swift */; };
+		973083B117EF9F5D6C858E96 /* CwlDemangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973089204127F0C46EE66EB7 /* CwlDemangle.swift */; };
+		9730890BA37D38918B78D21B /* Namer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730837F9EC3FB093F4A0A2C /* Namer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		168C962D216023F9008F354C /* ApprovalTests.SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApprovalTests.SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		168C9632216023F9008F354C /* ApprovalTests_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalTests_SwiftTests.swift; sourceTree = "<group>"; };
 		168C9634216023F9008F354C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		973082AC1A3E4EB029167842 /* ApprovalNamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalNamer.swift; sourceTree = "<group>"; };
+		9730837F9EC3FB093F4A0A2C /* Namer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Namer.swift; sourceTree = "<group>"; };
+		973089204127F0C46EE66EB7 /* CwlDemangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CwlDemangle.swift; path = Utils/CwlDemangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 			children = (
 				168C9627216023F9008F354C /* ApprovalTests_Swift.h */,
 				168C9628216023F9008F354C /* Info.plist */,
+				9730837F9EC3FB093F4A0A2C /* Namer.swift */,
+				973082AC1A3E4EB029167842 /* ApprovalNamer.swift */,
+				973089204127F0C46EE66EB7 /* CwlDemangle.swift */,
 			);
 			path = ApprovalTests.Swift;
 			sourceTree = "<group>";
@@ -194,6 +203,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9730890BA37D38918B78D21B /* Namer.swift in Sources */,
+				9730831E48E94420935703AA /* ApprovalNamer.swift in Sources */,
+				973083B117EF9F5D6C858E96 /* CwlDemangle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
