@@ -6,6 +6,10 @@
 import Foundation
 
 class FileApprover: ApprovalApprover {
+    enum ApprovalError: Error {
+        case Error(String)
+    }
+
     let fileManager = FileManager.default
 
     var received: String
@@ -55,8 +59,9 @@ class FileApprover: ApprovalApprover {
         }
     }
 
-    func fail() {
+    func fail() throws {
         // @ToDo: Add Error Handeling
+        throw ApprovalError.Error("Failed Approval \nApproved:\(approved) \nReceived:\(received)")
     }
 
     func reportFailure(reporter: ApprovalFailureReporter) {

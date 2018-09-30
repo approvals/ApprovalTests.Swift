@@ -6,6 +6,6 @@
 import Foundation
 
 protocol Loader {
-    func load() -> ApprovalNamer
+    func load(_ file: String) -> ApprovalNamer
 }
 

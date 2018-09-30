@@ -13,9 +13,6 @@ class ApprovalTests_SwiftTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        let fileManager = FileManager.default
-        let testDir = "/Users/industriallogic/Documents/Playgrounds/ApprovalTests.Swift/ApprovalTests.SwiftTests"
-        fileManager.changeCurrentDirectoryPath(testDir)
     }
     
     override func tearDown() {
@@ -23,7 +20,7 @@ class ApprovalTests_SwiftTests: XCTestCase {
     }
 
     func testClassName() {
-        let name = Namer()
+        let name = Namer(#file.description)
         XCTAssertEqual("ApprovalTests_SwiftTests.testClassName", name.getApprovalName())
     }
 
@@ -33,11 +30,11 @@ class ApprovalTests_SwiftTests: XCTestCase {
     }
 
     private func createEmbeddedNamer() -> Namer {
-        return Namer()
+        return Namer(#file.description)
     }
 
     func testFindReceivedFile() {
-        let name = Namer()
+        let name = Namer(#file.description)
         let fileManager = FileManager.default
         let receivedURL = URL(fileURLWithPath: name.getSourceFilePath() + ".received.txt")
 
@@ -45,6 +42,6 @@ class ApprovalTests_SwiftTests: XCTestCase {
     }
 
     func testApprovalsVerify() {
-        Approvals.verify("foo")
+        try! Approvals.verify("foo")
     }
 }

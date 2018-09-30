@@ -8,22 +8,27 @@ import Foundation
 class Namer: ApprovalNamer {
     var className = String()
     var testName = String()
+    var fromFile = String()
+
+    init(_ file: String) {
+        fromFile = file
+    }
 
     func getApprovalName() -> String {
-        demangleStack(depth: 3)
+        demangleStack()
         return className + "." + testName
     }
 
     func getSourceFilePath() -> String {
-        demangleStack(depth: 3)
-        let fileManager = FileManager.default
-        let directoryName = fileManager.currentDirectoryPath
+        demangleStack()
 
-        let baseName = String(format:"%@/%@.%@", directoryName, className, testName)
+        let indexEnd = fromFile.range(of: ".swift")?.lowerBound
+        let tempName = String(fromFile.prefix(upTo: indexEnd!))
+        let baseName = String(format:"%@.%@", tempName, testName)
         return baseName;
     }
 
-    private func demangleStack(depth: Int) {
+    private func demangleStack() {
         do {
             var result = String()
 
@@ -78,4 +83,3 @@ class Namer: ApprovalNamer {
         return className
     }
 }
-
