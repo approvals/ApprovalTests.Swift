@@ -6,6 +6,8 @@
 import Foundation
 
 class FileApprover: ApprovalApprover {
+    let fileManager = FileManager.default
+
     var received: String
     var approved: String
     var writter: ApprovalWriter
@@ -23,7 +25,6 @@ class FileApprover: ApprovalApprover {
     }
 
     func approveTextFile(approved expected: String, received actual: String) -> Bool {
-        let fileManager = FileManager.default
         let expectedExists = fileManager.fileExists(atPath: expected)
         let actualExists = fileManager.fileExists(atPath: actual)
 
@@ -48,9 +49,14 @@ class FileApprover: ApprovalApprover {
     }
 
     func cleanUpAfterSuccess(reporter: ApprovalFailureReporter) {
+        do {
+            try fileManager.removeItem(atPath: received)
+        } catch {
+        }
     }
 
     func fail() {
+        // @ToDo: Add Error Handeling
     }
 
     func reportFailure(reporter: ApprovalFailureReporter) {
