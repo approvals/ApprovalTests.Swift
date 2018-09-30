@@ -20,7 +20,7 @@ class FileApprover: ApprovalApprover {
     }
 
     func approve() -> Bool {
-        received = writter.writeReceivedFile(received: received)
+        writter.writeReceivedFile(received: received)
         return approveTextFile(approved: approved, received: received);
     }
 
@@ -34,14 +34,14 @@ class FileApprover: ApprovalApprover {
 
         if( !actualExists ) { return false }
 
-        let expectedUrl = URL(string: expected)
-        let actualUrl = URL(string: actual)
+        let expectedUrl = URL(fileURLWithPath: expected)
+        let actualUrl = URL(fileURLWithPath: actual)
 
         var t1 = ""
         var t2 = ""
         do {
-            t1 = try String(contentsOf: expectedUrl!)
-            t2 = try String(contentsOf: actualUrl!)
+            t1 = try String(contentsOf: expectedUrl)
+            t2 = try String(contentsOf: actualUrl)
         }
         catch {/* error handling here */}
 
