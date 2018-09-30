@@ -10,9 +10,18 @@
 		168C962E216023F9008F354C /* ApprovalTests_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168C9624216023F9008F354C /* ApprovalTests_Swift.framework */; };
 		168C9633216023F9008F354C /* ApprovalTests_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168C9632216023F9008F354C /* ApprovalTests_SwiftTests.swift */; };
 		168C9635216023F9008F354C /* ApprovalTests_Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 168C9627216023F9008F354C /* ApprovalTests_Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9730801D5BCEA91A9A690505 /* ApprovalTextWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973087E75739021548E4B2A3 /* ApprovalTextWriter.swift */; };
+		973080A6646FB16777A38529 /* FileApprover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973081C94D25326B3FB08335 /* FileApprover.swift */; };
+		973080D29E0EB2F6757F2948 /* ApprovalApprover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730858B01E943DE50E905A5 /* ApprovalApprover.swift */; };
+		973081A5EC6CCDF9D5C6C1F7 /* ApprovalFailureReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973080A337851F4A414FE692 /* ApprovalFailureReporter.swift */; };
 		9730831E48E94420935703AA /* ApprovalNamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973082AC1A3E4EB029167842 /* ApprovalNamer.swift */; };
+		97308320C31027074CA8B622 /* DiffReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973086A47F5FA42E815B4842 /* DiffReporter.swift */; };
 		973083B117EF9F5D6C858E96 /* CwlDemangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973089204127F0C46EE66EB7 /* CwlDemangle.swift */; };
+		973084D0C881CA40F9C53283 /* ApprovalWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730834CB1F60D32C9D70312 /* ApprovalWriter.swift */; };
 		9730890BA37D38918B78D21B /* Namer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730837F9EC3FB093F4A0A2C /* Namer.swift */; };
+		973089132BD96EE34FCDBE89 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308CEAA4C7AA6026D211DB /* Loader.swift */; };
+		97308D61052277BED3D105AD /* ReporterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973083D78B3CF48D594BA6F7 /* ReporterFactory.swift */; };
+		97308F8A36EB85A6CFDF5C78 /* Approvals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308BBAF1CDE277460537C7 /* Approvals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,9 +41,18 @@
 		168C962D216023F9008F354C /* ApprovalTests.SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApprovalTests.SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		168C9632216023F9008F354C /* ApprovalTests_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalTests_SwiftTests.swift; sourceTree = "<group>"; };
 		168C9634216023F9008F354C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		973080A337851F4A414FE692 /* ApprovalFailureReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalFailureReporter.swift; sourceTree = "<group>"; };
+		973081C94D25326B3FB08335 /* FileApprover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileApprover.swift; sourceTree = "<group>"; };
 		973082AC1A3E4EB029167842 /* ApprovalNamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalNamer.swift; sourceTree = "<group>"; };
+		9730834CB1F60D32C9D70312 /* ApprovalWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalWriter.swift; sourceTree = "<group>"; };
 		9730837F9EC3FB093F4A0A2C /* Namer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Namer.swift; sourceTree = "<group>"; };
+		973083D78B3CF48D594BA6F7 /* ReporterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterFactory.swift; sourceTree = "<group>"; };
+		9730858B01E943DE50E905A5 /* ApprovalApprover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalApprover.swift; sourceTree = "<group>"; };
+		973086A47F5FA42E815B4842 /* DiffReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffReporter.swift; sourceTree = "<group>"; };
+		973087E75739021548E4B2A3 /* ApprovalTextWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalTextWriter.swift; sourceTree = "<group>"; };
 		973089204127F0C46EE66EB7 /* CwlDemangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CwlDemangle.swift; path = Utils/CwlDemangle.swift; sourceTree = "<group>"; };
+		97308BBAF1CDE277460537C7 /* Approvals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Approvals.swift; sourceTree = "<group>"; };
+		97308CEAA4C7AA6026D211DB /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +100,15 @@
 				9730837F9EC3FB093F4A0A2C /* Namer.swift */,
 				973082AC1A3E4EB029167842 /* ApprovalNamer.swift */,
 				973089204127F0C46EE66EB7 /* CwlDemangle.swift */,
+				97308BBAF1CDE277460537C7 /* Approvals.swift */,
+				973087E75739021548E4B2A3 /* ApprovalTextWriter.swift */,
+				973080A337851F4A414FE692 /* ApprovalFailureReporter.swift */,
+				973083D78B3CF48D594BA6F7 /* ReporterFactory.swift */,
+				973086A47F5FA42E815B4842 /* DiffReporter.swift */,
+				973081C94D25326B3FB08335 /* FileApprover.swift */,
+				9730858B01E943DE50E905A5 /* ApprovalApprover.swift */,
+				9730834CB1F60D32C9D70312 /* ApprovalWriter.swift */,
+				97308CEAA4C7AA6026D211DB /* Loader.swift */,
 			);
 			path = ApprovalTests.Swift;
 			sourceTree = "<group>";
@@ -206,6 +233,15 @@
 				9730890BA37D38918B78D21B /* Namer.swift in Sources */,
 				9730831E48E94420935703AA /* ApprovalNamer.swift in Sources */,
 				973083B117EF9F5D6C858E96 /* CwlDemangle.swift in Sources */,
+				97308F8A36EB85A6CFDF5C78 /* Approvals.swift in Sources */,
+				9730801D5BCEA91A9A690505 /* ApprovalTextWriter.swift in Sources */,
+				973081A5EC6CCDF9D5C6C1F7 /* ApprovalFailureReporter.swift in Sources */,
+				97308D61052277BED3D105AD /* ReporterFactory.swift in Sources */,
+				97308320C31027074CA8B622 /* DiffReporter.swift in Sources */,
+				973080A6646FB16777A38529 /* FileApprover.swift in Sources */,
+				973080D29E0EB2F6757F2948 /* ApprovalApprover.swift in Sources */,
+				973084D0C881CA40F9C53283 /* ApprovalWriter.swift in Sources */,
+				973089132BD96EE34FCDBE89 /* Loader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

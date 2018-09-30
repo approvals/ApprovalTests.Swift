@@ -29,8 +29,11 @@ class Namer: ApprovalNamer {
 
             let symbols = Thread.callStackSymbols
 
-            let index = symbols[depth].range(of: "_T")?.lowerBound
-            let tempName = String(symbols[depth].suffix(from: index!))
+
+            let testDepth = selectElement(symbols: symbols)
+
+            let index = symbols[testDepth].range(of: "_T")?.lowerBound
+            let tempName = String(symbols[testDepth].suffix(from: index!))
 
             let indexEnd = tempName.range(of: " ")?.lowerBound
             let mangledName = String(tempName.prefix(upTo: indexEnd!))
@@ -47,6 +50,21 @@ class Namer: ApprovalNamer {
         } catch {
             print("Got an error")
         }
+    }
+
+    private func selectElement(symbols trace: [String]) -> Int {
+        var depth = 0
+        for element in trace {
+            if( isTestCase(element) ) {
+                break
+            }
+            depth += 1
+        }
+        return (depth - 3)
+    }
+
+    private func isTestCase(_ element: String) -> Bool {
+        return (element.range(of: "XCTest", options: .caseInsensitive) != nil)
     }
 
     private func extractTestName(result: String) -> String {
