@@ -5,6 +5,6 @@
 
 import Foundation
 
-protocol ApprovalFailureReporter {
+public protocol ApprovalFailureReporter {
     func report(received: String, approved: String)
 }

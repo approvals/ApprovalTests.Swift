@@ -5,7 +5,7 @@
 
 import Foundation
 
-class Approvals {
+public class Approvals {
     public class NameCreator: Loader {
         public func load(_ file: String) -> ApprovalNamer{
             return Namer(file)
