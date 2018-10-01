@@ -25,7 +25,7 @@ class DiffReporter: ApprovalFailureReporter {
 
         let process = Process()
         process.executableURL = URL(fileURLWithPath:"/usr/local/bin/diffmerge")
-        process.arguments = [workingReceived, workingApproved]
+        process.arguments = [workingReceived, workingApproved, "--nosplash"]
         process.terminationHandler = { (process) in
             print("\ndidFinish: \(!process.isRunning)")
         }
