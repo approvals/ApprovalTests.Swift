@@ -50,7 +50,10 @@ class CombinationApprovals {
                 }
             }
         }
-        print(output)
+        do {
+            try Approvals.verify(output)
+        } catch {
+        }
     }
 
     private static func extracted(_ array: [Any]) -> Array<Any> {

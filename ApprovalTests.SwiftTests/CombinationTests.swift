@@ -39,16 +39,19 @@ class CombinationTests: XCTestCase {
         return String("\(anInt) \(aFloat) \(aString)")
     }
 
-    func testPassMethod() throws {
+    func testCombinationsSingleParameterInt() {
         CombinationApprovals.verifyAllCombinations(doubleInt, [1,2,3,4,5])
-        CombinationApprovals.verifyAllCombinations(doubleFloat, [1.1,2.2,3.3,4.4,5.5])
-
-        CombinationApprovals.verifyAllCombinations(twoIntParams, [1, 2], [3, 4])
-        CombinationApprovals.verifyAllCombinations(twoFloatParams, [1.1,2.2], [3.3,4.4])
-
-        CombinationApprovals.verifyAllCombinations(threeParams, [1,2], [3,4], [5,6])
-
-        CombinationApprovals.verifyAllCombinations(threeMixedParams, [1,2,3], [4.4, 5.5], ["String1", "String2", "String3", "String4"])
     }
 
+    func testCombinationsSingleParameterFloat() {
+        CombinationApprovals.verifyAllCombinations(doubleFloat, [1.1, 2.2, 3.3, 4.4, 5.5])
+    }
+
+    func testCombinationsTwoParametersInt() {
+        CombinationApprovals.verifyAllCombinations(twoIntParams, [1, 2], [3, 4])
+    }
+
+    func testCombinationsMixedParameters() {
+        CombinationApprovals.verifyAllCombinations(threeMixedParams, [1,2,3], [4.4, 5.5], ["String1", "String2", "String3", "String4"])
+    }
 }
