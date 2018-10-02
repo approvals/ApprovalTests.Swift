@@ -15,7 +15,7 @@ class IN3 {
 
 class CombinationApprovals {
 
-    public static func verifyAllCombinations<IN1, OUT>(_ call: @escaping (IN1) -> OUT, _ params1: Array<IN1>) {
+    public static func verifyAllCombinations<IN1, OUT>(_ call: @escaping (IN1) -> OUT, _ params1: Array<IN1>) throws {
         let outcall: (IN1, IN2, IN3 ) -> (OUT) = {
             var _ = $1
             var _ = $2
@@ -24,21 +24,21 @@ class CombinationApprovals {
 
         let params2: [IN2] = [IN2()]
         let params3: [IN3] = [IN3()]
-        verifyAllCombinations(outcall, params1, params2, params3)
+        try verifyAllCombinations(outcall, params1, params2, params3)
     }
 
-    public static func verifyAllCombinations<IN1, IN2, OUT>(_ call: @escaping (IN1, IN2) -> OUT, _ params1: Array<IN1>, _ params2: Array<IN2>) {
+    public static func verifyAllCombinations<IN1, IN2, OUT>(_ call: @escaping (IN1, IN2) -> OUT, _ params1: Array<IN1>, _ params2: Array<IN2>) throws {
         let outcall: (IN1, IN2, IN3 ) -> (OUT) = {
             var _ = $2
             return call($0,$1)
         }
 
         let params3: [IN3] = [IN3()]
-        verifyAllCombinations(outcall, params1, params2, params3)
+        try verifyAllCombinations(outcall, params1, params2, params3)
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, OUT>(_ call: (IN1, IN2, IN3) -> OUT,
-                                                 _ params1: Array<IN1>, _ params2: Array<IN2>, _ params3: Array<IN3>) {
+                                                 _ params1: Array<IN1>, _ params2: Array<IN2>, _ params3: Array<IN3>) throws {
         var output = String()
         for in1 in params1 {
             for in2 in params2 {
@@ -50,10 +50,7 @@ class CombinationApprovals {
                 }
             }
         }
-        do {
-            try Approvals.verify(output)
-        } catch {
-        }
+        try Approvals.verify(output)
     }
 
     private static func extracted(_ array: [Any]) -> Array<Any> {

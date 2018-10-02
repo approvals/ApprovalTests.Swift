@@ -40,18 +40,18 @@ class CombinationTests: XCTestCase {
     }
 
     func testCombinationsSingleParameterInt() {
-        CombinationApprovals.verifyAllCombinations(doubleInt, [1,2,3,4,5])
+        try! CombinationApprovals.verifyAllCombinations(doubleInt, [1,2,3,4,5])
     }
 
     func testCombinationsSingleParameterFloat() {
-        CombinationApprovals.verifyAllCombinations(doubleFloat, [1.1, 2.2, 3.3, 4.4, 5.5])
+        try! CombinationApprovals.verifyAllCombinations(doubleFloat, [1.1, 2.2, 3.3, 4.4, 5.5])
     }
 
     func testCombinationsTwoParametersInt() {
-        CombinationApprovals.verifyAllCombinations(twoIntParams, [1, 2], [3, 4])
+        try! CombinationApprovals.verifyAllCombinations(twoIntParams, [1, 2], [3, 4])
     }
 
     func testCombinationsMixedParameters() {
-        CombinationApprovals.verifyAllCombinations(threeMixedParams, [1,2,3], [4.4, 5.5], ["String1", "String2", "String3", "String4"])
+        try! CombinationApprovals.verifyAllCombinations(threeMixedParams, [1,2,3], [4.4, 5.5], ["String1", "String2", "String3", "String4"])
     }
 }
