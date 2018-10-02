@@ -6,10 +6,6 @@
 import Foundation
 
 class FileApprover: ApprovalApprover {
-    enum ApprovalError: Error {
-        case Error(String)
-    }
-
     let fileManager = FileManager.default
 
     var received: String

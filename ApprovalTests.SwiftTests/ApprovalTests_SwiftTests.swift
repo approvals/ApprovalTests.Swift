@@ -42,6 +42,6 @@ class ApprovalTests_SwiftTests: XCTestCase {
     }
 
     func testApprovalsVerify() {
-        try! Approvals.verify("foo")
+        try! Approvals.verify("bar")
     }
 }

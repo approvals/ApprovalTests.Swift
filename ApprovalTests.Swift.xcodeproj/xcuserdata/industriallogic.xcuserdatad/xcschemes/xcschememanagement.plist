@@ -14,33 +14,40 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>ApprovalTests_SwiftTests.testClassName.xcscheme</key>
+		<key>ApprovalTests_SwiftTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>ApprovalTests_SwiftTests.xcscheme</key>
+		<key>ApprovalTests_SwiftTests.testFindReceivedFile.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>ApprovalTests_SwiftTests.testFindReceivedFile.xcscheme</key>
+		<key>ApprovalTests_SwiftTests.testApprovalsVerify.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>ApprovalTests_SwiftTests.testApprovalsVerify.xcscheme</key>
+		<key>CombinationApprovals.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>5</integer>
+		</dict>
+		<key>CombinationTests.testPassMethod.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 	</dict>
 </dict>
