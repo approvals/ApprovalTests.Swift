@@ -116,6 +116,22 @@ class CombinationApprovals {
         try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9)
     }
 
+    public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, OUT>(_ call: @escaping (IN1, IN2, IN3, IN4, IN5) -> OUT, _ params1: Array<IN1>, _ params2: Array<IN2>, _ params3: Array<IN3>, _ params4: Array<IN4>, _ params5: Array<IN5>) throws {
+        let outcall: (IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9 ) -> (OUT) = {
+            var _ = $5
+            var _ = $6
+            var _ = $7
+            var _ = $8
+            return call($0,$1,$2,$3,$4)
+        }
+        
+        let params6: [IN6] = [IN6()]
+        let params7: [IN7] = [IN7()]
+        let params8: [IN8] = [IN8()]
+        let params9: [IN9] = [IN9()]
+        try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9)
+    }
+
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, OUT>(_ call: (IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9) -> OUT,
          _ params1: Array<IN1>, _ params2: Array<IN2>, _ params3: Array<IN3>,
          _ params4: Array<IN4>, _ params5: Array<IN5>, _ params6: Array<IN6>,
