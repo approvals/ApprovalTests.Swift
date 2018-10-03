@@ -82,4 +82,13 @@ class CombinationTests: XCTestCase {
         try! CombinationApprovals.verifyAllCombinations(inCall, [1,2,3], [4,5], [6,7], [8,9], [10,11], [12,13])
     }
 
+    func testCombinationsSevenParameters() {
+        let inCall: (Int, Int, Int, Int, Int, Int, Int) -> String = {
+            let sum = $0 + $1 + $2 + $3 + $4 + $5 + $6
+            return String(sum)
+        }
+        
+        try! CombinationApprovals.verifyAllCombinations(inCall, [1,2,3], [4,5], [6,7], [8,9], [10,11], [12,13], [14,15])
+    }
+
 }
