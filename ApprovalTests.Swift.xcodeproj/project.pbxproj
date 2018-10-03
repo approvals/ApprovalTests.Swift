@@ -13,6 +13,8 @@
 		1637CE692164342100994238 /* ApprovalsFramework_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1637CE602164342100994238 /* ApprovalsFramework_IOS.framework */; };
 		1637CE6E2164342100994238 /* ApprovalsFramework_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1637CE6D2164342100994238 /* ApprovalsFramework_IOSTests.swift */; };
 		1637CE702164342100994238 /* ApprovalsFramework_IOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 1637CE622164342100994238 /* ApprovalsFramework_IOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1637CE7B2164633700994238 /* ApprovalTests_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168C9624216023F9008F354C /* ApprovalTests_Swift.framework */; };
+		1637CE7C216463BA00994238 /* ApprovalTests_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168C9624216023F9008F354C /* ApprovalTests_Swift.framework */; };
 		168C962E216023F9008F354C /* ApprovalTests_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168C9624216023F9008F354C /* ApprovalTests_Swift.framework */; };
 		168C9633216023F9008F354C /* ApprovalTests_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168C9632216023F9008F354C /* ApprovalTests_SwiftTests.swift */; };
 		168C9635216023F9008F354C /* ApprovalTests_Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 168C9627216023F9008F354C /* ApprovalTests_Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1637CE7B2164633700994238 /* ApprovalTests_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1637CE7C216463BA00994238 /* ApprovalTests_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +182,13 @@
 			path = "ApprovalsFramework-IOSTests";
 			sourceTree = "<group>";
 		};
+		1637CE7A2164633700994238 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		168C961A216023F8008F354C = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +199,7 @@
 				1637CE612164342100994238 /* ApprovalsFramework-IOS */,
 				1637CE6C2164342100994238 /* ApprovalsFramework-IOSTests */,
 				168C9625216023F9008F354C /* Products */,
+				1637CE7A2164633700994238 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -443,6 +455,7 @@
 				TargetAttributes = {
 					1637CE432164340300994238 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					1637CE4B2164340300994238 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -613,6 +626,7 @@
 		1637CE552164340300994238 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -628,9 +642,11 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ApprovalsFramework-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -638,6 +654,7 @@
 		1637CE562164340300994238 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -653,6 +670,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ApprovalsFramework-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -697,7 +715,7 @@
 		1637CE722164342100994238 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -723,7 +741,7 @@
 		1637CE732164342100994238 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
