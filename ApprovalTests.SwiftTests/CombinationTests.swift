@@ -54,4 +54,14 @@ class CombinationTests: XCTestCase {
     func testCombinationsMixedParameters() {
         try! CombinationApprovals.verifyAllCombinations(threeMixedParams, [1,2,3], [4.4, 5.5], ["String1", "String2", "String3", "String4"])
     }
+    
+    func testCombinationsFourParameters() {
+        let inCall: (Int, Int, Int, Int) -> String = {
+            let sum = $0 + $1 + $2 + $3
+            return String(sum)
+        }
+
+        try! CombinationApprovals.verifyAllCombinations(inCall, [1,2,3], [4,5], [6,7], [8,9])
+    }
+
 }
