@@ -17,31 +17,31 @@
 		<key>ApprovalTests_SwiftTests.testApprovalsVerify.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>2</integer>
 		</dict>
 		<key>ApprovalTests_SwiftTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>5</integer>
 		</dict>
 		<key>CombinationApprovals.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>3</integer>
 		</dict>
 		<key>CombinationTests.testPassMethod.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>4</integer>
 		</dict>
 		<key>CombinationTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>6</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -49,17 +49,17 @@
 		<key>1637CE5F2164342100994238</key>
 		<dict>
 			<key>primary</key>
-			<true/>
+			<true />
 		</dict>
 		<key>1637CE672164342100994238</key>
 		<dict>
 			<key>primary</key>
-			<true/>
+			<true />
 		</dict>
 		<key>168C962C216023F9008F354C</key>
 		<dict>
 			<key>primary</key>
-			<true/>
+			<true />
 		</dict>
 	</dict>
 </dict>
