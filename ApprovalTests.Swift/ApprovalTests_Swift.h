@@ -1,11 +1,3 @@
-//
-//  ApprovalTests_Swift.h
-//  ApprovalTests.Swift
-//
-//  Created by Industrial Logic on 9/29/18.
-//  Copyright © 2018 NA. All rights reserved.
-//
-
 #import <Cocoa/Cocoa.h>
 
 //! Project version number for ApprovalTests_Swift.

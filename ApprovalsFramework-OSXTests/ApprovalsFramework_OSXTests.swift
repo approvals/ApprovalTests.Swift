@@ -1,11 +1,3 @@
-//
-//  ApprovalsFramework_OSXTests.swift
-//  ApprovalsFramework-OSXTests
-//
-//  Created by Industrial Logic on 10/2/18.
-//  Copyright © 2018 NA. All rights reserved.
-//
-
 import XCTest
 @testable import ApprovalsFramework_OSX
 

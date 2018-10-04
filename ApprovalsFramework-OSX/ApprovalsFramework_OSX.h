@@ -1,11 +1,3 @@
-//
-//  ApprovalsFramework_OSX.h
-//  ApprovalsFramework-OSX
-//
-//  Created by Industrial Logic on 10/2/18.
-//  Copyright © 2018 NA. All rights reserved.
-//
-
 #import <Cocoa/Cocoa.h>
 
 //! Project version number for ApprovalsFramework_OSX.
