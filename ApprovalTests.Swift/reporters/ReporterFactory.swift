@@ -10,7 +10,7 @@ class ReporterFactory {
     let USE_REPORTER         = "UseReporter";
 
     public static func get() -> ApprovalFailureReporter {
-        let returned = DiffReporter()
+        let returned = DiffMergReporter()
         return returned
     }
 }
