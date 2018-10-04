@@ -12,13 +12,16 @@ public class Approvals {
     }
 
     public static func verify(_ response: String,
-                              file: StaticString = #file) throws {
+                              _ reporter: ApprovalFailureReporter = getReporter(),
+                              _ file: StaticString = #file) throws {
 
-        try verify( ApprovalTextWriter(response, "txt"), file);
+        try verify( ApprovalTextWriter(response, "txt"), reporter, file);
     }
 
-    private class func verify(_ writter: ApprovalTextWriter, _ file: StaticString) throws {
-        try verify(writter, createApprovalNamer(file.description), getReporter(), file);
+    private class func verify(_ writter: ApprovalTextWriter,
+                              _ reporter: ApprovalFailureReporter = getReporter(),
+                              _ file: StaticString) throws {
+        try verify(writter, createApprovalNamer(file.description), reporter, file);
     }
 
     private class func verify(_ writter: ApprovalTextWriter,

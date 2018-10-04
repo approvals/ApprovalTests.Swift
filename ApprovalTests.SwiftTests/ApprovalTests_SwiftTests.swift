@@ -19,4 +19,14 @@ class ApprovalTests_SwiftTests: XCTestCase {
     func testApprovalsVerify() {
         try! Approvals.verify("bar")
     }
+
+    func testWithReporter() {
+        let reporter = TestReporter()
+        do {
+            try Approvals.verify("bar", reporter)
+        } catch {
+        }
+        XCTAssertNotEqual("", reporter.received)
+    }
+
 }

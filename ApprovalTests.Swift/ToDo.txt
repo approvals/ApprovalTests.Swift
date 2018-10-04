@@ -1,3 +1,15 @@
 1. Publish to coco
 2. Create a README.md
 3. Fix Combinations path problem
+4. Approval Annotations
+5. Reporters
+5.a. Clipboard Reporter
+5.b. XCTestReporter
+5.c. DiffReporter
+5.d. Common Reporters
+5.e. First Working Reporter
+5.f. MultiReporter
+5.g. FileLauncher Reporter
+6. VerifyAll
+7. verifyMap
+8. verifyJSON
