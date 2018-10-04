@@ -3,14 +3,6 @@ import XCTest
 
 class CombinationTests: XCTestCase {
 
-    override func setUp() {
-        super.setUp()
-    }
-
-    override func tearDown() {
-        super.tearDown()
-    }
-
     func threeParams(_ in1: Int, _ in2: Int, _ in3: Int ) -> Int {
         return in1 + in2 + in3
     }

@@ -2,31 +2,14 @@ import XCTest
 @testable import ApprovalTests_Swift
 
 class ApprovalTests_SwiftTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-    }
 
     func testClassName() {
-        let name = Namer(#file.description)
+        let name = Approvals.getNamer()
         XCTAssertEqual("ApprovalTests_SwiftTests.testClassName", name.getApprovalName())
     }
 
-    func testEmbeddedStackName() {
-        let namer = createEmbeddedNamer()
-        XCTAssertEqual("ApprovalTests_SwiftTests.testEmbeddedStackName", namer.getApprovalName())
-    }
-
-    private func createEmbeddedNamer() -> Namer {
-        return Namer(#file.description)
-    }
-
     func testFindReceivedFile() {
-        let name = Namer(#file.description)
+        let name = Approvals.getNamer()
         let fileManager = FileManager.default
         let receivedURL = URL(fileURLWithPath: name.getSourceFilePath() + ".received.txt")
 
