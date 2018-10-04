@@ -7,14 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1637CE4D2164340300994238 /* ApprovalsFramework_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1637CE442164340300994238 /* ApprovalsFramework_OSX.framework */; };
-		1637CE522164340300994238 /* ApprovalsFramework_OSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1637CE512164340300994238 /* ApprovalsFramework_OSXTests.swift */; };
-		1637CE542164340300994238 /* ApprovalsFramework_OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 1637CE462164340300994238 /* ApprovalsFramework_OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1637CE692164342100994238 /* ApprovalsFramework_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1637CE602164342100994238 /* ApprovalsFramework_IOS.framework */; };
-		1637CE6E2164342100994238 /* ApprovalsFramework_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1637CE6D2164342100994238 /* ApprovalsFramework_IOSTests.swift */; };
-		1637CE702164342100994238 /* ApprovalsFramework_IOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 1637CE622164342100994238 /* ApprovalsFramework_IOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1637CE7B2164633700994238 /* ApprovalTests_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168C9624216023F9008F354C /* ApprovalTests_Swift.framework */; };
-		1637CE7C216463BA00994238 /* ApprovalTests_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168C9624216023F9008F354C /* ApprovalTests_Swift.framework */; };
 		168C962E216023F9008F354C /* ApprovalTests_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168C9624216023F9008F354C /* ApprovalTests_Swift.framework */; };
 		168C9633216023F9008F354C /* ApprovalTests_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168C9632216023F9008F354C /* ApprovalTests_SwiftTests.swift */; };
 		168C9635216023F9008F354C /* ApprovalTests_Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 168C9627216023F9008F354C /* ApprovalTests_Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,20 +28,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1637CE4E2164340300994238 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 168C961B216023F8008F354C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1637CE432164340300994238;
-			remoteInfo = "ApprovalsFramework-OSX";
-		};
-		1637CE6A2164342100994238 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 168C961B216023F8008F354C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1637CE5F2164342100994238;
-			remoteInfo = "ApprovalsFramework-IOS";
-		};
 		168C962F216023F9008F354C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 168C961B216023F8008F354C /* Project object */;
@@ -60,18 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1637CE442164340300994238 /* ApprovalsFramework_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ApprovalsFramework_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1637CE462164340300994238 /* ApprovalsFramework_OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApprovalsFramework_OSX.h; sourceTree = "<group>"; };
-		1637CE472164340300994238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1637CE4C2164340300994238 /* ApprovalsFramework-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ApprovalsFramework-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1637CE512164340300994238 /* ApprovalsFramework_OSXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalsFramework_OSXTests.swift; sourceTree = "<group>"; };
-		1637CE532164340300994238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1637CE602164342100994238 /* ApprovalsFramework_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ApprovalsFramework_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1637CE622164342100994238 /* ApprovalsFramework_IOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApprovalsFramework_IOS.h; sourceTree = "<group>"; };
-		1637CE632164342100994238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1637CE682164342100994238 /* ApprovalsFramework-IOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ApprovalsFramework-IOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1637CE6D2164342100994238 /* ApprovalsFramework_IOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalsFramework_IOSTests.swift; sourceTree = "<group>"; };
-		1637CE6F2164342100994238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		168C9624216023F9008F354C /* ApprovalTests_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ApprovalTests_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		168C9627216023F9008F354C /* ApprovalTests_Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApprovalTests_Swift.h; sourceTree = "<group>"; };
 		168C9628216023F9008F354C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,38 +62,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1637CE402164340300994238 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1637CE7B2164633700994238 /* ApprovalTests_Swift.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1637CE492164340300994238 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1637CE4D2164340300994238 /* ApprovalsFramework_OSX.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1637CE5C2164342100994238 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1637CE7C216463BA00994238 /* ApprovalTests_Swift.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1637CE652164342100994238 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1637CE692164342100994238 /* ApprovalsFramework_IOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		168C9620216023F9008F354C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,42 +80,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1637CE452164340300994238 /* ApprovalsFramework-OSX */ = {
-			isa = PBXGroup;
-			children = (
-				1637CE462164340300994238 /* ApprovalsFramework_OSX.h */,
-				1637CE472164340300994238 /* Info.plist */,
-			);
-			path = "ApprovalsFramework-OSX";
-			sourceTree = "<group>";
-		};
-		1637CE502164340300994238 /* ApprovalsFramework-OSXTests */ = {
-			isa = PBXGroup;
-			children = (
-				1637CE512164340300994238 /* ApprovalsFramework_OSXTests.swift */,
-				1637CE532164340300994238 /* Info.plist */,
-			);
-			path = "ApprovalsFramework-OSXTests";
-			sourceTree = "<group>";
-		};
-		1637CE612164342100994238 /* ApprovalsFramework-IOS */ = {
-			isa = PBXGroup;
-			children = (
-				1637CE622164342100994238 /* ApprovalsFramework_IOS.h */,
-				1637CE632164342100994238 /* Info.plist */,
-			);
-			path = "ApprovalsFramework-IOS";
-			sourceTree = "<group>";
-		};
-		1637CE6C2164342100994238 /* ApprovalsFramework-IOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				1637CE6D2164342100994238 /* ApprovalsFramework_IOSTests.swift */,
-				1637CE6F2164342100994238 /* Info.plist */,
-			);
-			path = "ApprovalsFramework-IOSTests";
-			sourceTree = "<group>";
-		};
 		1637CE7A2164633700994238 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,10 +92,6 @@
 			children = (
 				168C9626216023F9008F354C /* ApprovalTests.Swift */,
 				168C9631216023F9008F354C /* ApprovalTests.SwiftTests */,
-				1637CE452164340300994238 /* ApprovalsFramework-OSX */,
-				1637CE502164340300994238 /* ApprovalsFramework-OSXTests */,
-				1637CE612164342100994238 /* ApprovalsFramework-IOS */,
-				1637CE6C2164342100994238 /* ApprovalsFramework-IOSTests */,
 				168C9625216023F9008F354C /* Products */,
 				1637CE7A2164633700994238 /* Frameworks */,
 			);
@@ -208,10 +102,6 @@
 			children = (
 				168C9624216023F9008F354C /* ApprovalTests_Swift.framework */,
 				168C962D216023F9008F354C /* ApprovalTests.SwiftTests.xctest */,
-				1637CE442164340300994238 /* ApprovalsFramework_OSX.framework */,
-				1637CE4C2164340300994238 /* ApprovalsFramework-OSXTests.xctest */,
-				1637CE602164342100994238 /* ApprovalsFramework_IOS.framework */,
-				1637CE682164342100994238 /* ApprovalsFramework-IOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -308,22 +198,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1637CE412164340300994238 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1637CE542164340300994238 /* ApprovalsFramework_OSX.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1637CE5D2164342100994238 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1637CE702164342100994238 /* ApprovalsFramework_IOS.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		168C9621216023F9008F354C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -335,78 +209,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1637CE432164340300994238 /* ApprovalsFramework-OSX */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1637CE592164340300994238 /* Build configuration list for PBXNativeTarget "ApprovalsFramework-OSX" */;
-			buildPhases = (
-				1637CE3F2164340300994238 /* Sources */,
-				1637CE402164340300994238 /* Frameworks */,
-				1637CE412164340300994238 /* Headers */,
-				1637CE422164340300994238 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "ApprovalsFramework-OSX";
-			productName = "ApprovalsFramework-OSX";
-			productReference = 1637CE442164340300994238 /* ApprovalsFramework_OSX.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		1637CE4B2164340300994238 /* ApprovalsFramework-OSXTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1637CE5A2164340300994238 /* Build configuration list for PBXNativeTarget "ApprovalsFramework-OSXTests" */;
-			buildPhases = (
-				1637CE482164340300994238 /* Sources */,
-				1637CE492164340300994238 /* Frameworks */,
-				1637CE4A2164340300994238 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1637CE4F2164340300994238 /* PBXTargetDependency */,
-			);
-			name = "ApprovalsFramework-OSXTests";
-			productName = "ApprovalsFramework-OSXTests";
-			productReference = 1637CE4C2164340300994238 /* ApprovalsFramework-OSXTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		1637CE5F2164342100994238 /* ApprovalsFramework-IOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1637CE712164342100994238 /* Build configuration list for PBXNativeTarget "ApprovalsFramework-IOS" */;
-			buildPhases = (
-				1637CE5B2164342100994238 /* Sources */,
-				1637CE5C2164342100994238 /* Frameworks */,
-				1637CE5D2164342100994238 /* Headers */,
-				1637CE5E2164342100994238 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "ApprovalsFramework-IOS";
-			productName = "ApprovalsFramework-IOS";
-			productReference = 1637CE602164342100994238 /* ApprovalsFramework_IOS.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		1637CE672164342100994238 /* ApprovalsFramework-IOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1637CE742164342100994238 /* Build configuration list for PBXNativeTarget "ApprovalsFramework-IOSTests" */;
-			buildPhases = (
-				1637CE642164342100994238 /* Sources */,
-				1637CE652164342100994238 /* Frameworks */,
-				1637CE662164342100994238 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1637CE6B2164342100994238 /* PBXTargetDependency */,
-			);
-			name = "ApprovalsFramework-IOSTests";
-			productName = "ApprovalsFramework-IOSTests";
-			productReference = 1637CE682164342100994238 /* ApprovalsFramework-IOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		168C9623216023F9008F354C /* ApprovalTests.Swift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 168C9638216023F9008F354C /* Build configuration list for PBXNativeTarget "ApprovalTests.Swift" */;
@@ -453,19 +255,6 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = NA;
 				TargetAttributes = {
-					1637CE432164340300994238 = {
-						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 0940;
-					};
-					1637CE4B2164340300994238 = {
-						CreatedOnToolsVersion = 9.4.1;
-					};
-					1637CE5F2164342100994238 = {
-						CreatedOnToolsVersion = 9.4.1;
-					};
-					1637CE672164342100994238 = {
-						CreatedOnToolsVersion = 9.4.1;
-					};
 					168C9623216023F9008F354C = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -488,43 +277,11 @@
 			targets = (
 				168C9623216023F9008F354C /* ApprovalTests.Swift */,
 				168C962C216023F9008F354C /* ApprovalTests.SwiftTests */,
-				1637CE432164340300994238 /* ApprovalsFramework-OSX */,
-				1637CE4B2164340300994238 /* ApprovalsFramework-OSXTests */,
-				1637CE5F2164342100994238 /* ApprovalsFramework-IOS */,
-				1637CE672164342100994238 /* ApprovalsFramework-IOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1637CE422164340300994238 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1637CE4A2164340300994238 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1637CE5E2164342100994238 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1637CE662164342100994238 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		168C9622216023F9008F354C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -542,36 +299,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1637CE3F2164340300994238 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1637CE482164340300994238 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1637CE522164340300994238 /* ApprovalsFramework_OSXTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1637CE5B2164342100994238 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1637CE642164342100994238 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1637CE6E2164342100994238 /* ApprovalsFramework_IOSTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		168C961F216023F9008F354C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -605,16 +332,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1637CE4F2164340300994238 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1637CE432164340300994238 /* ApprovalsFramework-OSX */;
-			targetProxy = 1637CE4E2164340300994238 /* PBXContainerItemProxy */;
-		};
-		1637CE6B2164342100994238 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1637CE5F2164342100994238 /* ApprovalsFramework-IOS */;
-			targetProxy = 1637CE6A2164342100994238 /* PBXContainerItemProxy */;
-		};
 		168C9630216023F9008F354C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 168C9623216023F9008F354C /* ApprovalTests.Swift */;
@@ -623,189 +340,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1637CE552164340300994238 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "ApprovalsFramework-OSX/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ApprovalsFramework-OSX";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		1637CE562164340300994238 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "ApprovalsFramework-OSX/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ApprovalsFramework-OSX";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		1637CE572164340300994238 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "ApprovalsFramework-OSXTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ApprovalsFramework-OSXTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		1637CE582164340300994238 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "ApprovalsFramework-OSXTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ApprovalsFramework-OSXTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		1637CE722164342100994238 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "ApprovalsFramework-IOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ApprovalsFramework-IOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		1637CE732164342100994238 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "ApprovalsFramework-IOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ApprovalsFramework-IOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		1637CE752164342100994238 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "ApprovalsFramework-IOSTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ApprovalsFramework-IOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		1637CE762164342100994238 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "ApprovalsFramework-IOSTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ApprovalsFramework-IOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		168C9636216023F9008F354C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1012,42 +546,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1637CE592164340300994238 /* Build configuration list for PBXNativeTarget "ApprovalsFramework-OSX" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1637CE552164340300994238 /* Debug */,
-				1637CE562164340300994238 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1637CE5A2164340300994238 /* Build configuration list for PBXNativeTarget "ApprovalsFramework-OSXTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1637CE572164340300994238 /* Debug */,
-				1637CE582164340300994238 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1637CE712164342100994238 /* Build configuration list for PBXNativeTarget "ApprovalsFramework-IOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1637CE722164342100994238 /* Debug */,
-				1637CE732164342100994238 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1637CE742164342100994238 /* Build configuration list for PBXNativeTarget "ApprovalsFramework-IOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1637CE752164342100994238 /* Debug */,
-				1637CE762164342100994238 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		168C961E216023F8008F354C /* Build configuration list for PBXProject "ApprovalTests.Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
