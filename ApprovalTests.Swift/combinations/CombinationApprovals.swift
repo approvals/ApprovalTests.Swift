@@ -4,7 +4,7 @@ class INUNUSED {
     var description: String {return "SKIP"}
 }
 
-class CombinationApprovals {
+public class CombinationApprovals {
 
     public static func verifyAllCombinations<IN1, OUT>(_ call: @escaping (IN1) -> OUT, _ params1: Array<IN1>) throws {
         let outcall: (IN1, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED ) -> (OUT) = {
