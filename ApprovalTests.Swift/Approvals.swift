@@ -18,6 +18,12 @@ public class Approvals {
         try verify( ApprovalTextWriter(response, "txt"), reporter, file);
     }
 
+    public static func verifyAll(_ label: String, _ array: [Any],
+                                 _ reporter: ApprovalFailureReporter = getReporter(),
+                                 file: StaticString = #file) throws {
+        try verify( ApprovalTextWriter(StringUtils.toString(label, array), "txt"), reporter, file)
+    }
+
     private class func verify(_ writter: ApprovalTextWriter,
                               _ reporter: ApprovalFailureReporter = getReporter(),
                               _ file: StaticString) throws {
