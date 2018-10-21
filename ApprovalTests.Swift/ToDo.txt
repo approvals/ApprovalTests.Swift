@@ -1,6 +1,6 @@
-1. Publish to coco
-2. Create a README.md
-3. Fix Combinations path problem
+1. (DONE) Publish to coco
+2. (DONE) Create a README.md
+3. (DONE) Fix Combinations path problem
 4. Approval Annotations
 5. Reporters
 5.a. Clipboard Reporter
