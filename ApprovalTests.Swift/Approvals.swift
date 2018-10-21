@@ -13,7 +13,7 @@ public class Approvals {
 
     public static func verify(_ response: String,
                               _ reporter: ApprovalFailureReporter = getReporter(),
-                              _ file: StaticString = #file) throws {
+                              file: StaticString = #file) throws {
 
         try verify( ApprovalTextWriter(response, "txt"), reporter, file);
     }
