@@ -27,7 +27,8 @@ If you prefer auditory learning, you might enjoy the following podcast
 How to get it
 ---
 Coacoa Pods
-```target 'MyApp' do
+```
+target 'MyApp' do
   use_frameworks!
 
   # Pods for MyApp 
@@ -52,7 +53,7 @@ class SampleTest: XCTestCase {
         	var names: [String] = ["Llewellyn", "James", "Dan", "Jason", "Katrina"]
         	names.sort()
         	try Approvals.verifyAll("", names);
-    		}
+    	}
 }
 ```
 Will Produce a File
