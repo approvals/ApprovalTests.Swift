@@ -11,6 +11,18 @@ public class Approvals {
         return NameCreator().load(file.description)
     }
 
+    public static func verifyAsJson<INOBJ: Codable>(_ object: INOBJ, file: StaticString = #file) throws {
+        let jsonEncoder = JSONEncoder()
+        jsonEncoder.outputFormatting = .prettyPrinted
+        do {
+            let jsonData = try jsonEncoder.encode(object)
+            let jsonString = (String(data: jsonData, encoding: .utf8) ?? "")
+            try verify(jsonString, file: file)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+
     public static func verifyAll(_ label: String, _ array: [Any],
                                  _ reporter: ApprovalFailureReporter = getReporter(),
                                  file: StaticString = #file) throws {
