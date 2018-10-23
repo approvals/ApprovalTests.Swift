@@ -11,6 +11,11 @@ public class Approvals {
         return NameCreator().load(file.description)
     }
 
+    class func verify(_ object: Any, file: StaticString = #file) throws {
+        let description = String(describing: type(of: object.self)) + String(describing: object)
+        try verify(description, file: file)
+    }
+
     public static func verify(_ response: String,
                               _ reporter: ApprovalFailureReporter = getReporter(),
                               file: StaticString = #file) throws {
