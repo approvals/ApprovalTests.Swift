@@ -58,7 +58,7 @@ class SampleTest: XCTestCase {
 ```
 Will Produce a File
 
-    SampleTest.TestList.received.txt
+    SampleTest.testList.received.txt
     [0] = Dan
     [1] = James
     [2] = Jason
