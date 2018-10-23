@@ -45,7 +45,7 @@ end
 
 Examples
 ---
-
+[Sample Code](https://github.com/approvals/ApprovalTests.Swift/blob/master/ApprovalTests.SwiftTests/Demo/SampleArrayTest.swift)
 ```Swift
 class SampleTest: XCTestCase {
 
