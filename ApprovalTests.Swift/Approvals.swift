@@ -11,7 +11,13 @@ public class Approvals {
         return NameCreator().load(file.description)
     }
 
-    class func verify(_ object: Any, file: StaticString = #file) throws {
+    public static func verifyAll(_ label: String, _ array: [Any],
+                                 _ reporter: ApprovalFailureReporter = getReporter(),
+                                 file: StaticString = #file) throws {
+        try verify( ApprovalTextWriter(StringUtils.toString(label, array), "txt"), reporter, file)
+    }
+
+    public static func verify(_ object: Any, file: StaticString = #file) throws {
         let description = String(describing: type(of: object.self)) + String(describing: object)
         try verify(description, file: file)
     }
@@ -19,14 +25,7 @@ public class Approvals {
     public static func verify(_ response: String,
                               _ reporter: ApprovalFailureReporter = getReporter(),
                               file: StaticString = #file) throws {
-
         try verify( ApprovalTextWriter(response, "txt"), reporter, file);
-    }
-
-    public static func verifyAll(_ label: String, _ array: [Any],
-                                 _ reporter: ApprovalFailureReporter = getReporter(),
-                                 file: StaticString = #file) throws {
-        try verify( ApprovalTextWriter(StringUtils.toString(label, array), "txt"), reporter, file)
     }
 
     private class func verify(_ writter: ApprovalTextWriter,
