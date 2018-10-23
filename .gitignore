@@ -17,7 +17,7 @@ DerivedData/
 !default.perspectivev3
 xcuserdata/
 
-*/xcuserdata/*
+ApprovalTests.Swift.xcodeproj/xcuserdata/*
 
 ## Other
 *.moved-aside
