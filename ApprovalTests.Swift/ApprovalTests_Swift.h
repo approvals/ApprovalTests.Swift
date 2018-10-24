@@ -1,4 +1,9 @@
+#include <TargetConditionals.h>
+#if TARGET_OS_IOS
+#import <UIKit/UIKit.h>
+#else
 #import <Cocoa/Cocoa.h>
+#endif
 
 //! Project version number for ApprovalTests_Swift.
 FOUNDATION_EXPORT double ApprovalTests_SwiftVersionNumber;

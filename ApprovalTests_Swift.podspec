@@ -12,24 +12,27 @@ Pod::Spec.new do |s|
   s.summary      = "ApprovalTests for Swift."
 
   s.description  = <<-DESC
-ApprovalTests for Swift
+Capturing Human Intelligence - ApprovalTests is an open source assertion/verification library to aid unit testing.
+ApprovalsTest Swift is compatible with the XCUnit testing framework
                    DESC
 
   s.homepage     = "https://github.com/approvals"
 
-  s.license      = "Apache 2.0 License"
+  s.license      = { :type => "Apache 2.0 License", :file => "LICENSE" }
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
   s.author    = "Matthew Carlson"
 
-  s.platform = :osx
+  s.swift_version = '4.1'
+  s.ios.deployment_target = "11.0"
   s.osx.deployment_target = "10.13"
 
   s.source       = { :git => "https://github.com/approvals/ApprovalTests.Swift.git" }
 
+  s.framework = "XCTest"
 
-  s.source_files  = "ApprovalTests.Swift", "ApprovalTests.Swift/**/*.swift"
-  #s.exclude_files = "Classes/Exclude"
+  s.source_files      = "ApprovalTests.Swift", "ApprovalTests.Swift/**/*.swift" 
+  s.ios.exclude_files = "ApprovalTests.Swift/**/DiffMergReporter.swift"
+  s.osx.exclude_files = "ApprovalTests.Swift/reporters/ios/XCTReporter.swift"
 
-  # s.public_header_files = "Classes/**/*.h"
 end
