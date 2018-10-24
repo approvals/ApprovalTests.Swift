@@ -5,7 +5,11 @@ class ReporterFactory {
     let USE_REPORTER         = "UseReporter";
 
     public static func get() -> ApprovalFailureReporter {
+        #if os(OSX)
         let returned = DiffMergReporter()
+        #elseif os(iOS)
+        let returned = XCTReporter()
+        #endif
         return returned
     }
 }

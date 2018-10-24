@@ -1,5 +1,9 @@
 import XCTest
+#if os(OSX)
 @testable import ApprovalTests_Swift
+#elseif os(iOS)
+@testable import ApprovalTests_iOS
+#endif
 
 class ApprovalsTest: XCTestCase {
     func testToString() throws {
@@ -21,7 +25,7 @@ class MyRect: Codable {
     var width: Int
     var height: Int
 
-    init(x x: Int, y y: Int, width width: Int, height height: Int) {
+    init(x: Int, y: Int, width: Int, height: Int) {
         self.x = x
         self.y = y
         self.width = width

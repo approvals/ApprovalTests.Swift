@@ -1,5 +1,9 @@
 import XCTest
+#if os(OSX)
 @testable import ApprovalTests_Swift
+#elseif os(iOS)
+@testable import ApprovalTests_iOS
+#endif
 
 class Samples: XCTestCase {
     func testString() throws {
