@@ -26,7 +26,7 @@ If you prefer auditory learning, you might enjoy the following podcast
 
 How to get it
 ---
-Coacoa Pods
+CocoaPods
 ```
 target 'MyApp' do
   use_frameworks!
