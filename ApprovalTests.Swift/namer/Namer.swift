@@ -32,7 +32,7 @@ class Namer: ApprovalNamer {
 
             let testDepth = selectElement(symbols: symbols)
 
-            let index = symbols[testDepth].range(of: "_T")?.lowerBound
+            let index = symbols[testDepth].range(of: "$")?.lowerBound
             let tempName = String(symbols[testDepth].suffix(from: index!))
 
             let indexEnd = tempName.range(of: " ")?.lowerBound
