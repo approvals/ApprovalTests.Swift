@@ -441,9 +441,11 @@
 					};
 					168C9623216023F9008F354C = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1150;
 					};
 					168C962C216023F9008F354C = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -828,7 +830,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ApprovalTests-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -853,7 +855,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ApprovalTests-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -870,7 +872,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ApprovalTests-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -887,7 +889,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ApprovalTests-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
