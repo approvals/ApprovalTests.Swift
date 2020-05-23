@@ -433,9 +433,11 @@
 				TargetAttributes = {
 					163E1848217F827400A54A48 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1150;
 					};
 					163E1850217F827400A54A48 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1150;
 					};
 					168C9623216023F9008F354C = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -608,7 +610,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -635,7 +637,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -657,7 +659,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ApprovalTests-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -678,7 +680,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ApprovalTests-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
