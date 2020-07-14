@@ -21,34 +21,26 @@ class ApprovalTextWriter: ApprovalWriter {
 
     func writeReceivedFile(received: String) -> String {
         let fileUrl = URL(fileURLWithPath: received)
+        print("Received=\(received)")
         print("FileURL=\(fileUrl)|")
         print("FileURL PTH=\(fileUrl.path)|")
         do {
             
-            try text.write(toFile: fileUrl.path, atomically: true, encoding: .utf8)
+            //try text.write(toFile: fileUrl.path, atomically: true, encoding: .utf8)
+            let fileName = fileUrl.lastPathComponent
+            print("filename=\(fileName)")
+ 
+            let fileUrl2 = URL(fileURLWithPath: "/Users/nicolas/Downloads/approvals/testFile.txt")
+            try text.write(toFile: fileUrl2.path, atomically: true, encoding: .utf8)
+            
             
         } catch {
-            print("ERROR=\(error)")
-            print("ERROR LD=\(error.localizedDescription)")
             print("An error occured writing file:" + received)
+            print("ERROR=\(error)")
         }
-        
-        
-        let str = "Super long string here"
-        let filename = getDocumentsDirectory().appendingPathComponent("output.txt")
 
-        do {
-            try str.write(to: filename, atomically: true, encoding: .utf8)
-        } catch {
-            // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
-        }
-        
         return fileUrl.path
     }
-    
-    func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return paths[0]
-    }
+
     
 }
