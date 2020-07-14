@@ -21,11 +21,34 @@ class ApprovalTextWriter: ApprovalWriter {
 
     func writeReceivedFile(received: String) -> String {
         let fileUrl = URL(fileURLWithPath: received)
+        print("FileURL=\(fileUrl)|")
+        print("FileURL PTH=\(fileUrl.path)|")
         do {
+            
             try text.write(toFile: fileUrl.path, atomically: true, encoding: .utf8)
+            
         } catch {
-            print("An error occured writing file:" + received + "\(error.localizedDescription)")
+            print("ERROR=\(error)")
+            print("ERROR LD=\(error.localizedDescription)")
+            print("An error occured writing file:" + received)
         }
+        
+        
+        let str = "Super long string here"
+        let filename = getDocumentsDirectory().appendingPathComponent("output.txt")
+
+        do {
+            try str.write(to: filename, atomically: true, encoding: .utf8)
+        } catch {
+            // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
+        }
+        
         return fileUrl.path
     }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
 }
