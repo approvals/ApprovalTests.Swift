@@ -24,7 +24,7 @@ class ApprovalTextWriter: ApprovalWriter {
         do {
             try text.write(toFile: fileUrl.path, atomically: true, encoding: .utf8)
         } catch {
-            print("An error occured writing file:" + received)
+            print("An error occured writing file:" + received + "\(error.localizedDescription)")
         }
         return fileUrl.path
     }
