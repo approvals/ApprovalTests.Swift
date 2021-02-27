@@ -56,6 +56,8 @@
 		97308F929CF27A617D272BCA /* Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308BE497F4102343464B3C /* Samples.swift */; };
 		97308F937FDF58C96E108DE4 /* CombinationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730821C2686EF2FBA95FAEE /* CombinationTests.swift */; };
 		97308FF1569559F04D5ACAED /* CwlDemangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308B6D486609330CC17CB0 /* CwlDemangle.swift */; };
+		BB1700A176A8A3E69F0F8815 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170B4E04C535C1000CA54A /* Package.swift */; };
+		BB17050BD72A29A239ACEA81 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170B4E04C535C1000CA54A /* Package.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,7 @@
 		97308F82A0741AAE8F498A37 /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		97308FAD567B1657AE7671D0 /* ApprovalApprover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalApprover.swift; sourceTree = "<group>"; };
 		97308FC331B73ECB0A9BA7EE /* ApprovalTextWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalTextWriter.swift; sourceTree = "<group>"; };
+		BB170B4E04C535C1000CA54A /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +203,7 @@
 				163E1855217F827400A54A48 /* ApprovalTests_iOSTests */,
 				168C9625216023F9008F354C /* Products */,
 				1637CE7A2164633700994238 /* Frameworks */,
+				BB170B4E04C535C1000CA54A /* Package.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -558,6 +562,7 @@
 				97308597E60FDC87E7ED7453 /* CombinationApprovals.swift in Sources */,
 				97308F6B400647E9F43E7000 /* UseReporterFromAnnotations.swift in Sources */,
 				97308702B176EBB5F0A8D932 /* StringUtils.swift in Sources */,
+				BB17050BD72A29A239ACEA81 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,6 +576,7 @@
 				973086311B135BA1E44E28B3 /* SampleArrayTest.swift in Sources */,
 				973081B984AC2F9B66D19D7F /* ApprovalsTest.swift in Sources */,
 				97308F929CF27A617D272BCA /* Samples.swift in Sources */,
+				BB1700A176A8A3E69F0F8815 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
