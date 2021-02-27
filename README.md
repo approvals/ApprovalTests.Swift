@@ -1,3 +1,5 @@
+[![Swift](https://github.com/approvals/ApprovalTests.Swift/actions/workflows/swift.yml/badge.svg)](https://github.com/approvals/ApprovalTests.Swift/actions/workflows/swift.yml)
+
 ApprovalTests
 ====
 
