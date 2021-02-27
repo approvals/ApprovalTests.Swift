@@ -10,7 +10,8 @@ let package = Package(
         products: [
             .library(
                     name: "ApprovalTests.Swift",
-                    targets: ["ApprovalTests.Swift"]),
+                    targets: ["ApprovalTests.Swift"]
+            ),
         ],
         targets: [
             .target(
