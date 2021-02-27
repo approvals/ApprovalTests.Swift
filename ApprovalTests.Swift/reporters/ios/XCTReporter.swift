@@ -1,6 +1,8 @@
 import Foundation
 import XCTest
 
+#if os(iOS)
+
 class XCTReporter: ApprovalFailureReporter {
     
     func report(received: String, approved: String) {
@@ -42,3 +44,5 @@ class XCTReporter: ApprovalFailureReporter {
         return workingPathString
     }
 }
+
+#endif
