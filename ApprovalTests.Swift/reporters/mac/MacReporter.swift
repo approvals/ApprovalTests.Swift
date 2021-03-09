@@ -2,6 +2,6 @@ import Foundation
 
 class MacReporter: FirstWorkingReporter {
     init() {
-        super.init(DiffMergeReporter())
+        super.init(KaleidoscopeReporter(), DiffMergeReporter())
     }
 }
