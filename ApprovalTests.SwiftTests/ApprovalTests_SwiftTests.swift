@@ -17,7 +17,7 @@ class ApprovalTests_SwiftTests: XCTestCase {
     }
 
     func testWithReporter() {
-        let reporter = TestReporter()
+        let reporter = TestReporter(success: true)
         do {
             try Approvals.verify("bar", reporter)
         } catch {

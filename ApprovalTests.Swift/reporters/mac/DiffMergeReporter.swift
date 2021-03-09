@@ -2,7 +2,7 @@ import Foundation
 
 class DiffMergeReporter: ApprovalFailureReporter {
 
-    func report(received: String, approved: String) {
+    func report(received: String, approved: String) -> Bool {
         var workingReceived = received
         var workingApproved = approved
 
@@ -26,6 +26,9 @@ class DiffMergeReporter: ApprovalFailureReporter {
         }
         do {
             try process.run()
-        } catch {}
+            return true
+        } catch {
+            return false
+        }
     }
 }

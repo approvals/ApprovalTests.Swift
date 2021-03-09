@@ -5,7 +5,7 @@ import XCTest
 
 class XCTReporter: ApprovalFailureReporter {
     
-    func report(received: String, approved: String) {
+    func report(received: String, approved: String) -> Bool {
         // read the files into strings
         let approvedUrl = URL(fileURLWithPath: approved)
         let receivedUrl = URL(fileURLWithPath: received)
@@ -30,6 +30,8 @@ class XCTReporter: ApprovalFailureReporter {
         let approveCommand = "To approve run : " + command
         print(approveCommand);
         XCTAssertEqual(aText, rText)
+        
+        return true
     }
     
     private func cleanPathString(_ pathString: String) -> String {

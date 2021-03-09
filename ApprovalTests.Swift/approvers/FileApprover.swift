@@ -56,6 +56,6 @@ class FileApprover: ApprovalApprover {
     }
 
     func reportFailure(reporter: ApprovalFailureReporter) {
-        reporter.report(received: received, approved: approved)
+        _ = reporter.report(received: received, approved: approved)
     }
 }
