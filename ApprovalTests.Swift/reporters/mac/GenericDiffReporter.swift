@@ -2,9 +2,18 @@ import Foundation
 
 class GenericDiffReporter: ApprovalFailureReporter {
     private let programPath: String
+    private let arguments: (String, String) -> [String]
 
     init(programPath: String) {
         self.programPath = programPath
+        arguments = { received, approved in
+            [received, approved]
+        }
+    }
+
+    init(programPath: String, arguments: @escaping (String, String) -> [String]) {
+        self.programPath = programPath
+        self.arguments = arguments
     }
 
     func report(received: String, approved: String) -> Bool {
@@ -29,7 +38,7 @@ class GenericDiffReporter: ApprovalFailureReporter {
 
         let process = Process()
         process.executableURL = URL(fileURLWithPath: programPath)
-        process.arguments = [workingReceived, workingApproved]
+        process.arguments = arguments(workingReceived, workingApproved)
         process.terminationHandler = { (process) in
             print("\ndidFinish: \(!process.isRunning)")
         }
