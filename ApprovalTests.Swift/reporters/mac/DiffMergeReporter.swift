@@ -1,6 +1,6 @@
 import Foundation
 
-class DiffMergReporter: ApprovalFailureReporter {
+class DiffMergeReporter: ApprovalFailureReporter {
 
     func report(received: String, approved: String) {
         var workingReceived = received

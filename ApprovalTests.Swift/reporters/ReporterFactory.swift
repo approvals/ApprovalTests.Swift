@@ -6,7 +6,7 @@ class ReporterFactory {
 
     public static func get() -> ApprovalFailureReporter {
         #if os(OSX)
-        let returned = DiffMergReporter()
+        let returned = DiffMergeReporter()
         #elseif os(iOS)
         let returned = XCTReporter()
         #endif
