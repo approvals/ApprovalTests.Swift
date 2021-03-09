@@ -57,6 +57,7 @@
 		97308F937FDF58C96E108DE4 /* CombinationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730821C2686EF2FBA95FAEE /* CombinationTests.swift */; };
 		97308FF1569559F04D5ACAED /* CwlDemangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308B6D486609330CC17CB0 /* CwlDemangle.swift */; };
 		BB17001927AF3FBB44EB00AA /* FirstWorkingReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17059F97E2ED858F9C9A2F /* FirstWorkingReporter.swift */; };
+		BB1702505E8BF49858471116 /* MacReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1707BC3C179D89F3FD2B84 /* MacReporter.swift */; };
 		BB170DD606509A7F5AA1321E /* ReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17064685A20DAA7CFE6421 /* ReporterTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,7 @@
 		97308FC331B73ECB0A9BA7EE /* ApprovalTextWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalTextWriter.swift; sourceTree = "<group>"; };
 		BB17059F97E2ED858F9C9A2F /* FirstWorkingReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstWorkingReporter.swift; sourceTree = "<group>"; };
 		BB17064685A20DAA7CFE6421 /* ReporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterTests.swift; sourceTree = "<group>"; };
+		BB1707BC3C179D89F3FD2B84 /* MacReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacReporter.swift; sourceTree = "<group>"; };
 		BB170B4E04C535C1000CA54A /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				9730802AF82CC10B0E3F69C7 /* DiffMergeReporter.swift */,
+				BB1707BC3C179D89F3FD2B84 /* MacReporter.swift */,
 			);
 			path = mac;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 				97308F6B400647E9F43E7000 /* UseReporterFromAnnotations.swift in Sources */,
 				97308702B176EBB5F0A8D932 /* StringUtils.swift in Sources */,
 				BB17001927AF3FBB44EB00AA /* FirstWorkingReporter.swift in Sources */,
+				BB1702505E8BF49858471116 /* MacReporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
