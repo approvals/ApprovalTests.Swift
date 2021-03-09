@@ -1,8 +1,13 @@
 import Foundation
 
 class KaleidoscopeReporter: ApprovalFailureReporter {
+    let programPath = "/usr/local/bin/ksdiff"
 
     func report(received: String, approved: String) -> Bool {
+        if !FileManager.default.fileExists(atPath: programPath) {
+            return false
+        }
+        
         var workingReceived = received
         var workingApproved = approved
 
@@ -19,10 +24,8 @@ class KaleidoscopeReporter: ApprovalFailureReporter {
         workingReceived = newReceived2
 
         let process = Process()
-//        process.executableURL = URL(fileURLWithPath:"/Applications/Kaleidoscope.app/Contents/MacOS/Kaleidoscope")
-        process.executableURL = URL(fileURLWithPath:"/usr/local/bin/ksdiff")
+        process.executableURL = URL(fileURLWithPath: programPath)
         process.arguments = [workingReceived, workingApproved]
-        print("-----> \(String(describing: process.executableURL!)) \(String(describing: process.arguments!))")
         process.terminationHandler = { (process) in
             print("\ndidFinish: \(!process.isRunning)")
         }
