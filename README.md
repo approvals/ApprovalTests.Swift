@@ -7,6 +7,10 @@ Capturing Human Intelligence - ApprovalTests is an open source assertion/verific
 
 ApprovalsTest Swift is compatible with the XCUnit testing framework
 
+## Getting started
+
+Clone the [macOS starter project](https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs)
+
 What can it be used for?
 ---
 
