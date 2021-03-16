@@ -11,13 +11,15 @@ public class Approvals {
         return NameCreator().load(file.description)
     }
 
-    public static func verifyAsJson<INOBJ: Codable>(_ object: INOBJ, file: StaticString = #file) throws {
+    public static func verifyAsJson<INOBJ: Codable>(_ object: INOBJ,
+                                                    _ reporter: ApprovalFailureReporter = getReporter(),
+                                                    file: StaticString = #file) throws {
         let jsonEncoder = JSONEncoder()
         jsonEncoder.outputFormatting = .prettyPrinted
         do {
             let jsonData = try jsonEncoder.encode(object)
             let jsonString = (String(data: jsonData, encoding: .utf8) ?? "")
-            try verify(jsonString, file: file)
+            try verify(jsonString, reporter: reporter, file: file)
         } catch {
             print(error.localizedDescription)
         }
@@ -30,7 +32,7 @@ public class Approvals {
     }
 
     public static func verify(_ response: String,
-                              _ reporter: ApprovalFailureReporter = getReporter(),
+                              reporter: ApprovalFailureReporter = getReporter(),
                               file: StaticString = #file) throws {
         try verify( ApprovalTextWriter(response, "txt"), reporter, file);
     }
@@ -62,7 +64,7 @@ public class Approvals {
                                      _ reporter: ApprovalFailureReporter = getReporter(),
                                      file: StaticString = #file) throws {
         let description = String(describing: type(of: object.self)) + String(describing: object)
-        try verify(description, reporter, file: file)
+        try verify(description, reporter: reporter, file: file)
     }
 
     public static func createApprovalNamer(_ file: String) -> ApprovalNamer {

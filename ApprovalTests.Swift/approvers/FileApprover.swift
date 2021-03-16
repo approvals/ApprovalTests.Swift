@@ -1,4 +1,8 @@
 import Foundation
+#if os(iOS)
+import XCTest
+#endif
+
 
 class FileApprover: ApprovalApprover {
     let fileManager = FileManager.default
@@ -51,8 +55,12 @@ class FileApprover: ApprovalApprover {
     }
 
     func fail() throws {
-        // @ToDo: Add Error Handeling
-        throw ApprovalError.Error("Failed Approval \nApproved:\(approved) \nReceived:\(received)")
+        let message = "Failed Approval \nApproved:\(approved) \nReceived:\(received)"
+        #if os(OSX)
+            throw ApprovalError.Error(message)
+        #elseif os(iOS)
+            XCTFail(message)
+        #endif
     }
 
     func reportFailure(reporter: ApprovalFailureReporter) {

@@ -11,7 +11,7 @@ class ApprovalsTest: XCTestCase {
     }
 
     func testAsJson() throws {
-        try Approvals.verifyAsJson(CGRect(x: 5, y: 10, width: 100, height: 200))
+        try Approvals.verifyAsJson(CGRect(x: 5, y: 10, width: 100, height: 200), DiffMergeReporter())
     }
 
     func testAsJsonWithCustomObject() throws {

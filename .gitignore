@@ -1,4 +1,5 @@
 *.received.*
+command.sh
 
 # Xcode
 #
