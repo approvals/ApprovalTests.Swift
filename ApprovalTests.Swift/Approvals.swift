@@ -59,9 +59,10 @@ public class Approvals {
     }
     
     public static func verify<INOBJ>(_ object: INOBJ,
+                                     _ reporter: ApprovalFailureReporter = getReporter(),
                                      file: StaticString = #file) throws {
         let description = String(describing: type(of: object.self)) + String(describing: object)
-        try verify(description, file: file)
+        try verify(description, reporter, file: file)
     }
 
     public static func createApprovalNamer(_ file: String) -> ApprovalNamer {
