@@ -4,9 +4,9 @@ class ApprovalTextWriter: ApprovalWriter {
     var text = String()
     var fileExtensionWithoutDot = String()
 
-    init(_ textIn: String, _ fileExtentionWithoutDotIn: String) {
+    init(_ textIn: String, _ fileExtensionWithoutDotIn: String) {
         text = textIn
-        fileExtensionWithoutDot = fileExtentionWithoutDotIn
+        fileExtensionWithoutDot = fileExtensionWithoutDotIn
     }
 
     func getApprovalFilename(base: String) -> String {
@@ -24,7 +24,7 @@ class ApprovalTextWriter: ApprovalWriter {
         do {
             try text.write(toFile: fileUrl.path, atomically: true, encoding: .utf8)
         } catch {
-            print("An error occured writing file:" + received)
+            print("An error occurred writing file:" + received)
             print("Error: \(error)")
         }
 
