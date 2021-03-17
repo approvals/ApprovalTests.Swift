@@ -59,10 +59,10 @@
 		BB17001927AF3FBB44EB00AA /* FirstWorkingReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17059F97E2ED858F9C9A2F /* FirstWorkingReporter.swift */; };
 		BB1700BEA64E5553DECC0A6F /* GenericDiffReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1705F1B761A7E6263D8FFB /* GenericDiffReporter.swift */; };
 		BB1702505E8BF49858471116 /* MacReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1707BC3C179D89F3FD2B84 /* MacReporter.swift */; };
-		BB1704FF7E5D8A3C7C404389 /* DiffMergeReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17070775083BB000324A0A /* DiffMergeReporter.swift */; };
+		BB1704FF7E5D8A3C7C404389 /* DiffMergeReporterIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17070775083BB000324A0A /* DiffMergeReporterIOS.swift */; };
 		BB1708E421B1EDC9B7505EA0 /* KaleidoscopeReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170A02C65DDFAD9FADE96C /* KaleidoscopeReporter.swift */; };
 		BB170DD606509A7F5AA1321E /* ReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17064685A20DAA7CFE6421 /* ReporterTests.swift */; };
-		BB170E455F9D597F98E2147D /* GenericDiffReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1700198EEF7F2B448074E8 /* GenericDiffReporter.swift */; };
+		BB170E455F9D597F98E2147D /* GenericDiffReporterIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1700198EEF7F2B448074E8 /* GenericDiffReporterIOS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,11 +119,11 @@
 		97308F82A0741AAE8F498A37 /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		97308FAD567B1657AE7671D0 /* ApprovalApprover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalApprover.swift; sourceTree = "<group>"; };
 		97308FC331B73ECB0A9BA7EE /* ApprovalTextWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalTextWriter.swift; sourceTree = "<group>"; };
-		BB1700198EEF7F2B448074E8 /* GenericDiffReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDiffReporter.swift; sourceTree = "<group>"; };
+		BB1700198EEF7F2B448074E8 /* GenericDiffReporterIOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDiffReporterIOS.swift; sourceTree = "<group>"; };
 		BB17059F97E2ED858F9C9A2F /* FirstWorkingReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstWorkingReporter.swift; sourceTree = "<group>"; };
 		BB1705F1B761A7E6263D8FFB /* GenericDiffReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDiffReporter.swift; sourceTree = "<group>"; };
 		BB17064685A20DAA7CFE6421 /* ReporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterTests.swift; sourceTree = "<group>"; };
-		BB17070775083BB000324A0A /* DiffMergeReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffMergeReporter.swift; sourceTree = "<group>"; };
+		BB17070775083BB000324A0A /* DiffMergeReporterIOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffMergeReporterIOS.swift; sourceTree = "<group>"; };
 		BB1707BC3C179D89F3FD2B84 /* MacReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacReporter.swift; sourceTree = "<group>"; };
 		BB170A02C65DDFAD9FADE96C /* KaleidoscopeReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaleidoscopeReporter.swift; sourceTree = "<group>"; };
 		BB170B4E04C535C1000CA54A /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -205,8 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				163E1881217FAA4D00A54A48 /* XCTReporter.swift */,
-				BB1700198EEF7F2B448074E8 /* GenericDiffReporter.swift */,
-				BB17070775083BB000324A0A /* DiffMergeReporter.swift */,
+				BB1700198EEF7F2B448074E8 /* GenericDiffReporterIOS.swift */,
+				BB17070775083BB000324A0A /* DiffMergeReporterIOS.swift */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -553,8 +553,8 @@
 				163E186F217F84BE00A54A48 /* StringUtils.swift in Sources */,
 				163E1870217F84BE00A54A48 /* ApprovalTextWriter.swift in Sources */,
 				163E1871217F84BE00A54A48 /* CombinationApprovals.swift in Sources */,
-				BB170E455F9D597F98E2147D /* GenericDiffReporter.swift in Sources */,
-				BB1704FF7E5D8A3C7C404389 /* DiffMergeReporter.swift in Sources */,
+				BB170E455F9D597F98E2147D /* GenericDiffReporterIOS.swift in Sources */,
+				BB1704FF7E5D8A3C7C404389 /* DiffMergeReporterIOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

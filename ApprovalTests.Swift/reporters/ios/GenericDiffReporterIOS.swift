@@ -1,5 +1,7 @@
 import Foundation
 
+#if os(iOS)
+
 class GenericDiffReporter: ApprovalFailureReporter {
     private let programPath: String
     private let arguments: (String, String) -> [String]
@@ -52,3 +54,5 @@ class GenericDiffReporter: ApprovalFailureReporter {
         }
     }
 }
+
+#endif
