@@ -47,6 +47,7 @@ class GenericDiffReporter: ApprovalFailureReporter {
                 try process.write(toFile: fileUrl.path, atomically: true, encoding: .utf8)
             } catch {
                 print("An error occured writing file:" + received)
+                print("Error: \(error)")
             }
             return true
         } catch {
