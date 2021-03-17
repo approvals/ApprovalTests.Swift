@@ -2,20 +2,20 @@ import Foundation
 
 class ApprovalTextWriter: ApprovalWriter {
     var text = String()
-    var fileExtentionWithoutDot = String()
+    var fileExtensionWithoutDot = String()
 
     init(_ textIn: String, _ fileExtentionWithoutDotIn: String) {
         text = textIn
-        fileExtentionWithoutDot = fileExtentionWithoutDotIn
+        fileExtensionWithoutDot = fileExtentionWithoutDotIn
     }
 
     func getApprovalFilename(base: String) -> String {
-        let approvalFilename = String(base + ".approved" + "." + fileExtentionWithoutDot)
+        let approvalFilename = String(base + ".approved" + "." + fileExtensionWithoutDot)
         return approvalFilename
     }
 
     func getReceivedFilename(base: String) -> String {
-        let receivedFilename = String(base + ".received" + "." + fileExtentionWithoutDot)
+        let receivedFilename = String(base + ".received" + "." + fileExtensionWithoutDot)
         return receivedFilename
     }
 
