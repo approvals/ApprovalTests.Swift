@@ -9,17 +9,17 @@ class FileApprover: ApprovalApprover {
 
     var received: String
     var approved: String
-    var writter: ApprovalWriter
+    var writer: ApprovalWriter
 
-    init(_ writterIn: ApprovalWriter, _ namerIn: ApprovalNamer) {
+    init(_ writerIn: ApprovalWriter, _ namerIn: ApprovalNamer) {
         let base = namerIn.getSourceFilePath()
-        received = writterIn.getReceivedFilename(base: base)
-        approved = writterIn.getApprovalFilename(base: base)
-        writter = writterIn
+        received = writerIn.getReceivedFilename(base: base)
+        approved = writerIn.getApprovalFilename(base: base)
+        writer = writerIn
     }
 
     func approve() -> Bool {
-        let _ = writter.writeReceivedFile(received: received)
+        let _ = writer.writeReceivedFile(received: received)
         return approveTextFile(approved: approved, received: received);
     }
 

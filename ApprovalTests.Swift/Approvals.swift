@@ -37,17 +37,17 @@ public class Approvals {
         try verify( ApprovalTextWriter(response, "txt"), reporter, file);
     }
 
-    private class func verify(_ writter: ApprovalTextWriter,
+    private class func verify(_ writer: ApprovalTextWriter,
                               _ reporter: ApprovalFailureReporter = getReporter(),
                               _ file: StaticString) throws {
-        try verify(writter, createApprovalNamer(file.description), reporter, file);
+        try verify(writer, createApprovalNamer(file.description), reporter, file);
     }
 
-    private class func verify(_ writter: ApprovalTextWriter,
+    private class func verify(_ writer: ApprovalTextWriter,
                               _ namer: ApprovalNamer,
                               _ reporter: ApprovalFailureReporter,
                               _ file: StaticString) throws {
-        try verify(FileApprover(writter, namer), reporter, file);
+        try verify(FileApprover(writer, namer), reporter, file);
     }
 
     private class func verify(_ approver: FileApprover, _ reporter: ApprovalFailureReporter,
