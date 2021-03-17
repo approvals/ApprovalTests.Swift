@@ -227,7 +227,7 @@ public class CombinationApprovals {
         var list = Array<Any>()
 
         for input in array {
-            if (String(describing: type(of: input)) == "INUNUSED") {
+            if String(describing: type(of: input)) == "INUNUSED" {
                 continue
             }
             list.append(input)

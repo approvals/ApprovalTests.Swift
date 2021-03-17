@@ -55,7 +55,7 @@ class Namer: ApprovalNamer {
     private func selectElement(symbols trace: [String]) -> Int {
         var depth = 0
         for element in trace {
-            if (isTestCase(element)) {
+            if isTestCase(element) {
                 break
             }
             depth += 1

@@ -52,7 +52,7 @@ public class Approvals {
 
     private class func verify(_ approver: FileApprover, _ reporter: ApprovalFailureReporter,
                               _ file: StaticString) throws {
-        if (!approver.approve()) {
+        if !approver.approve() {
             approver.reportFailure(reporter: reporter);
             try approver.fail();
         } else {
