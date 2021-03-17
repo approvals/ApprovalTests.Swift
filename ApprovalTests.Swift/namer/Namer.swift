@@ -19,7 +19,7 @@ class Namer: ApprovalNamer {
 
         let indexEnd = fromFile.range(of: ".swift")?.lowerBound
         let tempName = String(fromFile.prefix(upTo: indexEnd!))
-        let baseName = String(format:"%@.%@", tempName, testName)
+        let baseName = String(format: "%@.%@", tempName, testName)
         return baseName;
     }
 
@@ -55,7 +55,7 @@ class Namer: ApprovalNamer {
     private func selectElement(symbols trace: [String]) -> Int {
         var depth = 0
         for element in trace {
-            if( isTestCase(element) ) {
+            if (isTestCase(element)) {
                 break
             }
             depth += 1

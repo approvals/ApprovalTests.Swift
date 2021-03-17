@@ -27,11 +27,11 @@ class FileApprover: ApprovalApprover {
         let expectedExists = fileManager.fileExists(atPath: expected)
         let actualExists = fileManager.fileExists(atPath: actual)
 
-        if( !expectedExists ) {
+        if (!expectedExists) {
             fileManager.createFile(atPath: expected, contents: Data())
         }
 
-        if( !actualExists ) { return false }
+        if (!actualExists) { return false }
 
         let expectedUrl = URL(fileURLWithPath: expected)
         let actualUrl = URL(fileURLWithPath: actual)
@@ -41,8 +41,7 @@ class FileApprover: ApprovalApprover {
         do {
             t1 = try String(contentsOf: expectedUrl)
             t2 = try String(contentsOf: actualUrl)
-        }
-        catch {/* error handling here */}
+        } catch { /* error handling here */ }
 
         return t1 == t2
     }

@@ -31,5 +31,4 @@ class ApprovalTextWriter: ApprovalWriter {
         return fileUrl.path
     }
 
-    
 }

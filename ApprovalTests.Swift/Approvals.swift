@@ -2,12 +2,12 @@ import Foundation
 
 public class Approvals {
     public class NameCreator: Loader {
-        public func load(_ file: String) -> ApprovalNamer{
+        public func load(_ file: String) -> ApprovalNamer {
             return Namer(file)
         }
     }
 
-    class func getNamer( file: StaticString = #file ) -> ApprovalNamer {
+    class func getNamer(file: StaticString = #file) -> ApprovalNamer {
         return NameCreator().load(file.description)
     }
 
@@ -28,13 +28,13 @@ public class Approvals {
     public static func verifyAll(_ label: String, _ array: [Any],
                                  _ reporter: ApprovalFailureReporter = getReporter(),
                                  file: StaticString = #file) throws {
-        try verify( ApprovalTextWriter(StringUtils.toString(label, array), "txt"), reporter, file)
+        try verify(ApprovalTextWriter(StringUtils.toString(label, array), "txt"), reporter, file)
     }
 
     public static func verify(_ response: String,
                               reporter: ApprovalFailureReporter = getReporter(),
                               file: StaticString = #file) throws {
-        try verify( ApprovalTextWriter(response, "txt"), reporter, file);
+        try verify(ApprovalTextWriter(response, "txt"), reporter, file);
     }
 
     private class func verify(_ writer: ApprovalTextWriter,
@@ -59,7 +59,7 @@ public class Approvals {
             approver.cleanUpAfterSuccess(reporter: reporter);
         }
     }
-    
+
     public static func verify<INOBJ>(_ object: INOBJ,
                                      _ reporter: ApprovalFailureReporter = getReporter(),
                                      file: StaticString = #file) throws {

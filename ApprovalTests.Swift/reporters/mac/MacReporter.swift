@@ -7,6 +7,6 @@ class MacReporter: FirstWorkingReporter {
                 KaleidoscopeReporter(),
                 DiffMergeReporter()
                 // end-snippet
-                )
+        )
     }
 }

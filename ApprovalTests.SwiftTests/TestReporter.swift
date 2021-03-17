@@ -17,7 +17,7 @@ class TestReporter: ApprovalFailureReporter {
         self.approved = approved
         return success
     }
-    
+
     public var received: String = ""
     public var approved: String = ""
 }

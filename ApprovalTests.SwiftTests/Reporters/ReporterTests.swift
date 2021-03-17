@@ -7,9 +7,9 @@ final class ReporterTests: XCTestCase {
         let reporter1 = TestReporter(success: false)
         let reporter2 = TestReporter(success: true)
         let reporter3 = TestReporter(success: true)
-        
+
         let success = FirstWorkingReporter(reporter1, reporter2, reporter3).report(received: "r.text", approved: "a.text")
-        
+
         XCTAssertTrue(success)
         XCTAssertEqual(reporter1.approved, "a.text")
         XCTAssertEqual(reporter2.approved, "a.text")
