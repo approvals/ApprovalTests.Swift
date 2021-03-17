@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		163E1852217F827400A54A48 /* ApprovalTests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 163E1849217F827400A54A48 /* ApprovalTests_iOS.framework */; };
-		163E1857217F827400A54A48 /* ApprovalTests_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163E1856217F827400A54A48 /* ApprovalTests_iOSTests.swift */; };
 		163E1859217F827400A54A48 /* ApprovalTests_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 163E184B217F827400A54A48 /* ApprovalTests_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		163E1864217F84BE00A54A48 /* FileApprover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308F282AC7547A5A3278BB /* FileApprover.swift */; };
 		163E1865217F84BE00A54A48 /* ApprovalFailureReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973085D5FB753938543FDA7C /* ApprovalFailureReporter.swift */; };
@@ -87,7 +86,6 @@
 		163E184B217F827400A54A48 /* ApprovalTests_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApprovalTests_iOS.h; sourceTree = "<group>"; };
 		163E184C217F827400A54A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		163E1851217F827400A54A48 /* ApprovalTests_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApprovalTests_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		163E1856217F827400A54A48 /* ApprovalTests_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalTests_iOSTests.swift; sourceTree = "<group>"; };
 		163E1858217F827400A54A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		163E1881217FAA4D00A54A48 /* XCTReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTReporter.swift; sourceTree = "<group>"; };
 		163E188B218018E100A54A48 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -184,7 +182,6 @@
 		163E1855217F827400A54A48 /* ApprovalTests_iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				163E1856217F827400A54A48 /* ApprovalTests_iOSTests.swift */,
 				163E1858217F827400A54A48 /* Info.plist */,
 			);
 			path = ApprovalTests_iOSTests;
@@ -562,7 +559,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				163E1857217F827400A54A48 /* ApprovalTests_iOSTests.swift in Sources */,
 				163E1884217FB49800A54A48 /* TestReporter.swift in Sources */,
 				163E1885217FB4A200A54A48 /* CombinationTests.swift in Sources */,
 				163E1886217FB4B700A54A48 /* SampleArrayTest.swift in Sources */,
