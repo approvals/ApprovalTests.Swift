@@ -121,6 +121,7 @@
 		BB17059F97E2ED858F9C9A2F /* FirstWorkingReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstWorkingReporter.swift; sourceTree = "<group>"; };
 		BB1705F1B761A7E6263D8FFB /* GenericDiffReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDiffReporter.swift; sourceTree = "<group>"; };
 		BB17064685A20DAA7CFE6421 /* ReporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterTests.swift; sourceTree = "<group>"; };
+		BB1706F98B5163B28C84D8D5 /* iOSApprovalsWatcher.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = iOSApprovalsWatcher.py; sourceTree = "<group>"; };
 		BB17070775083BB000324A0A /* DiffMergeReporterIOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffMergeReporterIOS.swift; sourceTree = "<group>"; };
 		BB1707BC3C179D89F3FD2B84 /* MacReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacReporter.swift; sourceTree = "<group>"; };
 		BB170A02C65DDFAD9FADE96C /* KaleidoscopeReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaleidoscopeReporter.swift; sourceTree = "<group>"; };
@@ -261,6 +262,7 @@
 				97308D241492E13CB5BF5866 /* ApprovalsTest.swift */,
 				97308BE497F4102343464B3C /* Samples.swift */,
 				BB17064E8F6B27C1C626D959 /* Reporters */,
+				BB1706F98B5163B28C84D8D5 /* iOSApprovalsWatcher.py */,
 			);
 			path = ApprovalTests.SwiftTests;
 			sourceTree = "<group>";
