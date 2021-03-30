@@ -1,6 +1,7 @@
 #! /usr/bin/env python
 import datetime
 import os
+import stat
 import subprocess
 
 def monitor_file(file_name):
@@ -11,6 +12,7 @@ def monitor_file(file_name):
             if date < current_date:
                 print("date: " + str(current_date))
                 date = current_date
+                os.chmod(file_name, os.stat(file_name).st_mode | stat.S_IEXEC) 
                 subprocess.call("./" + file_name, shell=True)
 
 if __name__ == "__main__":
