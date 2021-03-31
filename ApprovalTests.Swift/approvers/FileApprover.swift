@@ -1,10 +1,16 @@
 import Foundation
-#if os(iOS)
-import XCTest
-#endif
-
 
 class FileApprover: ApprovalApprover {
+    private static var failer: Failer = XCTFailer()
+
+    static func registerFailer(_ failer: Failer) {
+        FileApprover.failer = failer
+    }
+    
+    static func resetFailer() {
+        FileApprover.failer = XCTFailer()
+    }
+
     let fileManager = FileManager.default
 
     var received: String
@@ -55,11 +61,7 @@ class FileApprover: ApprovalApprover {
 
     func fail() throws {
         let message = "Failed Approval \nApproved:\(approved) \nReceived:\(received)"
-        #if os(OSX)
-            throw ApprovalError.Error(message)
-        #elseif os(iOS)
-            XCTFail(message)
-        #endif
+        try FileApprover.failer.fail(message)
     }
 
     func reportFailure(reporter: ApprovalFailureReporter) {

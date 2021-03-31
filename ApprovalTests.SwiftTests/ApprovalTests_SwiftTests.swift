@@ -16,12 +16,21 @@ class ApprovalTests_SwiftTests: XCTestCase {
         try! Approvals.verify("bar")
     }
 
-    func testWithReporter() {
+    func testWithReporter() throws {
         let reporter = TestReporter(success: true)
-        do {
-            try Approvals.verify("bar", reporter)
-        } catch {
-        }
+        let failer: TestFailer = TestFailer()
+        FileApprover.registerFailer(failer)
+        try Approvals.verify("bar", reporter)
+        FileApprover.resetFailer()
         XCTAssertNotEqual("", reporter.received)
+        XCTAssertTrue(failer.failed)
+    }
+}
+
+class TestFailer: Failer {
+    var failed = false
+    
+    override func fail(_ message: String) throws {
+        failed = true
     }
 }
