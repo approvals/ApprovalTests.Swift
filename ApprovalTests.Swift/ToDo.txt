@@ -9,7 +9,6 @@
 5.g. FileLauncher Reporter
 6. VerifyAll
 7. verifyMap
-8. verifyJSON
 
 Add starter project
 Add CI
