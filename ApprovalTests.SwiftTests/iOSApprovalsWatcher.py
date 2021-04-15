@@ -13,7 +13,7 @@ def monitor_file(file_name):
                 print("date: " + str(current_date))
                 date = current_date
                 os.chmod(file_name, os.stat(file_name).st_mode | stat.S_IEXEC) 
-                subprocess.call("./" + file_name, shell=True)
+                subprocess.Popen("./" + file_name)
 
 if __name__ == "__main__":
     monitor_file("command.sh")
