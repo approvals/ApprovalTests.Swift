@@ -1,3 +1,5 @@
+import Foundation
+
 class Namer: ApprovalNamer {
     var className = String()
     var testName = String()

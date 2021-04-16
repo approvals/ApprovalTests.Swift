@@ -1,3 +1,5 @@
+import Foundation
+
 class GenericDiffReporterBase: EquatableFailureReporter {
     let programPath: String
     let arguments: (String, String) -> [String]
