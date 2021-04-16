@@ -9,11 +9,11 @@ open class EquatableFailureReporter: ApprovalFailureReporter, Equatable {
         false
     }
 
-    func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
-        false
-    }
-
     public static func ==(lhs: EquatableFailureReporter, rhs: EquatableFailureReporter) -> Bool {
         lhs.isEqualTo(rhs)
+    }
+
+    func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
+        false
     }
 }
