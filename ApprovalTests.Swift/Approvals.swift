@@ -52,6 +52,13 @@ public class Approvals {
 
     private class func verify(_ approver: FileApprover, _ reporter: ApprovalFailureReporter,
                               _ file: StaticString) throws {
+        try verify(approver, file, Options(reporter))
+    }
+
+    private class func verify(_ approver: FileApprover,
+                              _ file: StaticString,
+                              _ options: Options = Options()) throws {
+        let reporter = options.getReporter()
         if !approver.approve() {
             approver.reportFailure(reporter: reporter);
             try approver.fail();
