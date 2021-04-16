@@ -6,13 +6,12 @@ class FileApprover: ApprovalApprover {
     static func registerFailer(_ failer: Failer) {
         FileApprover.failer = failer
     }
-    
+
     static func resetFailer() {
         FileApprover.failer = XCTFailer()
     }
 
     let fileManager = FileManager.default
-
     var received: String
     var approved: String
     var writer: ApprovalWriter
