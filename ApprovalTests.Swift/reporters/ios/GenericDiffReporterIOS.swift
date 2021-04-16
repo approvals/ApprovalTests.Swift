@@ -4,12 +4,12 @@ import Foundation
 
 class GenericDiffReporter: GenericDiffReporterBase {
     override func runProcess(received: String, approved: String) throws {
-        var (workingReceived, workingApproved) = cleanUpFileNames(received: received, approved: approved)
+        let (workingReceived, workingApproved) = cleanUpFileNames(received: received, approved: approved)
 
         let arguments2 = arguments(workingReceived, workingApproved)
-        var process1 = "\(programPath) \(arguments2.joined(separator: " "))"
+        let process1 = "\(programPath) \(arguments2.joined(separator: " "))"
 
-        var process = "#!/bin/bash\n\(process1)"
+        let process = "#!/bin/bash\n\(process1)"
         var fileUrl = URL(fileURLWithPath: workingReceived)
         fileUrl.deleteLastPathComponent()
         fileUrl = fileUrl.appendingPathComponent("command.sh")
