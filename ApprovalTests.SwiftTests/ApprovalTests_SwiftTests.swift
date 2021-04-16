@@ -7,12 +7,12 @@ import XCTest
 
 class ApprovalTests_SwiftTests: XCTestCase {
 
-    func testClassName() {
+    func testClassName() throws {
         let name = Approvals.getNamer()
         XCTAssertEqual("ApprovalTests_SwiftTests.testClassName", name.getApprovalName())
     }
 
-    func testApprovalsVerify() {
+    func testApprovalsVerify() throws {
         try! Approvals.verify("bar")
     }
 

@@ -31,23 +31,23 @@ class CombinationTests: XCTestCase {
         return String("\(anInt) \(aFloat) \(aString)")
     }
 
-    func testCombinationsSingleParameterInt() {
+    func testCombinationsSingleParameterInt() throws {
         try! CombinationApprovals.verifyAllCombinations(doubleInt, [1, 2, 3, 4, 5])
     }
 
-    func testCombinationsSingleParameterFloat() {
+    func testCombinationsSingleParameterFloat() throws {
         try! CombinationApprovals.verifyAllCombinations(doubleFloat, [1.1, 2.2, 3.3, 4.4, 5.5])
     }
 
-    func testCombinationsTwoParametersInt() {
+    func testCombinationsTwoParametersInt() throws {
         try! CombinationApprovals.verifyAllCombinations(twoIntParams, [1, 2], [3, 4])
     }
 
-    func testCombinationsMixedParameters() {
+    func testCombinationsMixedParameters() throws {
         try! CombinationApprovals.verifyAllCombinations(threeMixedParams, [1, 2, 3], [4.4, 5.5], ["String1", "String2", "String3", "String4"])
     }
 
-    func testCombinationsFourParameters() {
+    func testCombinationsFourParameters() throws {
         let inCall: (Int, Int, Int, Int) -> String = {
             let sum = $0 + $1 + $2 + $3
             return String(sum)
@@ -56,7 +56,7 @@ class CombinationTests: XCTestCase {
         try! CombinationApprovals.verifyAllCombinations(inCall, [1, 2, 3], [4, 5], [6, 7], [8, 9])
     }
 
-    func testCombinationsFiveParameters() {
+    func testCombinationsFiveParameters() throws {
         let inCall: (Int, Int, Int, Int, Int) -> String = {
             let sum = $0 + $1 + $2 + $3 + $4
             return String(sum)
@@ -65,7 +65,7 @@ class CombinationTests: XCTestCase {
         try! CombinationApprovals.verifyAllCombinations(inCall, [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11])
     }
 
-    func testCombinationsSixParameters() {
+    func testCombinationsSixParameters() throws {
         let inCall: (Int, Int, Int, Int, Int, Int) -> String = {
             let sum = $0 + $1 + $2 + $3 + $4 + $5
             return String(sum)
@@ -74,7 +74,7 @@ class CombinationTests: XCTestCase {
         try! CombinationApprovals.verifyAllCombinations(inCall, [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13])
     }
 
-    func testCombinationsSevenParameters() {
+    func testCombinationsSevenParameters() throws {
         let inCall: (Int, Int, Int, Int, Int, Int, Int) -> String = {
             let sum = $0 + $1 + $2 + $3 + $4 + $5 + $6
             return String(sum)
@@ -83,7 +83,7 @@ class CombinationTests: XCTestCase {
         try! CombinationApprovals.verifyAllCombinations(inCall, [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13], [14, 15])
     }
 
-    func testCombinationsEightParameters() {
+    func testCombinationsEightParameters() throws {
         let inCall: (Int, Int, Int, Int, Int, Int, Int, Int) -> String = {
             let sum = $0 + $1 + $2 + $3 + $4 + $5 + $6 + $7
             return String(sum)
@@ -92,7 +92,7 @@ class CombinationTests: XCTestCase {
         try! CombinationApprovals.verifyAllCombinations(inCall, [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13], [14, 15], [16, 17])
     }
 
-    func testCombinationsNineParameters() {
+    func testCombinationsNineParameters() throws {
         let inCall: (Int, Int, Int, Int, Int, Int, Int, Int, Int) -> String = {
             let sum = $0 + $1 + $2 + $3 + $4 + $5 + $6 + $7 + $8
             return String(sum)
