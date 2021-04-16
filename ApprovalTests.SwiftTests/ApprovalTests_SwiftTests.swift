@@ -30,7 +30,7 @@ final class ApprovalTests_SwiftTests: XCTestCase {
 class TestFailer: Failer {
     var failed = false
 
-    override func fail(_ message: String) throws {
+    func fail(_ message: String) throws {
         failed = true
     }
 }

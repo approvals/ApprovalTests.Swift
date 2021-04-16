@@ -1,12 +1,11 @@
 import XCTest
 
-class Failer {
-    func fail(_ message: String) throws {
-    }
+protocol Failer {
+    func fail(_ message: String) throws
 }
 
 class XCTFailer: Failer {
-    override func fail(_ message: String) throws {
+    func fail(_ message: String) throws {
         XCTFail(message)
     }
 }
