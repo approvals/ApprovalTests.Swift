@@ -5,14 +5,14 @@ import Foundation
 @testable import ApprovalTests_iOS
 #endif
 
-class TestReporter: ApprovalFailureReporter {
+class TestReporter: EquatableFailureReporter {
     private let success: Bool
 
     init(success: Bool) {
         self.success = success
     }
 
-    func report(received: String, approved: String) -> Bool {
+    override func report(received: String, approved: String) -> Bool {
         self.received = received
         self.approved = approved
         return success
