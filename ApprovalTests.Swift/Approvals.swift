@@ -3,12 +3,12 @@ import Foundation
 public class Approvals {
     public class NameCreator: Loader {
         public func load(_ file: String) -> ApprovalNamer {
-            return Namer(file)
+            Namer(file)
         }
     }
 
     class func getNamer(file: StaticString = #file) -> ApprovalNamer {
-        return NameCreator().load(file.description)
+        NameCreator().load(file.description)
     }
 
     public static func verifyAsJson<INOBJ: Codable>(_ object: INOBJ,
@@ -75,11 +75,11 @@ public class Approvals {
     }
 
     public static func createApprovalNamer(_ file: String) -> ApprovalNamer {
-        return NameCreator().load(file)
+        NameCreator().load(file)
     }
 
     public static func getReporter() -> ApprovalFailureReporter {
-        return ReporterFactory.get()
+        ReporterFactory.get()
     }
 
 }

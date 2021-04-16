@@ -12,10 +12,10 @@ class Options {
     }
 
     public func getReporter() -> ApprovalFailureReporter {
-        return reporter ?? Approvals.getReporter()
+        reporter ?? Approvals.getReporter()
     }
 
     public func withReporter(_ reporter: ApprovalFailureReporter) -> Options {
-        return Options(reporter)
+        Options(reporter)
     }
 }

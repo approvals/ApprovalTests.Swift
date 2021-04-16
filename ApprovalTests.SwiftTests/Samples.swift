@@ -28,5 +28,5 @@ class Samples: XCTestCase {
 class MyClass: CustomStringConvertible {
     var val = "ApprovalTests"
 
-    public var description: String { return "MyClass: \(val)" }
+    public var description: String { "MyClass: \(val)" }
 }

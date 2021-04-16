@@ -1,7 +1,7 @@
 import Foundation
 
 class INUNUSED {
-    var description: String { return "SKIP" }
+    var description: String { "SKIP" }
 }
 
 public class CombinationApprovals {

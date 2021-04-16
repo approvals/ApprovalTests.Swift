@@ -8,27 +8,27 @@ import XCTest
 final class CombinationTests: XCTestCase {
 
     private func threeParams(_ in1: Int, _ in2: Int, _ in3: Int) -> Int {
-        return in1 + in2 + in3
+        in1 + in2 + in3
     }
 
     private func twoIntParams(_ in1: Int, _ in2: Int) -> Int {
-        return in1 * in2
+        in1 * in2
     }
 
     private func twoFloatParams(_ in1: Float, _ in2: Float) -> Float {
-        return in1 * in2
+        in1 * in2
     }
 
     private func doubleInt(_ x: Int) -> Int {
-        return 2 * x
+        2 * x
     }
 
     private func doubleFloat(_ x: Float) -> Float {
-        return 2 * x
+        2 * x
     }
 
     private func threeMixedParams(_ anInt: Int, _ aFloat: Float, _ aString: String) -> String {
-        return String("\(anInt) \(aFloat) \(aString)")
+        String("\(anInt) \(aFloat) \(aString)")
     }
 
     func testCombinationsSingleParameterInt() throws {

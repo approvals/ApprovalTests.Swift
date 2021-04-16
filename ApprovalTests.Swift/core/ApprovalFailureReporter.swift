@@ -6,14 +6,14 @@ public protocol ApprovalFailureReporter {
 
 open class EquatableFailureReporter: ApprovalFailureReporter, Equatable {
     public func report(received: String, approved: String) -> Bool {
-        return false
+        false
     }
 
     func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
-        return false
+        false
     }
 
     public static func ==(lhs: EquatableFailureReporter, rhs: EquatableFailureReporter) -> Bool {
-        return lhs.isEqualTo(rhs)
+        lhs.isEqualTo(rhs)
     }
 }

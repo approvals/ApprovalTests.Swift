@@ -64,7 +64,7 @@ class Namer: ApprovalNamer {
     }
 
     private func isTestCase(_ element: String) -> Bool {
-        return (element.range(of: "XCTest", options: .caseInsensitive) != nil)
+        (element.range(of: "XCTest", options: .caseInsensitive) != nil)
     }
 
     private func extractTestName(result: String) -> String {
