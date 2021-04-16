@@ -1,4 +1,8 @@
-@testable import ApprovalTests_Swift
+#if os(OSX)
+    @testable import ApprovalTests_Swift
+#elseif os(iOS)
+    @testable import ApprovalTests_iOS
+#endif
 import XCTest
 
 final class ReporterTests: XCTestCase {

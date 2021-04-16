@@ -39,6 +39,7 @@
 		48B6BF6626290CAF00B956A4 /* MacReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1707BC3C179D89F3FD2B84 /* MacReporter.swift */; };
 		48B6BF7726290E2500B956A4 /* OptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170DC8AAB0910AD476210C /* OptionsTests.swift */; };
 		48B6BF7826290E2500B956A4 /* OptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170DC8AAB0910AD476210C /* OptionsTests.swift */; };
+		48B6BF9126293D5400B956A4 /* ReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17064685A20DAA7CFE6421 /* ReporterTests.swift */; };
 		9730813D4772C7FCA170E0EA /* ApprovalWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973088485E8B1D043616B220 /* ApprovalWriter.swift */; };
 		973081B984AC2F9B66D19D7F /* ApprovalsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308D241492E13CB5BF5866 /* ApprovalsTest.swift */; };
 		9730846152DA8E5EC7A1170F /* Namer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973086013CD2288DC3DE9F4E /* Namer.swift */; };
@@ -599,6 +600,7 @@
 				163E1884217FB49800A54A48 /* TestReporter.swift in Sources */,
 				163E1885217FB4A200A54A48 /* CombinationTests.swift in Sources */,
 				48B6BF54262906DD00B956A4 /* ApprovalTests_SwiftTests.swift in Sources */,
+				48B6BF9126293D5400B956A4 /* ReporterTests.swift in Sources */,
 				163E1886217FB4B700A54A48 /* SampleArrayTest.swift in Sources */,
 				163E1887217FB4C800A54A48 /* ApprovalsTest.swift in Sources */,
 				163E1888217FB4E500A54A48 /* Samples.swift in Sources */,
