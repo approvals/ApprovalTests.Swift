@@ -6,6 +6,7 @@ import XCTest
 #endif
 
 final class SampleArrayTest: XCTestCase {
+
     func testList() throws {
         var names: [String] = ["Llewellyn", "James", "Dan", "Jason", "Katrina"]
         names.sort()

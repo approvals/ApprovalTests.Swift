@@ -1,11 +1,12 @@
-import XCTest
 #if os(OSX)
     @testable import ApprovalTests_Swift
 #elseif os(iOS)
     @testable import ApprovalTests_iOS
 #endif
+import XCTest
 
 final class ApprovalsTest: XCTestCase {
+
     func testToString() throws {
         try Approvals.verify(CGRect(x: 5, y: 10, width: 100, height: 200))
     }
@@ -19,7 +20,7 @@ final class ApprovalsTest: XCTestCase {
     }
 }
 
-class MyRect: Codable {
+private class MyRect: Codable {
     var x: Int
     var y: Int
     var width: Int
