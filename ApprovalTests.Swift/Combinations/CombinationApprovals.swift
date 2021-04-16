@@ -195,7 +195,7 @@ public class CombinationApprovals {
                                                                                                _ params8: Array<IN8>,
                                                                                                _ params9: Array<IN9>,
                                                                                                file: StaticString = #file) throws {
-        var output = String()
+        var output = ""
         for in1 in params1 {
             for in2 in params2 {
                 for in3 in params3 {

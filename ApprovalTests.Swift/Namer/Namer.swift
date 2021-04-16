@@ -1,9 +1,9 @@
 import Foundation
 
 class Namer: ApprovalNamer {
-    var className = String()
-    var testName = String()
-    var fromFile = String()
+    var className = ""
+    var testName = ""
+    var fromFile = ""
 
     init(_ file: String) {
         fromFile = file
@@ -25,7 +25,7 @@ class Namer: ApprovalNamer {
 
     private func demangleStack() {
         do {
-            var result = String()
+            var result = ""
 
             let symbols = Thread.callStackSymbols
 
