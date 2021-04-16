@@ -1,5 +1,3 @@
-import Foundation
-
 class GenericDiffReporter: GenericDiffReporterBase {
     override func runProcess(received: String, approved: String) throws {
         let (workingReceived, workingApproved) = cleanUpFileNames(received: received, approved: approved)

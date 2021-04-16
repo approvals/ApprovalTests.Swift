@@ -1,5 +1,3 @@
-import Foundation
-
 public class UseReporterFromAnnotations: ApprovalFailureReporter {
     public init() {}
 

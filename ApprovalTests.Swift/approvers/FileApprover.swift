@@ -1,5 +1,3 @@
-import Foundation
-
 class FileApprover: ApprovalApprover {
     private static var failer: Failer = XCTFailer()
 

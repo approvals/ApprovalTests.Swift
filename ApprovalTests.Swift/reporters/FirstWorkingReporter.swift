@@ -1,5 +1,3 @@
-import Foundation
-
 class FirstWorkingReporter: EquatableFailureReporter {
     private let reporters: [EquatableFailureReporter]
 

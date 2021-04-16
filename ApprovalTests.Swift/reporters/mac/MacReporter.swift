@@ -1,5 +1,3 @@
-import Foundation
-
 class MacReporter: FirstWorkingReporter {
     init() {
         #if os(macOS)

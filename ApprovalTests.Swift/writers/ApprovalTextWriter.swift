@@ -1,5 +1,3 @@
-import Foundation
-
 class ApprovalTextWriter: ApprovalWriter {
     var text = String()
     var fileExtensionWithoutDot = String()

@@ -1,4 +1,3 @@
-import Foundation
 #if os(OSX)
     @testable import ApprovalTests_Swift
 #elseif os(iOS)

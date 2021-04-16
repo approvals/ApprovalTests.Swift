@@ -1,6 +1,3 @@
-import Foundation
-import XCTest
-
 #if os(iOS)
 
     class XCTReporter: EquatableFailureReporter {

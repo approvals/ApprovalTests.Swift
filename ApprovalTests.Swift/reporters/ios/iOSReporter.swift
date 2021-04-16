@@ -1,5 +1,3 @@
-import Foundation
-
 class iOSReporter: FirstWorkingReporter {
     init() {
         #if os(iOS)

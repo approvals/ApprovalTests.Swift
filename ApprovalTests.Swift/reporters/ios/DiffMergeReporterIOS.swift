@@ -1,5 +1,3 @@
-import Foundation
-
 #if os(iOS)
 
     class DiffMergeReporter: GenericDiffReporter {

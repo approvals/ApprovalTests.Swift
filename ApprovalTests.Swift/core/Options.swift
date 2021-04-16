@@ -1,5 +1,3 @@
-import Foundation
-
 class Options {
     private let reporter: ApprovalFailureReporter?
 

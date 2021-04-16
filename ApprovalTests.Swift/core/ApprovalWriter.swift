@@ -1,5 +1,3 @@
-import Foundation
-
 protocol ApprovalWriter {
     func writeReceivedFile(received: String) -> String
     func getReceivedFilename(base: String) -> String

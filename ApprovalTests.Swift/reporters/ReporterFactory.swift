@@ -1,5 +1,3 @@
-import Foundation
-
 class ReporterFactory {
     let FRONTLOADED_REPORTER = "FrontloadedReporter"
     let USE_REPORTER = "UseReporter";
