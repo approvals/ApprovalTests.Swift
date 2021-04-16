@@ -1,8 +1,8 @@
 import XCTest
 #if os(OSX)
-@testable import ApprovalTests_Swift
+    @testable import ApprovalTests_Swift
 #elseif os(iOS)
-@testable import ApprovalTests_iOS
+    @testable import ApprovalTests_iOS
 #endif
 
 class ApprovalTests_SwiftTests: XCTestCase {
@@ -29,7 +29,7 @@ class ApprovalTests_SwiftTests: XCTestCase {
 
 class TestFailer: Failer {
     var failed = false
-    
+
     override func fail(_ message: String) throws {
         failed = true
     }

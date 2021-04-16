@@ -1,8 +1,8 @@
 import Foundation
 #if os(OSX)
-@testable import ApprovalTests_Swift
+    @testable import ApprovalTests_Swift
 #elseif os(iOS)
-@testable import ApprovalTests_iOS
+    @testable import ApprovalTests_iOS
 #endif
 
 class TestReporter: EquatableFailureReporter {
