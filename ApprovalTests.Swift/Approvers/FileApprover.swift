@@ -11,10 +11,10 @@ class FileApprover: ApprovalApprover {
         FileApprover.failer = XCTFailer()
     }
 
-    let fileManager = FileManager.default
-    var received: String
-    var approved: String
-    var writer: ApprovalWriter
+    private let fileManager = FileManager.default
+    private let received: String
+    private let approved: String
+    private let writer: ApprovalWriter
 
     init(_ writerIn: ApprovalWriter, _ namerIn: ApprovalNamer) {
         let base = namerIn.getSourceFilePath()
