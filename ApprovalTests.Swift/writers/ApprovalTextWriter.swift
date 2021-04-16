@@ -1,10 +1,10 @@
 class ApprovalTextWriter: ApprovalWriter {
-    var text = String()
-    var fileExtensionWithoutDot = String()
+    private let text: String
+    private let fileExtensionWithoutDot: String
 
-    init(_ textIn: String, _ fileExtensionWithoutDotIn: String) {
-        text = textIn
-        fileExtensionWithoutDot = fileExtensionWithoutDotIn
+    init(_ text: String, _ fileExtensionWithoutDot: String) {
+        self.text = text
+        self.fileExtensionWithoutDot = fileExtensionWithoutDot
     }
 
     func getApprovalFilename(base: String) -> String {
