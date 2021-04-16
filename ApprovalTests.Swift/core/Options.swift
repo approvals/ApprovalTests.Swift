@@ -4,7 +4,7 @@ class Options {
     private let reporter: ApprovalFailureReporter?
 
     public init() {
-        self.reporter = nil
+        reporter = nil
     }
 
     public init(_ reporter: ApprovalFailureReporter) {
