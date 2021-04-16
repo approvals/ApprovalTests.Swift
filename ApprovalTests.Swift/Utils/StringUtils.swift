@@ -1,4 +1,4 @@
-class StringUtils {
+enum StringUtils {
 
     /***********************************************************************/
     public static func padNumber(_ number: Int, _ digits: Int) -> String {
