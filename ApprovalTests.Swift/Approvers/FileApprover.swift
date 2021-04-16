@@ -16,11 +16,11 @@ class FileApprover: ApprovalApprover {
     private let approved: String
     private let writer: ApprovalWriter
 
-    init(_ writerIn: ApprovalWriter, _ namerIn: ApprovalNamer) {
-        let base = namerIn.getSourceFilePath()
-        received = writerIn.getReceivedFilename(base: base)
-        approved = writerIn.getApprovalFilename(base: base)
-        writer = writerIn
+    init(_ writer: ApprovalWriter, _ namer: ApprovalNamer) {
+        let base = namer.getSourceFilePath()
+        received = writer.getReceivedFilename(base: base)
+        approved = writer.getApprovalFilename(base: base)
+        self.writer = writer
     }
 
     func approve() -> Bool {
