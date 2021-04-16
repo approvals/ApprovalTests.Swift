@@ -214,9 +214,9 @@
 			isa = PBXGroup;
 			children = (
 				9730802AF82CC10B0E3F69C7 /* DiffMergeReporter.swift */,
-				BB1707BC3C179D89F3FD2B84 /* MacReporter.swift */,
-				BB170A02C65DDFAD9FADE96C /* KaleidoscopeReporter.swift */,
 				BB1705F1B761A7E6263D8FFB /* GenericDiffReporter.swift */,
+				BB170A02C65DDFAD9FADE96C /* KaleidoscopeReporter.swift */,
+				BB1707BC3C179D89F3FD2B84 /* MacReporter.swift */,
 			);
 			path = mac;
 			sourceTree = "<group>";
@@ -224,10 +224,10 @@
 		163E1880217FA9C700A54A48 /* ios */ = {
 			isa = PBXGroup;
 			children = (
-				163E1881217FAA4D00A54A48 /* XCTReporter.swift */,
-				BB1700198EEF7F2B448074E8 /* GenericDiffReporterIOS.swift */,
 				BB17070775083BB000324A0A /* DiffMergeReporterIOS.swift */,
+				BB1700198EEF7F2B448074E8 /* GenericDiffReporterIOS.swift */,
 				BB1705FDCFBE674F39B7D859 /* iOSReporter.swift */,
+				163E1881217FAA4D00A54A48 /* XCTReporter.swift */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -259,16 +259,16 @@
 		168C9626216023F9008F354C /* ApprovalTests.Swift */ = {
 			isa = PBXGroup;
 			children = (
-				168C9627216023F9008F354C /* ApprovalTests_Swift.h */,
-				168C9628216023F9008F354C /* Info.plist */,
 				97308BBAF1CDE277460537C7 /* Approvals.swift */,
 				97308185AAA6F1A2582A854B /* approvers */,
+				9730882AB24F40884CA83F8C /* combinations */,
 				973084D9A486DE725CE0CA7D /* core */,
 				973081106774B58345BDD43C /* namer */,
 				97308887A6CE81339049E3B4 /* reporters */,
 				97308CA7D8483A14498F1D40 /* utils */,
 				973086E353683EE643DD4BA3 /* writers */,
-				9730882AB24F40884CA83F8C /* combinations */,
+				168C9627216023F9008F354C /* ApprovalTests_Swift.h */,
+				168C9628216023F9008F354C /* Info.plist */,
 				973086D51D21070606B41784 /* ToDo.txt */,
 			);
 			path = ApprovalTests.Swift;
@@ -277,16 +277,16 @@
 		168C9631216023F9008F354C /* ApprovalTests.SwiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				BB1706F98B5163B28C84D8D5 /* iOSApprovalsWatcher.py */,
+				97308D241492E13CB5BF5866 /* ApprovalsTest.swift */,
 				168C9632216023F9008F354C /* ApprovalTests_SwiftTests.swift */,
-				168C9634216023F9008F354C /* Info.plist */,
+				BB170DC8AAB0910AD476210C /* OptionsTests.swift */,
+				97308BE497F4102343464B3C /* Samples.swift */,
 				973084FDA2BB35BA2CA5DC70 /* TestReporter.swift */,
 				97308C741E9083C1EF8992C9 /* combinations.tests */,
 				97308D78086F701623ED654B /* Demo */,
-				97308D241492E13CB5BF5866 /* ApprovalsTest.swift */,
-				97308BE497F4102343464B3C /* Samples.swift */,
 				BB17064E8F6B27C1C626D959 /* Reporters */,
-				BB1706F98B5163B28C84D8D5 /* iOSApprovalsWatcher.py */,
-				BB170DC8AAB0910AD476210C /* OptionsTests.swift */,
+				168C9634216023F9008F354C /* Info.plist */,
 			);
 			path = ApprovalTests.SwiftTests;
 			sourceTree = "<group>";
@@ -295,8 +295,8 @@
 			isa = PBXGroup;
 			children = (
 				97308B0163F571871E65B39A /* ApprovalNamer.swift */,
-				973086013CD2288DC3DE9F4E /* Namer.swift */,
 				97308F82A0741AAE8F498A37 /* Loader.swift */,
+				973086013CD2288DC3DE9F4E /* Namer.swift */,
 			);
 			path = namer;
 			sourceTree = "<group>";
@@ -340,13 +340,13 @@
 		97308887A6CE81339049E3B4 /* reporters */ = {
 			isa = PBXGroup;
 			children = (
-				163E1880217FA9C700A54A48 /* ios */,
-				163E187F217FA9A500A54A48 /* mac */,
-				9730820AFFF03C5745F45021 /* ReporterFactory.swift */,
-				973083DADF04D723670F34D9 /* UseReporterFromAnnotations.swift */,
+				BB1701DBF0B6E0AD00A62DDD /* DiffReporter.swift */,
 				BB17059F97E2ED858F9C9A2F /* FirstWorkingReporter.swift */,
 				BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */,
-				BB1701DBF0B6E0AD00A62DDD /* DiffReporter.swift */,
+				9730820AFFF03C5745F45021 /* ReporterFactory.swift */,
+				973083DADF04D723670F34D9 /* UseReporterFromAnnotations.swift */,
+				163E1880217FA9C700A54A48 /* ios */,
+				163E187F217FA9A500A54A48 /* mac */,
 			);
 			path = reporters;
 			sourceTree = "<group>";
@@ -362,8 +362,8 @@
 		97308CA7D8483A14498F1D40 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				97308B6D486609330CC17CB0 /* CwlDemangle.swift */,
 				97308A9857256E4959E94600 /* ApprovalError.swift */,
+				97308B6D486609330CC17CB0 /* CwlDemangle.swift */,
 				973086C8511ED6F6F2F50094 /* StringUtils.swift */,
 			);
 			path = utils;
