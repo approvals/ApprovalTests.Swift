@@ -3,9 +3,14 @@ import XCTest
 
 #if os(iOS)
 
-class XCTReporter: ApprovalFailureReporter {
-    
-    func report(received: String, approved: String) -> Bool {
+class XCTReporter: EquatableFailureReporter {
+
+    override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
+        guard other is EquatableFailureReporter else { return false }
+        return true
+    }
+
+    override func report(received: String, approved: String) -> Bool {
         // read the files into strings
         let approvedUrl = URL(fileURLWithPath: approved)
         let receivedUrl = URL(fileURLWithPath: received)
