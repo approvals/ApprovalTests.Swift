@@ -17,7 +17,7 @@ class FirstWorkingReporter: EquatableFailureReporter {
     }
 
     override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
-        guard let otherReporter = other as? FirstWorkingReporter else { return false }
-        return reporters == otherReporter.reporters
+        guard let other = other as? FirstWorkingReporter else { return false }
+        return reporters == other.reporters
     }
 }

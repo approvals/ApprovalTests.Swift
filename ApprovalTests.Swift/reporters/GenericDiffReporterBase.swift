@@ -29,8 +29,8 @@ class GenericDiffReporterBase: EquatableFailureReporter {
     }
 
     override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
-        guard let otherReporter = other as? GenericDiffReporterBase else { return false }
-        return programPath == otherReporter.programPath
+        guard let other = other as? GenericDiffReporterBase else { return false }
+        return programPath == other.programPath
     }
 
     func runProcess(received: String, approved: String) throws {
