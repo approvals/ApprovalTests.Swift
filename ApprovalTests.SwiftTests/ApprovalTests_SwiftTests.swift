@@ -5,7 +5,7 @@ import XCTest
     @testable import ApprovalTests_iOS
 #endif
 
-class ApprovalTests_SwiftTests: XCTestCase {
+final class ApprovalTests_SwiftTests: XCTestCase {
 
     func testClassName() throws {
         let name = Approvals.getNamer()

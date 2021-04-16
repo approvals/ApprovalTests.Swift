@@ -5,7 +5,7 @@ import XCTest
     @testable import ApprovalTests_iOS
 #endif
 
-class SampleArrayTest: XCTestCase {
+final class SampleArrayTest: XCTestCase {
     func testList() throws {
         var names: [String] = ["Llewellyn", "James", "Dan", "Jason", "Katrina"]
         names.sort()
