@@ -1,4 +1,4 @@
 enum ApprovalError: Error {
-    case Error(String)
-    case SkipCombination
+    case error(String)
+    case skipCombination
 }
