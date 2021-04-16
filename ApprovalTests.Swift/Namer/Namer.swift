@@ -1,9 +1,9 @@
 import Foundation
 
 class Namer: ApprovalNamer {
-    var className = ""
-    var testName = ""
-    var fromFile = ""
+    private let fromFile: String
+    private var className = ""
+    private var testName = ""
 
     init(_ file: String) {
         fromFile = file
