@@ -3,7 +3,7 @@ import XCTest
 
 final class ReporterTests: XCTestCase {
 
-    func test_firstWorking() throws {
+    func testFirstWorking() throws {
         let reporter1 = TestReporter(success: false)
         let reporter2 = TestReporter(success: true)
         let reporter3 = TestReporter(success: true)

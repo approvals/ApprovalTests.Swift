@@ -7,12 +7,12 @@ import XCTest
 
 final class OptionsTests: XCTestCase {
 
-    func test_optionsGivesTheDefaultReporter() throws {
+    func testOptionsGivesTheDefaultReporter() throws {
         let o = Options()
         XCTAssertEqual(Approvals.getReporter() as! EquatableFailureReporter, o.getReporter() as! EquatableFailureReporter)
     }
 
-    func test_optionsHasReporters() throws {
+    func testOptionsHasReporters() throws {
         let reporter = iOSReporter()
         let o1 = Options(reporter)
         let o2 = Options().withReporter(reporter)
