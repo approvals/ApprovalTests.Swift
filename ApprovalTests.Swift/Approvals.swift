@@ -7,13 +7,13 @@ public class Approvals {
         }
     }
 
-    class func getNamer(file: StaticString = #file) -> ApprovalNamer {
+    class func getNamer(file: StaticString = #filePath) -> ApprovalNamer {
         NameCreator().load(file.description)
     }
 
     public static func verifyAsJson<INOBJ: Codable>(_ object: INOBJ,
                                                     _ reporter: ApprovalFailureReporter = getReporter(),
-                                                    file: StaticString = #file) throws {
+                                                    file: StaticString = #filePath) throws {
         let jsonEncoder = JSONEncoder()
         jsonEncoder.outputFormatting = .prettyPrinted
         do {
@@ -27,13 +27,13 @@ public class Approvals {
 
     public static func verifyAll(_ label: String, _ array: [Any],
                                  _ reporter: ApprovalFailureReporter = getReporter(),
-                                 file: StaticString = #file) throws {
+                                 file: StaticString = #filePath) throws {
         try verify(ApprovalTextWriter(StringUtils.toString(label, array), "txt"), reporter, file)
     }
 
     public static func verify(_ response: String,
                               reporter: ApprovalFailureReporter = getReporter(),
-                              file: StaticString = #file) throws {
+                              file: StaticString = #filePath) throws {
         try verify(ApprovalTextWriter(response, "txt"), reporter, file);
     }
 
@@ -69,7 +69,7 @@ public class Approvals {
 
     public static func verify<INOBJ>(_ object: INOBJ,
                                      _ reporter: ApprovalFailureReporter = getReporter(),
-                                     file: StaticString = #file) throws {
+                                     file: StaticString = #filePath) throws {
         let description = String(describing: type(of: object.self)) + String(describing: object)
         try verify(description, reporter: reporter, file: file)
     }
