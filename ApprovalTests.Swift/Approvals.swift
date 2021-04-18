@@ -47,7 +47,7 @@ public class Approvals {
                               _ namer: ApprovalNamer,
                               _ reporter: ApprovalFailureReporter,
                               _ file: StaticString) throws {
-        try verify(FileApprover(writer, namer), reporter, file);
+        try verify(FileApprover(writer: writer, namer: namer), reporter, file);
     }
 
     private class func verify(_ approver: FileApprover, _ reporter: ApprovalFailureReporter,

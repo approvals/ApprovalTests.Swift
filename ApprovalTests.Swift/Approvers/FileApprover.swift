@@ -16,7 +16,7 @@ class FileApprover: ApprovalApprover {
     private let approved: String
     private let writer: ApprovalWriter
 
-    init(_ writer: ApprovalWriter, _ namer: ApprovalNamer) {
+    init(writer: ApprovalWriter, namer: ApprovalNamer) {
         let base = namer.getSourceFilePath()
         received = writer.getReceivedFilename(base: base)
         approved = writer.getApprovalFilename(base: base)
