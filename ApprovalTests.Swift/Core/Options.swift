@@ -5,7 +5,7 @@ class Options {
         reporter = nil
     }
 
-    public init(_ reporter: ApprovalFailureReporter) {
+    public init(reporter: ApprovalFailureReporter) {
         self.reporter = reporter
     }
 
@@ -14,6 +14,6 @@ class Options {
     }
 
     public func withReporter(_ reporter: ApprovalFailureReporter) -> Options {
-        Options(reporter)
+        Options(reporter: reporter)
     }
 }

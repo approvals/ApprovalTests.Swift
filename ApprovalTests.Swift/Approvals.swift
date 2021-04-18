@@ -52,7 +52,7 @@ public class Approvals {
 
     private class func verify(_ approver: FileApprover, _ reporter: ApprovalFailureReporter,
                               _ file: StaticString) throws {
-        try verify(approver, file, Options(reporter))
+        try verify(approver, file, Options(reporter: reporter))
     }
 
     private class func verify(_ approver: FileApprover,
