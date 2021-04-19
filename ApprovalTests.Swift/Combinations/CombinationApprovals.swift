@@ -2,7 +2,7 @@ class INUNUSED {
     var description: String { "SKIP" }
 }
 
-public class CombinationApprovals {
+public enum CombinationApprovals {
 
     public static func verifyAllCombinations<IN1, OUT>(
             _ call: @escaping (IN1) -> OUT,
