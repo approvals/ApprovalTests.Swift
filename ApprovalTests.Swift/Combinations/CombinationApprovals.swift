@@ -4,9 +4,11 @@ class INUNUSED {
 
 public class CombinationApprovals {
 
-    public static func verifyAllCombinations<IN1, OUT>(_ call: @escaping (IN1) -> OUT,
-                                                       _ params1: Array<IN1>,
-                                                       file: StaticString = #filePath) throws {
+    public static func verifyAllCombinations<IN1, OUT>(
+            _ call: @escaping (IN1) -> OUT,
+            _ params1: Array<IN1>,
+            file: StaticString = #filePath
+    ) throws {
         let outcall: (IN1, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED) -> OUT = {
             var _ = $1
             var _ = $2
@@ -30,10 +32,12 @@ public class CombinationApprovals {
         try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file)
     }
 
-    public static func verifyAllCombinations<IN1, IN2, OUT>(_ call: @escaping (IN1, IN2) -> OUT,
-                                                            _ params1: Array<IN1>,
-                                                            _ params2: Array<IN2>,
-                                                            file: StaticString = #filePath) throws {
+    public static func verifyAllCombinations<IN1, IN2, OUT>(
+            _ call: @escaping (IN1, IN2) -> OUT,
+            _ params1: Array<IN1>,
+            _ params2: Array<IN2>,
+            file: StaticString = #filePath
+    ) throws {
         let outcall: (IN1, IN2, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED) -> OUT = {
             var _ = $2
             var _ = $3
@@ -55,11 +59,13 @@ public class CombinationApprovals {
         try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file)
     }
 
-    public static func verifyAllCombinations<IN1, IN2, IN3, OUT>(_ call: @escaping (IN1, IN2, IN3) -> OUT,
-                                                                 _ params1: Array<IN1>,
-                                                                 _ params2: Array<IN2>,
-                                                                 _ params3: Array<IN3>,
-                                                                 file: StaticString = #filePath) throws {
+    public static func verifyAllCombinations<IN1, IN2, IN3, OUT>(
+            _ call: @escaping (IN1, IN2, IN3) -> OUT,
+            _ params1: Array<IN1>,
+            _ params2: Array<IN2>,
+            _ params3: Array<IN3>,
+            file: StaticString = #filePath
+    ) throws {
         let outcall: (IN1, IN2, IN3, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED) -> OUT = {
             var _ = $3
             var _ = $4
@@ -79,12 +85,14 @@ public class CombinationApprovals {
         try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file)
     }
 
-    public static func verifyAllCombinations<IN1, IN2, IN3, IN4, OUT>(_ call: @escaping (IN1, IN2, IN3, IN4) -> OUT,
-                                                                      _ params1: Array<IN1>,
-                                                                      _ params2: Array<IN2>,
-                                                                      _ params3: Array<IN3>,
-                                                                      _ params4: Array<IN4>,
-                                                                      file: StaticString = #filePath) throws {
+    public static func verifyAllCombinations<IN1, IN2, IN3, IN4, OUT>(
+            _ call: @escaping (IN1, IN2, IN3, IN4) -> OUT,
+            _ params1: Array<IN1>,
+            _ params2: Array<IN2>,
+            _ params3: Array<IN3>,
+            _ params4: Array<IN4>,
+            file: StaticString = #filePath
+    ) throws {
         let outcall: (IN1, IN2, IN3, IN4, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED) -> OUT = {
             var _ = $4
             var _ = $5
@@ -102,13 +110,15 @@ public class CombinationApprovals {
         try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file)
     }
 
-    public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, OUT>(_ call: @escaping (IN1, IN2, IN3, IN4, IN5) -> OUT,
-                                                                           _ params1: Array<IN1>,
-                                                                           _ params2: Array<IN2>,
-                                                                           _ params3: Array<IN3>,
-                                                                           _ params4: Array<IN4>,
-                                                                           _ params5: Array<IN5>,
-                                                                           file: StaticString = #filePath) throws {
+    public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, OUT>(
+            _ call: @escaping (IN1, IN2, IN3, IN4, IN5) -> OUT,
+            _ params1: Array<IN1>,
+            _ params2: Array<IN2>,
+            _ params3: Array<IN3>,
+            _ params4: Array<IN4>,
+            _ params5: Array<IN5>,
+            file: StaticString = #filePath
+    ) throws {
         let outcall: (IN1, IN2, IN3, IN4, IN5, INUNUSED, INUNUSED, INUNUSED, INUNUSED) -> OUT = {
             var _ = $5
             var _ = $6
@@ -124,14 +134,16 @@ public class CombinationApprovals {
         try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file)
     }
 
-    public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, OUT>(_ call: @escaping (IN1, IN2, IN3, IN4, IN5, IN6) -> OUT,
-                                                                                _ params1: Array<IN1>,
-                                                                                _ params2: Array<IN2>,
-                                                                                _ params3: Array<IN3>,
-                                                                                _ params4: Array<IN4>,
-                                                                                _ params5: Array<IN5>,
-                                                                                _ params6: Array<IN6>,
-                                                                                file: StaticString = #filePath) throws {
+    public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, OUT>(
+            _ call: @escaping (IN1, IN2, IN3, IN4, IN5, IN6) -> OUT,
+            _ params1: Array<IN1>,
+            _ params2: Array<IN2>,
+            _ params3: Array<IN3>,
+            _ params4: Array<IN4>,
+            _ params5: Array<IN5>,
+            _ params6: Array<IN6>,
+            file: StaticString = #filePath
+    ) throws {
         let outcall: (IN1, IN2, IN3, IN4, IN5, IN6, INUNUSED, INUNUSED, INUNUSED) -> OUT = {
             var _ = $6
             var _ = $7
@@ -145,15 +157,17 @@ public class CombinationApprovals {
         try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file)
     }
 
-    public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, IN7, OUT>(_ call: @escaping (IN1, IN2, IN3, IN4, IN5, IN6, IN7) -> OUT,
-                                                                                     _ params1: Array<IN1>,
-                                                                                     _ params2: Array<IN2>,
-                                                                                     _ params3: Array<IN3>,
-                                                                                     _ params4: Array<IN4>,
-                                                                                     _ params5: Array<IN5>,
-                                                                                     _ params6: Array<IN6>,
-                                                                                     _ params7: Array<IN7>,
-                                                                                     file: StaticString = #filePath) throws {
+    public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, IN7, OUT>(
+            _ call: @escaping (IN1, IN2, IN3, IN4, IN5, IN6, IN7) -> OUT,
+            _ params1: Array<IN1>,
+            _ params2: Array<IN2>,
+            _ params3: Array<IN3>,
+            _ params4: Array<IN4>,
+            _ params5: Array<IN5>,
+            _ params6: Array<IN6>,
+            _ params7: Array<IN7>,
+            file: StaticString = #filePath
+    ) throws {
         let outcall: (IN1, IN2, IN3, IN4, IN5, IN6, IN7, INUNUSED, INUNUSED) -> OUT = {
             var _ = $7
             var _ = $8
@@ -165,16 +179,18 @@ public class CombinationApprovals {
         try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file)
     }
 
-    public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, OUT>(_ call: @escaping (IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8) -> OUT,
-                                                                                          _ params1: Array<IN1>,
-                                                                                          _ params2: Array<IN2>,
-                                                                                          _ params3: Array<IN3>,
-                                                                                          _ params4: Array<IN4>,
-                                                                                          _ params5: Array<IN5>,
-                                                                                          _ params6: Array<IN6>,
-                                                                                          _ params7: Array<IN7>,
-                                                                                          _ params8: Array<IN8>,
-                                                                                          file: StaticString = #filePath) throws {
+    public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, OUT>(
+            _ call: @escaping (IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8) -> OUT,
+            _ params1: Array<IN1>,
+            _ params2: Array<IN2>,
+            _ params3: Array<IN3>,
+            _ params4: Array<IN4>,
+            _ params5: Array<IN5>,
+            _ params6: Array<IN6>,
+            _ params7: Array<IN7>,
+            _ params8: Array<IN8>,
+            file: StaticString = #filePath
+    ) throws {
         let outcall: (IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, INUNUSED) -> OUT = {
             var _ = $8
             return call($0, $1, $2, $3, $4, $5, $6, $7)
@@ -184,17 +200,19 @@ public class CombinationApprovals {
         try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file)
     }
 
-    public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, OUT>(_ call: (IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9) -> OUT,
-                                                                                               _ params1: Array<IN1>,
-                                                                                               _ params2: Array<IN2>,
-                                                                                               _ params3: Array<IN3>,
-                                                                                               _ params4: Array<IN4>,
-                                                                                               _ params5: Array<IN5>,
-                                                                                               _ params6: Array<IN6>,
-                                                                                               _ params7: Array<IN7>,
-                                                                                               _ params8: Array<IN8>,
-                                                                                               _ params9: Array<IN9>,
-                                                                                               file: StaticString = #filePath) throws {
+    public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, OUT>(
+            _ call: (IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9) -> OUT,
+            _ params1: Array<IN1>,
+            _ params2: Array<IN2>,
+            _ params3: Array<IN3>,
+            _ params4: Array<IN4>,
+            _ params5: Array<IN5>,
+            _ params6: Array<IN6>,
+            _ params7: Array<IN7>,
+            _ params8: Array<IN8>,
+            _ params9: Array<IN9>,
+            file: StaticString = #filePath
+    ) throws {
         var output = ""
         for in1 in params1 {
             for in2 in params2 {

@@ -11,10 +11,12 @@ public class Approvals {
         NameCreator().load(file.description)
     }
 
-    public static func verifyAsJson<INOBJ: Codable>(_ object: INOBJ,
-                                                    _ reporter: ApprovalFailureReporter = getReporter(),
-                                                    file: StaticString = #filePath,
-                                                    line: UInt = #line) throws {
+    public static func verifyAsJson<INOBJ: Codable>(
+            _ object: INOBJ,
+            _ reporter: ApprovalFailureReporter = getReporter(),
+            file: StaticString = #filePath,
+            line: UInt = #line
+    ) throws {
         let jsonEncoder = JSONEncoder()
         jsonEncoder.outputFormatting = .prettyPrinted
         do {
@@ -26,46 +28,59 @@ public class Approvals {
         }
     }
 
-    public static func verifyAll(_ label: String, _ array: [Any],
-                                 _ reporter: ApprovalFailureReporter = getReporter(),
-                                 file: StaticString = #filePath,
-                                 line: UInt = #line) throws {
+    public static func verifyAll(
+            _ label: String,
+            _ array: [Any],
+            _ reporter: ApprovalFailureReporter = getReporter(),
+            file: StaticString = #filePath,
+            line: UInt = #line
+    ) throws {
         try verify(writer: ApprovalTextWriter(StringUtils.toString(label, array), "txt"), reporter: reporter, file: file, line: line)
     }
 
-    public static func verify(_ response: String,
-                              reporter: ApprovalFailureReporter = getReporter(),
-                              file: StaticString = #filePath,
-                              line: UInt = #line) throws {
+    public static func verify(
+            _ response: String,
+            reporter: ApprovalFailureReporter = getReporter(),
+            file: StaticString = #filePath,
+            line: UInt = #line
+    ) throws {
         try verify(writer: ApprovalTextWriter(response, "txt"), reporter: reporter, file: file, line: line);
     }
 
-    private class func verify(writer: ApprovalTextWriter,
-                              reporter: ApprovalFailureReporter = getReporter(),
-                              file: StaticString,
-                              line: UInt) throws {
+    private class func verify(
+            writer: ApprovalTextWriter,
+            reporter: ApprovalFailureReporter = getReporter(),
+            file: StaticString,
+            line: UInt
+    ) throws {
         try verify(writer: writer, namer: createApprovalNamer(file.description), reporter: reporter, file: file, line: line);
     }
 
-    private class func verify(writer: ApprovalTextWriter,
-                              namer: ApprovalNamer,
-                              reporter: ApprovalFailureReporter,
-                              file: StaticString,
-                              line: UInt) throws {
+    private class func verify(
+            writer: ApprovalTextWriter,
+            namer: ApprovalNamer,
+            reporter: ApprovalFailureReporter,
+            file: StaticString,
+            line: UInt
+    ) throws {
         try verify(approver: FileApprover(writer: writer, namer: namer), reporter: reporter, file: file, line: line);
     }
 
-    private class func verify(approver: FileApprover,
-                              reporter: ApprovalFailureReporter,
-                              file: StaticString,
-                              line: UInt) throws {
+    private class func verify(
+            approver: FileApprover,
+            reporter: ApprovalFailureReporter,
+            file: StaticString,
+            line: UInt
+    ) throws {
         try verify(approver: approver, file: file, options: Options(reporter: reporter), line: line)
     }
 
-    private class func verify(approver: FileApprover,
-                              file: StaticString,
-                              options: Options = Options(),
-                              line: UInt) throws {
+    private class func verify(
+            approver: FileApprover,
+            file: StaticString,
+            options: Options = Options(),
+            line: UInt
+    ) throws {
         let reporter = options.getReporter()
         if !approver.approve() {
             approver.reportFailure(reporter: reporter);
@@ -75,10 +90,12 @@ public class Approvals {
         }
     }
 
-    public static func verify<INOBJ>(_ object: INOBJ,
-                                     _ reporter: ApprovalFailureReporter = getReporter(),
-                                     file: StaticString = #filePath,
-                                     line: UInt = #line) throws {
+    public static func verify<INOBJ>(
+            _ object: INOBJ,
+            _ reporter: ApprovalFailureReporter = getReporter(),
+            file: StaticString = #filePath,
+            line: UInt = #line
+    ) throws {
         let description = String(describing: type(of: object.self)) + String(describing: object)
         try verify(description, reporter: reporter, file: file, line: line)
     }
