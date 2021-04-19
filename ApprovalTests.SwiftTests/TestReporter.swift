@@ -5,6 +5,8 @@
 #endif
 
 class TestReporter: EquatableFailureReporter {
+    public private(set) var received: String = ""
+    public private(set) var approved: String = ""
     private let success: Bool
 
     init(success: Bool) {
@@ -16,7 +18,4 @@ class TestReporter: EquatableFailureReporter {
         self.approved = approved
         return success
     }
-
-    public private(set) var received: String = ""
-    public private(set) var approved: String = ""
 }
