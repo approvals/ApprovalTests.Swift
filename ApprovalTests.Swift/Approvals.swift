@@ -61,7 +61,7 @@ public class Approvals {
         let reporter = options.getReporter()
         if !approver.approve() {
             approver.reportFailure(reporter: reporter);
-            try approver.fail();
+            try approver.fail(file: file, line: 0);
         } else {
             approver.cleanUpAfterSuccess(reporter: reporter);
         }

@@ -58,9 +58,9 @@ class FileApprover: ApprovalApprover {
         }
     }
 
-    func fail() throws {
+    func fail(file: StaticString, line: UInt) throws {
         let message = "Failed Approval \nApproved:\(approved) \nReceived:\(received)"
-        try FileApprover.failer.fail(message)
+        try FileApprover.failer.fail(message, file: file, line: line)
     }
 
     func reportFailure(reporter: ApprovalFailureReporter) {
