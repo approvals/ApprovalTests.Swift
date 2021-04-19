@@ -6,7 +6,7 @@ public class CombinationApprovals {
 
     public static func verifyAllCombinations<IN1, OUT>(
             _ call: @escaping (IN1) -> OUT,
-            _ params1: Array<IN1>,
+            _ params1: [IN1],
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
@@ -35,8 +35,8 @@ public class CombinationApprovals {
 
     public static func verifyAllCombinations<IN1, IN2, OUT>(
             _ call: @escaping (IN1, IN2) -> OUT,
-            _ params1: Array<IN1>,
-            _ params2: Array<IN2>,
+            _ params1: [IN1],
+            _ params2: [IN2],
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
@@ -63,9 +63,9 @@ public class CombinationApprovals {
 
     public static func verifyAllCombinations<IN1, IN2, IN3, OUT>(
             _ call: @escaping (IN1, IN2, IN3) -> OUT,
-            _ params1: Array<IN1>,
-            _ params2: Array<IN2>,
-            _ params3: Array<IN3>,
+            _ params1: [IN1],
+            _ params2: [IN2],
+            _ params3: [IN3],
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
@@ -90,10 +90,10 @@ public class CombinationApprovals {
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, OUT>(
             _ call: @escaping (IN1, IN2, IN3, IN4) -> OUT,
-            _ params1: Array<IN1>,
-            _ params2: Array<IN2>,
-            _ params3: Array<IN3>,
-            _ params4: Array<IN4>,
+            _ params1: [IN1],
+            _ params2: [IN2],
+            _ params3: [IN3],
+            _ params4: [IN4],
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
@@ -116,11 +116,11 @@ public class CombinationApprovals {
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, OUT>(
             _ call: @escaping (IN1, IN2, IN3, IN4, IN5) -> OUT,
-            _ params1: Array<IN1>,
-            _ params2: Array<IN2>,
-            _ params3: Array<IN3>,
-            _ params4: Array<IN4>,
-            _ params5: Array<IN5>,
+            _ params1: [IN1],
+            _ params2: [IN2],
+            _ params3: [IN3],
+            _ params4: [IN4],
+            _ params5: [IN5],
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
@@ -141,12 +141,12 @@ public class CombinationApprovals {
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, OUT>(
             _ call: @escaping (IN1, IN2, IN3, IN4, IN5, IN6) -> OUT,
-            _ params1: Array<IN1>,
-            _ params2: Array<IN2>,
-            _ params3: Array<IN3>,
-            _ params4: Array<IN4>,
-            _ params5: Array<IN5>,
-            _ params6: Array<IN6>,
+            _ params1: [IN1],
+            _ params2: [IN2],
+            _ params3: [IN3],
+            _ params4: [IN4],
+            _ params5: [IN5],
+            _ params6: [IN6],
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
@@ -165,13 +165,13 @@ public class CombinationApprovals {
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, IN7, OUT>(
             _ call: @escaping (IN1, IN2, IN3, IN4, IN5, IN6, IN7) -> OUT,
-            _ params1: Array<IN1>,
-            _ params2: Array<IN2>,
-            _ params3: Array<IN3>,
-            _ params4: Array<IN4>,
-            _ params5: Array<IN5>,
-            _ params6: Array<IN6>,
-            _ params7: Array<IN7>,
+            _ params1: [IN1],
+            _ params2: [IN2],
+            _ params3: [IN3],
+            _ params4: [IN4],
+            _ params5: [IN5],
+            _ params6: [IN6],
+            _ params7: [IN7],
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
@@ -188,14 +188,14 @@ public class CombinationApprovals {
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, OUT>(
             _ call: @escaping (IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8) -> OUT,
-            _ params1: Array<IN1>,
-            _ params2: Array<IN2>,
-            _ params3: Array<IN3>,
-            _ params4: Array<IN4>,
-            _ params5: Array<IN5>,
-            _ params6: Array<IN6>,
-            _ params7: Array<IN7>,
-            _ params8: Array<IN8>,
+            _ params1: [IN1],
+            _ params2: [IN2],
+            _ params3: [IN3],
+            _ params4: [IN4],
+            _ params5: [IN5],
+            _ params6: [IN6],
+            _ params7: [IN7],
+            _ params8: [IN8],
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
@@ -210,15 +210,15 @@ public class CombinationApprovals {
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, OUT>(
             _ call: (IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9) -> OUT,
-            _ params1: Array<IN1>,
-            _ params2: Array<IN2>,
-            _ params3: Array<IN3>,
-            _ params4: Array<IN4>,
-            _ params5: Array<IN5>,
-            _ params6: Array<IN6>,
-            _ params7: Array<IN7>,
-            _ params8: Array<IN8>,
-            _ params9: Array<IN9>,
+            _ params1: [IN1],
+            _ params2: [IN2],
+            _ params3: [IN3],
+            _ params4: [IN4],
+            _ params5: [IN5],
+            _ params6: [IN6],
+            _ params7: [IN7],
+            _ params8: [IN8],
+            _ params9: [IN9],
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
@@ -248,8 +248,8 @@ public class CombinationApprovals {
         try Approvals.verify(output, file: file, line: line)
     }
 
-    private static func extracted(_ array: [Any]) -> Array<Any> {
-        var list = Array<Any>()
+    private static func extracted(_ array: [Any]) -> [Any] {
+        var list = [Any]()
 
         for input in array {
             if String(describing: type(of: input)) == "INUNUSED" {
