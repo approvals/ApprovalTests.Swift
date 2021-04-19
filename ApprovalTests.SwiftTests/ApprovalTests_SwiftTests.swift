@@ -18,7 +18,7 @@ final class ApprovalTests_SwiftTests: XCTestCase {
 
     func testWithReporter() throws {
         let reporter = TestReporter(success: true)
-        let failer: TestFailer = TestFailer()
+        let failer = TestFailer()
         FileApprover.registerFailer(failer)
         try Approvals.verify("bar", reporter)
         FileApprover.resetFailer()

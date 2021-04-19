@@ -9,11 +9,11 @@ enum StringUtils {
     }
 
     public static func toString(_ name: String, _ array: [Any]) -> String {
-        var buffer: String = ""
+        var buffer = ""
         if (array.isEmpty) {
             buffer.append(name + ".length = 0");
         } else {
-            let maxPadding: Int = (String(array.count).count)
+            let maxPadding = String(array.count).count
             for index in 0 ..< array.count {
                 let padding = padNumber(index, maxPadding)
                 buffer.append(name + "[" + padding + "] = " + String(describing: array[index]) + "\n")

@@ -22,7 +22,7 @@
             let workingReceived = cleanPathString(received)
             let workingApproved = cleanPathString(approved)
 
-            let command: String = String(format: "mv %@ %@", workingReceived, workingApproved)
+            let command = String(format: "mv %@ %@", workingReceived, workingApproved)
 
             // copy to pasteboard
             let pasteboard = UIPasteboard.general
