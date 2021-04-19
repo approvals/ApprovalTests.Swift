@@ -28,36 +28,37 @@ public class Approvals {
     public static func verifyAll(_ label: String, _ array: [Any],
                                  _ reporter: ApprovalFailureReporter = getReporter(),
                                  file: StaticString = #filePath) throws {
-        try verify(ApprovalTextWriter(StringUtils.toString(label, array), "txt"), reporter, file)
+        try verify(writer: ApprovalTextWriter(StringUtils.toString(label, array), "txt"), reporter: reporter, file: file)
     }
 
     public static func verify(_ response: String,
                               reporter: ApprovalFailureReporter = getReporter(),
                               file: StaticString = #filePath) throws {
-        try verify(ApprovalTextWriter(response, "txt"), reporter, file);
+        try verify(writer: ApprovalTextWriter(response, "txt"), reporter: reporter, file: file);
     }
 
-    private class func verify(_ writer: ApprovalTextWriter,
-                              _ reporter: ApprovalFailureReporter = getReporter(),
-                              _ file: StaticString) throws {
-        try verify(writer, createApprovalNamer(file.description), reporter, file);
+    private class func verify(writer: ApprovalTextWriter,
+                              reporter: ApprovalFailureReporter = getReporter(),
+                              file: StaticString) throws {
+        try verify(writer: writer, namer: createApprovalNamer(file.description), reporter: reporter, file: file);
     }
 
-    private class func verify(_ writer: ApprovalTextWriter,
-                              _ namer: ApprovalNamer,
-                              _ reporter: ApprovalFailureReporter,
-                              _ file: StaticString) throws {
-        try verify(FileApprover(writer: writer, namer: namer), reporter, file);
+    private class func verify(writer: ApprovalTextWriter,
+                              namer: ApprovalNamer,
+                              reporter: ApprovalFailureReporter,
+                              file: StaticString) throws {
+        try verify(approver: FileApprover(writer: writer, namer: namer), reporter: reporter, file: file);
     }
 
-    private class func verify(_ approver: FileApprover, _ reporter: ApprovalFailureReporter,
-                              _ file: StaticString) throws {
-        try verify(approver, file, Options(reporter: reporter))
+    private class func verify(approver: FileApprover,
+                              reporter: ApprovalFailureReporter,
+                              file: StaticString) throws {
+        try verify(approver: approver, file: file, options: Options(reporter: reporter))
     }
 
-    private class func verify(_ approver: FileApprover,
-                              _ file: StaticString,
-                              _ options: Options = Options()) throws {
+    private class func verify(approver: FileApprover,
+                              file: StaticString,
+                              options: Options = Options()) throws {
         let reporter = options.getReporter()
         if !approver.approve() {
             approver.reportFailure(reporter: reporter);
