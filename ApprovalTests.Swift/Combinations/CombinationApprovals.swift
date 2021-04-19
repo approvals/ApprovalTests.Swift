@@ -7,7 +7,8 @@ public class CombinationApprovals {
     public static func verifyAllCombinations<IN1, OUT>(
             _ call: @escaping (IN1) -> OUT,
             _ params1: Array<IN1>,
-            file: StaticString = #filePath
+            file: StaticString = #filePath,
+            line: UInt = #line
     ) throws {
         let outcall: (IN1, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED) -> OUT = {
             var _ = $1
@@ -29,14 +30,15 @@ public class CombinationApprovals {
         let params7: [INUNUSED] = [INUNUSED()]
         let params8: [INUNUSED] = [INUNUSED()]
         let params9: [INUNUSED] = [INUNUSED()]
-        try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file)
+        try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
     }
 
     public static func verifyAllCombinations<IN1, IN2, OUT>(
             _ call: @escaping (IN1, IN2) -> OUT,
             _ params1: Array<IN1>,
             _ params2: Array<IN2>,
-            file: StaticString = #filePath
+            file: StaticString = #filePath,
+            line: UInt = #line
     ) throws {
         let outcall: (IN1, IN2, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED) -> OUT = {
             var _ = $2
@@ -56,7 +58,7 @@ public class CombinationApprovals {
         let params7: [INUNUSED] = [INUNUSED()]
         let params8: [INUNUSED] = [INUNUSED()]
         let params9: [INUNUSED] = [INUNUSED()]
-        try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file)
+        try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, OUT>(
@@ -64,7 +66,8 @@ public class CombinationApprovals {
             _ params1: Array<IN1>,
             _ params2: Array<IN2>,
             _ params3: Array<IN3>,
-            file: StaticString = #filePath
+            file: StaticString = #filePath,
+            line: UInt = #line
     ) throws {
         let outcall: (IN1, IN2, IN3, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED) -> OUT = {
             var _ = $3
@@ -82,7 +85,7 @@ public class CombinationApprovals {
         let params7: [INUNUSED] = [INUNUSED()]
         let params8: [INUNUSED] = [INUNUSED()]
         let params9: [INUNUSED] = [INUNUSED()]
-        try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file)
+        try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, OUT>(
@@ -91,7 +94,8 @@ public class CombinationApprovals {
             _ params2: Array<IN2>,
             _ params3: Array<IN3>,
             _ params4: Array<IN4>,
-            file: StaticString = #filePath
+            file: StaticString = #filePath,
+            line: UInt = #line
     ) throws {
         let outcall: (IN1, IN2, IN3, IN4, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED) -> OUT = {
             var _ = $4
@@ -107,7 +111,7 @@ public class CombinationApprovals {
         let params7: [INUNUSED] = [INUNUSED()]
         let params8: [INUNUSED] = [INUNUSED()]
         let params9: [INUNUSED] = [INUNUSED()]
-        try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file)
+        try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, OUT>(
@@ -117,7 +121,8 @@ public class CombinationApprovals {
             _ params3: Array<IN3>,
             _ params4: Array<IN4>,
             _ params5: Array<IN5>,
-            file: StaticString = #filePath
+            file: StaticString = #filePath,
+            line: UInt = #line
     ) throws {
         let outcall: (IN1, IN2, IN3, IN4, IN5, INUNUSED, INUNUSED, INUNUSED, INUNUSED) -> OUT = {
             var _ = $5
@@ -131,7 +136,7 @@ public class CombinationApprovals {
         let params7: [INUNUSED] = [INUNUSED()]
         let params8: [INUNUSED] = [INUNUSED()]
         let params9: [INUNUSED] = [INUNUSED()]
-        try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file)
+        try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, OUT>(
@@ -142,7 +147,8 @@ public class CombinationApprovals {
             _ params4: Array<IN4>,
             _ params5: Array<IN5>,
             _ params6: Array<IN6>,
-            file: StaticString = #filePath
+            file: StaticString = #filePath,
+            line: UInt = #line
     ) throws {
         let outcall: (IN1, IN2, IN3, IN4, IN5, IN6, INUNUSED, INUNUSED, INUNUSED) -> OUT = {
             var _ = $6
@@ -154,7 +160,7 @@ public class CombinationApprovals {
         let params7: [INUNUSED] = [INUNUSED()]
         let params8: [INUNUSED] = [INUNUSED()]
         let params9: [INUNUSED] = [INUNUSED()]
-        try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file)
+        try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, IN7, OUT>(
@@ -166,7 +172,8 @@ public class CombinationApprovals {
             _ params5: Array<IN5>,
             _ params6: Array<IN6>,
             _ params7: Array<IN7>,
-            file: StaticString = #filePath
+            file: StaticString = #filePath,
+            line: UInt = #line
     ) throws {
         let outcall: (IN1, IN2, IN3, IN4, IN5, IN6, IN7, INUNUSED, INUNUSED) -> OUT = {
             var _ = $7
@@ -176,7 +183,7 @@ public class CombinationApprovals {
 
         let params8: [INUNUSED] = [INUNUSED()]
         let params9: [INUNUSED] = [INUNUSED()]
-        try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file)
+        try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, OUT>(
@@ -189,7 +196,8 @@ public class CombinationApprovals {
             _ params6: Array<IN6>,
             _ params7: Array<IN7>,
             _ params8: Array<IN8>,
-            file: StaticString = #filePath
+            file: StaticString = #filePath,
+            line: UInt = #line
     ) throws {
         let outcall: (IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, INUNUSED) -> OUT = {
             var _ = $8
@@ -197,7 +205,7 @@ public class CombinationApprovals {
         }
 
         let params9: [INUNUSED] = [INUNUSED()]
-        try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file)
+        try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, OUT>(
@@ -211,7 +219,8 @@ public class CombinationApprovals {
             _ params7: Array<IN7>,
             _ params8: Array<IN8>,
             _ params9: Array<IN9>,
-            file: StaticString = #filePath
+            file: StaticString = #filePath,
+            line: UInt = #line
     ) throws {
         var output = ""
         for in1 in params1 {
@@ -236,7 +245,7 @@ public class CombinationApprovals {
                 }
             }
         }
-        try Approvals.verify(output, file: file)
+        try Approvals.verify(output, file: file, line: line)
     }
 
     private static func extracted(_ array: [Any]) -> Array<Any> {
