@@ -21,7 +21,7 @@ public class Approvals {
         jsonEncoder.outputFormatting = .prettyPrinted
         do {
             let jsonData = try jsonEncoder.encode(object)
-            let jsonString = (String(data: jsonData, encoding: .utf8) ?? "")
+            let jsonString = String(data: jsonData, encoding: .utf8) ?? ""
             try verify(jsonString, reporter: reporter, file: file, line: line)
         } catch {
             print(error.localizedDescription)
