@@ -10,12 +10,12 @@ class ApprovalTextWriter: ApprovalWriter {
     }
 
     func getApprovalFilename(base: String) -> String {
-        let approvalFilename = String(base + ".approved" + "." + fileExtensionWithoutDot)
+        let approvalFilename = "\(base).approved.\(fileExtensionWithoutDot)"
         return approvalFilename
     }
 
     func getReceivedFilename(base: String) -> String {
-        let receivedFilename = String(base + ".received" + "." + fileExtensionWithoutDot)
+        let receivedFilename = "\(base).received.\(fileExtensionWithoutDot)"
         return receivedFilename
     }
 

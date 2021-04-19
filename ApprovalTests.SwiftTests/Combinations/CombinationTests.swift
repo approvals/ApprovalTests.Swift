@@ -28,7 +28,7 @@ final class CombinationTests: XCTestCase {
     }
 
     private func threeMixedParams(_ anInt: Int, _ aFloat: Float, _ aString: String) -> String {
-        String("\(anInt) \(aFloat) \(aString)")
+        "\(anInt) \(aFloat) \(aString)"
     }
 
     func testCombinationsSingleParameterInt() throws {

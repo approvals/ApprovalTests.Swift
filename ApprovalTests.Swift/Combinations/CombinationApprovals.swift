@@ -232,10 +232,10 @@ public enum CombinationApprovals {
                                 for in7 in params7 {
                                     for in8 in params8 {
                                         for in9 in params9 {
-                                            let result = String("\(call(in1, in2, in3, in4, in5, in6, in7, in8, in9))")
+                                            let result = "\(call(in1, in2, in3, in4, in5, in6, in7, in8, in9))"
                                             let someArray = [in1, in2, in3, in4, in5, in6, in7, in8, in9] as [Any]
                                             let foo = extracted(someArray)
-                                            output.append(String("\(foo) -> \(result)\n"))
+                                            output.append("\(foo) -> \(result)\n")
                                         }
                                     }
                                 }
