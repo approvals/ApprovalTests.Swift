@@ -72,14 +72,14 @@ public class Approvals {
             file: StaticString,
             line: UInt
     ) throws {
-        try verify(approver: approver, file: file, options: Options(reporter: reporter), line: line)
+        try verify(approver: approver, file: file, line: line, options: Options(reporter: reporter))
     }
 
     private class func verify(
             approver: FileApprover,
             file: StaticString,
-            options: Options = Options(),
-            line: UInt
+            line: UInt,
+            options: Options = Options()
     ) throws {
         let reporter = options.getReporter()
         if !approver.approve() {
