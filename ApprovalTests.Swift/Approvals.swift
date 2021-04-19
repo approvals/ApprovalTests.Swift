@@ -11,8 +11,8 @@ public class Approvals {
         NameCreator().load(file.description)
     }
 
-    public static func verifyAsJson<INOBJ: Encodable>(
-            _ object: INOBJ,
+    public static func verifyAsJson<T: Encodable>(
+            _ object: T,
             _ reporter: ApprovalFailureReporter = getReporter(),
             file: StaticString = #filePath,
             line: UInt = #line
@@ -90,8 +90,8 @@ public class Approvals {
         }
     }
 
-    public static func verify<INOBJ>(
-            _ object: INOBJ,
+    public static func verify<T>(
+            _ object: T,
             _ reporter: ApprovalFailureReporter = getReporter(),
             file: StaticString = #filePath,
             line: UInt = #line
