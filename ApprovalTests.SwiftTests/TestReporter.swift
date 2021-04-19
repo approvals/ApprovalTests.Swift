@@ -17,6 +17,6 @@ class TestReporter: EquatableFailureReporter {
         return success
     }
 
-    public var received: String = ""
-    public var approved: String = ""
+    public private(set) var received: String = ""
+    public private(set) var approved: String = ""
 }
