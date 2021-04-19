@@ -11,14 +11,14 @@ public enum CombinationApprovals {
             line: UInt = #line
     ) throws {
         let outcall: (IN1, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED) -> OUT = {
-            var _ = $1
-            var _ = $2
-            var _ = $3
-            var _ = $4
-            var _ = $5
-            var _ = $6
-            var _ = $7
-            var _ = $8
+            let _ = $1
+            let _ = $2
+            let _ = $3
+            let _ = $4
+            let _ = $5
+            let _ = $6
+            let _ = $7
+            let _ = $8
             return call($0)
         }
 
@@ -41,13 +41,13 @@ public enum CombinationApprovals {
             line: UInt = #line
     ) throws {
         let outcall: (IN1, IN2, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED) -> OUT = {
-            var _ = $2
-            var _ = $3
-            var _ = $4
-            var _ = $5
-            var _ = $6
-            var _ = $7
-            var _ = $8
+            let _ = $2
+            let _ = $3
+            let _ = $4
+            let _ = $5
+            let _ = $6
+            let _ = $7
+            let _ = $8
             return call($0, $1)
         }
 
@@ -70,12 +70,12 @@ public enum CombinationApprovals {
             line: UInt = #line
     ) throws {
         let outcall: (IN1, IN2, IN3, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED) -> OUT = {
-            var _ = $3
-            var _ = $4
-            var _ = $5
-            var _ = $6
-            var _ = $7
-            var _ = $8
+            let _ = $3
+            let _ = $4
+            let _ = $5
+            let _ = $6
+            let _ = $7
+            let _ = $8
             return call($0, $1, $2)
         }
 
@@ -98,11 +98,11 @@ public enum CombinationApprovals {
             line: UInt = #line
     ) throws {
         let outcall: (IN1, IN2, IN3, IN4, INUNUSED, INUNUSED, INUNUSED, INUNUSED, INUNUSED) -> OUT = {
-            var _ = $4
-            var _ = $5
-            var _ = $6
-            var _ = $7
-            var _ = $8
+            let _ = $4
+            let _ = $5
+            let _ = $6
+            let _ = $7
+            let _ = $8
             return call($0, $1, $2, $3)
         }
 
@@ -125,10 +125,10 @@ public enum CombinationApprovals {
             line: UInt = #line
     ) throws {
         let outcall: (IN1, IN2, IN3, IN4, IN5, INUNUSED, INUNUSED, INUNUSED, INUNUSED) -> OUT = {
-            var _ = $5
-            var _ = $6
-            var _ = $7
-            var _ = $8
+            let _ = $5
+            let _ = $6
+            let _ = $7
+            let _ = $8
             return call($0, $1, $2, $3, $4)
         }
 
@@ -151,9 +151,9 @@ public enum CombinationApprovals {
             line: UInt = #line
     ) throws {
         let outcall: (IN1, IN2, IN3, IN4, IN5, IN6, INUNUSED, INUNUSED, INUNUSED) -> OUT = {
-            var _ = $6
-            var _ = $7
-            var _ = $8
+            let _ = $6
+            let _ = $7
+            let _ = $8
             return call($0, $1, $2, $3, $4, $5)
         }
 
@@ -176,8 +176,8 @@ public enum CombinationApprovals {
             line: UInt = #line
     ) throws {
         let outcall: (IN1, IN2, IN3, IN4, IN5, IN6, IN7, INUNUSED, INUNUSED) -> OUT = {
-            var _ = $7
-            var _ = $8
+            let _ = $7
+            let _ = $8
             return call($0, $1, $2, $3, $4, $5, $6)
         }
 
@@ -200,7 +200,7 @@ public enum CombinationApprovals {
             line: UInt = #line
     ) throws {
         let outcall: (IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, INUNUSED) -> OUT = {
-            var _ = $8
+            let _ = $8
             return call($0, $1, $2, $3, $4, $5, $6, $7)
         }
 
