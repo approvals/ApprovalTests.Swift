@@ -13,7 +13,7 @@ final class ApprovalTests_SwiftTests: XCTestCase {
     }
 
     func testApprovalsVerify() throws {
-        try! Approvals.verify("bar")
+        try Approvals.verify("bar")
     }
 
     func testWithReporter() throws {
