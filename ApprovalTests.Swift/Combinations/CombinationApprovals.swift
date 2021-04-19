@@ -22,14 +22,14 @@ public class CombinationApprovals {
             return call($0)
         }
 
-        let params2: [INUNUSED] = [INUNUSED()]
-        let params3: [INUNUSED] = [INUNUSED()]
-        let params4: [INUNUSED] = [INUNUSED()]
-        let params5: [INUNUSED] = [INUNUSED()]
-        let params6: [INUNUSED] = [INUNUSED()]
-        let params7: [INUNUSED] = [INUNUSED()]
-        let params8: [INUNUSED] = [INUNUSED()]
-        let params9: [INUNUSED] = [INUNUSED()]
+        let params2 = [INUNUSED()]
+        let params3 = [INUNUSED()]
+        let params4 = [INUNUSED()]
+        let params5 = [INUNUSED()]
+        let params6 = [INUNUSED()]
+        let params7 = [INUNUSED()]
+        let params8 = [INUNUSED()]
+        let params9 = [INUNUSED()]
         try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
     }
 
@@ -51,13 +51,13 @@ public class CombinationApprovals {
             return call($0, $1)
         }
 
-        let params3: [INUNUSED] = [INUNUSED()]
-        let params4: [INUNUSED] = [INUNUSED()]
-        let params5: [INUNUSED] = [INUNUSED()]
-        let params6: [INUNUSED] = [INUNUSED()]
-        let params7: [INUNUSED] = [INUNUSED()]
-        let params8: [INUNUSED] = [INUNUSED()]
-        let params9: [INUNUSED] = [INUNUSED()]
+        let params3 = [INUNUSED()]
+        let params4 = [INUNUSED()]
+        let params5 = [INUNUSED()]
+        let params6 = [INUNUSED()]
+        let params7 = [INUNUSED()]
+        let params8 = [INUNUSED()]
+        let params9 = [INUNUSED()]
         try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
     }
 
@@ -79,12 +79,12 @@ public class CombinationApprovals {
             return call($0, $1, $2)
         }
 
-        let params4: [INUNUSED] = [INUNUSED()]
-        let params5: [INUNUSED] = [INUNUSED()]
-        let params6: [INUNUSED] = [INUNUSED()]
-        let params7: [INUNUSED] = [INUNUSED()]
-        let params8: [INUNUSED] = [INUNUSED()]
-        let params9: [INUNUSED] = [INUNUSED()]
+        let params4 = [INUNUSED()]
+        let params5 = [INUNUSED()]
+        let params6 = [INUNUSED()]
+        let params7 = [INUNUSED()]
+        let params8 = [INUNUSED()]
+        let params9 = [INUNUSED()]
         try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
     }
 
@@ -106,11 +106,11 @@ public class CombinationApprovals {
             return call($0, $1, $2, $3)
         }
 
-        let params5: [INUNUSED] = [INUNUSED()]
-        let params6: [INUNUSED] = [INUNUSED()]
-        let params7: [INUNUSED] = [INUNUSED()]
-        let params8: [INUNUSED] = [INUNUSED()]
-        let params9: [INUNUSED] = [INUNUSED()]
+        let params5 = [INUNUSED()]
+        let params6 = [INUNUSED()]
+        let params7 = [INUNUSED()]
+        let params8 = [INUNUSED()]
+        let params9 = [INUNUSED()]
         try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
     }
 
@@ -132,10 +132,10 @@ public class CombinationApprovals {
             return call($0, $1, $2, $3, $4)
         }
 
-        let params6: [INUNUSED] = [INUNUSED()]
-        let params7: [INUNUSED] = [INUNUSED()]
-        let params8: [INUNUSED] = [INUNUSED()]
-        let params9: [INUNUSED] = [INUNUSED()]
+        let params6 = [INUNUSED()]
+        let params7 = [INUNUSED()]
+        let params8 = [INUNUSED()]
+        let params9 = [INUNUSED()]
         try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
     }
 
@@ -157,9 +157,9 @@ public class CombinationApprovals {
             return call($0, $1, $2, $3, $4, $5)
         }
 
-        let params7: [INUNUSED] = [INUNUSED()]
-        let params8: [INUNUSED] = [INUNUSED()]
-        let params9: [INUNUSED] = [INUNUSED()]
+        let params7 = [INUNUSED()]
+        let params8 = [INUNUSED()]
+        let params9 = [INUNUSED()]
         try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
     }
 
@@ -181,8 +181,8 @@ public class CombinationApprovals {
             return call($0, $1, $2, $3, $4, $5, $6)
         }
 
-        let params8: [INUNUSED] = [INUNUSED()]
-        let params9: [INUNUSED] = [INUNUSED()]
+        let params8 = [INUNUSED()]
+        let params9 = [INUNUSED()]
         try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
     }
 
@@ -204,7 +204,7 @@ public class CombinationApprovals {
             return call($0, $1, $2, $3, $4, $5, $6, $7)
         }
 
-        let params9: [INUNUSED] = [INUNUSED()]
+        let params9 = [INUNUSED()]
         try verifyAllCombinations(outcall, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
     }
 
