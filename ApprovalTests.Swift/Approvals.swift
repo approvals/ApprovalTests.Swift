@@ -11,7 +11,7 @@ public class Approvals {
         NameCreator().load(file.description)
     }
 
-    public static func verifyAsJson<INOBJ: Codable>(
+    public static func verifyAsJson<INOBJ: Encodable>(
             _ object: INOBJ,
             _ reporter: ApprovalFailureReporter = getReporter(),
             file: StaticString = #filePath,
