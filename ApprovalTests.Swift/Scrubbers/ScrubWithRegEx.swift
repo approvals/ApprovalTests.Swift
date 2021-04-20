@@ -6,7 +6,7 @@ class ScrubWithRegEx: Scrubber {
 
     public init(pattern: String, replaceWith: String) {
         self.pattern = pattern
-        self.replacementFunction = { _ in replaceWith }
+        replacementFunction = { _ in replaceWith }
     }
 
     public init(pattern: String, replacementFunction: @escaping (String) -> String) {
