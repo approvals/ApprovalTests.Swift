@@ -36,34 +36,31 @@ public class Approvals {
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
-        try verify(writer: ApprovalTextWriter(options.scrub(response), "txt"), options, file: file, line: line);
+        try verify(ApprovalTextWriter(options.scrub(response), "txt"), options, file: file, line: line);
     }
 
     private class func verify(
-            writer: ApprovalTextWriter,
+            _ writer: ApprovalTextWriter,
             _ options: Options = Options(),
             file: StaticString,
-            line: UInt
-    ) throws {
-        try verify(writer: writer, namer: createApprovalNamer(file.description), options, file: file, line: line);
+            line: UInt) throws {
+        try verify(writer, createApprovalNamer(file.description), options, file: file, line: line);
     }
 
     private class func verify(
-            writer: ApprovalTextWriter,
-            namer: ApprovalNamer,
+            _ writer: ApprovalTextWriter,
+            _ namer: ApprovalNamer,
             _ options: Options = Options(),
             file: StaticString,
-            line: UInt
-    ) throws {
-        try verify(approver: FileApprover(writer: writer, namer: namer), file: file, line: line, options);
+            line: UInt) throws {
+        try verify(FileApprover(writer: writer, namer: namer), file: file, line: line, options);
     }
 
     private class func verify(
-            approver: FileApprover,
+            _ approver: FileApprover,
             file: StaticString,
             line: UInt,
-            _ options: Options = Options()
-    ) throws {
+            _ options: Options = Options()) throws {
         let reporter = options.getReporter()
         if !approver.approve() {
             approver.reportFailure(reporter: reporter);
