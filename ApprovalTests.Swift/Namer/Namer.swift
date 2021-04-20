@@ -25,28 +25,18 @@ class Namer: ApprovalNamer {
 
     private func demangleStack() {
         do {
-            var result = ""
-
             let symbols = Thread.callStackSymbols
-
-
             let testDepth = selectElement(symbols: symbols)
-
             let index = symbols[testDepth].range(of: "$")?.lowerBound
             let tempName = String(symbols[testDepth].suffix(from: index!))
-
             let indexEnd = tempName.range(of: " ")?.lowerBound
             let mangledName = String(tempName.prefix(upTo: indexEnd!))
-
             let swiftSymbol = try parseMangledSwiftSymbol(mangledName)
-            result = swiftSymbol.print(using: SymbolPrintOptions.simplified.union(.synthesizeSugarOnTypes))
-
+            let result = swiftSymbol.print(using: SymbolPrintOptions.simplified.union(.synthesizeSugarOnTypes))
             let splitResult = result.split(separator: " ")
             let classAndMethod = splitResult.last!
-
             className = extractClassName(result: String(classAndMethod))
             testName = extractTestName(result: String(classAndMethod))
-
         } catch {
             print("Got an error")
         }
