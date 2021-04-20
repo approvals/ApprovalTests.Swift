@@ -5,7 +5,7 @@
 #endif
 import XCTest
 
-final class ApprovalsTest: XCTestCase {
+final class ApprovalsTests: XCTestCase {
 
     func testToString() throws {
         try Approvals.verify(CGRect(x: 5, y: 10, width: 100, height: 200))
