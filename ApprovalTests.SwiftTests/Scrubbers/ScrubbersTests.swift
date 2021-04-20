@@ -8,7 +8,7 @@ import XCTest
 final class ScrubbersTests: XCTestCase {
 
     func testSimpleScrub() throws {
-        let randomNumber = Int.random(in: 1...10)
+        let randomNumber = Int.random(in: 1 ... 10)
         let s = "\(randomNumber) is a nice number"
         try Approvals.verify(s, Options(ScrubWithRegEx(pattern: "\\d+", replaceWith: "<number>")))
     }
@@ -19,7 +19,7 @@ final class ScrubbersTests: XCTestCase {
     }
 
     func testScrubWithClosure() throws {
-        let scrubber = ScrubWithRegEx(pattern: "ll", replacementFunction: { match in "\(match.count)" } )
+        let scrubber = ScrubWithRegEx(pattern: "ll", replacementFunction: { match in "\(match.count)" })
         XCTAssertEqual(scrubber.scrub("hello"), "he2o")
     }
 
@@ -27,7 +27,10 @@ final class ScrubbersTests: XCTestCase {
         let scrubber = ScrubDates()
         let date = Date(timeIntervalSince1970: 1000)
         let date2 = Date(timeIntervalSince1970: 2000)
-        try Approvals.verifyAsJson(TimeSheet(startTime: date, breakTime: date, breakEnd: date2, endOfDay: date2), Options(scrubber))
+        try Approvals.verifyAsJson(
+                TimeSheet(startTime: date, breakTime: date, breakEnd: date2, endOfDay: date2),
+                Options(scrubber)
+        )
     }
 }
 

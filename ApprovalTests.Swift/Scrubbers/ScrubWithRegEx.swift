@@ -15,20 +15,23 @@ class ScrubWithRegEx: Scrubber {
     }
 
     func scrub(_ input: String) -> String {
-        if pattern == "" { return input } 
+        if pattern == "" { return input }
         return input.replacingOccurrences(matchingPattern: pattern, replacementProvider: replacementFunction)
     }
 }
 
 extension String {
-    func replacingOccurrences(matchingPattern pattern: String, replacementProvider: (String) -> String?) -> String {
+    func replacingOccurrences(matchingPattern pattern: String,
+                              replacementProvider: (String) -> String?) -> String {
         let expression = try! NSRegularExpression(pattern: pattern, options: [])
-        let matches = expression.matches(in: self, options: [], range: NSRange(startIndex..<endIndex, in: self))
-        return matches.reversed().reduce(into: self) { (current, result) in
-            let range = Range(result.range, in: current)!
-            let token = String(current[range])
-            guard let replacement = replacementProvider(token) else { return }
-            current.replaceSubrange(range, with: replacement)
-        }
+        let matches = expression.matches(in: self, options: [], range: NSRange(startIndex ..< endIndex, in: self))
+        return matches
+                .reversed()
+                .reduce(into: self) { (current, result) in
+                    let range = Range(result.range, in: current)!
+                    let token = String(current[range])
+                    guard let replacement = replacementProvider(token) else { return }
+                    current.replaceSubrange(range, with: replacement)
+                }
     }
 }
