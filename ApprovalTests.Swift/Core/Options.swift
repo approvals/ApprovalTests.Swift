@@ -30,6 +30,6 @@ public class Options {
     }
 
     func scrub(_ input: String) throws -> String {
-        return getScrubber().scrub(input)
+        getScrubber().scrub(input)
     }
 }
