@@ -35,7 +35,7 @@ public class Approvals {
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
-        try verify(writer: ApprovalTextWriter(StringUtils.toString(label, array), "txt"), options, file: file, line: line)
+        try verify(StringUtils.toString(label, array), options, file: file, line: line)
     }
 
     public static func verify(
@@ -44,7 +44,7 @@ public class Approvals {
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
-        try verify(writer: ApprovalTextWriter(response, "txt"), options, file: file, line: line);
+        try verify(writer: ApprovalTextWriter(options.scrub(response), "txt"), options, file: file, line: line);
     }
 
     private class func verify(

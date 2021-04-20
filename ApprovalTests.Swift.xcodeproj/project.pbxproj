@@ -67,16 +67,24 @@
 		BB1702505E8BF49858471116 /* MacReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1707BC3C179D89F3FD2B84 /* MacReporter.swift */; };
 		BB1702CC0E11C261EEA5D889 /* TestFailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17051531693F6FC252F7DF /* TestFailer.swift */; };
 		BB17030411282D1203B9BFF6 /* DiffReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1701DBF0B6E0AD00A62DDD /* DiffReporter.swift */; };
+		BB17048A6325F5E288673CA2 /* ScrubbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170BAAFF8A9EFB75598942 /* ScrubbersTests.swift */; };
 		BB1704E7E6A9EF2621DF755B /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170F2E5E36C79487539555 /* Options.swift */; };
 		BB1704FF7E5D8A3C7C404389 /* DiffMergeReporterIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17070775083BB000324A0A /* DiffMergeReporterIOS.swift */; };
 		BB17050D1CB42D26415F09D6 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170F2E5E36C79487539555 /* Options.swift */; };
 		BB1705193EE633BCD5E69CE0 /* iOSReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1705FDCFBE674F39B7D859 /* iOSReporter.swift */; };
+		BB1705AF0CCEF9E3911A2D0B /* ScrubbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170BAAFF8A9EFB75598942 /* ScrubbersTests.swift */; };
+		BB1705BD1C2CEECB5F9674DF /* ScrubNothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1700D4E088787C48D2EA63 /* ScrubNothing.swift */; };
 		BB17067D87D9EFBE29AF0CF1 /* DiffReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1701DBF0B6E0AD00A62DDD /* DiffReporter.swift */; };
 		BB1708AACDCB6363B732AC26 /* iOSReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1705FDCFBE674F39B7D859 /* iOSReporter.swift */; };
 		BB1708E421B1EDC9B7505EA0 /* KaleidoscopeReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170A02C65DDFAD9FADE96C /* KaleidoscopeReporter.swift */; };
+		BB17091A9C60F6653944C673 /* Scrubber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170FF2F8319026C4E149FF /* Scrubber.swift */; };
+		BB17092C827110A024C37290 /* ScrubWithRegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170E78802A85D68B77CAA0 /* ScrubWithRegEx.swift */; };
+		BB170CCEA1FCAC1D1490EB06 /* ScrubNothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1700D4E088787C48D2EA63 /* ScrubNothing.swift */; };
 		BB170D510FCEB3E5C338FCF0 /* GenericDiffReporterBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */; };
 		BB170DD606509A7F5AA1321E /* ReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17064685A20DAA7CFE6421 /* ReporterTests.swift */; };
 		BB170E455F9D597F98E2147D /* GenericDiffReporterIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1700198EEF7F2B448074E8 /* GenericDiffReporterIOS.swift */; };
+		BB170ECA78B7A7F62CF1784B /* ScrubWithRegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170E78802A85D68B77CAA0 /* ScrubWithRegEx.swift */; };
+		BB170F1E0EF85F10A44587DD /* Scrubber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170FF2F8319026C4E149FF /* Scrubber.swift */; };
 		BB170FF2D7989206C9C2C463 /* GenericDiffReporterBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +143,7 @@
 		97308FAD567B1657AE7671D0 /* ApprovalApprover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalApprover.swift; sourceTree = "<group>"; };
 		97308FC331B73ECB0A9BA7EE /* ApprovalTextWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalTextWriter.swift; sourceTree = "<group>"; };
 		BB1700198EEF7F2B448074E8 /* GenericDiffReporterIOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDiffReporterIOS.swift; sourceTree = "<group>"; };
+		BB1700D4E088787C48D2EA63 /* ScrubNothing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrubNothing.swift; sourceTree = "<group>"; };
 		BB1701DBF0B6E0AD00A62DDD /* DiffReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiffReporter.swift; sourceTree = "<group>"; };
 		BB17051531693F6FC252F7DF /* TestFailer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFailer.swift; sourceTree = "<group>"; };
 		BB17059F97E2ED858F9C9A2F /* FirstWorkingReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstWorkingReporter.swift; sourceTree = "<group>"; };
@@ -147,8 +156,11 @@
 		BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDiffReporterBase.swift; sourceTree = "<group>"; };
 		BB170A02C65DDFAD9FADE96C /* KaleidoscopeReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaleidoscopeReporter.swift; sourceTree = "<group>"; };
 		BB170B4E04C535C1000CA54A /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		BB170BAAFF8A9EFB75598942 /* ScrubbersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrubbersTests.swift; sourceTree = "<group>"; };
 		BB170DC8AAB0910AD476210C /* OptionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsTests.swift; sourceTree = "<group>"; };
+		BB170E78802A85D68B77CAA0 /* ScrubWithRegEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrubWithRegEx.swift; sourceTree = "<group>"; };
 		BB170F2E5E36C79487539555 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		BB170FF2F8319026C4E149FF /* Scrubber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scrubber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +284,7 @@
 				168C9627216023F9008F354C /* ApprovalTests_Swift.h */,
 				168C9628216023F9008F354C /* Info.plist */,
 				973086D51D21070606B41784 /* ToDo.txt */,
+				BB17046E248658EAD616D3F2 /* Scrubbers */,
 			);
 			path = ApprovalTests.Swift;
 			sourceTree = "<group>";
@@ -289,6 +302,7 @@
 				97308D78086F701623ED654B /* Demo */,
 				BB17064E8F6B27C1C626D959 /* Reporters */,
 				168C9634216023F9008F354C /* Info.plist */,
+				BB170341B90F8DAC2106366B /* Scrubbers */,
 			);
 			path = ApprovalTests.SwiftTests;
 			sourceTree = "<group>";
@@ -319,6 +333,7 @@
 				973085D5FB753938543FDA7C /* ApprovalFailureReporter.swift */,
 				973088485E8B1D043616B220 /* ApprovalWriter.swift */,
 				BB170F2E5E36C79487539555 /* Options.swift */,
+				BB170FF2F8319026C4E149FF /* Scrubber.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -377,6 +392,23 @@
 				97308657C3B3CEFB291EEBBD /* SampleArrayTest.swift */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		BB170341B90F8DAC2106366B /* Scrubbers */ = {
+			isa = PBXGroup;
+			children = (
+				BB170BAAFF8A9EFB75598942 /* ScrubbersTests.swift */,
+			);
+			path = Scrubbers;
+			sourceTree = "<group>";
+		};
+		BB17046E248658EAD616D3F2 /* Scrubbers */ = {
+			isa = PBXGroup;
+			children = (
+				BB170E78802A85D68B77CAA0 /* ScrubWithRegEx.swift */,
+				BB1700D4E088787C48D2EA63 /* ScrubNothing.swift */,
+			);
+			path = Scrubbers;
 			sourceTree = "<group>";
 		};
 		BB17064E8F6B27C1C626D959 /* Reporters */ = {
@@ -591,6 +623,10 @@
 				BB17067D87D9EFBE29AF0CF1 /* DiffReporter.swift in Sources */,
 				BB1708AACDCB6363B732AC26 /* iOSReporter.swift in Sources */,
 				BB1704E7E6A9EF2621DF755B /* Options.swift in Sources */,
+				BB1705AF0CCEF9E3911A2D0B /* ScrubbersTests.swift in Sources */,
+				BB170ECA78B7A7F62CF1784B /* ScrubWithRegEx.swift in Sources */,
+				BB17091A9C60F6653944C673 /* Scrubber.swift in Sources */,
+				BB1705BD1C2CEECB5F9674DF /* ScrubNothing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +674,10 @@
 				BB17030411282D1203B9BFF6 /* DiffReporter.swift in Sources */,
 				BB1705193EE633BCD5E69CE0 /* iOSReporter.swift in Sources */,
 				BB17050D1CB42D26415F09D6 /* Options.swift in Sources */,
+				BB17048A6325F5E288673CA2 /* ScrubbersTests.swift in Sources */,
+				BB17092C827110A024C37290 /* ScrubWithRegEx.swift in Sources */,
+				BB170F1E0EF85F10A44587DD /* Scrubber.swift in Sources */,
+				BB170CCEA1FCAC1D1490EB06 /* ScrubNothing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
