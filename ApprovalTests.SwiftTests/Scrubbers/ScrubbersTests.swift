@@ -12,4 +12,14 @@ final class ScrubbersTests: XCTestCase {
         let s = "\(randomNumber) is a nice number"
         try Approvals.verify(s, Options(ScrubWithRegEx(pattern: "\\d+", replaceWith: "<number>")))
     }
+
+    func testNothingDoesNothing() throws {
+        let scrubber = ScrubWithRegEx(pattern: "", replaceWith: "<replacement>")
+        XCTAssertEqual(scrubber.scrub("hello"), "hello")
+    }
+
+    func testScrubWithClosure() throws {
+        let scrubber = ScrubWithRegEx(pattern: "ll", replacementFunction: { match in "\(match.count)" } )
+        XCTAssertEqual(scrubber.scrub("hello"), "he2o")
+    }
 }
