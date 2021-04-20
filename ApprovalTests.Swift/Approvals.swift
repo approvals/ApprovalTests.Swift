@@ -7,7 +7,7 @@ public class Approvals {
         }
     }
 
-    class func getNamer(file: StaticString = #filePath) -> ApprovalNamer {
+    static func getNamer(file: StaticString = #filePath) -> ApprovalNamer {
         NameCreator().load(file.description)
     }
 
@@ -39,7 +39,7 @@ public class Approvals {
         try verify(ApprovalTextWriter(options.scrub(response), "txt"), options, file: file, line: line);
     }
 
-    private class func verify(
+    private static func verify(
             _ writer: ApprovalTextWriter,
             _ options: Options = Options(),
             file: StaticString,
@@ -47,7 +47,7 @@ public class Approvals {
         try verify(writer, createApprovalNamer(file.description), options, file: file, line: line);
     }
 
-    private class func verify(
+    private static func verify(
             _ writer: ApprovalTextWriter,
             _ namer: ApprovalNamer,
             _ options: Options = Options(),
@@ -56,7 +56,7 @@ public class Approvals {
         try verify(FileApprover(writer: writer, namer: namer), file: file, line: line, options);
     }
 
-    private class func verify(
+    private static func verify(
             _ approver: FileApprover,
             file: StaticString,
             line: UInt,
