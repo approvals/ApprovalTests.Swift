@@ -17,18 +17,7 @@ public class Approvals {
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
-        let jsonString: String
-        let jsonEncoder = JSONEncoder()
-        jsonEncoder.dateEncodingStrategy = .iso8601
-        jsonEncoder.outputFormatting = .prettyPrinted
-        do {
-            let jsonData = try jsonEncoder.encode(object)
-            jsonString = String(data: jsonData, encoding: .utf8) ?? ""
-        } catch {
-            jsonString = ""
-            print(error.localizedDescription)
-        }
-        try verify(jsonString, options, file: file, line: line)
+        try verify(StringUtils.toJson(object), options, file: file, line: line)
     }
 
     public static func verifyAll(
