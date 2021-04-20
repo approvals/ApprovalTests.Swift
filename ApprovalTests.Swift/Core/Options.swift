@@ -1,4 +1,4 @@
-class Options {
+public class Options {
     private let reporter: ApprovalFailureReporter?
 
     public init() {

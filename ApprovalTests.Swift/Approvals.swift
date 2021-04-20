@@ -13,7 +13,7 @@ public class Approvals {
 
     public static func verifyAsJson<T: Encodable>(
             _ object: T,
-            _ reporter: ApprovalFailureReporter = getReporter(),
+            _ options: Options = Options(),
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
@@ -22,7 +22,7 @@ public class Approvals {
         do {
             let jsonData = try jsonEncoder.encode(object)
             let jsonString = String(data: jsonData, encoding: .utf8) ?? ""
-            try verify(jsonString, reporter: reporter, file: file, line: line)
+            try verify(jsonString, options, file: file, line: line)
         } catch {
             print(error.localizedDescription)
         }
@@ -31,55 +31,46 @@ public class Approvals {
     public static func verifyAll(
             _ label: String,
             _ array: [Any],
-            _ reporter: ApprovalFailureReporter = getReporter(),
+            _ options: Options = Options(),
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
-        try verify(writer: ApprovalTextWriter(StringUtils.toString(label, array), "txt"), reporter: reporter, file: file, line: line)
+        try verify(writer: ApprovalTextWriter(StringUtils.toString(label, array), "txt"), options, file: file, line: line)
     }
 
     public static func verify(
             _ response: String,
-            reporter: ApprovalFailureReporter = getReporter(),
+            _ options: Options = Options(),
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
-        try verify(writer: ApprovalTextWriter(response, "txt"), reporter: reporter, file: file, line: line);
+        try verify(writer: ApprovalTextWriter(response, "txt"), options, file: file, line: line);
     }
 
     private class func verify(
             writer: ApprovalTextWriter,
-            reporter: ApprovalFailureReporter = getReporter(),
+            _ options: Options = Options(),
             file: StaticString,
             line: UInt
     ) throws {
-        try verify(writer: writer, namer: createApprovalNamer(file.description), reporter: reporter, file: file, line: line);
+        try verify(writer: writer, namer: createApprovalNamer(file.description), options, file: file, line: line);
     }
 
     private class func verify(
             writer: ApprovalTextWriter,
             namer: ApprovalNamer,
-            reporter: ApprovalFailureReporter,
+            _ options: Options = Options(),
             file: StaticString,
             line: UInt
     ) throws {
-        try verify(approver: FileApprover(writer: writer, namer: namer), reporter: reporter, file: file, line: line);
-    }
-
-    private class func verify(
-            approver: FileApprover,
-            reporter: ApprovalFailureReporter,
-            file: StaticString,
-            line: UInt
-    ) throws {
-        try verify(approver: approver, file: file, line: line, options: Options(reporter: reporter))
+        try verify(approver: FileApprover(writer: writer, namer: namer), file: file, line: line, options);
     }
 
     private class func verify(
             approver: FileApprover,
             file: StaticString,
             line: UInt,
-            options: Options = Options()
+            _ options: Options = Options()
     ) throws {
         let reporter = options.getReporter()
         if !approver.approve() {
@@ -92,12 +83,12 @@ public class Approvals {
 
     public static func verify<T>(
             _ object: T,
-            _ reporter: ApprovalFailureReporter = getReporter(),
+            _ options: Options = Options(),
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
         let description = String(describing: type(of: object.self)) + String(describing: object)
-        try verify(description, reporter: reporter, file: file, line: line)
+        try verify(description, options, file: file, line: line)
     }
 
     public static func createApprovalNamer(_ file: String) -> ApprovalNamer {
