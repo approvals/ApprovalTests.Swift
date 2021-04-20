@@ -1,6 +1,6 @@
 import Foundation
 
-class ScrubWithRegEx: Scrubber {
+public class ScrubWithRegEx: Scrubber {
     private let pattern: String
     private let replacementFunction: (String) -> String
 
@@ -14,7 +14,7 @@ class ScrubWithRegEx: Scrubber {
         self.replacementFunction = replacementFunction
     }
 
-    func scrub(_ input: String) -> String {
+    public func scrub(_ input: String) -> String {
         if pattern == "" { return input }
         return input.replacingOccurrences(matchingPattern: pattern, replacementProvider: replacementFunction)
     }

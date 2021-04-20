@@ -1,8 +1,8 @@
 import XCTest
 #if os(OSX)
-    @testable import ApprovalTests_Swift
+    import ApprovalTests_Swift
 #elseif os(iOS)
-    @testable import ApprovalTests_iOS
+    import ApprovalTests_iOS
 #endif
 
 final class SampleArrayTests: XCTestCase {
