@@ -282,12 +282,12 @@
 				973084D9A486DE725CE0CA7D /* Core */,
 				973081106774B58345BDD43C /* Namer */,
 				97308887A6CE81339049E3B4 /* Reporters */,
+				BB17046E248658EAD616D3F2 /* Scrubbers */,
 				97308CA7D8483A14498F1D40 /* Utils */,
 				973086E353683EE643DD4BA3 /* Writers */,
 				168C9627216023F9008F354C /* ApprovalTests_Swift.h */,
 				168C9628216023F9008F354C /* Info.plist */,
 				973086D51D21070606B41784 /* ToDo.txt */,
-				BB17046E248658EAD616D3F2 /* Scrubbers */,
 			);
 			path = ApprovalTests.Swift;
 			sourceTree = "<group>";
@@ -304,8 +304,8 @@
 				97308C741E9083C1EF8992C9 /* Combinations */,
 				97308D78086F701623ED654B /* Demo */,
 				BB17064E8F6B27C1C626D959 /* Reporters */,
-				168C9634216023F9008F354C /* Info.plist */,
 				BB170341B90F8DAC2106366B /* Scrubbers */,
+				168C9634216023F9008F354C /* Info.plist */,
 			);
 			path = ApprovalTests.SwiftTests;
 			sourceTree = "<group>";
@@ -408,9 +408,9 @@
 		BB17046E248658EAD616D3F2 /* Scrubbers */ = {
 			isa = PBXGroup;
 			children = (
-				BB170E78802A85D68B77CAA0 /* ScrubWithRegEx.swift */,
-				BB1700D4E088787C48D2EA63 /* ScrubNothing.swift */,
 				BB170B4E08B1BA83D2E5E201 /* ScrubDates.swift */,
+				BB1700D4E088787C48D2EA63 /* ScrubNothing.swift */,
+				BB170E78802A85D68B77CAA0 /* ScrubWithRegEx.swift */,
 			);
 			path = Scrubbers;
 			sourceTree = "<group>";
