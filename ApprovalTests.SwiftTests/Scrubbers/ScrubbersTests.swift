@@ -22,4 +22,18 @@ final class ScrubbersTests: XCTestCase {
         let scrubber = ScrubWithRegEx(pattern: "ll", replacementFunction: { match in "\(match.count)" } )
         XCTAssertEqual(scrubber.scrub("hello"), "he2o")
     }
+
+    func testScrubbingDates() throws {
+        let scrubber = ScrubDates()
+        let date = Date(timeIntervalSince1970: 1000)
+        let date2 = Date(timeIntervalSince1970: 2000)
+        try Approvals.verifyAsJson(TimeSheet(startTime: date, breakTime: date, breakEnd: date2, endOfDay: date2), Options(scrubber))
+    }
+}
+
+private struct TimeSheet: Codable {
+    let startTime: Date
+    let breakTime: Date
+    let breakEnd: Date
+    let endOfDay: Date
 }

@@ -40,6 +40,8 @@
 		48B6BF7726290E2500B956A4 /* OptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170DC8AAB0910AD476210C /* OptionsTests.swift */; };
 		48B6BF7826290E2500B956A4 /* OptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170DC8AAB0910AD476210C /* OptionsTests.swift */; };
 		48B6BF9126293D5400B956A4 /* ReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17064685A20DAA7CFE6421 /* ReporterTests.swift */; };
+		48DFED4C262E64290036E160 /* ScrubbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170BAAFF8A9EFB75598942 /* ScrubbersTests.swift */; };
+		48DFED4D262E642A0036E160 /* ScrubbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170BAAFF8A9EFB75598942 /* ScrubbersTests.swift */; };
 		9730813D4772C7FCA170E0EA /* ApprovalWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973088485E8B1D043616B220 /* ApprovalWriter.swift */; };
 		973081B984AC2F9B66D19D7F /* ApprovalsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308D241492E13CB5BF5866 /* ApprovalsTest.swift */; };
 		9730846152DA8E5EC7A1170F /* Namer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973086013CD2288DC3DE9F4E /* Namer.swift */; };
@@ -67,14 +69,14 @@
 		BB1702505E8BF49858471116 /* MacReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1707BC3C179D89F3FD2B84 /* MacReporter.swift */; };
 		BB1702CC0E11C261EEA5D889 /* TestFailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17051531693F6FC252F7DF /* TestFailer.swift */; };
 		BB17030411282D1203B9BFF6 /* DiffReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1701DBF0B6E0AD00A62DDD /* DiffReporter.swift */; };
-		BB17048A6325F5E288673CA2 /* ScrubbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170BAAFF8A9EFB75598942 /* ScrubbersTests.swift */; };
 		BB1704E7E6A9EF2621DF755B /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170F2E5E36C79487539555 /* Options.swift */; };
 		BB1704FF7E5D8A3C7C404389 /* DiffMergeReporterIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17070775083BB000324A0A /* DiffMergeReporterIOS.swift */; };
 		BB17050D1CB42D26415F09D6 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170F2E5E36C79487539555 /* Options.swift */; };
 		BB1705193EE633BCD5E69CE0 /* iOSReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1705FDCFBE674F39B7D859 /* iOSReporter.swift */; };
-		BB1705AF0CCEF9E3911A2D0B /* ScrubbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170BAAFF8A9EFB75598942 /* ScrubbersTests.swift */; };
+		BB1705BAFF1D3484001623D3 /* ScrubDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170B4E08B1BA83D2E5E201 /* ScrubDates.swift */; };
 		BB1705BD1C2CEECB5F9674DF /* ScrubNothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1700D4E088787C48D2EA63 /* ScrubNothing.swift */; };
 		BB17067D87D9EFBE29AF0CF1 /* DiffReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1701DBF0B6E0AD00A62DDD /* DiffReporter.swift */; };
+		BB170735AEB3FF2A966B2670 /* ScrubDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170B4E08B1BA83D2E5E201 /* ScrubDates.swift */; };
 		BB1708AACDCB6363B732AC26 /* iOSReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1705FDCFBE674F39B7D859 /* iOSReporter.swift */; };
 		BB1708E421B1EDC9B7505EA0 /* KaleidoscopeReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170A02C65DDFAD9FADE96C /* KaleidoscopeReporter.swift */; };
 		BB17091A9C60F6653944C673 /* Scrubber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170FF2F8319026C4E149FF /* Scrubber.swift */; };
@@ -156,6 +158,7 @@
 		BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDiffReporterBase.swift; sourceTree = "<group>"; };
 		BB170A02C65DDFAD9FADE96C /* KaleidoscopeReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaleidoscopeReporter.swift; sourceTree = "<group>"; };
 		BB170B4E04C535C1000CA54A /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		BB170B4E08B1BA83D2E5E201 /* ScrubDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrubDates.swift; sourceTree = "<group>"; };
 		BB170BAAFF8A9EFB75598942 /* ScrubbersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrubbersTests.swift; sourceTree = "<group>"; };
 		BB170DC8AAB0910AD476210C /* OptionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsTests.swift; sourceTree = "<group>"; };
 		BB170E78802A85D68B77CAA0 /* ScrubWithRegEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrubWithRegEx.swift; sourceTree = "<group>"; };
@@ -407,6 +410,7 @@
 			children = (
 				BB170E78802A85D68B77CAA0 /* ScrubWithRegEx.swift */,
 				BB1700D4E088787C48D2EA63 /* ScrubNothing.swift */,
+				BB170B4E08B1BA83D2E5E201 /* ScrubDates.swift */,
 			);
 			path = Scrubbers;
 			sourceTree = "<group>";
@@ -623,10 +627,10 @@
 				BB17067D87D9EFBE29AF0CF1 /* DiffReporter.swift in Sources */,
 				BB1708AACDCB6363B732AC26 /* iOSReporter.swift in Sources */,
 				BB1704E7E6A9EF2621DF755B /* Options.swift in Sources */,
-				BB1705AF0CCEF9E3911A2D0B /* ScrubbersTests.swift in Sources */,
 				BB170ECA78B7A7F62CF1784B /* ScrubWithRegEx.swift in Sources */,
 				BB17091A9C60F6653944C673 /* Scrubber.swift in Sources */,
 				BB1705BD1C2CEECB5F9674DF /* ScrubNothing.swift in Sources */,
+				BB1705BAFF1D3484001623D3 /* ScrubDates.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +640,7 @@
 			files = (
 				48B6BF7826290E2500B956A4 /* OptionsTests.swift in Sources */,
 				163E1884217FB49800A54A48 /* TestReporter.swift in Sources */,
+				48DFED4C262E64290036E160 /* ScrubbersTests.swift in Sources */,
 				163E1885217FB4A200A54A48 /* CombinationTests.swift in Sources */,
 				48B6BF54262906DD00B956A4 /* ApprovalTests_SwiftTests.swift in Sources */,
 				48B6BF9126293D5400B956A4 /* ReporterTests.swift in Sources */,
@@ -674,10 +679,10 @@
 				BB17030411282D1203B9BFF6 /* DiffReporter.swift in Sources */,
 				BB1705193EE633BCD5E69CE0 /* iOSReporter.swift in Sources */,
 				BB17050D1CB42D26415F09D6 /* Options.swift in Sources */,
-				BB17048A6325F5E288673CA2 /* ScrubbersTests.swift in Sources */,
 				BB17092C827110A024C37290 /* ScrubWithRegEx.swift in Sources */,
 				BB170F1E0EF85F10A44587DD /* Scrubber.swift in Sources */,
 				BB170CCEA1FCAC1D1490EB06 /* ScrubNothing.swift in Sources */,
+				BB170735AEB3FF2A966B2670 /* ScrubDates.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,6 +692,7 @@
 			files = (
 				168C9633216023F9008F354C /* ApprovalTests_SwiftTests.swift in Sources */,
 				973084EC01FAAC43432D75C3 /* TestReporter.swift in Sources */,
+				48DFED4D262E642A0036E160 /* ScrubbersTests.swift in Sources */,
 				97308F937FDF58C96E108DE4 /* CombinationTests.swift in Sources */,
 				973086311B135BA1E44E28B3 /* SampleArrayTest.swift in Sources */,
 				48B6BF7726290E2500B956A4 /* OptionsTests.swift in Sources */,
