@@ -23,17 +23,10 @@ enum StringUtils {
     }
 
     static func toJson<T: Encodable>(_ object: T) throws -> String {
-        let jsonString: String
         let jsonEncoder = JSONEncoder()
         jsonEncoder.dateEncodingStrategy = .iso8601
         jsonEncoder.outputFormatting = .prettyPrinted
-        do {
-            let jsonData = try jsonEncoder.encode(object)
-            jsonString = String(data: jsonData, encoding: .utf8) ?? ""
-        } catch {
-            jsonString = ""
-            print(error.localizedDescription)
-        }
-        return jsonString
+        let jsonData = try jsonEncoder.encode(object)
+        return String(data: jsonData, encoding: .utf8) ?? ""
     }
 }
