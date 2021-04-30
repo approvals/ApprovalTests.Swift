@@ -5,8 +5,8 @@
 #endif
 
 class TestReporter: EquatableFailureReporter {
-    public private(set) var received: String = ""
-    public private(set) var approved: String = ""
+    public private(set) var received = ""
+    public private(set) var approved = ""
     private let success: Bool
 
     init(success: Bool) {
