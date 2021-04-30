@@ -53,14 +53,13 @@ public enum Approvals {
             _ options: Options = Options(),
             file: StaticString,
             line: UInt) throws {
-        try verify(FileApprover(writer, namer), file: file, line: line, options)
+        try verify(FileApprover(writer, namer), options, file: file, line: line)
     }
 
-    private static func verify(
-            _ approver: FileApprover,
-            file: StaticString,
-            line: UInt,
-            _ options: Options = Options()) throws {
+    private static func verify(_ approver: FileApprover,
+                               _ options: Options = Options(),
+                               file: StaticString,
+                               line: UInt) throws {
         let reporter = options.reporter
         if !approver.approve() {
             approver.reportFailure(reporter: reporter)
