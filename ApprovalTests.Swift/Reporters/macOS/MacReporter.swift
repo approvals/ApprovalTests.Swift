@@ -3,8 +3,8 @@ class MacReporter: FirstWorkingReporter {
         #if os(macOS)
             super.init(
                     // begin-snippet: mac_reporters
-                    KaleidoscopeReporter(),
-                    DiffMergeReporter()
+                    DiffMergeReporter(),
+                    KaleidoscopeReporter()
                     // end-snippet
             )
         #endif

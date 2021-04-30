@@ -5,7 +5,11 @@ class ApprovalTextWriter: ApprovalWriter {
     private let fileExtensionWithoutDot: String
 
     init(_ text: String, _ fileExtensionWithoutDot: String) {
-        self.text = text
+        if !text.hasSuffix("\n") {
+            self.text = text + "\n"
+        } else {
+            self.text = text
+        }
         self.fileExtensionWithoutDot = fileExtensionWithoutDot
     }
 

@@ -1,6 +1,6 @@
 {
-  "startTime" : "<date2>",
-  "endOfDay" : "<date1>",
+  "breakEnd" : "<date1>",
   "breakTime" : "<date2>",
-  "breakEnd" : "<date1>"
+  "endOfDay" : "<date1>",
+  "startTime" : "<date2>"
 }

@@ -27,7 +27,7 @@ enum StringUtils {
     static func toJson<T: Encodable>(_ object: T) throws -> String {
         let jsonEncoder = JSONEncoder()
         jsonEncoder.dateEncodingStrategy = .iso8601
-        jsonEncoder.outputFormatting = .prettyPrinted
+        jsonEncoder.outputFormatting = JSONEncoder.OutputFormatting.prettyPrinted.union(.sortedKeys)
         let jsonData = try jsonEncoder.encode(object)
         return String(data: jsonData, encoding: .utf8) ?? ""
     }
