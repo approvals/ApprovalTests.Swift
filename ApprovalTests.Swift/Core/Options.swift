@@ -58,4 +58,8 @@ public class FileOptions {
     public var getFileExtensionWithDot: String {
         data["fileExtension"] as? String ?? ".txt"
     }
+
+    public var getFileExtensionWithoutDot: String {
+        String(getFileExtensionWithDot.dropFirst())
+    }
 }

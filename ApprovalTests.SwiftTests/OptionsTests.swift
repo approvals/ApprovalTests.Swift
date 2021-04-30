@@ -33,6 +33,7 @@ final class OptionsTests: XCTestCase {
         XCTAssertEqual(options.forFile().getFileExtensionWithDot, ".txt")
         options = options.forFile().withExtension(".json")
         XCTAssertEqual(options.forFile().getFileExtensionWithDot, ".json")
+        XCTAssertEqual(options.forFile().getFileExtensionWithoutDot, "json")
     }
 
 }
