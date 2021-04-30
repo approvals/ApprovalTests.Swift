@@ -27,7 +27,7 @@ final class ScrubbersTests: XCTestCase {
         let scrubber = ScrubDates()
         let date = Date(timeIntervalSince1970: 1000)
         let date2 = Date(timeIntervalSince1970: 2000)
-        try Approvals.verifyAsJson(
+        try Approvals.verifyAsJSON(
                 TimeSheet(startTime: date, breakTime: date, breakEnd: date2, endOfDay: date2),
                 Options(scrubber)
         )

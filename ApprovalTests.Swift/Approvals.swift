@@ -11,13 +11,13 @@ public enum Approvals {
         NameCreator().load(file.description)
     }
 
-    public static func verifyAsJson<T: Encodable>(
+    public static func verifyAsJSON<T: Encodable>(
             _ object: T,
             _ options: Options = Options(),
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
-        try verify(StringUtils.toJson(object), options.forFile.withExtension(".json"), file: file, line: line)
+        try verify(StringUtils.toJSON(object), options.forFile.withExtension(".json"), file: file, line: line)
     }
 
     public static func verifyAll(

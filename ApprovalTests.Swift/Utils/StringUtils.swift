@@ -24,7 +24,7 @@ enum StringUtils {
         return buffer
     }
 
-    static func toJson<T: Encodable>(_ object: T) throws -> String {
+    static func toJSON<T: Encodable>(_ object: T) throws -> String {
         let jsonEncoder = JSONEncoder()
         jsonEncoder.dateEncodingStrategy = .iso8601
         jsonEncoder.outputFormatting = JSONEncoder.OutputFormatting.prettyPrinted.union(.sortedKeys)
