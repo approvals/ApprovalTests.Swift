@@ -17,7 +17,7 @@ public enum Approvals {
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
-        try verify(StringUtils.toJson(object), options, file: file, line: line)
+        try verify(StringUtils.toJson(object), options.forFile().withExtension(".json"), file: file, line: line)
     }
 
     public static func verifyAll(
