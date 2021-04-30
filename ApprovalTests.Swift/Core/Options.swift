@@ -23,7 +23,7 @@ public class Options {
         data["reporter"] as? ApprovalFailureReporter ?? Approvals.getReporter
     }
 
-    public var getScrubber: Scrubber {
+    public var scrubber: Scrubber {
         data["scrubber"] as? Scrubber ?? ScrubNothing()
     }
 
@@ -36,7 +36,7 @@ public class Options {
     }
 
     func scrub(_ input: String) throws -> String {
-        getScrubber.scrub(input)
+        scrubber.scrub(input)
     }
 
     public var forFile: FileOptions {
