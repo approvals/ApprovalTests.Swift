@@ -20,7 +20,7 @@ public class Options {
     }
 
     public var reporter: ApprovalFailureReporter {
-        data["reporter"] as? ApprovalFailureReporter ?? Approvals.getReporter
+        data["reporter"] as? ApprovalFailureReporter ?? Approvals.reporter
     }
 
     public var scrubber: Scrubber {

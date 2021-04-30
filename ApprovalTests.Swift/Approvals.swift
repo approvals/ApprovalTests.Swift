@@ -84,7 +84,7 @@ public enum Approvals {
         NameCreator().load(file)
     }
     
-    public static var getReporter: ApprovalFailureReporter {
+    public static var reporter: ApprovalFailureReporter {
         ReporterFactory.get
     }
 }
