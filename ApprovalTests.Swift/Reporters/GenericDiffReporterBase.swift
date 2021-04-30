@@ -4,14 +4,10 @@ class GenericDiffReporterBase: EquatableFailureReporter {
     let programPath: String
     let arguments: (String, String) -> [String]
     
-    init(programPath: String) {
-        self.programPath = programPath
-        arguments = { received, approved in
-            [received, approved]
-        }
-    }
-
-    init(programPath: String, arguments: @escaping (String, String) -> [String]) {
+    init(programPath: String,
+         arguments: @escaping (String, String) -> [String] = { received, approved in
+             [received, approved]
+         }) {
         self.programPath = programPath
         self.arguments = arguments
     }
