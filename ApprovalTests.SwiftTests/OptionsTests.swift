@@ -14,7 +14,7 @@ final class OptionsTests: XCTestCase {
 
     func testOptionsHasReporters() throws {
         let reporter = iOSReporter()
-        let o1 = Options(reporter: reporter)
+        let o1 = Options(reporter)
         let o2 = Options().withReporter(reporter)
         XCTAssertEqual(reporter, o1.getReporter() as! EquatableFailureReporter)
         XCTAssertEqual(reporter, o2.getReporter() as! EquatableFailureReporter)

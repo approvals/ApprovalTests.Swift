@@ -20,7 +20,7 @@ final class ApprovalTests_SwiftTests: XCTestCase {
         let reporter = TestReporter(success: true)
         let failer = TestFailer()
         FileApprover.registerFailer(failer)
-        try Approvals.verify("bar", Options(reporter: reporter))
+        try Approvals.verify("bar", Options(reporter))
         FileApprover.resetFailer()
         XCTAssertNotEqual("", reporter.received)
         XCTAssertTrue(failer.failed)

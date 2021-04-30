@@ -5,7 +5,7 @@ public class Options {
         data = [:]
     }
 
-    public init(reporter: ApprovalFailureReporter) {
+    public init(_ reporter: ApprovalFailureReporter) {
         data = ["reporter": reporter]
     }
     

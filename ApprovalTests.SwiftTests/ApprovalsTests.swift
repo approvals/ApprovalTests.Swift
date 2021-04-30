@@ -12,11 +12,11 @@ final class ApprovalsTests: XCTestCase {
     }
 
     func testAsJson() throws {
-        try Approvals.verifyAsJson(CGRect(x: 5, y: 10, width: 100, height: 200), Options(reporter: DiffMergeReporter()))
+        try Approvals.verifyAsJson(CGRect(x: 5, y: 10, width: 100, height: 200), Options(DiffMergeReporter()))
     }
 
     func testAsJsonWithCustomObject() throws {
-        try Approvals.verifyAsJson(MyRect(x: 5, y: 10, width: 100, height: 200), Options(reporter: DiffMergeReporter()))
+        try Approvals.verifyAsJson(MyRect(x: 5, y: 10, width: 100, height: 200), Options(DiffMergeReporter()))
     }
 }
 
