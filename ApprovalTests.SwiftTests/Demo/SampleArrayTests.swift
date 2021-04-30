@@ -10,6 +10,6 @@ final class SampleArrayTests: XCTestCase {
     func testList() throws {
         var names = ["Llewellyn", "James", "Dan", "Jason", "Katrina"]
         names.sort()
-        try Approvals.verifyAll("", names)
+        try Approvals.verifyAll(label: "", names)
     }
 }
