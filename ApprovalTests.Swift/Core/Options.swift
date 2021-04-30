@@ -39,8 +39,8 @@ public class Options {
         getScrubber().scrub(input)
     }
 
-    public func forFile() -> FileOptions {
-        FileOptions(self.data)
+    public var forFile: FileOptions {
+        FileOptions(data)
     }
 }
 
