@@ -20,7 +20,7 @@ public class Options {
     }
 
     public func getReporter() -> ApprovalFailureReporter {
-        data["reporter"] as? ApprovalFailureReporter ?? Approvals.getReporter()
+        data["reporter"] as? ApprovalFailureReporter ?? Approvals.getReporter
     }
 
     public func getScrubber() -> Scrubber {

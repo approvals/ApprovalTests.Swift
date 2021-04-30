@@ -83,9 +83,8 @@ public enum Approvals {
     public static func createApprovalNamer(_ file: String) -> ApprovalNamer {
         NameCreator().load(file)
     }
-
-    public static func getReporter() -> ApprovalFailureReporter {
+    
+    public static var getReporter: ApprovalFailureReporter {
         ReporterFactory.get()
     }
-
 }

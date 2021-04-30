@@ -9,7 +9,7 @@ final class OptionsTests: XCTestCase {
 
     func testOptionsGivesTheDefaultReporter() throws {
         let o = Options()
-        XCTAssertEqual(Approvals.getReporter() as! EquatableFailureReporter, o.getReporter() as! EquatableFailureReporter)
+        XCTAssertEqual(Approvals.getReporter as! EquatableFailureReporter, o.getReporter() as! EquatableFailureReporter)
     }
 
     func testOptionsHasReporters() throws {
