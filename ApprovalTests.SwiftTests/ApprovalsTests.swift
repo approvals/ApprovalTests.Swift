@@ -20,16 +20,9 @@ final class ApprovalsTests: XCTestCase {
     }
 }
 
-private class MyRect: Codable {
-    var x: Int
-    var y: Int
-    var width: Int
-    var height: Int
-
-    init(x: Int, y: Int, width: Int, height: Int) {
-        self.x = x
-        self.y = y
-        self.width = width
-        self.height = height
-    }
+private struct MyRect: Codable {
+    let x: Int
+    let y: Int
+    let width: Int
+    let height: Int
 }
