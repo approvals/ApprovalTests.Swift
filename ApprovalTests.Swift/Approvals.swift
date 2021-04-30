@@ -53,7 +53,7 @@ public enum Approvals {
             _ options: Options = Options(),
             file: StaticString,
             line: UInt) throws {
-        try verify(FileApprover(writer: writer, namer: namer), file: file, line: line, options);
+        try verify(FileApprover(writer, namer), file: file, line: line, options);
     }
 
     private static func verify(
