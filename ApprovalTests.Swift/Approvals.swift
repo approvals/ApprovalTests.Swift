@@ -61,7 +61,7 @@ public enum Approvals {
             file: StaticString,
             line: UInt,
             _ options: Options = Options()) throws {
-        let reporter = options.getReporter()
+        let reporter = options.getReporter
         if !approver.approve() {
             approver.reportFailure(reporter: reporter);
             try approver.fail(file: file, line: line);

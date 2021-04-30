@@ -19,7 +19,7 @@ public class Options {
         self.data = d
     }
 
-    public func getReporter() -> ApprovalFailureReporter {
+    public var getReporter: ApprovalFailureReporter {
         data["reporter"] as? ApprovalFailureReporter ?? Approvals.getReporter
     }
 
