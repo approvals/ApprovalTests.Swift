@@ -31,6 +31,10 @@ public class Options {
         Options(data, key: "reporter", value: reporter)
     }
 
+    public func withScrubber(_ scrubber: Scrubber) -> Options {
+        Options(data, key: "scrubber", value: scrubber)
+    }
+
     func scrub(_ input: String) throws -> String {
         getScrubber().scrub(input)
     }
