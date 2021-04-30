@@ -85,6 +85,6 @@ public enum Approvals {
     }
     
     public static var getReporter: ApprovalFailureReporter {
-        ReporterFactory.get()
+        ReporterFactory.get
     }
 }
