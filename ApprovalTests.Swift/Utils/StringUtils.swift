@@ -17,11 +17,9 @@ enum StringUtils {
     }
 
     private static func padNumber(_ number: Int, _ digits: Int) -> String {
-        var text = "\(number)"
-        while (text.count < digits) {
-            text = "0" + text
-        }
-        return text
+        let text = "\(number)"
+        let padding = String(repeating: "0", count: digits - text.count)
+        return padding + text
     }
 
     static func toJSON<T: Encodable>(_ object: T) throws -> String {
