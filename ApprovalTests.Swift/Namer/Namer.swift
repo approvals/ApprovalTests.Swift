@@ -20,7 +20,7 @@ class Namer: ApprovalNamer {
         let indexEnd = fromFile.range(of: ".swift")?.lowerBound
         let tempName = String(fromFile.prefix(upTo: indexEnd!))
         let baseName = String(format: "%@.%@", tempName, testName)
-        return baseName;
+        return baseName
     }
 
     private func demangleStack() {

@@ -1,6 +1,6 @@
 class ReporterFactory {
     let FRONTLOADED_REPORTER = "FrontloadedReporter"
-    let USE_REPORTER = "UseReporter";
+    let USE_REPORTER = "UseReporter"
 
     public static var get: ApprovalFailureReporter {
         #if os(OSX)

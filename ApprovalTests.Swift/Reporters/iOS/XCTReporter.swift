@@ -30,7 +30,7 @@
 
             // send command to system out
             let approveCommand = "To approve run : " + command
-            print(approveCommand);
+            print(approveCommand)
             XCTAssertEqual(aText, rText)
 
             return true

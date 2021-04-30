@@ -9,7 +9,7 @@ class Samples: XCTestCase {
     func testString() throws {
         var s = "Approval"
         s += "Tests"
-        try Approvals.verify(s);
+        try Approvals.verify(s)
     }
 
     func testObject() throws {

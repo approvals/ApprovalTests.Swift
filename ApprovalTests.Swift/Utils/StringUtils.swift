@@ -13,7 +13,7 @@ enum StringUtils {
     public static func toString(_ name: String, _ array: [Any]) -> String {
         var buffer = ""
         if (array.isEmpty) {
-            buffer.append(name + ".length = 0");
+            buffer.append(name + ".length = 0")
         } else {
             let maxPadding = "\(array.count)".count
             for index in 0 ..< array.count {

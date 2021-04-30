@@ -36,7 +36,7 @@ public enum Approvals {
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
-        try verify(ApprovalTextWriter(options.scrub(response), options.forFile.fileExtensionWithoutDot), options, file: file, line: line);
+        try verify(ApprovalTextWriter(options.scrub(response), options.forFile.fileExtensionWithoutDot), options, file: file, line: line)
     }
 
     private static func verify(
@@ -44,7 +44,7 @@ public enum Approvals {
             _ options: Options = Options(),
             file: StaticString,
             line: UInt) throws {
-        try verify(writer, createApprovalNamer(file.description), options, file: file, line: line);
+        try verify(writer, createApprovalNamer(file.description), options, file: file, line: line)
     }
 
     private static func verify(
@@ -53,7 +53,7 @@ public enum Approvals {
             _ options: Options = Options(),
             file: StaticString,
             line: UInt) throws {
-        try verify(FileApprover(writer, namer), file: file, line: line, options);
+        try verify(FileApprover(writer, namer), file: file, line: line, options)
     }
 
     private static func verify(
@@ -63,10 +63,10 @@ public enum Approvals {
             _ options: Options = Options()) throws {
         let reporter = options.reporter
         if !approver.approve() {
-            approver.reportFailure(reporter: reporter);
-            try approver.fail(file: file, line: line);
+            approver.reportFailure(reporter: reporter)
+            try approver.fail(file: file, line: line)
         } else {
-            approver.cleanUpAfterSuccess(reporter: reporter);
+            approver.cleanUpAfterSuccess(reporter: reporter)
         }
     }
 
