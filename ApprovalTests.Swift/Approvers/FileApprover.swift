@@ -25,7 +25,7 @@ class FileApprover: ApprovalApprover {
 
     func approve() -> Bool {
         let _ = writer.writeReceivedFile(received)
-        return approveTextFile(approved: approved, received: received);
+        return approveTextFile(approved: approved, received: received)
     }
 
     func approveTextFile(approved expected: String, received actual: String) -> Bool {
