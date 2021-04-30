@@ -1,38 +1,44 @@
+enum OptionDataKey {
+    case reporter
+    case scrubber
+    case fileExtension
+}
+
 public class Options {
-    private let data: [String : Any]
+    private let data: [OptionDataKey : Any]
 
     public init() {
         data = [:]
     }
 
     public init(_ reporter: ApprovalFailureReporter) {
-        data = ["reporter": reporter]
+        data = [.reporter: reporter]
     }
     
     public init(_ scrubber: Scrubber) {
-        data = ["scrubber": scrubber]
+        data = [.scrubber: scrubber]
     }
 
-    fileprivate init(_ data: [String: Any], key: String, value: Any) {
-        var d: [String: Any] = data
+    fileprivate init(_ data: [OptionDataKey: Any], key: OptionDataKey, value: Any) {
+        var d: [OptionDataKey: Any] = data
         d[key] = value
         self.data = d
     }
 
     public var reporter: ApprovalFailureReporter {
-        data["reporter"] as? ApprovalFailureReporter ?? Approvals.reporter
+        data[.reporter] as? ApprovalFailureReporter ?? Approvals.reporter
     }
 
     public var scrubber: Scrubber {
-        data["scrubber"] as? Scrubber ?? ScrubNothing()
+        data[.scrubber] as? Scrubber ?? ScrubNothing()
     }
 
     public func withReporter(_ reporter: ApprovalFailureReporter) -> Options {
-        Options(data, key: "reporter", value: reporter)
+        Options(data, key: .reporter, value: reporter)
     }
 
     public func withScrubber(_ scrubber: Scrubber) -> Options {
-        Options(data, key: "scrubber", value: scrubber)
+        Options(data, key: .scrubber, value: scrubber)
     }
 
     func scrub(_ input: String) throws -> String {
@@ -45,18 +51,18 @@ public class Options {
 }
 
 public class FileOptions {
-    private let data: [String: Any]
+    private let data: [OptionDataKey: Any]
 
     public func withExtension(_ extensionWithDot: String) -> Options {
-        Options(data, key: "fileExtension", value: extensionWithDot)
+        Options(data, key: .fileExtension, value: extensionWithDot)
     }
 
-    public init(_ data: [String: Any]) {
+    init(_ data: [OptionDataKey: Any]) {
         self.data = data
     }
 
     public var fileExtensionWithDot: String {
-        data["fileExtension"] as? String ?? ".txt"
+        data[.fileExtension] as? String ?? ".txt"
     }
 
     public var fileExtensionWithoutDot: String {
