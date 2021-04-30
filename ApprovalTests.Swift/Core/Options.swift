@@ -1,32 +1,34 @@
 public class Options {
-    private let reporter: ApprovalFailureReporter?
-    private let scrubber: Scrubber?
+    private let data: [String : Any]
 
     public init() {
-        reporter = nil
-        scrubber = nil
+        data = [:]
     }
 
     public init(reporter: ApprovalFailureReporter) {
-        self.reporter = reporter
-        scrubber = nil
+        data = ["reporter": reporter]
     }
     
     public init(_ scrubber: Scrubber) {
-        reporter = nil
-        self.scrubber = scrubber
+        data = ["scrubber": scrubber]
+    }
+
+    private init(_ data: [String: Any], key: String, value: Any) {
+        var d: [String: Any] = data
+        d[key] = value
+        self.data = d
     }
 
     public func getReporter() -> ApprovalFailureReporter {
-        reporter ?? Approvals.getReporter()
+        data["reporter"] as? ApprovalFailureReporter ?? Approvals.getReporter()
     }
 
     public func getScrubber() -> Scrubber {
-        scrubber ?? ScrubNothing()
+        data["scrubber"] as? Scrubber ?? ScrubNothing()
     }
 
     public func withReporter(_ reporter: ApprovalFailureReporter) -> Options {
-        Options(reporter: reporter)
+        Options(data, key: "reporter", value: reporter)
     }
 
     func scrub(_ input: String) throws -> String {
