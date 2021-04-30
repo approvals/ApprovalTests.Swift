@@ -55,10 +55,6 @@ public class Options {
 public class FileOptions {
     private let data: OptionData
 
-    public func withExtension(_ extensionWithDot: String) -> Options {
-        Options(data, key: .fileExtension, value: extensionWithDot)
-    }
-
     init(_ data: [OptionDataKey: Any]) {
         self.data = data
     }
@@ -69,5 +65,9 @@ public class FileOptions {
 
     public var fileExtensionWithoutDot: String {
         String(fileExtensionWithDot.dropFirst())
+    }
+
+    public func withExtension(_ extensionWithDot: String) -> Options {
+        Options(data, key: .fileExtension, value: extensionWithDot)
     }
 }
