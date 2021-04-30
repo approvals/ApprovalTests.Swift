@@ -2,14 +2,6 @@ import Foundation
 
 enum StringUtils {
 
-    public static func padNumber(_ number: Int, _ digits: Int) -> String {
-        var text = "\(number)"
-        while (text.count < digits) {
-            text = "0" + text
-        }
-        return text
-    }
-
     public static func toString(_ name: String, _ array: [Any]) -> String {
         var buffer = ""
         if (array.isEmpty) {
@@ -22,6 +14,14 @@ enum StringUtils {
             }
         }
         return buffer
+    }
+
+    private static func padNumber(_ number: Int, _ digits: Int) -> String {
+        var text = "\(number)"
+        while (text.count < digits) {
+            text = "0" + text
+        }
+        return text
     }
 
     static func toJSON<T: Encodable>(_ object: T) throws -> String {
