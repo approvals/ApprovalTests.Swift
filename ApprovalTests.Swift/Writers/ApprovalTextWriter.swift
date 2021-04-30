@@ -6,7 +6,7 @@ class ApprovalTextWriter: ApprovalWriter {
 
     init(_ text: String, _ fileExtensionWithoutDot: String) {
         if !text.hasSuffix("\n") {
-            self.text = text + "\n"
+            self.text = text.appending("\n")
         } else {
             self.text = text
         }
