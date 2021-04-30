@@ -55,7 +55,7 @@ public class Options {
 public class FileOptions {
     private let data: OptionData
 
-    init(_ data: [OptionDataKey: Any]) {
+    fileprivate init(_ data: [OptionDataKey: Any]) {
         self.data = data
     }
 
