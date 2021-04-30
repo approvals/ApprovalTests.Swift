@@ -4,8 +4,10 @@ enum OptionDataKey {
     case fileExtension
 }
 
+typealias OptionData = [OptionDataKey: Any]
+
 public class Options {
-    private let data: [OptionDataKey : Any]
+    private let data: OptionData
 
     public init() {
         data = [:]
@@ -19,8 +21,8 @@ public class Options {
         data = [.scrubber: scrubber]
     }
 
-    fileprivate init(_ data: [OptionDataKey: Any], key: OptionDataKey, value: Any) {
-        var d: [OptionDataKey: Any] = data
+    fileprivate init(_ data: OptionData, key: OptionDataKey, value: Any) {
+        var d = data
         d[key] = value
         self.data = d
     }
@@ -51,7 +53,7 @@ public class Options {
 }
 
 public class FileOptions {
-    private let data: [OptionDataKey: Any]
+    private let data: OptionData
 
     public func withExtension(_ extensionWithDot: String) -> Options {
         Options(data, key: .fileExtension, value: extensionWithDot)
