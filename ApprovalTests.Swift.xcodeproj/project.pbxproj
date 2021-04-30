@@ -77,10 +77,12 @@
 		BB1705BD1C2CEECB5F9674DF /* ScrubNothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1700D4E088787C48D2EA63 /* ScrubNothing.swift */; };
 		BB17067D87D9EFBE29AF0CF1 /* DiffReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1701DBF0B6E0AD00A62DDD /* DiffReporter.swift */; };
 		BB170735AEB3FF2A966B2670 /* ScrubDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170B4E08B1BA83D2E5E201 /* ScrubDates.swift */; };
+		BB170785D01DD8502B5130E1 /* ScrubWithRegExWithReplacementAliasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170E5ED77EF744D7F2D311 /* ScrubWithRegExWithReplacementAliasing.swift */; };
 		BB1708AACDCB6363B732AC26 /* iOSReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1705FDCFBE674F39B7D859 /* iOSReporter.swift */; };
 		BB1708E421B1EDC9B7505EA0 /* KaleidoscopeReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170A02C65DDFAD9FADE96C /* KaleidoscopeReporter.swift */; };
 		BB17091A9C60F6653944C673 /* Scrubber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170FF2F8319026C4E149FF /* Scrubber.swift */; };
 		BB17092C827110A024C37290 /* ScrubWithRegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170E78802A85D68B77CAA0 /* ScrubWithRegEx.swift */; };
+		BB170CAAE3C02DCE74BC4555 /* ScrubWithRegExWithReplacementAliasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170E5ED77EF744D7F2D311 /* ScrubWithRegExWithReplacementAliasing.swift */; };
 		BB170CCEA1FCAC1D1490EB06 /* ScrubNothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1700D4E088787C48D2EA63 /* ScrubNothing.swift */; };
 		BB170D510FCEB3E5C338FCF0 /* GenericDiffReporterBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */; };
 		BB170DD606509A7F5AA1321E /* ReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17064685A20DAA7CFE6421 /* ReporterTests.swift */; };
@@ -161,6 +163,7 @@
 		BB170B4E08B1BA83D2E5E201 /* ScrubDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrubDates.swift; sourceTree = "<group>"; };
 		BB170BAAFF8A9EFB75598942 /* ScrubbersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrubbersTests.swift; sourceTree = "<group>"; };
 		BB170DC8AAB0910AD476210C /* OptionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsTests.swift; sourceTree = "<group>"; };
+		BB170E5ED77EF744D7F2D311 /* ScrubWithRegExWithReplacementAliasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrubWithRegExWithReplacementAliasing.swift; sourceTree = "<group>"; };
 		BB170E78802A85D68B77CAA0 /* ScrubWithRegEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrubWithRegEx.swift; sourceTree = "<group>"; };
 		BB170F2E5E36C79487539555 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		BB170FF2F8319026C4E149FF /* Scrubber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scrubber.swift; sourceTree = "<group>"; };
@@ -411,6 +414,7 @@
 				BB170B4E08B1BA83D2E5E201 /* ScrubDates.swift */,
 				BB1700D4E088787C48D2EA63 /* ScrubNothing.swift */,
 				BB170E78802A85D68B77CAA0 /* ScrubWithRegEx.swift */,
+				BB170E5ED77EF744D7F2D311 /* ScrubWithRegExWithReplacementAliasing.swift */,
 			);
 			path = Scrubbers;
 			sourceTree = "<group>";
@@ -631,6 +635,7 @@
 				BB17091A9C60F6653944C673 /* Scrubber.swift in Sources */,
 				BB1705BD1C2CEECB5F9674DF /* ScrubNothing.swift in Sources */,
 				BB1705BAFF1D3484001623D3 /* ScrubDates.swift in Sources */,
+				BB170CAAE3C02DCE74BC4555 /* ScrubWithRegExWithReplacementAliasing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,6 +688,7 @@
 				BB170F1E0EF85F10A44587DD /* Scrubber.swift in Sources */,
 				BB170CCEA1FCAC1D1490EB06 /* ScrubNothing.swift in Sources */,
 				BB170735AEB3FF2A966B2670 /* ScrubDates.swift in Sources */,
+				BB170785D01DD8502B5130E1 /* ScrubWithRegExWithReplacementAliasing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
