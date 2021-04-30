@@ -17,7 +17,9 @@
             do {
                 aText = try String(contentsOf: approvedUrl)
                 rText = try String(contentsOf: receivedUrl)
-            } catch {}
+            } catch {
+                print("Error: \(error)")
+            }
 
             let workingReceived = cleanPathString(received)
             let workingApproved = cleanPathString(approved)

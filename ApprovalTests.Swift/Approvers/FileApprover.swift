@@ -46,7 +46,9 @@ class FileApprover: ApprovalApprover {
         do {
             t1 = try String(contentsOf: expectedUrl)
             t2 = try String(contentsOf: actualUrl)
-        } catch { /* error handling here */ }
+        } catch {
+            print("Error: \(error)")
+        }
 
         return t1 == t2
     }
@@ -55,6 +57,7 @@ class FileApprover: ApprovalApprover {
         do {
             try fileManager.removeItem(atPath: received)
         } catch {
+            print("Error: \(error)")
         }
     }
 

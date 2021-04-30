@@ -20,6 +20,7 @@ class GenericDiffReporterBase: EquatableFailureReporter {
             try runProcess(received: received, approved: approved)
             return true
         } catch {
+            print("Error: \(error)")
             return false
         }
     }
