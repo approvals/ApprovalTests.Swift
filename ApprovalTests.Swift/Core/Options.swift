@@ -13,7 +13,7 @@ public class Options {
         data = ["scrubber": scrubber]
     }
 
-    private init(_ data: [String: Any], key: String, value: Any) {
+    fileprivate init(_ data: [String: Any], key: String, value: Any) {
         var d: [String: Any] = data
         d[key] = value
         self.data = d
@@ -37,5 +37,25 @@ public class Options {
 
     func scrub(_ input: String) throws -> String {
         getScrubber().scrub(input)
+    }
+
+    public func forFile() -> FileOptions {
+        FileOptions(self.data)
+    }
+}
+
+public class FileOptions {
+    private let data: [String: Any]
+
+    public func withExtension(_ extensionWithDot: String) -> Options {
+        Options(data, key: "fileExtension", value: extensionWithDot)
+    }
+
+    public init(_ data: [String: Any]) {
+        self.data = data
+    }
+
+    public var getFileExtensionWithDot: String {
+        data["fileExtension"] as? String ?? ".txt"
     }
 }
