@@ -1,9 +1,9 @@
-import XCTest
 #if os(OSX)
     import ApprovalTests_Swift
 #elseif os(iOS)
     import ApprovalTests_iOS
 #endif
+import XCTest
 
 final class SampleArrayTests: XCTestCase {
 
