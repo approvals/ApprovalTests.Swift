@@ -50,11 +50,11 @@ class Namer: ApprovalNamer {
             }
             depth += 1
         }
-        return (depth - 3)
+        return depth - 3
     }
 
     private func isTestCase(_ element: String) -> Bool {
-        (element.range(of: "XCTest", options: .caseInsensitive) != nil)
+        element.range(of: "XCTest", options: .caseInsensitive) != nil
     }
 
     private func extractTestName(result: String) -> String {
