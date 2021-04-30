@@ -18,7 +18,7 @@ class Samples: XCTestCase {
     }
 
     func testArray() throws {
-        var s = [String]()
+        var s: [String] = []
         s.append("Approval")
         s.append("Tests")
         try Approvals.verifyAll("Text", s)

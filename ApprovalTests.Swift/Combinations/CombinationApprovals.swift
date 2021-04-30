@@ -249,7 +249,7 @@ public enum CombinationApprovals {
     }
 
     private static func extracted(_ array: [Any]) -> [Any] {
-        var list = [Any]()
+        var list: [Any] = []
 
         for input in array {
             if String(describing: type(of: input)) == "INUNUSED" {
