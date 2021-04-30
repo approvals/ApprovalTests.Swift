@@ -12,4 +12,9 @@ final class SampleArrayTests: XCTestCase {
         names.sort()
         try Approvals.verifyAll(label: "", names)
     }
+
+    func testEmptyList() throws {
+        let names: [String] = []
+        try Approvals.verifyAll("Names", names)
+    }
 }
