@@ -1,4 +1,4 @@
-class ReporterFactory {
+enum ReporterFactory {
     public static var get: ApprovalFailureReporter {
         #if os(OSX)
             let returned = MacReporter()
