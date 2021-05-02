@@ -234,8 +234,8 @@ public enum CombinationApprovals {
                                         for in9 in params9 {
                                             let result = "\(call(in1, in2, in3, in4, in5, in6, in7, in8, in9))"
                                             let someArray = [in1, in2, in3, in4, in5, in6, in7, in8, in9] as [Any]
-                                            let foo = someArray.filter { !($0 is UNUSED) }
-                                            output.append("\(foo) -> \(result)\n")
+                                            let extracted = someArray.filter { !($0 is UNUSED) }
+                                            output.append("\(extracted) -> \(result)\n")
                                         }
                                     }
                                 }
