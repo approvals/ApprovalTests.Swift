@@ -21,7 +21,7 @@ class Samples: XCTestCase {
         var s: [String] = []
         s.append("Approval")
         s.append("Tests")
-        try Approvals.verifyAll(label: "Text", s)
+        try Approvals.verifyAll("Text", s)
     }
 }
 
