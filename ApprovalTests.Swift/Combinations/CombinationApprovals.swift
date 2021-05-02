@@ -1,8 +1,7 @@
-private class UNUSED {
-    var description: String { "SKIP" }
-}
-
 public enum CombinationApprovals {
+    private class UNUSED {
+        var description: String { "SKIP" }
+    }
 
     public static func verifyAllCombinations<IN1, OUT>(
             _ call: @escaping (IN1) -> OUT,
