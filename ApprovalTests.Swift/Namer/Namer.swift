@@ -38,7 +38,7 @@ class Namer: ApprovalNamer {
             className = extractClassName(result: String(classAndMethod))
             testName = extractTestName(result: String(classAndMethod))
         } catch {
-            print("Error: \(error)")
+            print("Error in \(#function): \(error)")
         }
     }
 

@@ -26,8 +26,7 @@ class ApprovalTextWriter: ApprovalWriter {
         do {
             try text.write(toFile: fileUrl.path, atomically: true, encoding: .utf8)
         } catch {
-            print("An error occurred writing file:" + received)
-            print("Error: \(error)")
+            print("Error in \(#function) for received \"\(received)\": \(error)")
         }
 
         return fileUrl.path

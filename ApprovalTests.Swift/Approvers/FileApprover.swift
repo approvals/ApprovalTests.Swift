@@ -47,7 +47,7 @@ class FileApprover: ApprovalApprover {
             t1 = try String(contentsOf: expectedUrl)
             t2 = try String(contentsOf: actualUrl)
         } catch {
-            print("Error: \(error)")
+            print("Error in \(#function) for approved \"\(expected)\", received \"\(actual)\": \(error)")
         }
 
         return t1 == t2
@@ -57,7 +57,7 @@ class FileApprover: ApprovalApprover {
         do {
             try fileManager.removeItem(atPath: received)
         } catch {
-            print("Error: \(error)")
+            print("Error in \(#function): \(error)")
         }
     }
 
