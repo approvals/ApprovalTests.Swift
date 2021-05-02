@@ -7,7 +7,7 @@ enum StringUtils {
         if (array.isEmpty) {
             buffer.append(name + ".length = 0")
         } else {
-            let maxPadding = "\(array.count)".count
+            let maxPadding = "\(array.count - 1)".count
             for index in 0 ..< array.count {
                 let padding = padNumber(index, maxPadding)
                 buffer.append(name + "[" + padding + "] = " + String(describing: array[index]) + "\n")
