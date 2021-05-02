@@ -249,14 +249,7 @@ public enum CombinationApprovals {
     }
 
     private static func extracted(_ array: [Any]) -> [Any] {
-        var list: [Any] = []
-        for input in array {
-            if input is UNUSED {
-                continue
-            }
-            list.append(input)
-        }
-        return list
+        array.filter { !($0 is UNUSED) }
     }
 
 }
