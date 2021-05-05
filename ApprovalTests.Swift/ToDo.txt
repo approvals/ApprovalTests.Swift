@@ -7,7 +7,6 @@
 5.e. First Working Reporter
 5.f. MultiReporter
 5.g. FileLauncher Reporter
-6. VerifyAll
 7. verifyMap
 
 Add starter project

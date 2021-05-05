@@ -50,4 +50,14 @@ final class SampleArrayTests: XCTestCase {
         ]
         try Approvals.verifyAll("Greek", names)
     }
+
+    func testDictionary() throws {
+        var dict: [Int: String] = [
+            3: "Three",
+            2: "Two",
+            1: "One",
+        ]
+        try Approvals.verify(dict)
+    }
+
 }

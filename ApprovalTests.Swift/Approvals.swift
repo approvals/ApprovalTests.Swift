@@ -70,6 +70,13 @@ public enum Approvals {
         try verify(description, options, file: file, line: line)
     }
 
+    public static func verify<Key: Hashable & Comparable, Value>(_ object: [Key: Value],
+                                 _ options: Options = Options(),
+                                 file: StaticString = #filePath,
+                                 line: UInt = #line) throws {
+        try verify(StringUtils.printDictionary(object), options, file: file, line: line)
+    }
+
     public static func createApprovalNamer(_ file: String) -> ApprovalNamer {
         NameCreator().load(file)
     }

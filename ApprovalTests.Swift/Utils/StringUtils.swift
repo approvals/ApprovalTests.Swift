@@ -29,4 +29,15 @@ enum StringUtils {
         let jsonData = try jsonEncoder.encode(object)
         return String(data: jsonData, encoding: .utf8) ?? ""
     }
+
+    static func printDictionary<Key: Hashable & Comparable>(_ dictionary: [Key: Any]) throws -> String {
+        var buffer = "[\n"
+        var keys = Array(dictionary.keys)
+        keys.sort()
+        for key in keys {
+            buffer.append("  \(key) : \(dictionary[key]!),\n")
+        }
+        buffer.append("]\n")
+        return buffer
+    }
 }
