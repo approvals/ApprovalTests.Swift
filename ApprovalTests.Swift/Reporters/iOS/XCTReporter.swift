@@ -3,8 +3,7 @@ import XCTest
 class XCTReporter: EquatableFailureReporter {
 
     override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
-        guard other is XCTReporter else { return false }
-        return true
+        other is XCTReporter
     }
 
     override func report(received: String, approved: String) -> Bool {

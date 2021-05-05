@@ -3,15 +3,12 @@ import Foundation
 class ClipboardReporter: EquatableFailureReporter {
 
     override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
-        guard other is ClipboardReporter else { return false }
-        return true
+        other is ClipboardReporter
     }
 
     override func report(received: String, approved: String) -> Bool {
         let command = ClipboardReporter.getCommandLineMove(received: received, approved: approved)
-
         SystemUtils.pasteToClipboard(command)
-
         return true
     }
 
