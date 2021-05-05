@@ -3,7 +3,7 @@
     class XCTReporter: EquatableFailureReporter {
 
         override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
-            guard other is EquatableFailureReporter else { return false }
+            guard other is XCTReporter else { return false }
             return true
         }
 
@@ -20,15 +20,10 @@
             } catch {
                 print("Error in \(#function) for received \"\(received)\", approved \"\(approved)\": \(error)")
             }
-
-            let workingReceived = cleanPathString(received)
-            let workingApproved = cleanPathString(approved)
-
-            let command = "mv \(workingReceived) \(workingApproved)"
+            let command = ClipboardReporter.getCommandLineMove(received: received, approved: approved)
 
             // copy to pasteboard
-            let pasteboard = UIPasteboard.general
-            pasteboard.string = command
+            SystemUtils.pasteToClipboard(command)
 
             // send command to system out
             let approveCommand = "To approve run : " + command
@@ -36,18 +31,6 @@
             XCTAssertEqual(aText, rText)
 
             return true
-        }
-
-        private func cleanPathString(_ pathString: String) -> String {
-            var workingPathString = pathString
-
-            let removedColons = workingPathString.replacingOccurrences(of: ":::", with: "")
-            workingPathString = removedColons
-
-            let escapedSpaces = workingPathString.replacingOccurrences(of: " ", with: "\\ ")
-            workingPathString = escapedSpaces
-
-            return workingPathString
         }
     }
 

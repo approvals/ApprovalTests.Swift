@@ -1,8 +1,6 @@
 4. Approval Annotations
 5. Reporters
 5.a. Clipboard Reporter
-5.b. XCTestReporter
-5.c. DiffReporter
 5.d. Common Reporters
 5.f. MultiReporter
 5.g. FileLauncher Reporter
