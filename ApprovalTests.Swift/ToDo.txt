@@ -4,10 +4,8 @@
 5.b. XCTestReporter
 5.c. DiffReporter
 5.d. Common Reporters
-5.e. First Working Reporter
 5.f. MultiReporter
 5.g. FileLauncher Reporter
-7. verifyMap
 
 Add starter project
 Add CI

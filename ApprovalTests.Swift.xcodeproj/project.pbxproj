@@ -76,6 +76,7 @@
 		BB17067D87D9EFBE29AF0CF1 /* DiffReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1701DBF0B6E0AD00A62DDD /* DiffReporter.swift */; };
 		BB170735AEB3FF2A966B2670 /* ScrubDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170B4E08B1BA83D2E5E201 /* ScrubDates.swift */; };
 		BB170785D01DD8502B5130E1 /* ScrubWithRegExWithReplacementAliasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170E5ED77EF744D7F2D311 /* ScrubWithRegExWithReplacementAliasing.swift */; };
+		BB17082BCD15B0EC24818BB6 /* ReportWithEverything.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170ABF2255D4F0B1D59D15 /* ReportWithEverything.swift */; };
 		BB1708AACDCB6363B732AC26 /* iOSReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1705FDCFBE674F39B7D859 /* iOSReporter.swift */; };
 		BB1708E421B1EDC9B7505EA0 /* KaleidoscopeReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170A02C65DDFAD9FADE96C /* KaleidoscopeReporter.swift */; };
 		BB17091A9C60F6653944C673 /* Scrubber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170FF2F8319026C4E149FF /* Scrubber.swift */; };
@@ -86,6 +87,7 @@
 		BB170DD606509A7F5AA1321E /* ReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17064685A20DAA7CFE6421 /* ReporterTests.swift */; };
 		BB170E455F9D597F98E2147D /* GenericDiffReporterIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1700198EEF7F2B448074E8 /* GenericDiffReporterIOS.swift */; };
 		BB170ECA78B7A7F62CF1784B /* ScrubWithRegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170E78802A85D68B77CAA0 /* ScrubWithRegEx.swift */; };
+		BB170F1D5D24E5B93365060D /* ReportWithEverything.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170ABF2255D4F0B1D59D15 /* ReportWithEverything.swift */; };
 		BB170F1E0EF85F10A44587DD /* Scrubber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170FF2F8319026C4E149FF /* Scrubber.swift */; };
 		BB170FF2D7989206C9C2C463 /* GenericDiffReporterBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */; };
 /* End PBXBuildFile section */
@@ -156,6 +158,7 @@
 		BB1707BC3C179D89F3FD2B84 /* MacReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacReporter.swift; sourceTree = "<group>"; };
 		BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDiffReporterBase.swift; sourceTree = "<group>"; };
 		BB170A02C65DDFAD9FADE96C /* KaleidoscopeReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaleidoscopeReporter.swift; sourceTree = "<group>"; };
+		BB170ABF2255D4F0B1D59D15 /* ReportWithEverything.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportWithEverything.swift; sourceTree = "<group>"; };
 		BB170B4E04C535C1000CA54A /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		BB170B4E08B1BA83D2E5E201 /* ScrubDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrubDates.swift; sourceTree = "<group>"; };
 		BB170BAAFF8A9EFB75598942 /* ScrubbersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrubbersTests.swift; sourceTree = "<group>"; };
@@ -366,6 +369,7 @@
 				9730820AFFF03C5745F45021 /* ReporterFactory.swift */,
 				163E1880217FA9C700A54A48 /* iOS */,
 				163E187F217FA9A500A54A48 /* macOS */,
+				BB170ABF2255D4F0B1D59D15 /* ReportWithEverything.swift */,
 			);
 			path = Reporters;
 			sourceTree = "<group>";
@@ -631,6 +635,7 @@
 				BB1705BD1C2CEECB5F9674DF /* ScrubNothing.swift in Sources */,
 				BB1705BAFF1D3484001623D3 /* ScrubDates.swift in Sources */,
 				BB170CAAE3C02DCE74BC4555 /* ScrubWithRegExWithReplacementAliasing.swift in Sources */,
+				BB170F1D5D24E5B93365060D /* ReportWithEverything.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,6 +688,7 @@
 				BB170CCEA1FCAC1D1490EB06 /* ScrubNothing.swift in Sources */,
 				BB170735AEB3FF2A966B2670 /* ScrubDates.swift in Sources */,
 				BB170785D01DD8502B5130E1 /* ScrubWithRegExWithReplacementAliasing.swift in Sources */,
+				BB17082BCD15B0EC24818BB6 /* ReportWithEverything.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
