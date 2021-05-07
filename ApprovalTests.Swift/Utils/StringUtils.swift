@@ -24,8 +24,12 @@ enum StringUtils {
 
     static func toJSON<T: Encodable>(_ object: T) throws -> String {
         let jsonEncoder = JSONEncoder()
-        jsonEncoder.dateEncodingStrategy = .iso8601
-        jsonEncoder.outputFormatting = JSONEncoder.OutputFormatting.prettyPrinted.union(.sortedKeys)
+        if #available(iOS 10.0, *) {
+            jsonEncoder.dateEncodingStrategy = .iso8601
+        }
+        if #available(iOS 11.0, *) {
+            jsonEncoder.outputFormatting = JSONEncoder.OutputFormatting.prettyPrinted.union(.sortedKeys)
+        }
         let jsonData = try jsonEncoder.encode(object)
         return String(data: jsonData, encoding: .utf8) ?? ""
     }

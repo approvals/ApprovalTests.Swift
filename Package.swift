@@ -6,6 +6,7 @@ let package = Package(
         name: "ApprovalTests.Swift",
         platforms: [
             .macOS(.v10_14),
+            .iOS(.v12),
         ],
         products: [
             .library(
