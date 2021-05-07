@@ -52,7 +52,7 @@ final class SampleArrayTests: XCTestCase {
     }
 
     func testDictionary() throws {
-        var dict: [Int: String] = [
+        let dict: [Int: String] = [
             3: "Three",
             2: "Two",
             1: "One",
