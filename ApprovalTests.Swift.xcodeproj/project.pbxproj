@@ -42,6 +42,10 @@
 		48B6BF9126293D5400B956A4 /* ReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17064685A20DAA7CFE6421 /* ReporterTests.swift */; };
 		48DFED4C262E64290036E160 /* ScrubbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170BAAFF8A9EFB75598942 /* ScrubbersTests.swift */; };
 		48DFED4D262E642A0036E160 /* ScrubbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170BAAFF8A9EFB75598942 /* ScrubbersTests.swift */; };
+		48FD0FA1264B85F100623323 /* XCTReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163E1881217FAA4D00A54A48 /* XCTReporter.swift */; };
+		48FD0FA6264B864F00623323 /* GenericDiffReporterIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1700198EEF7F2B448074E8 /* GenericDiffReporterIOS.swift */; };
+		48FD0FAB264B865300623323 /* KaleidoscopeReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170A02C65DDFAD9FADE96C /* KaleidoscopeReporter.swift */; };
+		48FD0FAC264B865300623323 /* GenericDiffReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1705F1B761A7E6263D8FFB /* GenericDiffReporter.swift */; };
 		9730813D4772C7FCA170E0EA /* ApprovalWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973088485E8B1D043616B220 /* ApprovalWriter.swift */; };
 		973081B984AC2F9B66D19D7F /* ApprovalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308D241492E13CB5BF5866 /* ApprovalsTests.swift */; };
 		9730846152DA8E5EC7A1170F /* Namer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973086013CD2288DC3DE9F4E /* Namer.swift */; };
@@ -623,9 +627,11 @@
 				163E1868217F84BE00A54A48 /* Namer.swift in Sources */,
 				48B6BF6626290CAF00B956A4 /* MacReporter.swift in Sources */,
 				163E1869217F84BE00A54A48 /* Loader.swift in Sources */,
+				48FD0FAC264B865300623323 /* GenericDiffReporter.swift in Sources */,
 				163E186B217F84BE00A54A48 /* ReporterFactory.swift in Sources */,
 				163E186D217F84BE00A54A48 /* CwlDemangle.swift in Sources */,
 				163E1882217FAA4D00A54A48 /* XCTReporter.swift in Sources */,
+				48FD0FAB264B865300623323 /* KaleidoscopeReporter.swift in Sources */,
 				163E186E217F84BE00A54A48 /* ApprovalError.swift in Sources */,
 				163E186F217F84BE00A54A48 /* StringUtils.swift in Sources */,
 				163E1870217F84BE00A54A48 /* ApprovalTextWriter.swift in Sources */,
@@ -692,9 +698,11 @@
 				BB1705193EE633BCD5E69CE0 /* iOSReporter.swift in Sources */,
 				BB17050D1CB42D26415F09D6 /* Options.swift in Sources */,
 				BB17092C827110A024C37290 /* ScrubWithRegEx.swift in Sources */,
+				48FD0FA6264B864F00623323 /* GenericDiffReporterIOS.swift in Sources */,
 				BB170F1E0EF85F10A44587DD /* Scrubber.swift in Sources */,
 				BB170CCEA1FCAC1D1490EB06 /* ScrubNothing.swift in Sources */,
 				BB170735AEB3FF2A966B2670 /* ScrubDates.swift in Sources */,
+				48FD0FA1264B85F100623323 /* XCTReporter.swift in Sources */,
 				BB170785D01DD8502B5130E1 /* ScrubWithRegExWithReplacementAliasing.swift in Sources */,
 				BB17082BCD15B0EC24818BB6 /* ReportWithEverything.swift in Sources */,
 				BB1709DEFFE6129029D2E405 /* SystemUtils.swift in Sources */,
