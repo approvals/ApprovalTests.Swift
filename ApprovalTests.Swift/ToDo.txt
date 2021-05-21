@@ -1,4 +1,3 @@
-4. Approval Annotations
 5. Reporters
 5.d. Common Reporters for diff tools
 5.g. FileLauncher Reporter

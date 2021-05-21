@@ -87,12 +87,14 @@
 		BB17091A9C60F6653944C673 /* Scrubber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170FF2F8319026C4E149FF /* Scrubber.swift */; };
 		BB17092C827110A024C37290 /* ScrubWithRegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170E78802A85D68B77CAA0 /* ScrubWithRegEx.swift */; };
 		BB1709DEFFE6129029D2E405 /* SystemUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170A69DD1A71C2E2A023E7 /* SystemUtils.swift */; };
+		BB170B23B4B633C2A1740C43 /* ReportByOpeningReceivedFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170FA3E48957CD9F09940C /* ReportByOpeningReceivedFile.swift */; };
 		BB170B666CED34E67E36EB1C /* ClipboardReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170BD5F95C651D0A332123 /* ClipboardReporter.swift */; };
 		BB170C6E8500DD54788F22AC /* XCTReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170EB6027F20F1764F9EF4 /* XCTReporter.swift */; };
 		BB170CAAE3C02DCE74BC4555 /* ScrubWithRegExWithReplacementAliasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170E5ED77EF744D7F2D311 /* ScrubWithRegExWithReplacementAliasing.swift */; };
 		BB170CCEA1FCAC1D1490EB06 /* ScrubNothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1700D4E088787C48D2EA63 /* ScrubNothing.swift */; };
 		BB170D510FCEB3E5C338FCF0 /* GenericDiffReporterBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */; };
 		BB170DD606509A7F5AA1321E /* ReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17064685A20DAA7CFE6421 /* ReporterTests.swift */; };
+		BB170E346922548F2216AEA2 /* ReportByOpeningReceivedFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170FA3E48957CD9F09940C /* ReportByOpeningReceivedFile.swift */; };
 		BB170E455F9D597F98E2147D /* GenericDiffReporterIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1700198EEF7F2B448074E8 /* GenericDiffReporterIOS.swift */; };
 		BB170ECA78B7A7F62CF1784B /* ScrubWithRegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170E78802A85D68B77CAA0 /* ScrubWithRegEx.swift */; };
 		BB170F1D5D24E5B93365060D /* ReportWithEverything.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170ABF2255D4F0B1D59D15 /* ReportWithEverything.swift */; };
@@ -175,6 +177,7 @@
 		BB170E78802A85D68B77CAA0 /* ScrubWithRegEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrubWithRegEx.swift; sourceTree = "<group>"; };
 		BB170EB6027F20F1764F9EF4 /* XCTReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTReporter.swift; sourceTree = "<group>"; };
 		BB170F2E5E36C79487539555 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		BB170FA3E48957CD9F09940C /* ReportByOpeningReceivedFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportByOpeningReceivedFile.swift; sourceTree = "<group>"; };
 		BB170FF2F8319026C4E149FF /* Scrubber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scrubber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -379,6 +382,7 @@
 				BB170ABF2255D4F0B1D59D15 /* ReportWithEverything.swift */,
 				BB170BD5F95C651D0A332123 /* ClipboardReporter.swift */,
 				BB170EB6027F20F1764F9EF4 /* XCTReporter.swift */,
+				BB170FA3E48957CD9F09940C /* ReportByOpeningReceivedFile.swift */,
 			);
 			path = Reporters;
 			sourceTree = "<group>";
@@ -650,6 +654,7 @@
 				BB17070A6881417FE68D5156 /* SystemUtils.swift in Sources */,
 				BB17003FDDE7E5E6AC29C8C4 /* ClipboardReporter.swift in Sources */,
 				BB17060F3B36CE199DDF034D /* XCTReporter.swift in Sources */,
+				BB170B23B4B633C2A1740C43 /* ReportByOpeningReceivedFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +712,7 @@
 				BB1709DEFFE6129029D2E405 /* SystemUtils.swift in Sources */,
 				BB170B666CED34E67E36EB1C /* ClipboardReporter.swift in Sources */,
 				BB170C6E8500DD54788F22AC /* XCTReporter.swift in Sources */,
+				BB170E346922548F2216AEA2 /* ReportByOpeningReceivedFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

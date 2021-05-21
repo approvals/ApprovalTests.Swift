@@ -32,4 +32,12 @@ final class ReporterTests: XCTestCase {
         XCTAssertEqual(reporter2.approved, "a.text")
         XCTAssertEqual(reporter3.approved, "a.text")
     }
+
+    #if os(OSX)
+        func test_fileLaunchingOnMac() throws {
+            let reporter = ReportByOpeningReceivedFile()
+            let process = reporter.getProcess(received: "r.html", approved: "a.html")
+            try Approvals.verify("\(process.executableURL!) \(process.arguments!)")
+        }
+    #endif
 }
