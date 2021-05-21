@@ -1,11 +1,5 @@
-5. Reporters
-5.d. Common Reporters for diff tools
-5.g. FileLauncher Reporter
-
 Add starter project
 Add CI
 Add CI publishing
 Add MarkDown snippets
-Add FileMerge reporter
-Add AppCode reporter
 Make documentation about supported reporters
