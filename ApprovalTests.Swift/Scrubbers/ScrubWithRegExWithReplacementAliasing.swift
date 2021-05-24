@@ -1,6 +1,5 @@
-import Foundation
-
 public class ScrubWithRegExWithReplacementAliasing: ScrubWithRegEx {
+
     public init(pattern: String, aliaser: @escaping (Int) -> String) {
         var hash: [String: Int] = [:]
         super.init(pattern: pattern, replacementFunction: { d in
