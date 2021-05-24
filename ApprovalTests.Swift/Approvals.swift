@@ -1,8 +1,8 @@
 import Foundation
 
 public enum Approvals {
-    public class NameCreator: Loader {
-        public func load(_ file: String) -> ApprovalNamer {
+    class NameCreator: Loader {
+        func load(_ file: String) -> ApprovalNamer {
             Namer(file)
         }
     }
@@ -77,7 +77,7 @@ public enum Approvals {
         try verify(StringUtils.printDictionary(object), options, file: file, line: line)
     }
 
-    public static func createApprovalNamer(_ file: String) -> ApprovalNamer {
+    private static func createApprovalNamer(_ file: String) -> ApprovalNamer {
         NameCreator().load(file)
     }
 
