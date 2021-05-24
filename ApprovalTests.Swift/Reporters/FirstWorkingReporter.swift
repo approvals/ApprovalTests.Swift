@@ -1,7 +1,7 @@
 class FirstWorkingReporter: EquatableFailureReporter {
     private let reporters: [EquatableFailureReporter]
 
-    public init(_ reporters: EquatableFailureReporter...) {
+    init(_ reporters: EquatableFailureReporter...) {
         self.reporters = reporters
     }
 
