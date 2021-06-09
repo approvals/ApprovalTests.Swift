@@ -32,19 +32,31 @@ final class CombinationTests: XCTestCase {
     }
 
     func testCombinationsSingleParameterInt() throws {
-        try CombinationApprovals.verifyAllCombinations(doubleInt, [1, 2, 3, 4, 5])
+        try CombinationApprovals.verifyAllCombinations(
+                doubleInt,
+                [1, 2, 3, 4, 5]
+        )
     }
 
     func testCombinationsSingleParameterFloat() throws {
-        try CombinationApprovals.verifyAllCombinations(doubleFloat, [1.1, 2.2, 3.3, 4.4, 5.5])
+        try CombinationApprovals.verifyAllCombinations(
+                doubleFloat,
+                [1.1, 2.2, 3.3, 4.4, 5.5]
+        )
     }
 
     func testCombinationsTwoParametersInt() throws {
-        try CombinationApprovals.verifyAllCombinations(twoIntParams, [1, 2], [3, 4])
+        try CombinationApprovals.verifyAllCombinations(
+                twoIntParams, 
+                [1, 2], [3, 4]
+        )
     }
 
     func testCombinationsMixedParameters() throws {
-        try CombinationApprovals.verifyAllCombinations(threeMixedParams, [1, 2, 3], [4.4, 5.5], ["String1", "String2", "String3", "String4"])
+        try CombinationApprovals.verifyAllCombinations(
+                threeMixedParams,
+                [1, 2, 3], [4.4, 5.5], ["String1", "String2", "String3", "String4"]
+        )
     }
 
     func testCombinationsFourParameters() throws {
@@ -62,7 +74,10 @@ final class CombinationTests: XCTestCase {
             return String(sum)
         }
 
-        try CombinationApprovals.verifyAllCombinations(inCall, [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11])
+        try CombinationApprovals.verifyAllCombinations(
+                inCall,
+                [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11]
+        )
     }
 
     func testCombinationsSixParameters() throws {
@@ -71,7 +86,10 @@ final class CombinationTests: XCTestCase {
             return String(sum)
         }
 
-        try CombinationApprovals.verifyAllCombinations(inCall, [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13])
+        try CombinationApprovals.verifyAllCombinations(
+                inCall,
+                [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13]
+        )
     }
 
     func testCombinationsSevenParameters() throws {
@@ -80,7 +98,10 @@ final class CombinationTests: XCTestCase {
             return String(sum)
         }
 
-        try CombinationApprovals.verifyAllCombinations(inCall, [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13], [14, 15])
+        try CombinationApprovals.verifyAllCombinations(
+                inCall,
+                [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13], [14, 15]
+        )
     }
 
     func testCombinationsEightParameters() throws {
@@ -89,7 +110,10 @@ final class CombinationTests: XCTestCase {
             return String(sum)
         }
 
-        try CombinationApprovals.verifyAllCombinations(inCall, [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13], [14, 15], [16, 17])
+        try CombinationApprovals.verifyAllCombinations(
+                inCall,
+                [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13], [14, 15], [16, 17]
+        )
     }
 
     func testCombinationsNineParameters() throws {
@@ -98,7 +122,9 @@ final class CombinationTests: XCTestCase {
             return String(sum)
         }
 
-        try CombinationApprovals.verifyAllCombinations(inCall, [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13], [14, 15], [16, 17], [18, 19])
+        try CombinationApprovals.verifyAllCombinations(
+                inCall,
+                [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13], [14, 15], [16, 17], [18, 19]
+        )
     }
-
 }

@@ -28,12 +28,15 @@ extension String {
         guard matches.count > 0 else { return self }
         var splitStart = startIndex
         return matches.map { (match) -> (String, [String]) in
-            let range = Range(match.range, in: self)!
-            let split = String(self[splitStart ..< range.lowerBound])
-            splitStart = range.upperBound
-            return (split, (0 ..< match.numberOfRanges)
-                    .compactMap { Range(match.range(at: $0), in: self) }
-                    .map { String(self[$0]) }
-            )
-        }.reduce("") { "\($0)\($1.0)\(replacementProvider($1.1.first ?? "") ?? "")" } + self[Range(matches.last!.range, in: self)!.upperBound ..< endIndex]}
+                          let range = Range(match.range, in: self)!
+                          let split = String(self[splitStart ..< range.lowerBound])
+                          splitStart = range.upperBound
+                          return (split, (0 ..< match.numberOfRanges)
+                                  .compactMap { Range(match.range(at: $0), in: self) }
+                                  .map { String(self[$0]) }
+                          )
+                      }
+                      .reduce("") { "\($0)\($1.0)\(replacementProvider($1.1.first ?? "") ?? "")" }
+                + self[Range(matches.last!.range, in: self)!.upperBound ..< endIndex]
+    }
 }

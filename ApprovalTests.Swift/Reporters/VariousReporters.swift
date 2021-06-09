@@ -1,8 +1,11 @@
 class ReportWithDiffMerge: GenericDiffReporter {
     init() {
-        super.init(programPath: "/Applications/DiffMerge.app/Contents/MacOS/DiffMerge", arguments: { received, approved in
-            ["--nosplash", received, approved]
-        })
+        super.init(
+                programPath: "/Applications/DiffMerge.app/Contents/MacOS/DiffMerge",
+                arguments: { received, approved in
+                    ["--nosplash", received, approved]
+                }
+        )
     }
 }
 
@@ -15,17 +18,23 @@ class ReportWithBeyondCompare: GenericDiffReporter {
 // Requires Tools->Create Command-line Launcher
 class ReportWithAppCode: GenericDiffReporter {
     init() {
-        super.init(programPath: "/usr/local/bin/appcode", arguments: { received, approved in
-            ["diff", received, approved]
-        })
+        super.init(
+                programPath: "/usr/local/bin/appcode",
+                arguments: { received, approved in
+                    ["diff", received, approved]
+                }
+        )
     }
 }
 
 class ReportWithKdiff3: GenericDiffReporter {
     init() {
-        super.init(programPath: "/Applications/kdiff3.app/Contents/MacOS/kdiff3", arguments: { received, approved in
-            [received, approved, "-m"]
-        })
+        super.init(
+                programPath: "/Applications/kdiff3.app/Contents/MacOS/kdiff3",
+                arguments: { received, approved in
+                    [received, approved, "-m"]
+                }
+        )
     }
 }
 
@@ -43,8 +52,11 @@ class ReportWithTKDiff: GenericDiffReporter {
 
 class ReportWithVisualStudioCode: GenericDiffReporter {
     init() {
-        super.init(programPath: "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code", arguments: { received, approved in
-            ["-d", received, approved]
-        })
+        super.init(
+                programPath: "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code",
+                arguments: { received, approved in
+                    ["-d", received, approved]
+                }
+        )
     }
 }

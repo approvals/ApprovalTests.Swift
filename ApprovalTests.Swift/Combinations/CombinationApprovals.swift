@@ -29,7 +29,11 @@ public enum CombinationApprovals {
         let params7 = [UNUSED()]
         let params8 = [UNUSED()]
         let params9 = [UNUSED()]
-        try verifyAllCombinations(callWithAllParameters, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
+        try verifyAllCombinations(
+                callWithAllParameters,
+                params1, params2, params3, params4, params5, params6, params7, params8, params9,
+                file: file, line: line
+        )
     }
 
     public static func verifyAllCombinations<IN1, IN2, OUT>(
@@ -57,7 +61,11 @@ public enum CombinationApprovals {
         let params7 = [UNUSED()]
         let params8 = [UNUSED()]
         let params9 = [UNUSED()]
-        try verifyAllCombinations(callWithAllParameters, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
+        try verifyAllCombinations(
+                callWithAllParameters,
+                params1, params2, params3, params4, params5, params6, params7, params8, params9,
+                file: file, line: line
+        )
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, OUT>(
@@ -84,7 +92,11 @@ public enum CombinationApprovals {
         let params7 = [UNUSED()]
         let params8 = [UNUSED()]
         let params9 = [UNUSED()]
-        try verifyAllCombinations(callWithAllParameters, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
+        try verifyAllCombinations(
+                callWithAllParameters,
+                params1, params2, params3, params4, params5, params6, params7, params8, params9,
+                file: file, line: line
+        )
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, OUT>(
@@ -110,7 +122,11 @@ public enum CombinationApprovals {
         let params7 = [UNUSED()]
         let params8 = [UNUSED()]
         let params9 = [UNUSED()]
-        try verifyAllCombinations(callWithAllParameters, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
+        try verifyAllCombinations(
+                callWithAllParameters,
+                params1, params2, params3, params4, params5, params6, params7, params8, params9,
+                file: file, line: line
+        )
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, OUT>(
@@ -135,7 +151,11 @@ public enum CombinationApprovals {
         let params7 = [UNUSED()]
         let params8 = [UNUSED()]
         let params9 = [UNUSED()]
-        try verifyAllCombinations(callWithAllParameters, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
+        try verifyAllCombinations(
+                callWithAllParameters,
+                params1, params2, params3, params4, params5, params6, params7, params8, params9,
+                file: file, line: line
+        )
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, OUT>(
@@ -159,7 +179,11 @@ public enum CombinationApprovals {
         let params7 = [UNUSED()]
         let params8 = [UNUSED()]
         let params9 = [UNUSED()]
-        try verifyAllCombinations(callWithAllParameters, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
+        try verifyAllCombinations(
+                callWithAllParameters,
+                params1, params2, params3, params4, params5, params6, params7, params8, params9,
+                file: file, line: line
+        )
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, IN7, OUT>(
@@ -182,7 +206,11 @@ public enum CombinationApprovals {
 
         let params8 = [UNUSED()]
         let params9 = [UNUSED()]
-        try verifyAllCombinations(callWithAllParameters, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
+        try verifyAllCombinations(
+                callWithAllParameters,
+                params1, params2, params3, params4, params5, params6, params7, params8, params9,
+                file: file, line: line
+        )
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, OUT>(
@@ -204,7 +232,11 @@ public enum CombinationApprovals {
         }
 
         let params9 = [UNUSED()]
-        try verifyAllCombinations(callWithAllParameters, params1, params2, params3, params4, params5, params6, params7, params8, params9, file: file, line: line)
+        try verifyAllCombinations(
+                callWithAllParameters,
+                params1, params2, params3, params4, params5, params6, params7, params8, params9,
+                file: file, line: line
+        )
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, OUT>(

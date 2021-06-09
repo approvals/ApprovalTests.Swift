@@ -29,7 +29,11 @@ public enum Approvals {
                               file: StaticString = #filePath,
                               line: UInt = #line
     ) throws {
-        try verify(ApprovalTextWriter(options.scrub(response), options.forFile.fileExtensionWithoutDot), options, file: file, line: line)
+        try verify(
+                ApprovalTextWriter(options.scrub(response), options.forFile.fileExtensionWithoutDot),
+                options,
+                file: file, line: line
+        )
     }
 
     private static func verify(_ writer: ApprovalTextWriter,
