@@ -1,12 +1,12 @@
-class MacReporter: FirstWorkingReporter {
+class ReportersForMac: FirstWorkingReporter {
     init() {
         #if os(macOS)
             super.init(
                     // begin-snippet: mac_reporters
                     ReportWithBeyondCompare(),
                     ReportWithAppCode(),
-                    DiffMergeReporter(),
-                    KaleidoscopeReporter(),
+                    ReportWithDiffMerge(),
+                    ReportWithKaleidoscope(),
                     ReportWithP4Merge(),
                     ReportWithKdiff3(),
                     ReportWithTKDiff(),
