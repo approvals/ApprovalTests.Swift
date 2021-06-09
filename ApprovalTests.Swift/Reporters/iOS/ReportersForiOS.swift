@@ -3,7 +3,7 @@ class ReportersForiOS: FirstWorkingReporter {
         #if os(iOS)
             super.init(
                     // begin-snippet: ios_reporters
-                    XCTReporter()
+                    ReportContentsWithXCTest()
                     // end-snippet
             )
         #endif

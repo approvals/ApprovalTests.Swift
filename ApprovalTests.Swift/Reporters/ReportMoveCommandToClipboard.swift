@@ -1,20 +1,20 @@
 import Foundation
 
-class ClipboardReporter: EquatableFailureReporter {
+class ReportMoveCommandToClipboard: EquatableFailureReporter {
 
     override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
-        other is ClipboardReporter
+        other is ReportMoveCommandToClipboard
     }
 
     override func report(received: String, approved: String) -> Bool {
-        let command = ClipboardReporter.getCommandLineMove(received: received, approved: approved)
+        let command = ReportMoveCommandToClipboard.getCommandLineMove(received: received, approved: approved)
         SystemUtils.pasteToClipboard(command)
         return true
     }
 
     static func getCommandLineMove(received: String, approved: String) -> String {
-        let workingReceived = ClipboardReporter.cleanPathString(received)
-        let workingApproved = ClipboardReporter.cleanPathString(approved)
+        let workingReceived = ReportMoveCommandToClipboard.cleanPathString(received)
+        let workingApproved = ReportMoveCommandToClipboard.cleanPathString(approved)
         return "mv \(workingReceived) \(workingApproved)"
     }
 

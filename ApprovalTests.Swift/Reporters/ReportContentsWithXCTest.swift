@@ -1,9 +1,9 @@
 import XCTest
 
-class XCTReporter: EquatableFailureReporter {
+class ReportContentsWithXCTest: EquatableFailureReporter {
 
     override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
-        other is XCTReporter
+        other is ReportContentsWithXCTest
     }
 
     override func report(received: String, approved: String) -> Bool {
@@ -19,7 +19,7 @@ class XCTReporter: EquatableFailureReporter {
         } catch {
             print("Error in \(#function) for received \"\(received)\", approved \"\(approved)\": \(error)")
         }
-        let command = ClipboardReporter.getCommandLineMove(received: received, approved: approved)
+        let command = ReportMoveCommandToClipboard.getCommandLineMove(received: received, approved: approved)
 
         // copy to pasteboard
         SystemUtils.pasteToClipboard(command)

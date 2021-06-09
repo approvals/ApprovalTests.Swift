@@ -3,7 +3,7 @@ enum ReporterFactory {
         #if os(OSX)
             let returned = ReportersForMac()
         #elseif os(iOS)
-            let returned = XCTReporter()
+            let returned = ReportContentsWithXCTest()
         #endif
         return returned
     }
