@@ -13,11 +13,11 @@ class ApprovalTextWriter: ApprovalWriter {
         self.fileExtensionWithoutDot = fileExtensionWithoutDot
     }
 
-    func approvalFilename(base: String) -> String {
+    func approvalFilename(_ base: String) -> String {
         "\(base).approved.\(fileExtensionWithoutDot)"
     }
 
-    func receivedFilename(base: String) -> String {
+    func receivedFilename(_ base: String) -> String {
         "\(base).received.\(fileExtensionWithoutDot)"
     }
 

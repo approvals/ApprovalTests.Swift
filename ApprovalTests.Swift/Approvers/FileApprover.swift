@@ -18,8 +18,8 @@ class FileApprover: ApprovalApprover {
 
     init(_ writer: ApprovalWriter, _ namer: ApprovalNamer) {
         let base = namer.sourceFilePath()
-        received = writer.receivedFilename(base: base)
-        approved = writer.approvalFilename(base: base)
+        received = writer.receivedFilename(base)
+        approved = writer.approvalFilename(base)
         self.writer = writer
     }
 
