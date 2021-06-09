@@ -1,28 +1,30 @@
 [![Swift](https://github.com/approvals/ApprovalTests.Swift/actions/workflows/swift.yml/badge.svg)](https://github.com/approvals/ApprovalTests.Swift/actions/workflows/swift.yml)
 
-ApprovalTests
-====
+# ApprovalTests
 
 Capturing Human Intelligence - ApprovalTests is an open source assertion/verification library to aid unit testing.
 
 ApprovalsTest Swift is compatible with the XCUnit testing framework
 
+toc
+
 ## Getting started
 
 Clone the [macOS starter project](https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs)
 
-What can it be used for?
----
+## What can it be used for?
 
 Approval Tests can be used for verifying objects that require more than a simple assert.
 
-[Video Tutorials](http://www.youtube.com/playlist?list=PL0C32F89E8BBB5368)
----
+## [Video Tutorials](http://www.youtube.com/playlist?list=PL0C32F89E8BBB5368)
 
 You can watch a bunch of short videos on getting started and [using ApprovalTests in .Net](http://www.youtube.com/playlist?list=PL0C32F89E8BBB5368) at YouTube
 
-Podcasts
----
+## Documentation
+
+[Find the documentation here](./docs/README.md)
+
+## Podcasts
 If you prefer auditory learning, you might enjoy the following podcast 
 
 - [This Agile Life](http://www.thisagilelife.com/46/)
@@ -30,8 +32,7 @@ If you prefer auditory learning, you might enjoy the following podcast
 - [Herding Code](http://www.developerfusion.com/media/122649/herding-code-117-llewellyn-falcon-on-approval-tests/)
 - [The Watir Podcast](http://watirpodcast.com/podcast-53/)
 
-How to get it
----
+## How to get it
 CocoaPods
 ```
 target 'MyApp' do
@@ -74,8 +75,7 @@ Will Produce a File
 Simply rename this to SampleTest.testList.approved.txt and the test will now pass.
 
 
-Approved File Artifacts
----
+## Approved File Artifacts
 
 The `*.approved.*` files must be checked into source your source control. ApprovalTests now ignores line endings by default (so you can remove `*.approved.* binary` from your .gitattributes file if you added previously).
 
@@ -85,19 +85,15 @@ Do not add `*.received.*` files to your source control (they are transitory, and
 
 
 
-More Info
----
+## More Info
 
-- [Website](http://approvaltests.sourceforge.net/)
 - [Blog](http://blog.approvaltests.com/)
-- [Getting Started Doc](https://github.com/approvals/ApprovalTests.Net/blob/master/build/Documentation/Approval%20Tests%20-%20Getting%20Started.pdf?raw=true)
 
 	
 ## LICENSE
 [Apache 2.0 License](https://github.com/SignalR/SignalR/blob/master/LICENSE.md)
 
 
-Questions?
----
+## Questions?
 
 ask on twitter: [@LlewellynFalco](https://twitter.com/#!/llewellynfalco) or #ApprovalTests
