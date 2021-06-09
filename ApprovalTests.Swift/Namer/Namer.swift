@@ -36,9 +36,9 @@ private class StackDemangler {
             let swiftSymbol = try parseMangledSwiftSymbol(mangledName)
             let result = swiftSymbol.print(using: SymbolPrintOptions.simplified.union(.synthesizeSugarOnTypes))
             let splitResult = result.split(separator: " ")
-            let classAndMethod = String(splitResult.last!)
-            className = extractClassName(result: classAndMethod)
-            testName = extractTestName(result: classAndMethod)
+            let classAndMethod = splitResult.last!
+            className = extractClassName(classAndMethod)
+            testName = extractTestName(classAndMethod)
         } catch {
             print("Error in \(#function): \(error)")
         }
@@ -60,14 +60,14 @@ private class StackDemangler {
         element.range(of: "XCTest", options: .caseInsensitive) != nil
     }
 
-    private func extractTestName(result: String) -> String {
-        let testNameWithParens = String(result.suffix(from: (result.range(of: ".")?.upperBound)!))
-        let testName = String(testNameWithParens.prefix(upTo: (testNameWithParens.range(of: "(")?.lowerBound)!))
-        return testName
+    private func extractClassName(_ classAndMethod: String.SubSequence) -> String {
+        let className = classAndMethod.prefix(upTo: (classAndMethod.range(of: ".")?.lowerBound)!)
+        return String(className)
     }
 
-    private func extractClassName(result: String) -> String {
-        let className = String(result.prefix(upTo: (result.range(of: ".")?.lowerBound)!))
-        return className
+    private func extractTestName(_ classAndMethod: String.SubSequence) -> String {
+        let testNameWithParens = classAndMethod.suffix(from: (classAndMethod.range(of: ".")?.upperBound)!)
+        let testName = testNameWithParens.prefix(upTo: (testNameWithParens.range(of: "(")?.lowerBound)!)
+        return String(testName)
     }
 }
