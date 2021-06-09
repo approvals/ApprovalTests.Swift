@@ -11,6 +11,14 @@ public enum Approvals {
         NameCreator().load(file.description)
     }
 
+    static func makeApprovalNamer(forFile file: String) -> ApprovalNamer {
+        NameCreator().load(file)
+    }
+
+    public static var reporter: ApprovalFailureReporter {
+        ReporterFactory.get
+    }
+
     public static func verifyAsJSON<T: Encodable>(_ object: T,
                                                   _ options: Options = Options(),
                                                   file: StaticString = #filePath,
@@ -75,13 +83,5 @@ public enum Approvals {
                                  file: StaticString = #filePath,
                                  line: UInt = #line) throws {
         try verify(StringUtils.printDictionary(object), options, file: file, line: line)
-    }
-
-    static func makeApprovalNamer(forFile file: String) -> ApprovalNamer {
-        NameCreator().load(file)
-    }
-
-    public static var reporter: ApprovalFailureReporter {
-        ReporterFactory.get
     }
 }
