@@ -50,8 +50,8 @@ If you prefer auditory learning, you might enjoy the following podcast
 ### Swift Package Manager
 
 <!-- snippet: https://raw.githubusercontent.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/main/Package.swift#package_include_approvals -->
-<a id='snippet-https://raw.githubusercontent.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/main/Package.swift'></a>
-```swift
+<a id='snippet-https://raw.githubusercontent.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/main/Package.swift#package_include_approvals'></a>
+```swift#package_include_approvals
 // swift-tools-version:5.2
 
 import PackageDescription
@@ -90,7 +90,7 @@ let package = Package(
         ]
 )
 ```
-<sup><a href='#snippet-https://raw.githubusercontent.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/main/Package.swift' title='Start of snippet'>anchor</a></sup>
+<sup><a href='#snippet-https://raw.githubusercontent.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/main/Package.swift#package_include_approvals' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ### CocoaPods
