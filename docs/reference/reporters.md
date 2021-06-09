@@ -34,7 +34,7 @@ ReportWithVisualStudioCode()
 <!-- snippet: ios_reporters -->
 <a id='snippet-ios_reporters'></a>
 ```swift
-XCTReporter()
+ReportContentsWithXCTest()
 ```
 <sup><a href='/ApprovalTests.Swift/Reporters/iOS/ReportersForiOS.swift#L5-L7' title='Snippet source file'>snippet source</a> | <a href='#snippet-ios_reporters' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
