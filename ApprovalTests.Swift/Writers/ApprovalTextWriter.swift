@@ -21,15 +21,12 @@ class ApprovalTextWriter: ApprovalWriter {
         "\(base).received.\(fileExtensionWithoutDot)"
     }
 
-    func writeReceivedFile(_ received: String) -> String {
+    func writeReceivedFile(_ received: String) {
         let fileUrl = URL(fileURLWithPath: received)
         do {
             try text.write(toFile: fileUrl.path, atomically: true, encoding: .utf8)
         } catch {
             print("Error in \(#function) for received \"\(received)\": \(error)")
         }
-
-        return fileUrl.path
     }
-
 }
