@@ -1,7 +1,7 @@
 import Foundation
 
 public enum Approvals {
-    static func makeApprovalNamer(forFile file: String) -> ApprovalNamer {
+    static func makeNamer(forFile file: String) -> ApprovalNamer {
         Namer(file)
     }
 
@@ -36,7 +36,7 @@ public enum Approvals {
                                _ options: Options = Options(),
                                file: StaticString,
                                line: UInt) throws {
-        try verify(writer, makeApprovalNamer(forFile: file.description), options, file: file, line: line)
+        try verify(writer, makeNamer(forFile: file.description), options, file: file, line: line)
     }
 
     private static func verify(_ writer: ApprovalTextWriter,

@@ -8,12 +8,12 @@ import XCTest
 final class ApprovalTests_SwiftTests: XCTestCase {
 
     func testApprovalName() throws {
-        let name = Approvals.makeApprovalNamer(forFile: "DUMMY")
+        let name = Approvals.makeNamer(forFile: "DUMMY")
         XCTAssertEqual(name.approvalName(), "ApprovalTests_SwiftTests.testApprovalName")
     }
 
     func testSourceFilePath() throws {
-        let name = Approvals.makeApprovalNamer(forFile: #file)
+        let name = Approvals.makeNamer(forFile: #file)
         let sourceFilePath = name.sourceFilePath()
         XCTAssertTrue(
                 sourceFilePath.hasSuffix("/ApprovalTests.Swift/ApprovalTests.SwiftTests/ApprovalTests_SwiftTests.testSourceFilePath"),
