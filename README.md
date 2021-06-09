@@ -49,7 +49,7 @@ If you prefer auditory learning, you might enjoy the following podcast
 ## How to get it
 ### Swift Package Manager
 
-<!-- snippet: https://raw.githubusercontent.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/main/Package.swift -->
+<!-- snippet: https://raw.githubusercontent.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/main/Package.swift#package_include_approvals -->
 <a id='snippet-https://raw.githubusercontent.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/main/Package.swift'></a>
 ```swift
 // swift-tools-version:5.2
