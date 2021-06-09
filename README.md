@@ -30,7 +30,7 @@ Clone the [macOS starter project](https://github.com/approvals/ApprovalTests.Swi
 
 Approval Tests can be used for verifying objects that require more than a simple assert.
 
-## [Video Tutorials](http://www.youtube.com/playlist?list=PL0C32F89E8BBB5368)
+## Video Tutorials
 
 You can watch a bunch of short videos on getting started and [using ApprovalTests in .Net](http://www.youtube.com/playlist?list=PL0C32F89E8BBB5368) at YouTube
 
