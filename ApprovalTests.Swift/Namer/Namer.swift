@@ -9,12 +9,12 @@ class Namer: ApprovalNamer {
         fromFile = file
     }
 
-    func getApprovalName() -> String {
+    func approvalName() -> String {
         demangleStack()
         return className + "." + testName
     }
 
-    func getSourceFilePath() -> String {
+    func sourceFilePath() -> String {
         demangleStack()
 
         let indexEnd = fromFile.range(of: ".swift")?.lowerBound

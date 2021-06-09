@@ -9,7 +9,7 @@ final class ApprovalTests_SwiftTests: XCTestCase {
 
     func testClassName() throws {
         let name = Approvals.getNamer()
-        XCTAssertEqual("ApprovalTests_SwiftTests.testClassName", name.getApprovalName())
+        XCTAssertEqual("ApprovalTests_SwiftTests.testClassName", name.approvalName())
     }
 
     func testApprovalsVerify() throws {
