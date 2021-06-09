@@ -21,11 +21,13 @@ class Namer: ApprovalNamer {
     }
 }
 
-private class StackDemangler {
-    private(set) var className = ""
-    private(set) var testName = ""
+private struct StackNames {
+    let className: String
+    let testName: String
+}
 
-    func extractNames() -> Self {
+private struct StackDemangler {
+    func extractNames() -> StackNames {
         do {
             let symbols = Thread.callStackSymbols
             let testDepth = selectElement(symbols: symbols)
@@ -37,12 +39,14 @@ private class StackDemangler {
             let result = swiftSymbol.print(using: SymbolPrintOptions.simplified.union(.synthesizeSugarOnTypes))
             let splitResult = result.split(separator: " ")
             let classAndMethod = splitResult.last!
-            className = extractClassName(classAndMethod)
-            testName = extractTestName(classAndMethod)
+            return StackNames(
+                    className: extractClassName(classAndMethod),
+                    testName: extractTestName(classAndMethod)
+            )
         } catch {
             print("Error in \(#function): \(error)")
+            return StackNames(className: "ERROR", testName: "ERROR")
         }
-        return self
     }
     
     private func selectElement(symbols trace: [String]) -> Int {
