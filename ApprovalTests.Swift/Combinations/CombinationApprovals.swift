@@ -1,5 +1,5 @@
 public enum CombinationApprovals {
-    private class UNUSED {
+    private struct UNUSED {
         var description: String { "SKIP" }
     }
 

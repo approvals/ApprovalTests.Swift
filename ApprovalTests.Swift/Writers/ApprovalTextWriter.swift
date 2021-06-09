@@ -1,6 +1,6 @@
 import Foundation
 
-class ApprovalTextWriter: ApprovalWriter {
+struct ApprovalTextWriter: ApprovalWriter {
     private let text: String
     private let fileExtensionWithoutDot: String
 

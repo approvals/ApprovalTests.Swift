@@ -6,7 +6,7 @@ enum OptionDataKey {
 
 typealias OptionData = [OptionDataKey: Any]
 
-public class Options {
+public struct Options {
     private let data: OptionData
 
     public init() {
@@ -52,7 +52,7 @@ public class Options {
     }
 }
 
-public class FileOptions {
+public struct FileOptions {
     private let data: OptionData
 
     fileprivate init(_ data: [OptionDataKey: Any]) {
