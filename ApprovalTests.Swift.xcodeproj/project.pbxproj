@@ -164,6 +164,8 @@
 		BB1705FDCFBE674F39B7D859 /* ReportersForiOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportersForiOS.swift; sourceTree = "<group>"; };
 		BB17064685A20DAA7CFE6421 /* ReporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterTests.swift; sourceTree = "<group>"; };
 		BB1706F98B5163B28C84D8D5 /* iOSApprovalsWatcher.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = iOSApprovalsWatcher.py; sourceTree = "<group>"; };
+		BB1707104FED4CC2995D7B54 /* updateMarkdown.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; name = updateMarkdown.yml; path = .github/workflows/updateMarkdown.yml; sourceTree = "<group>"; };
+		BB1707774EE04FB7B43D5A2E /* mdsnippets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mdsnippets.json; sourceTree = "<group>"; };
 		BB1707BC3C179D89F3FD2B84 /* ReportersForMac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportersForMac.swift; sourceTree = "<group>"; };
 		BB1707D5C3AF3A375FD117FC /* reporters.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = reporters.md; path = docs/reference/reporters.md; sourceTree = "<group>"; };
 		BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDiffReporterBase.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				163E188B218018E100A54A48 /* XCTest.framework */,
 				BB1707D5C3AF3A375FD117FC /* reporters.md */,
 				BB1702FC3F3CF8B2887CDA19 /* README.md */,
+				BB1707104FED4CC2995D7B54 /* updateMarkdown.yml */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				1637CE7A2164633700994238 /* Frameworks */,
 				BB170B4E04C535C1000CA54A /* Package.swift */,
 				48B6BFF42629519600B956A4 /* XcodeWarnings.xcconfig */,
+				BB1707774EE04FB7B43D5A2E /* mdsnippets.json */,
 			);
 			sourceTree = "<group>";
 		};
