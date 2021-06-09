@@ -14,7 +14,6 @@
 		163E1866217F84BE00A54A48 /* ApprovalWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973088485E8B1D043616B220 /* ApprovalWriter.swift */; };
 		163E1867217F84BE00A54A48 /* ApprovalNamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308B0163F571871E65B39A /* ApprovalNamer.swift */; };
 		163E1868217F84BE00A54A48 /* Namer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973086013CD2288DC3DE9F4E /* Namer.swift */; };
-		163E1869217F84BE00A54A48 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308F82A0741AAE8F498A37 /* Loader.swift */; };
 		163E186B217F84BE00A54A48 /* ReporterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730820AFFF03C5745F45021 /* ReporterFactory.swift */; };
 		163E186D217F84BE00A54A48 /* CwlDemangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308B6D486609330CC17CB0 /* CwlDemangle.swift */; };
 		163E186E217F84BE00A54A48 /* ApprovalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308A9857256E4959E94600 /* ApprovalError.swift */; };
@@ -49,7 +48,6 @@
 		9730846152DA8E5EC7A1170F /* Namer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973086013CD2288DC3DE9F4E /* Namer.swift */; };
 		973084968FAC2B7E4FA2620F /* ApprovalFailureReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973085D5FB753938543FDA7C /* ApprovalFailureReporter.swift */; };
 		973084A9A0109F6A474420DE /* ReportWithDiffMerge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730802AF82CC10B0E3F69C7 /* ReportWithDiffMerge.swift */; };
-		973084AF13C94AD7CD09249A /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308F82A0741AAE8F498A37 /* Loader.swift */; };
 		973084EC01FAAC43432D75C3 /* TestReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973084FDA2BB35BA2CA5DC70 /* TestReporter.swift */; };
 		97308597E60FDC87E7ED7453 /* CombinationApprovals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973085B841308DD129EF2C02 /* CombinationApprovals.swift */; };
 		973086311B135BA1E44E28B3 /* SampleArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308657C3B3CEFB291EEBBD /* SampleArrayTests.swift */; };
@@ -151,7 +149,6 @@
 		97308BE497F4102343464B3C /* Samples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Samples.swift; sourceTree = "<group>"; };
 		97308D241492E13CB5BF5866 /* ApprovalsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalsTests.swift; sourceTree = "<group>"; };
 		97308F282AC7547A5A3278BB /* FileApprover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileApprover.swift; sourceTree = "<group>"; };
-		97308F82A0741AAE8F498A37 /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		97308FAD567B1657AE7671D0 /* ApprovalApprover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalApprover.swift; sourceTree = "<group>"; };
 		97308FC331B73ECB0A9BA7EE /* ApprovalTextWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalTextWriter.swift; sourceTree = "<group>"; };
 		BB1700198EEF7F2B448074E8 /* GenericDiffReporterIOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDiffReporterIOS.swift; sourceTree = "<group>"; };
@@ -334,7 +331,6 @@
 			isa = PBXGroup;
 			children = (
 				97308B0163F571871E65B39A /* ApprovalNamer.swift */,
-				97308F82A0741AAE8F498A37 /* Loader.swift */,
 				973086013CD2288DC3DE9F4E /* Namer.swift */,
 			);
 			path = Namer;
@@ -638,7 +634,6 @@
 				163E1867217F84BE00A54A48 /* ApprovalNamer.swift in Sources */,
 				163E1868217F84BE00A54A48 /* Namer.swift in Sources */,
 				48B6BF6626290CAF00B956A4 /* ReportersForMac.swift in Sources */,
-				163E1869217F84BE00A54A48 /* Loader.swift in Sources */,
 				48FD0FAC264B865300623323 /* GenericDiffReporter.swift in Sources */,
 				163E186B217F84BE00A54A48 /* ReporterFactory.swift in Sources */,
 				163E186D217F84BE00A54A48 /* CwlDemangle.swift in Sources */,
@@ -695,7 +690,6 @@
 				9730846152DA8E5EC7A1170F /* Namer.swift in Sources */,
 				973084A9A0109F6A474420DE /* ReportWithDiffMerge.swift in Sources */,
 				97308FF1569559F04D5ACAED /* CwlDemangle.swift in Sources */,
-				973084AF13C94AD7CD09249A /* Loader.swift in Sources */,
 				973087A01B5F30E6D1CB585D /* ApprovalTextWriter.swift in Sources */,
 				97308AE5D7992BFA4749DDC7 /* ReporterFactory.swift in Sources */,
 				97308B9048518982E40D8FE7 /* ApprovalError.swift in Sources */,

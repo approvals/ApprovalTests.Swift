@@ -1,14 +1,8 @@
 import Foundation
 
 public enum Approvals {
-    private class NameCreator: Loader {
-        func load(_ file: String) -> ApprovalNamer {
-            Namer(file)
-        }
-    }
-    
     static func makeApprovalNamer(forFile file: String) -> ApprovalNamer {
-        NameCreator().load(file)
+        Namer(file)
     }
 
     public static var reporter: ApprovalFailureReporter {
