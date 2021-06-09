@@ -9,15 +9,15 @@ final class OptionsTests: XCTestCase {
 
     func testOptionsGivesTheDefaultReporter() throws {
         let o = Options()
-        XCTAssertEqual(o.reporter as! EquatableFailureReporter, Approvals.reporter as! EquatableFailureReporter)
+        XCTAssertEqual(o.reporter as? EquatableFailureReporter, Approvals.reporter as? EquatableFailureReporter)
     }
 
     func testOptionsHasReporters() throws {
         let reporter = ReportersForiOS()
         let o1 = Options(reporter)
         let o2 = Options().withReporter(reporter)
-        XCTAssertEqual(o1.reporter as! EquatableFailureReporter, reporter)
-        XCTAssertEqual(o2.reporter as! EquatableFailureReporter, reporter)
+        XCTAssertEqual(o1.reporter as? EquatableFailureReporter, reporter)
+        XCTAssertEqual(o2.reporter as? EquatableFailureReporter, reporter)
     }
 
     func testMutations() throws {
