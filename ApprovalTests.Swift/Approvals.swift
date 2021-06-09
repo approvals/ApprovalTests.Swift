@@ -1,7 +1,7 @@
 import Foundation
 
 public enum Approvals {
-    class NameCreator: Loader {
+    private class NameCreator: Loader {
         func load(_ file: String) -> ApprovalNamer {
             Namer(file)
         }
