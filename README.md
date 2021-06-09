@@ -97,7 +97,7 @@ Will Produce a File
     [3] = Katrina
     [4] = Llewellyn
 
-Simply rename this to SampleTest.testList.approved.txt and the test will now pass.
+Simply rename this to SampleTest.testList.approved.txt, and the test will now pass.
 
 
 ## Approved File Artifacts
@@ -121,4 +121,4 @@ Do not add `*.received.*` files to your source control (they are transitory, and
 
 ## Questions?
 
-ask on twitter: [@LlewellynFalco](https://twitter.com/#!/llewellynfalco) or #ApprovalTests
+Ask on Twitter: [@LlewellynFalco](https://twitter.com/#!/llewellynfalco) or #ApprovalTests
