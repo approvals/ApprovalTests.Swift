@@ -19,7 +19,7 @@ class ReportContentsWithXCTest: EquatableFailureReporter {
         } catch {
             print("Error in \(#function) for received \"\(received)\", approved \"\(approved)\": \(error)")
         }
-        let command = ReportMoveCommandToClipboard.getCommandLineMove(received: received, approved: approved)
+        let command = ReportMoveCommandToClipboard.makeCommandLineMove(received: received, approved: approved)
 
         // copy to pasteboard
         SystemUtils.pasteToClipboard(command)

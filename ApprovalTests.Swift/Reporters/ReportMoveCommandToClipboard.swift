@@ -7,12 +7,12 @@ class ReportMoveCommandToClipboard: EquatableFailureReporter {
     }
 
     override func report(received: String, approved: String) -> Bool {
-        let command = ReportMoveCommandToClipboard.getCommandLineMove(received: received, approved: approved)
+        let command = ReportMoveCommandToClipboard.makeCommandLineMove(received: received, approved: approved)
         SystemUtils.pasteToClipboard(command)
         return true
     }
 
-    static func getCommandLineMove(received: String, approved: String) -> String {
+    static func makeCommandLineMove(received: String, approved: String) -> String {
         let workingReceived = ReportMoveCommandToClipboard.cleanPathString(received)
         let workingApproved = ReportMoveCommandToClipboard.cleanPathString(approved)
         return "mv \(workingReceived) \(workingApproved)"
