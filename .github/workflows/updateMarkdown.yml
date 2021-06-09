@@ -9,7 +9,8 @@ jobs:
       - name: Run MarkdownSnippets
         run: |
           dotnet tool install --global MarkdownSnippets.Tool
-          mdsnippets ${GITHUB_WORKSPACE}
+          mdsnippets ${GITHUB_WORKSPACE} --urls-as-snippets "https://github.com/SimonCropp/MarkdownSnippets/snippet.cs"
+
         shell: bash
       - name: Push changes
         run: |
