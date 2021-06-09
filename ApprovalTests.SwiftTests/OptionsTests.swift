@@ -13,7 +13,7 @@ final class OptionsTests: XCTestCase {
     }
 
     func testOptionsHasReporters() throws {
-        let reporter = iOSReporter()
+        let reporter = ReportersForiOS()
         let o1 = Options(reporter)
         let o2 = Options().withReporter(reporter)
         XCTAssertEqual(reporter, o1.reporter as! EquatableFailureReporter)
@@ -21,7 +21,7 @@ final class OptionsTests: XCTestCase {
     }
 
     func testMutations() throws {
-        let reporter = iOSReporter()
+        let reporter = ReportersForiOS()
         let scrubber = ScrubDates()
         let options = Options(scrubber).withReporter(reporter)
         let scrubbed: String = try options.scrub("1970-01-01T00:16:40Z")
