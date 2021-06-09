@@ -45,7 +45,11 @@ If you prefer auditory learning, you might enjoy the following podcast
 - [The Watir Podcast](http://watirpodcast.com/podcast-53/)
 
 ## How to get it
-CocoaPods
+### Swift Package Manager
+
+snippet: https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/blob/main/Package.swift
+
+### CocoaPods
 ```
 target 'MyApp' do
   use_frameworks!
