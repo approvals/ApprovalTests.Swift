@@ -28,7 +28,7 @@ class FileApprover: ApprovalApprover {
         return approveTextFile(approved: approved, received: received)
     }
 
-    func approveTextFile(approved expected: String, received actual: String) -> Bool {
+    private func approveTextFile(approved expected: String, received actual: String) -> Bool {
         let expectedExists = fileManager.fileExists(atPath: expected)
         let actualExists = fileManager.fileExists(atPath: actual)
 
