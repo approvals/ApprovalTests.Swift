@@ -31,7 +31,7 @@
 		168C962E216023F9008F354C /* ApprovalTests_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168C9624216023F9008F354C /* ApprovalTests_Swift.framework */; };
 		168C9633216023F9008F354C /* ApprovalTests_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168C9632216023F9008F354C /* ApprovalTests_SwiftTests.swift */; };
 		168C9635216023F9008F354C /* ApprovalTests_Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 168C9627216023F9008F354C /* ApprovalTests_Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		48AD02E52645D16B00F3B3F9 /* ReportWithDiffMerge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730802AF82CC10B0E3F69C7 /* ReportWithDiffMerge.swift */; };
+		48AD02E52645D16B00F3B3F9 /* VariousReporters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730802AF82CC10B0E3F69C7 /* VariousReporters.swift */; };
 		48B6BF54262906DD00B956A4 /* ApprovalTests_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168C9632216023F9008F354C /* ApprovalTests_SwiftTests.swift */; };
 		48B6BF6126290C2700B956A4 /* FirstWorkingReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17059F97E2ED858F9C9A2F /* FirstWorkingReporter.swift */; };
 		48B6BF6626290CAF00B956A4 /* ReportersForMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1707BC3C179D89F3FD2B84 /* ReportersForMac.swift */; };
@@ -47,7 +47,7 @@
 		973081B984AC2F9B66D19D7F /* ApprovalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308D241492E13CB5BF5866 /* ApprovalsTests.swift */; };
 		9730846152DA8E5EC7A1170F /* Namer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973086013CD2288DC3DE9F4E /* Namer.swift */; };
 		973084968FAC2B7E4FA2620F /* ApprovalFailureReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973085D5FB753938543FDA7C /* ApprovalFailureReporter.swift */; };
-		973084A9A0109F6A474420DE /* ReportWithDiffMerge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730802AF82CC10B0E3F69C7 /* ReportWithDiffMerge.swift */; };
+		973084A9A0109F6A474420DE /* VariousReporters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730802AF82CC10B0E3F69C7 /* VariousReporters.swift */; };
 		973084EC01FAAC43432D75C3 /* TestReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973084FDA2BB35BA2CA5DC70 /* TestReporter.swift */; };
 		97308597E60FDC87E7ED7453 /* CombinationApprovals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973085B841308DD129EF2C02 /* CombinationApprovals.swift */; };
 		973086311B135BA1E44E28B3 /* SampleArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308657C3B3CEFB291EEBBD /* SampleArrayTests.swift */; };
@@ -131,7 +131,7 @@
 		168C9632216023F9008F354C /* ApprovalTests_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalTests_SwiftTests.swift; sourceTree = "<group>"; };
 		168C9634216023F9008F354C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48B6BFF42629519600B956A4 /* XcodeWarnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = XcodeWarnings.xcconfig; sourceTree = "<group>"; };
-		9730802AF82CC10B0E3F69C7 /* ReportWithDiffMerge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportWithDiffMerge.swift; sourceTree = "<group>"; };
+		9730802AF82CC10B0E3F69C7 /* VariousReporters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariousReporters.swift; sourceTree = "<group>"; };
 		9730820AFFF03C5745F45021 /* ReporterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterFactory.swift; sourceTree = "<group>"; };
 		9730821C2686EF2FBA95FAEE /* CombinationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinationTests.swift; sourceTree = "<group>"; };
 		973084FDA2BB35BA2CA5DC70 /* TestReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestReporter.swift; sourceTree = "<group>"; };
@@ -376,17 +376,17 @@
 		97308887A6CE81339049E3B4 /* Reporters */ = {
 			isa = PBXGroup;
 			children = (
-				9730802AF82CC10B0E3F69C7 /* ReportWithDiffMerge.swift */,
-				BB1701DBF0B6E0AD00A62DDD /* ReportWithDiffTool.swift */,
 				BB17059F97E2ED858F9C9A2F /* FirstWorkingReporter.swift */,
 				BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */,
-				9730820AFFF03C5745F45021 /* ReporterFactory.swift */,
 				163E1880217FA9C700A54A48 /* iOS */,
 				163E187F217FA9A500A54A48 /* macOS */,
-				BB170ABF2255D4F0B1D59D15 /* ReportWithEverything.swift */,
-				BB170BD5F95C651D0A332123 /* ReportMoveCommandToClipboard.swift */,
-				BB170EB6027F20F1764F9EF4 /* ReportContentsWithXCTest.swift */,
 				BB170FA3E48957CD9F09940C /* ReportByOpeningReceivedFile.swift */,
+				BB170EB6027F20F1764F9EF4 /* ReportContentsWithXCTest.swift */,
+				9730820AFFF03C5745F45021 /* ReporterFactory.swift */,
+				BB170BD5F95C651D0A332123 /* ReportMoveCommandToClipboard.swift */,
+				BB1701DBF0B6E0AD00A62DDD /* ReportWithDiffTool.swift */,
+				BB170ABF2255D4F0B1D59D15 /* ReportWithEverything.swift */,
+				9730802AF82CC10B0E3F69C7 /* VariousReporters.swift */,
 			);
 			path = Reporters;
 			sourceTree = "<group>";
@@ -630,7 +630,7 @@
 				48B6BF6126290C2700B956A4 /* FirstWorkingReporter.swift in Sources */,
 				163E1865217F84BE00A54A48 /* ApprovalFailureReporter.swift in Sources */,
 				163E1866217F84BE00A54A48 /* ApprovalWriter.swift in Sources */,
-				48AD02E52645D16B00F3B3F9 /* ReportWithDiffMerge.swift in Sources */,
+				48AD02E52645D16B00F3B3F9 /* VariousReporters.swift in Sources */,
 				163E1867217F84BE00A54A48 /* ApprovalNamer.swift in Sources */,
 				163E1868217F84BE00A54A48 /* Namer.swift in Sources */,
 				48B6BF6626290CAF00B956A4 /* ReportersForMac.swift in Sources */,
@@ -688,7 +688,7 @@
 				9730813D4772C7FCA170E0EA /* ApprovalWriter.swift in Sources */,
 				9730887714C23132E12F08DF /* ApprovalNamer.swift in Sources */,
 				9730846152DA8E5EC7A1170F /* Namer.swift in Sources */,
-				973084A9A0109F6A474420DE /* ReportWithDiffMerge.swift in Sources */,
+				973084A9A0109F6A474420DE /* VariousReporters.swift in Sources */,
 				97308FF1569559F04D5ACAED /* CwlDemangle.swift in Sources */,
 				973087A01B5F30E6D1CB585D /* ApprovalTextWriter.swift in Sources */,
 				97308AE5D7992BFA4749DDC7 /* ReporterFactory.swift in Sources */,
