@@ -73,9 +73,9 @@ public enum Approvals {
     }
 
     public static func verify<Key: Hashable & Comparable, Value>(_ object: [Key: Value],
-                                 _ options: Options = Options(),
-                                 file: StaticString = #filePath,
-                                 line: UInt = #line) throws {
+                                                                 _ options: Options = Options(),
+                                                                 file: StaticString = #filePath,
+                                                                 line: UInt = #line) throws {
         try verify(StringUtils.printDictionary(object), options, file: file, line: line)
     }
 }
