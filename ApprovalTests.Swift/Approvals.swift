@@ -38,7 +38,7 @@ public enum Approvals {
                                _ options: Options = Options(),
                                file: StaticString,
                                line: UInt) throws {
-        try verify(writer, createApprovalNamer(file.description), options, file: file, line: line)
+        try verify(writer, makeApprovalNamer(forFile: file.description), options, file: file, line: line)
     }
 
     private static func verify(_ writer: ApprovalTextWriter,
@@ -77,7 +77,7 @@ public enum Approvals {
         try verify(StringUtils.printDictionary(object), options, file: file, line: line)
     }
 
-    private static func createApprovalNamer(_ file: String) -> ApprovalNamer {
+    static func makeApprovalNamer(forFile file: String) -> ApprovalNamer {
         NameCreator().load(file)
     }
 
