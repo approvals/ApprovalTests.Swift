@@ -36,7 +36,7 @@ final class ReporterTests: XCTestCase {
     #if os(OSX)
         func test_fileLaunchingOnMac() throws {
             let reporter = ReportByOpeningReceivedFile()
-            let process = reporter.getProcess(received: "r.html", approved: "a.html")
+            let process = reporter.makeProcess(received: "r.html", approved: "a.html")
             try Approvals.verify("\(process.executableURL!) \(process.arguments!)")
         }
     #endif
