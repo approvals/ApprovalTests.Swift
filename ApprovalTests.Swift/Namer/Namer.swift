@@ -14,10 +14,9 @@ class Namer: ApprovalNamer {
 
     func sourceFilePath() -> String {
         let stack = StackDemangler().extractNames()
-        let indexEnd = fromFile.range(of: ".swift")?.lowerBound
-        let tempName = String(fromFile.prefix(upTo: indexEnd!))
-        let baseName = tempName + "." + stack.testName
-        return baseName
+        let fileExtension = fromFile.range(of: ".swift")!.lowerBound
+        let baseName = fromFile.prefix(upTo: fileExtension)
+        return baseName + "." + stack.testName
     }
 }
 
