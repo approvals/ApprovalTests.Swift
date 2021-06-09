@@ -48,50 +48,15 @@ If you prefer auditory learning, you might enjoy the following podcast
 
 ## How to get it
 ### Swift Package Manager
-
-<!-- snippet: package_include_approvals -->
-<a id='snippet-https://raw.githubusercontent.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/main/Package.swift#package_include_approvals'></a>
+See an example [package manifest](https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/blob/main/Package.swift#L17-L22) here
 ```swift#package_include_approvals
-// swift-tools-version:5.2
-
-import PackageDescription
-
-let package = Package(
-        name: "ApprovalTests.Swift.StarterProject.MacOS",
-        platforms: [
-            .macOS(.v10_14),
-        ],
-        products: [
-            .library(
-                    name: "ApprovalTests.Swift.StarterProject.MacOS",
-                    targets: ["ApprovalTests.Swift.StarterProject.MacOS"]
-            ),
-        ],
         dependencies: [
             .package(
                 url: "https://github.com/approvals/ApprovalTests.Swift.git",
                 .branch("master")
                 ),
         ],
-        targets: [
-            .target(
-                    name: "ApprovalTests.Swift.StarterProject.MacOS",
-                    dependencies: [],
-                    path: "ApprovalTests.Swift.StarterProject.MacOS"
-            ),
-            .testTarget(
-                    name: "ApprovalTests.Swift.StarterProject.MacOSTests",
-                    dependencies: [
-                        "ApprovalTests.Swift.StarterProject.MacOS",
-                        "ApprovalTests.Swift"
-                    ],
-                    path: "ApprovalTests.Swift.StarterProject.MacOSTests"
-            ),
-        ]
-)
 ```
-<sup><a href='#snippet-https://raw.githubusercontent.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/main/Package.swift#package_include_approvals' title='Start of snippet'>anchor</a></sup>
-<!-- endSnippet -->
 
 ### CocoaPods
 ```
