@@ -1,6 +1,11 @@
 # Reporters
 
-toc
+<!-- toc -->
+## Contents
+
+  * [Supported Diff Tools](#supported-diff-tools)
+    * [Mac](#mac)
+    * [iOS](#ios)<!-- endToc -->
 
 ## Supported Diff Tools
 
@@ -9,11 +14,30 @@ Currently, the search goes in this order:
 
 ### Mac
 
-snippet: mac_reporters
+<!-- snippet: mac_reporters -->
+<a id='snippet-mac_reporters'></a>
+```swift
+ReportWithBeyondCompare(),
+ReportWithAppCode(),
+ReportWithDiffMerge(),
+ReportWithKaleidoscope(),
+ReportWithP4Merge(),
+ReportWithKdiff3(),
+ReportWithTKDiff(),
+ReportWithVisualStudioCode()
+```
+<sup><a href='/ApprovalTests.Swift/Reporters/macOS/ReportersForMac.swift#L5-L14' title='Snippet source file'>snippet source</a> | <a href='#snippet-mac_reporters' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
 
 ### iOS
 
-snippet: ios_reporters
+<!-- snippet: ios_reporters -->
+<a id='snippet-ios_reporters'></a>
+```swift
+XCTReporter()
+```
+<sup><a href='/ApprovalTests.Swift/Reporters/iOS/ReportersForiOS.swift#L5-L7' title='Snippet source file'>snippet source</a> | <a href='#snippet-ios_reporters' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
 
 ---
 

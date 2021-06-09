@@ -1,6 +1,9 @@
 # ApprovalTests
 
-toc
+<!-- toc -->
+## Contents
+
+  * [Concepts](#concepts)<!-- endToc -->
 
 ## Concepts
 
