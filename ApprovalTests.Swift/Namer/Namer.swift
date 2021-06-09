@@ -9,7 +9,7 @@ class Namer: ApprovalNamer {
 
     func approvalName() -> String {
         do {
-            let stack = try StackDemangler()
+            let stack = try StackDemangler().extractNames()
             return stack.className + "." + stack.testName
         } catch {
             print("Error in \(#function): \(error)")
@@ -19,7 +19,7 @@ class Namer: ApprovalNamer {
 
     func sourceFilePath() -> String {
         do {
-            let stack = try StackDemangler()
+            let stack = try StackDemangler().extractNames()
             let indexEnd = fromFile.range(of: ".swift")?.lowerBound
             let tempName = String(fromFile.prefix(upTo: indexEnd!))
             let baseName = tempName + "." + stack.testName
@@ -32,12 +32,12 @@ class Namer: ApprovalNamer {
 }
 
 private class StackDemangler {
-    let className: String
-    let testName: String
+    private(set) var className = ""
+    private(set) var testName = ""
 
-    init() throws {
+    func extractNames() throws -> Self {
         let symbols = Thread.callStackSymbols
-        let testDepth = StackDemangler.selectElement(symbols: symbols)
+        let testDepth = selectElement(symbols: symbols)
         let index = symbols[testDepth].range(of: "$")?.lowerBound
         let tempName = String(symbols[testDepth].suffix(from: index!))
         let indexEnd = tempName.range(of: " ")?.lowerBound
@@ -46,14 +46,15 @@ private class StackDemangler {
         let result = swiftSymbol.print(using: SymbolPrintOptions.simplified.union(.synthesizeSugarOnTypes))
         let splitResult = result.split(separator: " ")
         let classAndMethod = splitResult.last!
-        className = StackDemangler.extractClassName(result: String(classAndMethod))
-        testName = StackDemangler.extractTestName(result: String(classAndMethod))
+        className = extractClassName(result: String(classAndMethod))
+        testName = extractTestName(result: String(classAndMethod))
+        return self
     }
     
-    private static func selectElement(symbols trace: [String]) -> Int {
+    private func selectElement(symbols trace: [String]) -> Int {
         var depth = 0
         for element in trace {
-            if StackDemangler.isTestCase(element) {
+            if isTestCase(element) {
                 break
             }
             depth += 1
@@ -61,17 +62,17 @@ private class StackDemangler {
         return depth - 3
     }
 
-    private static func isTestCase(_ element: String) -> Bool {
+    private func isTestCase(_ element: String) -> Bool {
         element.range(of: "XCTest", options: .caseInsensitive) != nil
     }
 
-    private static func extractTestName(result: String) -> String {
+    private func extractTestName(result: String) -> String {
         let testNameWithParens = String(result.suffix(from: (result.range(of: ".")?.upperBound)!))
         let testName = String(testNameWithParens.prefix(upTo: (testNameWithParens.range(of: "(")?.lowerBound)!))
         return testName
     }
 
-    private static func extractClassName(result: String) -> String {
+    private func extractClassName(result: String) -> String {
         let className = String(result.prefix(upTo: (result.range(of: ".")?.lowerBound)!))
         return className
     }
