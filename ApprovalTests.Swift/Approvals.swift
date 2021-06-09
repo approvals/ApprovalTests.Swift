@@ -6,11 +6,7 @@ public enum Approvals {
             Namer(file)
         }
     }
-
-    static func getNamer(file: StaticString = #filePath) -> ApprovalNamer {
-        NameCreator().load(file.description)
-    }
-
+    
     static func makeApprovalNamer(forFile file: String) -> ApprovalNamer {
         NameCreator().load(file)
     }
