@@ -16,7 +16,7 @@ public struct Options {
     public init(_ reporter: ApprovalFailureReporter) {
         data = [.reporter: reporter]
     }
-    
+
     public init(_ scrubber: Scrubber) {
         data = [.scrubber: scrubber]
     }

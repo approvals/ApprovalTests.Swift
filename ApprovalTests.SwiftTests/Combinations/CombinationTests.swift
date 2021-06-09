@@ -47,7 +47,7 @@ final class CombinationTests: XCTestCase {
 
     func testCombinationsTwoParametersInt() throws {
         try CombinationApprovals.verifyAllCombinations(
-                twoIntParams, 
+                twoIntParams,
                 [1, 2], [3, 4]
         )
     }

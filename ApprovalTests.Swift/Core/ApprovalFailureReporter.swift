@@ -10,7 +10,7 @@ class EquatableFailureReporter: ApprovalFailureReporter, Equatable {
     func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
         false
     }
-    
+
     static func ==(lhs: EquatableFailureReporter, rhs: EquatableFailureReporter) -> Bool {
         lhs.isEqualTo(rhs)
     }

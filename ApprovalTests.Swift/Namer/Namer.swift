@@ -47,7 +47,7 @@ private struct StackDemangler {
             return StackNames(className: "ERROR", testName: "ERROR")
         }
     }
-    
+
     private func selectElement(symbols trace: [String]) -> Int {
         var depth = 0
         for element in trace {
