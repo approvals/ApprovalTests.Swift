@@ -4,7 +4,7 @@ enum StringUtils {
 
     public static func toString(_ name: String, _ array: [Any]) -> String {
         var buffer = ""
-        if (array.isEmpty) {
+        if array.isEmpty {
             buffer.append(name + ".length = 0")
         } else {
             let maxPadding = "\(array.count - 1)".count
