@@ -45,10 +45,12 @@ enum StringUtils {
         return buffer
     }
 
-    public static func printGrid(_ width: Int, _ height: Int, _ cellPrinter: (Int, Int) -> String) -> String {
+    public static func printGrid(_ width: Int,
+                                 _ height: Int,
+                                 _ cellPrinter: (Int, Int) -> String) -> String {
         var buffer = ""
-        for y in 0..<height {
-            for x in 0..<width {
+        for y in 0 ..< height {
+            for x in 0 ..< width {
                 buffer += cellPrinter(x, y)
             }
             buffer += "\n"
