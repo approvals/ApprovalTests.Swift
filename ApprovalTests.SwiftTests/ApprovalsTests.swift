@@ -24,7 +24,7 @@ final class ApprovalsTests: XCTestCase {
             2 <= x && x <= 4 && y == 2
         }
         try Approvals.verifySequence(gameOfLife, 2) { _ in
-            gameOfLife = gameOfLife.advance()
+            gameOfLife = gameOfLife.advance
             return gameOfLife
         }
     }
@@ -45,7 +45,7 @@ private class GameOfLife {
         self.board = board
     }
 
-    func advance() -> GameOfLife {
+    var advance: GameOfLife {
         GameOfLife { [self] x, y in
             let neighbors = [
                 board(x - 1, y - 1),
