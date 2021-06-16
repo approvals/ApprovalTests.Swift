@@ -21,7 +21,7 @@ final class ApprovalsTests: XCTestCase {
 
     func testSequence() throws {
         var gameOfLife = GameOfLife { x, y in
-            return 2 <= x && x <= 4 && y == 2
+            2 <= x && x <= 4 && y == 2
         }
         try Approvals.verifySequence(gameOfLife, 2) { _ in
             gameOfLife = gameOfLife.advance()
@@ -46,7 +46,7 @@ private class GameOfLife: CustomStringConvertible {
     }
 
     func advance() -> GameOfLife {
-        return GameOfLife { x, y in
+        GameOfLife { x, y in
             let c = [
                 self.board(x - 1, y - 1),
                 self.board(x - 0, y - 1),
@@ -63,8 +63,8 @@ private class GameOfLife: CustomStringConvertible {
     }
 
     var description: String {
-        return StringUtils.printGrid(5, 5) { x, y in
-            return board(x, y) ? "X " : ". "
+        StringUtils.printGrid(5, 5) { x, y in
+            board(x, y) ? "X " : ". "
         }
     }
 }
