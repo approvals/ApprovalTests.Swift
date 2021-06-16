@@ -47,7 +47,7 @@ private class GameOfLife: CustomStringConvertible {
 
     func advance() -> GameOfLife {
         GameOfLife { x, y in
-            let c = [
+            let count = [
                 self.board(x - 1, y - 1),
                 self.board(x - 0, y - 1),
                 self.board(x + 1, y - 1),
@@ -58,7 +58,7 @@ private class GameOfLife: CustomStringConvertible {
                 self.board(x - 0, y + 1),
                 self.board(x + 1, y + 1),
             ].filter({ b in b }).count
-            return c == 3 || (c == 2 && self.board(x, y))
+            return count == 3 || (count == 2 && self.board(x, y))
         }
     }
 
