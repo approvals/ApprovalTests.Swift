@@ -39,9 +39,9 @@ enum StringUtils {
         var keys = Array(dictionary.keys)
         keys.sort()
         for key in keys {
-            buffer.append("  \(key) : \(dictionary[key]!),\n")
+            buffer += "  \(key) : \(dictionary[key]!),\n"
         }
-        buffer.append("]\n")
+        buffer += "]\n"
         return buffer
     }
 
