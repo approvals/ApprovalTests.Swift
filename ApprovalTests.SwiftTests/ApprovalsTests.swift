@@ -47,7 +47,7 @@ private class GameOfLife: CustomStringConvertible {
 
     func advance() -> GameOfLife {
         GameOfLife { [self] x, y in
-            let cellCount = [
+            let neighbors = [
                 board(x - 1, y - 1),
                 board(x - 0, y - 1),
                 board(x + 1, y - 1),
@@ -57,7 +57,8 @@ private class GameOfLife: CustomStringConvertible {
                 board(x - 1, y + 1),
                 board(x - 0, y + 1),
                 board(x + 1, y + 1),
-            ].filter { $0 }.count
+            ]
+            let cellCount = neighbors.filter { $0 }.count
             return cellCount == 3 || (cellCount == 2 && board(x, y))
         }
     }
