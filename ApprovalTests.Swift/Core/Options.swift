@@ -1,10 +1,10 @@
-enum OptionDataKey {
+private enum OptionDataKey {
     case reporter
     case scrubber
     case fileExtension
 }
 
-typealias OptionData = [OptionDataKey: Any]
+private typealias OptionData = [OptionDataKey: Any]
 
 public struct Options {
     private let data: OptionData
