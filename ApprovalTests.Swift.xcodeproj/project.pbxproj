@@ -16,7 +16,6 @@
 		163E1868217F84BE00A54A48 /* Namer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973086013CD2288DC3DE9F4E /* Namer.swift */; };
 		163E186B217F84BE00A54A48 /* ReporterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730820AFFF03C5745F45021 /* ReporterFactory.swift */; };
 		163E186D217F84BE00A54A48 /* CwlDemangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308B6D486609330CC17CB0 /* CwlDemangle.swift */; };
-		163E186E217F84BE00A54A48 /* ApprovalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308A9857256E4959E94600 /* ApprovalError.swift */; };
 		163E186F217F84BE00A54A48 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973086C8511ED6F6F2F50094 /* StringUtils.swift */; };
 		163E1870217F84BE00A54A48 /* ApprovalTextWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308FC331B73ECB0A9BA7EE /* ApprovalTextWriter.swift */; };
 		163E1871217F84BE00A54A48 /* CombinationApprovals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973085B841308DD129EF2C02 /* CombinationApprovals.swift */; };
@@ -56,7 +55,6 @@
 		9730887714C23132E12F08DF /* ApprovalNamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308B0163F571871E65B39A /* ApprovalNamer.swift */; };
 		97308953E0DAF2007A0AEA43 /* FileApprover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308F282AC7547A5A3278BB /* FileApprover.swift */; };
 		97308AE5D7992BFA4749DDC7 /* ReporterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9730820AFFF03C5745F45021 /* ReporterFactory.swift */; };
-		97308B9048518982E40D8FE7 /* ApprovalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308A9857256E4959E94600 /* ApprovalError.swift */; };
 		97308E0EDC9DA6E224FBAAC7 /* ApprovalApprover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308FAD567B1657AE7671D0 /* ApprovalApprover.swift */; };
 		97308F8A36EB85A6CFDF5C78 /* Approvals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308BBAF1CDE277460537C7 /* Approvals.swift */; };
 		97308F929CF27A617D272BCA /* Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308BE497F4102343464B3C /* Samples.swift */; };
@@ -142,7 +140,6 @@
 		973086C8511ED6F6F2F50094 /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		973086D51D21070606B41784 /* ToDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
 		973088485E8B1D043616B220 /* ApprovalWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalWriter.swift; sourceTree = "<group>"; };
-		97308A9857256E4959E94600 /* ApprovalError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalError.swift; sourceTree = "<group>"; };
 		97308B0163F571871E65B39A /* ApprovalNamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalNamer.swift; sourceTree = "<group>"; };
 		97308B6D486609330CC17CB0 /* CwlDemangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CwlDemangle.swift; sourceTree = "<group>"; };
 		97308BBAF1CDE277460537C7 /* Approvals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Approvals.swift; sourceTree = "<group>"; };
@@ -402,7 +399,6 @@
 		97308CA7D8483A14498F1D40 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				97308A9857256E4959E94600 /* ApprovalError.swift */,
 				97308B6D486609330CC17CB0 /* CwlDemangle.swift */,
 				973086C8511ED6F6F2F50094 /* StringUtils.swift */,
 				BB170A69DD1A71C2E2A023E7 /* SystemUtils.swift */,
@@ -638,7 +634,6 @@
 				163E186B217F84BE00A54A48 /* ReporterFactory.swift in Sources */,
 				163E186D217F84BE00A54A48 /* CwlDemangle.swift in Sources */,
 				48FD0FAB264B865300623323 /* ReportWithKaleidoscope.swift in Sources */,
-				163E186E217F84BE00A54A48 /* ApprovalError.swift in Sources */,
 				163E186F217F84BE00A54A48 /* StringUtils.swift in Sources */,
 				163E1870217F84BE00A54A48 /* ApprovalTextWriter.swift in Sources */,
 				163E1871217F84BE00A54A48 /* CombinationApprovals.swift in Sources */,
@@ -692,7 +687,6 @@
 				97308FF1569559F04D5ACAED /* CwlDemangle.swift in Sources */,
 				973087A01B5F30E6D1CB585D /* ApprovalTextWriter.swift in Sources */,
 				97308AE5D7992BFA4749DDC7 /* ReporterFactory.swift in Sources */,
-				97308B9048518982E40D8FE7 /* ApprovalError.swift in Sources */,
 				97308597E60FDC87E7ED7453 /* CombinationApprovals.swift in Sources */,
 				97308702B176EBB5F0A8D932 /* StringUtils.swift in Sources */,
 				BB17001927AF3FBB44EB00AA /* FirstWorkingReporter.swift in Sources */,
