@@ -57,7 +57,7 @@ private class GameOfLife: CustomStringConvertible {
                 board(x - 1, y + 1),
                 board(x - 0, y + 1),
                 board(x + 1, y + 1),
-            ].filter({ b in b }).count
+            ].filter { $0 }.count
             return cellCount == 3 || (cellCount == 2 && board(x, y))
         }
     }
