@@ -38,7 +38,7 @@ private struct MyRect: Codable {
     let height: Int
 }
 
-private class GameOfLife: CustomStringConvertible {
+private class GameOfLife {
     private var board: (Int, Int) -> Bool
 
     init(_ board: @escaping (Int, Int) -> Bool) {
@@ -62,7 +62,9 @@ private class GameOfLife: CustomStringConvertible {
             return cellCount == 3 || (cellCount == 2 && board(x, y))
         }
     }
+}
 
+extension GameOfLife: CustomStringConvertible {
     var description: String {
         StringUtils.printGrid(5, 5) { x, y in
             board(x, y) ? "X " : ". "
