@@ -20,13 +20,13 @@ final class ApprovalsTests: XCTestCase {
     }
 
     func testSequence() throws {
-        var gameOfLife = GameOfLife({ x, y in
+        var gameOfLife = GameOfLife { x, y in
             return 2 <= x && x <= 4 && y == 2
-        })
-        try Approvals.verifySequence(gameOfLife, 2, { frame in
+        }
+        try Approvals.verifySequence(gameOfLife, 2) { _ in
             gameOfLife = gameOfLife.advance()
             return gameOfLife
-        })
+        }
     }
 
 }
@@ -46,7 +46,7 @@ private class GameOfLife: CustomStringConvertible {
     }
 
     func advance() -> GameOfLife {
-        return GameOfLife({ x, y in
+        return GameOfLife { x, y in
             let c = [
                 self.board(x - 1, y - 1),
                 self.board(x - 0, y - 1),
@@ -59,12 +59,12 @@ private class GameOfLife: CustomStringConvertible {
                 self.board(x + 1, y + 1),
             ].filter({ b in b }).count
             return c == 3 || (c == 2 && self.board(x, y))
-        })
+        }
     }
 
     var description: String {
-        return StringUtils.printGrid(5, 5, { x, y in
+        return StringUtils.printGrid(5, 5) { x, y in
             return board(x, y) ? "X " : ". "
-        })
+        }
     }
 }
