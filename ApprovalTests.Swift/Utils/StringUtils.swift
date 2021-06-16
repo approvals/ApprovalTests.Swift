@@ -8,9 +8,9 @@ enum StringUtils {
             buffer += "\(name).length = 0"
         } else {
             let maxPadding = "\(array.count - 1)".count
-            for index in 0 ..< array.count {
+            for (index, element) in array.enumerated() {
                 let padding = padNumber(index, maxPadding)
-                buffer += "\(name)[\(padding)] = \(array[index])\n"
+                buffer += "\(name)[\(padding)] = \(element)\n"
             }
         }
         return buffer
