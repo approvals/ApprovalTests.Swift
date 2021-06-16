@@ -1,7 +1,8 @@
 public enum CombinationApprovals {
     private struct UNUSED {
-        var description: String { "SKIP" }
+        static let parameter = [UNUSED()]
     }
+    private static var unused: [UNUSED] { [UNUSED()] }
 
     public static func verifyAllCombinations<IN1, OUT>(
             _ call: @escaping (IN1) -> OUT,
@@ -20,18 +21,10 @@ public enum CombinationApprovals {
             let _ = $8
             return call($0)
         }
-
-        let params2 = [UNUSED()]
-        let params3 = [UNUSED()]
-        let params4 = [UNUSED()]
-        let params5 = [UNUSED()]
-        let params6 = [UNUSED()]
-        let params7 = [UNUSED()]
-        let params8 = [UNUSED()]
-        let params9 = [UNUSED()]
         try verifyAllCombinations(
                 callWithAllParameters,
-                params1, params2, params3, params4, params5, params6, params7, params8, params9,
+                params1,
+                unused, unused, unused, unused, unused, unused, unused, unused,
                 file: file, line: line
         )
     }
@@ -53,17 +46,10 @@ public enum CombinationApprovals {
             let _ = $8
             return call($0, $1)
         }
-
-        let params3 = [UNUSED()]
-        let params4 = [UNUSED()]
-        let params5 = [UNUSED()]
-        let params6 = [UNUSED()]
-        let params7 = [UNUSED()]
-        let params8 = [UNUSED()]
-        let params9 = [UNUSED()]
         try verifyAllCombinations(
                 callWithAllParameters,
-                params1, params2, params3, params4, params5, params6, params7, params8, params9,
+                params1, params2,
+                unused, unused, unused, unused, unused, unused, unused,
                 file: file, line: line
         )
     }
@@ -85,16 +71,10 @@ public enum CombinationApprovals {
             let _ = $8
             return call($0, $1, $2)
         }
-
-        let params4 = [UNUSED()]
-        let params5 = [UNUSED()]
-        let params6 = [UNUSED()]
-        let params7 = [UNUSED()]
-        let params8 = [UNUSED()]
-        let params9 = [UNUSED()]
         try verifyAllCombinations(
                 callWithAllParameters,
-                params1, params2, params3, params4, params5, params6, params7, params8, params9,
+                params1, params2, params3,
+                unused, unused, unused, unused, unused, unused,
                 file: file, line: line
         )
     }
@@ -116,15 +96,10 @@ public enum CombinationApprovals {
             let _ = $8
             return call($0, $1, $2, $3)
         }
-
-        let params5 = [UNUSED()]
-        let params6 = [UNUSED()]
-        let params7 = [UNUSED()]
-        let params8 = [UNUSED()]
-        let params9 = [UNUSED()]
         try verifyAllCombinations(
                 callWithAllParameters,
-                params1, params2, params3, params4, params5, params6, params7, params8, params9,
+                params1, params2, params3, params4,
+                unused, unused, unused, unused, unused,
                 file: file, line: line
         )
     }
@@ -146,14 +121,10 @@ public enum CombinationApprovals {
             let _ = $8
             return call($0, $1, $2, $3, $4)
         }
-
-        let params6 = [UNUSED()]
-        let params7 = [UNUSED()]
-        let params8 = [UNUSED()]
-        let params9 = [UNUSED()]
         try verifyAllCombinations(
                 callWithAllParameters,
-                params1, params2, params3, params4, params5, params6, params7, params8, params9,
+                params1, params2, params3, params4, params5,
+                unused, unused, unused, unused,
                 file: file, line: line
         )
     }
@@ -175,13 +146,10 @@ public enum CombinationApprovals {
             let _ = $8
             return call($0, $1, $2, $3, $4, $5)
         }
-
-        let params7 = [UNUSED()]
-        let params8 = [UNUSED()]
-        let params9 = [UNUSED()]
         try verifyAllCombinations(
                 callWithAllParameters,
-                params1, params2, params3, params4, params5, params6, params7, params8, params9,
+                params1, params2, params3, params4, params5, params6,
+                unused, unused, unused,
                 file: file, line: line
         )
     }
@@ -203,12 +171,10 @@ public enum CombinationApprovals {
             let _ = $8
             return call($0, $1, $2, $3, $4, $5, $6)
         }
-
-        let params8 = [UNUSED()]
-        let params9 = [UNUSED()]
         try verifyAllCombinations(
                 callWithAllParameters,
-                params1, params2, params3, params4, params5, params6, params7, params8, params9,
+                params1, params2, params3, params4, params5, params6, params7,
+                unused, unused,
                 file: file, line: line
         )
     }
@@ -230,11 +196,10 @@ public enum CombinationApprovals {
             let _ = $8
             return call($0, $1, $2, $3, $4, $5, $6, $7)
         }
-
-        let params9 = [UNUSED()]
         try verifyAllCombinations(
                 callWithAllParameters,
-                params1, params2, params3, params4, params5, params6, params7, params8, params9,
+                params1, params2, params3, params4, params5, params6, params7, params8,
+                unused,
                 file: file, line: line
         )
     }
