@@ -24,6 +24,19 @@ public enum Approvals {
         try verify(StringUtils.toString(label, array), options, file: file, line: line)
     }
 
+    public static func verifySequence<T>(_ initial: T,
+                                         _ numberOfFrames: Int,
+                                         _ getNextFrame: (Int) -> T,
+                                         _ options: Options = Options(),
+                                         file: StaticString = #filePath,
+                                         line: UInt = #line) throws {
+        var string = "initial: \n\(initial)\n\n"
+        for frame in 1...numberOfFrames {
+            string += "frame #\(frame):\n\(getNextFrame(frame))\n\n"
+        }
+        try verify(string, options, file: file, line: line)
+    }
+
     public static func verify(_ response: String,
                               _ options: Options = Options(),
                               file: StaticString = #filePath,

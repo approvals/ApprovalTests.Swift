@@ -15,7 +15,7 @@ enum StringUtils {
         }
         return buffer
     }
-
+    
     private static func padNumber(_ number: Int, _ digits: Int) -> String {
         let text = "\(number)"
         let padding = String(repeating: "0", count: digits - text.count)
@@ -42,6 +42,17 @@ enum StringUtils {
             buffer.append("  \(key) : \(dictionary[key]!),\n")
         }
         buffer.append("]\n")
+        return buffer
+    }
+
+    public static func printGrid(_ width: Int, _ height: Int, _ cellPrinter: (Int, Int) -> String) -> String {
+        var buffer = ""
+        for y in 0..<height {
+            for x in 0..<width {
+                buffer += cellPrinter(x, y)
+            }
+            buffer += "\n"
+        }
         return buffer
     }
 }
