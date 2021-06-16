@@ -29,28 +29,19 @@ class FileApprover: ApprovalApprover {
     }
 
     private func approveTextFile(approved expected: String, received actual: String) -> Bool {
-        let expectedExists = fileManager.fileExists(atPath: expected)
-        let actualExists = fileManager.fileExists(atPath: actual)
-
-        if !expectedExists {
+        guard fileManager.fileExists(atPath: actual) else { return false }
+        if !fileManager.fileExists(atPath: expected) {
             fileManager.createFile(atPath: expected, contents: Data())
         }
 
-        if !actualExists { return false }
-
-        let expectedUrl = URL(fileURLWithPath: expected)
-        let actualUrl = URL(fileURLWithPath: actual)
-
-        var t1 = ""
-        var t2 = ""
         do {
-            t1 = try String(contentsOf: expectedUrl)
-            t2 = try String(contentsOf: actualUrl)
+            let t1 = try String(contentsOfFile: expected)
+            let t2 = try String(contentsOfFile: actual)
+            return t1 == t2
         } catch {
             print("Error in \(#function) for approved \"\(expected)\", received \"\(actual)\": \(error)")
+            return false
         }
-
-        return t1 == t2
     }
 
     func cleanUpAfterSuccess(reporter: ApprovalFailureReporter) {
