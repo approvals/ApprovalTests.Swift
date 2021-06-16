@@ -55,7 +55,7 @@ public struct Options {
 public struct FileOptions {
     private let data: OptionData
 
-    fileprivate init(_ data: [OptionDataKey: Any]) {
+    fileprivate init(_ data: OptionData) {
         self.data = data
     }
 
