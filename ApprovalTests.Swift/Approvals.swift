@@ -30,9 +30,19 @@ public enum Approvals {
                                          _ options: Options = Options(),
                                          file: StaticString = #filePath,
                                          line: UInt = #line) throws {
-        var output = "initial:\n\(initial)\n\n"
+        var output = """
+                     initial:
+                     \(initial)
+
+
+                     """
         for frame in 1...numberOfFrames {
-            output += "frame #\(frame):\n\(getNextFrame(frame))\n\n"
+            output += """
+                      frame #\(frame):
+                      \(getNextFrame(frame))
+
+
+                      """
         }
         try verify(output, options, file: file, line: line)
     }
