@@ -46,19 +46,19 @@ private class GameOfLife: CustomStringConvertible {
     }
 
     func advance() -> GameOfLife {
-        GameOfLife { x, y in
+        GameOfLife { [self] x, y in
             let count = [
-                self.board(x - 1, y - 1),
-                self.board(x - 0, y - 1),
-                self.board(x + 1, y - 1),
-                self.board(x - 1, y),
-//                self.board(x - 0, y),
-                self.board(x + 1, y),
-                self.board(x - 1, y + 1),
-                self.board(x - 0, y + 1),
-                self.board(x + 1, y + 1),
+                board(x - 1, y - 1),
+                board(x - 0, y - 1),
+                board(x + 1, y - 1),
+                board(x - 1, y),
+//              board(x - 0, y),
+                board(x + 1, y),
+                board(x - 1, y + 1),
+                board(x - 0, y + 1),
+                board(x + 1, y + 1),
             ].filter({ b in b }).count
-            return count == 3 || (count == 2 && self.board(x, y))
+            return count == 3 || (count == 2 && board(x, y))
         }
     }
 
