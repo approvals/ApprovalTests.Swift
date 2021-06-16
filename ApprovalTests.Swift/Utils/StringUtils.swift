@@ -2,6 +2,14 @@ import Foundation
 
 enum StringUtils {
 
+    public static func endWithNewline(_ text: String) -> String {
+        var buffer = text
+        if !buffer.hasSuffix("\n") {
+            buffer += "\n"
+        }
+        return buffer
+    }
+
     public static func toString<T>(_ name: String, _ array: [T]) -> String {
         guard !array.isEmpty else {
             return "\(name).length = 0"

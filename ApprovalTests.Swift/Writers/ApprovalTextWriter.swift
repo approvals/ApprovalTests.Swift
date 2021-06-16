@@ -5,14 +5,10 @@ struct ApprovalTextWriter: ApprovalWriter {
     private let fileExtensionWithoutDot: String
 
     init(_ text: String, _ fileExtensionWithoutDot: String) {
-        if !text.hasSuffix("\n") {
-            self.text = text + "\n"
-        } else {
-            self.text = text
-        }
+        self.text = StringUtils.endWithNewline(text)
         self.fileExtensionWithoutDot = fileExtensionWithoutDot
     }
-
+    
     func approvalFilename(_ base: String) -> String {
         "\(base).approved.\(fileExtensionWithoutDot)"
     }
