@@ -3,14 +3,13 @@ import Foundation
 enum StringUtils {
 
     public static func toString<T>(_ name: String, _ array: [T]) -> String {
+        guard !array.isEmpty else {
+            return "\(name).length = 0"
+        }
         var buffer = ""
-        if array.isEmpty {
-            buffer += "\(name).length = 0"
-        } else {
-            let maxPadding = "\(array.count - 1)".count
-            for (index, element) in array.enumerated() {
-                buffer += "\(name)[\(padNumber(index, maxPadding))] = \(element)\n"
-            }
+        let maxPadding = "\(array.count - 1)".count
+        for (index, element) in array.enumerated() {
+            buffer += "\(name)[\(padNumber(index, maxPadding))] = \(element)\n"
         }
         return buffer
     }
