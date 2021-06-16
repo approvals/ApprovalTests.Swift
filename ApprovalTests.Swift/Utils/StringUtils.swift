@@ -2,7 +2,7 @@ import Foundation
 
 enum StringUtils {
 
-    public static func toString(_ name: String, _ array: [Any]) -> String {
+    public static func toString<T>(_ name: String, _ array: [T]) -> String {
         var buffer = ""
         if array.isEmpty {
             buffer += "\(name).length = 0"
@@ -34,7 +34,7 @@ enum StringUtils {
         return String(data: jsonData, encoding: .utf8) ?? ""
     }
 
-    static func printDictionary<Key: Hashable & Comparable>(_ dictionary: [Key: Any]) throws -> String {
+    static func printDictionary<Key: Hashable & Comparable, Value>(_ dictionary: [Key: Value]) throws -> String {
         var buffer = "[\n"
         var keys = Array(dictionary.keys)
         keys.sort()
