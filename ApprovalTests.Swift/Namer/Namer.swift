@@ -2,8 +2,7 @@ import Foundation
 
 struct Namer: ApprovalNamer {
     private let fromFile: String
-
-    init(_ file: String) {
+public init(_ file: String) {
         fromFile = file
     }
 

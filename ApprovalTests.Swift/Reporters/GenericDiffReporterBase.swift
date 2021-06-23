@@ -3,8 +3,7 @@ import Foundation
 public class GenericDiffReporterBase: EquatableFailureReporter {
     let programPath: String
     let arguments: (String, String) -> [String]
-
-    init(programPath: String,
+public init(programPath: String,
          arguments: @escaping (String, String) -> [String] = { received, approved in
              [received, approved]
          }) {

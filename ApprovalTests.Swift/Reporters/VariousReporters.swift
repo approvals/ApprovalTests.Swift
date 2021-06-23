@@ -1,5 +1,5 @@
 public class ReportWithDiffMerge: GenericDiffReporter {
-    init() {
+public init() {
         super.init(
                 programPath: "/Applications/DiffMerge.app/Contents/MacOS/DiffMerge",
                 arguments: { received, approved in
@@ -10,14 +10,14 @@ public class ReportWithDiffMerge: GenericDiffReporter {
 }
 
 public class ReportWithBeyondCompare: GenericDiffReporter {
-    init() {
+public init() {
         super.init(programPath: "/Applications/Beyond Compare.app/Contents/MacOS/bcomp")
     }
 }
 
 // Requires Tools->Create Command-line Launcher
 public class ReportWithAppCode: GenericDiffReporter {
-    init() {
+public init() {
         super.init(
                 programPath: "/usr/local/bin/appcode",
                 arguments: { received, approved in
@@ -28,7 +28,7 @@ public class ReportWithAppCode: GenericDiffReporter {
 }
 
 public class ReportWithKdiff3: GenericDiffReporter {
-    init() {
+public init() {
         super.init(
                 programPath: "/Applications/kdiff3.app/Contents/MacOS/kdiff3",
                 arguments: { received, approved in
@@ -39,19 +39,19 @@ public class ReportWithKdiff3: GenericDiffReporter {
 }
 
 public class ReportWithP4Merge: GenericDiffReporter {
-    init() {
+public init() {
         super.init(programPath: "/Applications/p4merge.app/Contents/MacOS/p4merge")
     }
 }
 
 public class ReportWithTKDiff: GenericDiffReporter {
-    init() {
+public init() {
         super.init(programPath: "/Applications/TkDiff.app/Contents/MacOS/tkdiff")
     }
 }
 
 public class ReportWithVisualStudioCode: GenericDiffReporter {
-    init() {
+public init() {
         super.init(
                 programPath: "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code",
                 arguments: { received, approved in

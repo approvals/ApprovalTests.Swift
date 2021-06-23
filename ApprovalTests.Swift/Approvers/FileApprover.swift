@@ -15,15 +15,14 @@ public class FileApprover: ApprovalApprover {
     private let received: String
     private let approved: String
     private let writer: ApprovalWriter
-
-    init(_ writer: ApprovalWriter, _ namer: ApprovalNamer) {
+public init(_ writer: ApprovalWriter, _ namer: ApprovalNamer) {
         let base = namer.sourceFilePath()
         received = writer.receivedFilename(base)
         approved = writer.approvalFilename(base)
         self.writer = writer
     }
 
-    func approve() -> Bool {
+    public func approve() -> Bool {
         writer.writeReceivedFile(received)
         return approveTextFile(approved: approved, received: received)
     }
@@ -44,7 +43,7 @@ public class FileApprover: ApprovalApprover {
         }
     }
 
-    func cleanUpAfterSuccess(reporter: ApprovalFailureReporter) {
+    public func cleanUpAfterSuccess(reporter: ApprovalFailureReporter) {
         do {
             try fileManager.removeItem(atPath: received)
         } catch {
@@ -52,12 +51,12 @@ public class FileApprover: ApprovalApprover {
         }
     }
 
-    func fail(file: StaticString, line: UInt) throws {
+    public func fail(file: StaticString, line: UInt) throws {
         let message = "Failed Approval \nApproved:\(approved) \nReceived:\(received)"
         try FileApprover.failer.fail(message, file: file, line: line)
     }
 
-    func reportFailure(reporter: ApprovalFailureReporter) {
+    public func reportFailure(reporter: ApprovalFailureReporter) {
         _ = reporter.report(received: received, approved: approved)
     }
 }

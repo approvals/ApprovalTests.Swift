@@ -1,5 +1,5 @@
 public class ReportersForiOS: FirstWorkingReporter {
-    init() {
+public init() {
         #if os(iOS)
             super.init(
                     // begin-snippet: ios_reporters

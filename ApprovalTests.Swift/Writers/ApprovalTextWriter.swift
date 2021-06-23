@@ -3,8 +3,7 @@ import Foundation
 struct ApprovalTextWriter: ApprovalWriter {
     private let text: String
     private let fileExtensionWithoutDot: String
-
-    init(_ text: String, _ fileExtensionWithoutDot: String) {
+public init(_ text: String, _ fileExtensionWithoutDot: String) {
         self.text = StringUtils.endWithNewline(text)
         self.fileExtensionWithoutDot = fileExtensionWithoutDot
     }

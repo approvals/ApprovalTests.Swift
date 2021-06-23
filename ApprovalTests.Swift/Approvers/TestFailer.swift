@@ -1,6 +1,6 @@
 import XCTest
 
-protocol Failer {
+public protocol Failer {
     func fail(_ message: String, file: StaticString, line: UInt) throws
 }
 

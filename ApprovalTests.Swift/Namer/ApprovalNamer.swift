@@ -1,4 +1,4 @@
-protocol ApprovalNamer {
+public protocol ApprovalNamer {
     func approvalName() -> String
     func sourceFilePath() -> String
 }
