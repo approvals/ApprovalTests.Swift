@@ -6,8 +6,7 @@
             let process = makeProcess(received: received, approved: approved)
             try process.run()
         }
-
-        func makeProcess(received: String, approved: String) -> Process {
+public func makeProcess(received: String, approved: String) -> Process {
             let (workingReceived, workingApproved) = cleanUpFileNames(received: received, approved: approved)
 
             let process = Process()
