@@ -1,3 +1,5 @@
+#if os(macOS)
+    
 public class ReportWithDiffMerge: GenericDiffReporter {
     public init() {
         super.init(
@@ -38,6 +40,12 @@ public class ReportWithKdiff3: GenericDiffReporter {
     }
 }
 
+public class ReportWithKaleidoscope: GenericDiffReporter {
+    public init() {
+        super.init(programPath: "/usr/local/bin/ksdiff")
+    }
+}
+
 public class ReportWithP4Merge: GenericDiffReporter {
     public init() {
         super.init(programPath: "/Applications/p4merge.app/Contents/MacOS/p4merge")
@@ -60,3 +68,6 @@ public class ReportWithVisualStudioCode: GenericDiffReporter {
         )
     }
 }
+
+#endif
+
