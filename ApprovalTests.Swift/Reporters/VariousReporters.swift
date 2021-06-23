@@ -1,5 +1,3 @@
-#if os(macOS)
-    
 public class ReportWithDiffMerge: GenericDiffReporter {
     public init() {
         super.init(
@@ -68,6 +66,4 @@ public class ReportWithVisualStudioCode: GenericDiffReporter {
         )
     }
 }
-
-#endif
 

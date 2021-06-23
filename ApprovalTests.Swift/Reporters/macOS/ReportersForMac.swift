@@ -10,7 +10,8 @@ public class ReportersForMac: FirstWorkingReporter {
                     ReportWithP4Merge(),
                     ReportWithKdiff3(),
                     ReportWithTKDiff(),
-                    ReportWithVisualStudioCode()
+                    ReportWithVisualStudioCode(),
+                    ReportContentsWithXCTest()
                     // end-snippet
             )
         #endif
