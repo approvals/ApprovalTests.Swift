@@ -17,7 +17,7 @@ public class ReportMoveCommandToClipboard: EquatableFailureReporter {
         return "mv \(workingReceived) \(workingApproved)"
     }
 
-    static private func cleanPathString(_ pathString: String) -> String {
+    private static func cleanPathString(_ pathString: String) -> String {
         var workingPathString = pathString
 
         let removedColons = workingPathString.replacingOccurrences(of: ":::", with: "")
