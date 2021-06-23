@@ -1,6 +1,8 @@
 import Foundation
 
 public class ReportMoveCommandToClipboard: EquatableFailureReporter {
+    public override init() {}
+
     public override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
         other is ReportMoveCommandToClipboard
     }

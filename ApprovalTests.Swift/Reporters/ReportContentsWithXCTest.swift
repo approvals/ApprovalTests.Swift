@@ -1,6 +1,8 @@
 import XCTest
 
 public class ReportContentsWithXCTest: EquatableFailureReporter {
+    public override init() {}
+
     public override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
         other is ReportContentsWithXCTest
     }
