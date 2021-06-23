@@ -10,7 +10,8 @@ public class ReportMoveCommandToClipboard: EquatableFailureReporter {
         SystemUtils.pasteToClipboard(command)
         return true
     }
-public static func makeCommandLineMove(received: String, approved: String) -> String {
+
+    public static func makeCommandLineMove(received: String, approved: String) -> String {
         let workingReceived = ReportMoveCommandToClipboard.cleanPathString(received)
         let workingApproved = ReportMoveCommandToClipboard.cleanPathString(approved)
         return "mv \(workingReceived) \(workingApproved)"

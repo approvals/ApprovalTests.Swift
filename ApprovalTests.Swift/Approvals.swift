@@ -1,7 +1,7 @@
 import Foundation
 
 public enum Approvals {
-public static func makeNamer(forFile file: String) -> ApprovalNamer {
+    public static func makeNamer(forFile file: String) -> ApprovalNamer {
         Namer(file)
     }
 

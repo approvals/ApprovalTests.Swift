@@ -27,7 +27,8 @@ enum StringUtils {
         let padding = String(repeating: "0", count: digits - text.count)
         return padding + text
     }
-public static func toJSON<T: Encodable>(_ object: T) throws -> String {
+
+    public static func toJSON<T: Encodable>(_ object: T) throws -> String {
         let jsonEncoder = JSONEncoder()
         if #available(iOS 10.0, *) {
             jsonEncoder.dateEncodingStrategy = .iso8601
@@ -38,7 +39,8 @@ public static func toJSON<T: Encodable>(_ object: T) throws -> String {
         let jsonData = try jsonEncoder.encode(object)
         return String(data: jsonData, encoding: .utf8) ?? ""
     }
-public static func printDictionary<Key: Hashable & Comparable, Value>(_ dictionary: [Key: Value]) throws -> String {
+
+    public static func printDictionary<Key: Hashable & Comparable, Value>(_ dictionary: [Key: Value]) throws -> String {
         var buffer = "[\n"
         var keys = Array(dictionary.keys)
         keys.sort()

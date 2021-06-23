@@ -2,10 +2,12 @@ import Foundation
 
 public class FileApprover: ApprovalApprover {
     private static var failer: Failer = XCTFailer()
-public static func registerFailer(_ failer: Failer) {
+
+    public static func registerFailer(_ failer: Failer) {
         FileApprover.failer = failer
     }
-public static func resetFailer() {
+
+    public static func resetFailer() {
         FileApprover.failer = XCTFailer()
     }
 
