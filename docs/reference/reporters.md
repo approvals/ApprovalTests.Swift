@@ -24,9 +24,10 @@ ReportWithKaleidoscope(),
 ReportWithP4Merge(),
 ReportWithKdiff3(),
 ReportWithTKDiff(),
-ReportWithVisualStudioCode()
+ReportWithVisualStudioCode(),
+ReportContentsWithXCTest()
 ```
-<sup><a href='/ApprovalTests.Swift/Reporters/macOS/ReportersForMac.swift#L5-L14' title='Snippet source file'>snippet source</a> | <a href='#snippet-mac_reporters' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/ApprovalTests.Swift/Reporters/macOS/ReportersForMac.swift#L5-L15' title='Snippet source file'>snippet source</a> | <a href='#snippet-mac_reporters' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ### iOS
@@ -34,9 +35,17 @@ ReportWithVisualStudioCode()
 <!-- snippet: ios_reporters -->
 <a id='snippet-ios_reporters'></a>
 ```swift
+ReportWithBeyondCompare(),
+ReportWithAppCode(),
+ReportWithDiffMerge(),
+ReportWithKaleidoscope(),
+ReportWithP4Merge(),
+ReportWithKdiff3(),
+ReportWithTKDiff(),
+ReportWithVisualStudioCode(),
 ReportContentsWithXCTest()
 ```
-<sup><a href='/ApprovalTests.Swift/Reporters/iOS/ReportersForiOS.swift#L5-L7' title='Snippet source file'>snippet source</a> | <a href='#snippet-ios_reporters' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/ApprovalTests.Swift/Reporters/iOS/ReportersForiOS.swift#L5-L15' title='Snippet source file'>snippet source</a> | <a href='#snippet-ios_reporters' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ---
