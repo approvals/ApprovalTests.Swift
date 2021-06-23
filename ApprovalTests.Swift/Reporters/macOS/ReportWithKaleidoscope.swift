@@ -1,5 +1,5 @@
 #if os(macOS)
-public class ReportWithKaleidoscope: GenericDiffReporter {
+    public class ReportWithKaleidoscope: GenericDiffReporter {
         init() {
             super.init(programPath: "/usr/local/bin/ksdiff")
         }

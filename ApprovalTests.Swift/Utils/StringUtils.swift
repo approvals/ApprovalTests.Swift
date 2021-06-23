@@ -21,7 +21,7 @@ enum StringUtils {
         }
         return buffer
     }
-    
+
     private static func padNumber(_ number: Int, _ digits: Int) -> String {
         let text = "\(number)"
         let padding = String(repeating: "0", count: digits - text.count)

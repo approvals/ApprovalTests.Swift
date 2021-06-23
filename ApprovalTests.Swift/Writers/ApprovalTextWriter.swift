@@ -8,7 +8,7 @@ struct ApprovalTextWriter: ApprovalWriter {
         self.text = StringUtils.endWithNewline(text)
         self.fileExtensionWithoutDot = fileExtensionWithoutDot
     }
-    
+
     func approvalFilename(_ base: String) -> String {
         "\(base).approved.\(fileExtensionWithoutDot)"
     }

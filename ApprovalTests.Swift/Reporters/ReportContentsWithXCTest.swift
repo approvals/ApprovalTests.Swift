@@ -1,10 +1,11 @@
 import XCTest
 
 public class ReportContentsWithXCTest: EquatableFailureReporter {
-public override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
+    public override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
         other is ReportContentsWithXCTest
     }
-public override func report(received: String, approved: String) -> Bool {
+
+    public override func report(received: String, approved: String) -> Bool {
         // read the files into strings
         let approvedUrl = URL(fileURLWithPath: approved)
         let receivedUrl = URL(fileURLWithPath: received)

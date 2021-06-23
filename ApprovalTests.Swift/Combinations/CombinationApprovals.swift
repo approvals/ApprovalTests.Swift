@@ -2,6 +2,7 @@ public enum CombinationApprovals {
     private struct UNUSED {
         static let parameter = [UNUSED()]
     }
+
     private static var unused: [UNUSED] { [UNUSED()] }
 
     public static func verifyAllCombinations<IN1, OUT>(

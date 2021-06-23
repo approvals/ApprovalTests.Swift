@@ -17,10 +17,10 @@ public enum Approvals {
     }
 
     public static func verifyAll<T>(_ label: String,
-                                 _ array: [T],
-                                 _ options: Options = Options(),
-                                 file: StaticString = #filePath,
-                                 line: UInt = #line) throws {
+                                    _ array: [T],
+                                    _ options: Options = Options(),
+                                    file: StaticString = #filePath,
+                                    line: UInt = #line) throws {
         try verify(StringUtils.toString(label, array), options, file: file, line: line)
     }
 
@@ -36,7 +36,7 @@ public enum Approvals {
 
 
                      """
-        for frame in 1...numberOfFrames {
+        for frame in 1 ... numberOfFrames {
             output += """
                       frame #\(frame):
                       \(getNextFrame(frame))

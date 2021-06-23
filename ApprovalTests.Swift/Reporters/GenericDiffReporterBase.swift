@@ -11,7 +11,8 @@ public class GenericDiffReporterBase: EquatableFailureReporter {
         self.programPath = programPath
         self.arguments = arguments
     }
-public override func report(received: String, approved: String) -> Bool {
+
+    public override func report(received: String, approved: String) -> Bool {
         if !FileManager.default.fileExists(atPath: programPath) {
             return false
         }
@@ -23,7 +24,8 @@ public override func report(received: String, approved: String) -> Bool {
             return false
         }
     }
-public override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
+
+    public override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
         guard let other = other as? GenericDiffReporterBase else { return false }
         return programPath == other.programPath
     }

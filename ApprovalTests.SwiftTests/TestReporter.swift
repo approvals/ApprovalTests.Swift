@@ -12,7 +12,8 @@ public class TestReporter: EquatableFailureReporter {
     init(success: Bool) {
         self.success = success
     }
-public override func report(received: String, approved: String) -> Bool {
+
+    public override func report(received: String, approved: String) -> Bool {
         self.received = received
         self.approved = approved
         return success

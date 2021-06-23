@@ -1,8 +1,8 @@
 #if os(macOS)
 
     import Foundation
-public class GenericDiffReporter: GenericDiffReporterBase {
-public override func runProcess(received: String, approved: String) throws {
+    public class GenericDiffReporter: GenericDiffReporterBase {
+        public override func runProcess(received: String, approved: String) throws {
             let process = makeProcess(received: received, approved: approved)
             try process.run()
         }
