@@ -1,5 +1,5 @@
 public class ReportWithDiffTool: FirstWorkingReporter {
-public init() {
+    public init() {
         super.init(
                 ReportersForiOS(),
                 ReportersForMac()

@@ -1,5 +1,5 @@
 public class ReportersForMac: FirstWorkingReporter {
-public init() {
+    public init() {
         #if os(macOS)
             super.init(
                     // begin-snippet: mac_reporters

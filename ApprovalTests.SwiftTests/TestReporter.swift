@@ -8,7 +8,8 @@ public class TestReporter: EquatableFailureReporter {
     public private(set) var received = ""
     public private(set) var approved = ""
     private let success: Bool
-public init(success: Bool) {
+
+    public init(success: Bool) {
         self.success = success
     }
 

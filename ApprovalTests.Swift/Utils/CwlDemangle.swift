@@ -165,7 +165,8 @@ enum ValueWitnessKind: UInt64, CustomStringConvertible {
     case destructiveInjectEnumTag = 21
     case getEnumTagSinglePayload = 22
     case storeEnumTagSinglePayload = 23
-public init?(code: String) {
+
+    public init?(code: String) {
         switch code {
         case "al": self = .allocateBuffer
         case "ca": self = .assignWithCopy
@@ -579,7 +580,8 @@ fileprivate struct Demangler<C> where C: Collection, C.Iterator.Element == Unico
     var symbolicReferences: [Int32] = []
     var isOldFunctionTypeMangling: Bool = false
     var symbolicReferenceResolver: ((Int32, Int) throws -> SwiftSymbol)? = nil
-public init(scalars: C) {
+
+    public init(scalars: C) {
         scanner = ScalarScanner(scalars: scalars)
     }
 }
@@ -3622,7 +3624,8 @@ fileprivate struct SymbolPrinter {
     var target: String
     var specializationPrefixPrinted: Bool
     let options: SymbolPrintOptions
-public init(options: SymbolPrintOptions = .default) {
+
+    public init(options: SymbolPrintOptions = .default) {
         self.target = ""
         self.specializationPrefixPrinted = false
         self.options = options
@@ -4772,7 +4775,7 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
     var consumed: Int
 
     /// Construct from a String.UnicodeScalarView and a context value
-public init(scalars: C) {
+    public init(scalars: C) {
         self.scalars = scalars
         self.index = self.scalars.startIndex
         self.consumed = 0

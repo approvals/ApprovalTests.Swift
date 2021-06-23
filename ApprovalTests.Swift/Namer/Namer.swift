@@ -2,7 +2,8 @@ import Foundation
 
 struct Namer: ApprovalNamer {
     private let fromFile: String
-public init(_ file: String) {
+
+    public init(_ file: String) {
         fromFile = file
     }
 

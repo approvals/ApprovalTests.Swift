@@ -1,6 +1,7 @@
 public class ReportWithEverything: EquatableFailureReporter {
     private let reporters: [EquatableFailureReporter]
-public init(_ reporters: EquatableFailureReporter...) {
+
+    public init(_ reporters: EquatableFailureReporter...) {
         self.reporters = reporters
     }
 
