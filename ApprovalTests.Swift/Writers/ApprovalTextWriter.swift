@@ -1,6 +1,6 @@
 import Foundation
 
-struct ApprovalTextWriter: ApprovalWriter {
+public struct ApprovalTextWriter: ApprovalWriter {
     private let text: String
     private let fileExtensionWithoutDot: String
 
@@ -9,15 +9,15 @@ struct ApprovalTextWriter: ApprovalWriter {
         self.fileExtensionWithoutDot = fileExtensionWithoutDot
     }
 
-    func approvalFilename(_ base: String) -> String {
+    public func approvalFilename(_ base: String) -> String {
         "\(base).approved.\(fileExtensionWithoutDot)"
     }
 
-    func receivedFilename(_ base: String) -> String {
+    public func receivedFilename(_ base: String) -> String {
         "\(base).received.\(fileExtensionWithoutDot)"
     }
 
-    func writeReceivedFile(_ received: String) {
+    public func writeReceivedFile(_ received: String) {
         let fileUrl = URL(fileURLWithPath: received)
         do {
             try text.write(toFile: fileUrl.path, atomically: true, encoding: .utf8)

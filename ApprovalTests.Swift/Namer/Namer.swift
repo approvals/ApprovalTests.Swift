@@ -1,18 +1,18 @@
 import Foundation
 
-struct Namer: ApprovalNamer {
+public struct Namer: ApprovalNamer {
     private let fromFile: String
 
     public init(_ file: String) {
         fromFile = file
     }
 
-    func approvalName() -> String {
+    public func approvalName() -> String {
         let stack = StackDemangler().extractNames()
         return stack.className + "." + stack.testName
     }
 
-    func sourceFilePath() -> String {
+    public func sourceFilePath() -> String {
         let stack = StackDemangler().extractNames()
         let fileExtension = fromFile.range(of: ".swift")!.lowerBound
         let baseName = fromFile.prefix(upTo: fileExtension)
