@@ -7,7 +7,7 @@ public class EquatableFailureReporter: ApprovalFailureReporter, Equatable {
         false
     }
 
-    func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
+    public func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
         false
     }
 
