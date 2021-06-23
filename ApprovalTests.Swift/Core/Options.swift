@@ -42,7 +42,8 @@ public struct Options {
     public func withScrubber(_ scrubber: Scrubber) -> Options {
         Options(data, key: .scrubber, value: scrubber)
     }
-public func scrub(_ input: String) throws -> String {
+
+    public func scrub(_ input: String) throws -> String {
         scrubber.scrub(input)
     }
 

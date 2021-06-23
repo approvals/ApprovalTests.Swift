@@ -29,9 +29,11 @@ public class GenericDiffReporterBase: EquatableFailureReporter {
         guard let other = other as? GenericDiffReporterBase else { return false }
         return programPath == other.programPath
     }
-public func runProcess(received: String, approved: String) throws {
+
+    public func runProcess(received: String, approved: String) throws {
     }
-public func cleanUpFileNames(received: String, approved: String) -> (String, String) {
+
+    public func cleanUpFileNames(received: String, approved: String) -> (String, String) {
         var workingReceived = received
         var workingApproved = approved
 
