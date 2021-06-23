@@ -1,6 +1,6 @@
 import Foundation
 
-class FileApprover: ApprovalApprover {
+public class FileApprover: ApprovalApprover {
     private static var failer: Failer = XCTFailer()
 
     static func registerFailer(_ failer: Failer) {

@@ -1,4 +1,4 @@
-class ReportersForiOS: FirstWorkingReporter {
+public class ReportersForiOS: FirstWorkingReporter {
     init() {
         #if os(iOS)
             super.init(

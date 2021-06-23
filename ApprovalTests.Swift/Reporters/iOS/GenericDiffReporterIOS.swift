@@ -1,9 +1,8 @@
 #if os(iOS)
 
     import Foundation
-
-    class GenericDiffReporter: GenericDiffReporterBase {
-        override func runProcess(received: String, approved: String) throws {
+public class GenericDiffReporter: GenericDiffReporterBase {
+public override func runProcess(received: String, approved: String) throws {
             let (workingReceived, workingApproved) = cleanUpFileNames(received: received, approved: approved)
 
             let arguments2 = arguments(workingReceived, workingApproved)

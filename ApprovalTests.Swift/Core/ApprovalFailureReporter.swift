@@ -2,8 +2,8 @@ public protocol ApprovalFailureReporter {
     func report(received: String, approved: String) -> Bool
 }
 
-class EquatableFailureReporter: ApprovalFailureReporter, Equatable {
-    func report(received: String, approved: String) -> Bool {
+public class EquatableFailureReporter: ApprovalFailureReporter, Equatable {
+    public func report(received: String, approved: String) -> Bool {
         false
     }
 
@@ -11,7 +11,7 @@ class EquatableFailureReporter: ApprovalFailureReporter, Equatable {
         false
     }
 
-    static func ==(lhs: EquatableFailureReporter, rhs: EquatableFailureReporter) -> Bool {
+    public static func ==(lhs: EquatableFailureReporter, rhs: EquatableFailureReporter) -> Bool {
         lhs.isEqualTo(rhs)
     }
 }

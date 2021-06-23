@@ -1,4 +1,4 @@
-class ReportWithDiffTool: FirstWorkingReporter {
+public class ReportWithDiffTool: FirstWorkingReporter {
     init() {
         super.init(
                 ReportersForiOS(),

@@ -1,4 +1,4 @@
-class ReportersForMac: FirstWorkingReporter {
+public class ReportersForMac: FirstWorkingReporter {
     init() {
         #if os(macOS)
             super.init(
