@@ -2,7 +2,7 @@
     import UIKit
 
     enum SystemUtils {
-        static func pasteToClipboard(_ text: String) {
+public static func pasteToClipboard(_ text: String) {
             let pasteboard = UIPasteboard.general
             pasteboard.string = text
         }
@@ -11,7 +11,7 @@
     import AppKit
 
     enum SystemUtils {
-        static func pasteToClipboard(_ text: String) {
+public static func pasteToClipboard(_ text: String) {
             let pasteboard = NSPasteboard.general
             pasteboard.setString(text, forType: .string)
         }
