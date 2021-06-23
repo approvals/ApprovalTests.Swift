@@ -4,16 +4,16 @@
     @testable import ApprovalTests_iOS
 #endif
 
-public class TestReporter: EquatableFailureReporter {
-    public private(set) var received = ""
-    public private(set) var approved = ""
+class TestReporter: EquatableFailureReporter {
+    private(set) var received = ""
+    private(set) var approved = ""
     private let success: Bool
 
-    public init(success: Bool) {
+    init(success: Bool) {
         self.success = success
     }
 
-    public override func report(received: String, approved: String) -> Bool {
+    override func report(received: String, approved: String) -> Bool {
         self.received = received
         self.approved = approved
         return success

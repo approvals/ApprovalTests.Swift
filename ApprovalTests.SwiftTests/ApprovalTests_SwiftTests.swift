@@ -38,10 +38,10 @@ final class ApprovalTests_SwiftTests: XCTestCase {
     }
 }
 
-public class TestFailer: Failer {
+private class TestFailer: Failer {
     var failed = false
 
-    public func fail(_ message: String, file: StaticString, line: UInt) throws {
+    func fail(_ message: String, file: StaticString, line: UInt) throws {
         failed = true
     }
 }

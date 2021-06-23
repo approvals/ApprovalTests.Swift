@@ -41,7 +41,7 @@ private struct MyRect: Codable {
 private class GameOfLife {
     private var board: (Int, Int) -> Bool
 
-    public init(_ board: @escaping (Int, Int) -> Bool) {
+    init(_ board: @escaping (Int, Int) -> Bool) {
         self.board = board
     }
 
