@@ -21,9 +21,9 @@ let package = Package(
                     path: "ApprovalTests.Swift"
             ),
             .testTarget(
-                    name: "ApprovalTests.SwiftTests",
+                    name: "ApprovalTests_SwiftTests",
                     dependencies: ["ApprovalTests.Swift"],
-                    path: "ApprovalTests.SwiftTests"
+                    path: "ApprovalTests_SwiftTests"
             ),
         ]
 )
