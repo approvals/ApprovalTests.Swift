@@ -18,5 +18,8 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>NSPrincipalClass</key>
+	<string>ApprovalTests_SwiftTests.TestSetup</string>
+<!--	<string>$(TARGET_NAME).TestSetup</string>-->
 </dict>
 </plist>
