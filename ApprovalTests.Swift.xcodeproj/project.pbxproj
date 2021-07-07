@@ -127,7 +127,7 @@
 		168C9624216023F9008F354C /* ApprovalTests_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ApprovalTests_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		168C9627216023F9008F354C /* ApprovalTests_Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApprovalTests_Swift.h; sourceTree = "<group>"; };
 		168C9628216023F9008F354C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		168C962D216023F9008F354C /* ApprovalTests.SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApprovalTests.SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		168C962D216023F9008F354C /* ApprovalTests_SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApprovalTests_SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		168C9632216023F9008F354C /* ApprovalTests_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalTests_SwiftTests.swift; sourceTree = "<group>"; };
 		168C9634216023F9008F354C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48B6BFF42629519600B956A4 /* XcodeWarnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = XcodeWarnings.xcconfig; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				168C9624216023F9008F354C /* ApprovalTests_Swift.framework */,
-				168C962D216023F9008F354C /* ApprovalTests.SwiftTests.xctest */,
+				168C962D216023F9008F354C /* ApprovalTests_SwiftTests.xctest */,
 				163E1849217F827400A54A48 /* ApprovalTests_iOS.framework */,
 				163E1851217F827400A54A48 /* ApprovalTests_iOSTests.xctest */,
 			);
@@ -521,9 +521,9 @@
 			productReference = 168C9624216023F9008F354C /* ApprovalTests_Swift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		168C962C216023F9008F354C /* ApprovalTests.SwiftTests */ = {
+		168C962C216023F9008F354C /* ApprovalTests_SwiftTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 168C963B216023F9008F354C /* Build configuration list for PBXNativeTarget "ApprovalTests.SwiftTests" */;
+			buildConfigurationList = 168C963B216023F9008F354C /* Build configuration list for PBXNativeTarget "ApprovalTests_SwiftTests" */;
 			buildPhases = (
 				168C9629216023F9008F354C /* Sources */,
 				168C962A216023F9008F354C /* Frameworks */,
@@ -534,9 +534,9 @@
 			dependencies = (
 				168C9630216023F9008F354C /* PBXTargetDependency */,
 			);
-			name = ApprovalTests.SwiftTests;
+			name = ApprovalTests_SwiftTests;
 			productName = ApprovalTests.SwiftTests;
-			productReference = 168C962D216023F9008F354C /* ApprovalTests.SwiftTests.xctest */;
+			productReference = 168C962D216023F9008F354C /* ApprovalTests_SwiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -581,7 +581,7 @@
 			projectRoot = "";
 			targets = (
 				168C9623216023F9008F354C /* ApprovalTests.Swift */,
-				168C962C216023F9008F354C /* ApprovalTests.SwiftTests */,
+				168C962C216023F9008F354C /* ApprovalTests_SwiftTests */,
 				163E1848217F827400A54A48 /* ApprovalTests_iOS */,
 				163E1850217F827400A54A48 /* ApprovalTests_iOSTests */,
 			);
@@ -1038,7 +1038,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		168C963B216023F9008F354C /* Build configuration list for PBXNativeTarget "ApprovalTests.SwiftTests" */ = {
+		168C963B216023F9008F354C /* Build configuration list for PBXNativeTarget "ApprovalTests_SwiftTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				168C963C216023F9008F354C /* Debug */,
