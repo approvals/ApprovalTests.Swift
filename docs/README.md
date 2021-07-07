@@ -3,7 +3,8 @@
 <!-- toc -->
 ## Contents
 
-  * [Concepts](#concepts)<!-- endToc -->
+  * [Concepts](#concepts)
+  * [How-Tos](#how-tos)<!-- endToc -->
 
 ## Concepts
 
