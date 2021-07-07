@@ -17,7 +17,7 @@ final class ApprovalTests_SwiftTests: XCTestCase {
         let sourceFilePath = name.sourceFilePath()
         XCTAssertTrue(
                 sourceFilePath.hasSuffix(
-                        "/ApprovalTests.Swift/ApprovalTests.SwiftTests/ApprovalTests_SwiftTests.testSourceFilePath"
+                        "/ApprovalTests.Swift/ApprovalTests_SwiftTests/ApprovalTests_SwiftTests.testSourceFilePath"
                 ),
                 "was \(sourceFilePath)"
         )

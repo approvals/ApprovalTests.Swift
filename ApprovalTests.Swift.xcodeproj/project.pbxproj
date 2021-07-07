@@ -267,7 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				168C9626216023F9008F354C /* ApprovalTests.Swift */,
-				168C9631216023F9008F354C /* ApprovalTests.SwiftTests */,
+				168C9631216023F9008F354C /* ApprovalTests_SwiftTests */,
 				163E184A217F827400A54A48 /* ApprovalTests_iOS */,
 				163E1855217F827400A54A48 /* ApprovalTests_iOSTests */,
 				168C9625216023F9008F354C /* Products */,
@@ -308,7 +308,7 @@
 			path = ApprovalTests.Swift;
 			sourceTree = "<group>";
 		};
-		168C9631216023F9008F354C /* ApprovalTests.SwiftTests */ = {
+		168C9631216023F9008F354C /* ApprovalTests_SwiftTests */ = {
 			isa = PBXGroup;
 			children = (
 				BB1706F98B5163B28C84D8D5 /* iOSApprovalsWatcher.py */,
@@ -325,7 +325,7 @@
 				BB17051DA6037ED58B6A29A3 /* TestSetup.swift */,
 				BB1705F8B220353ECE8102B0 /* TestSetupTests.swift */,
 			);
-			path = ApprovalTests.SwiftTests;
+			path = ApprovalTests_SwiftTests;
 			sourceTree = "<group>";
 		};
 		973081106774B58345BDD43C /* Namer */ = {
@@ -970,7 +970,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ApprovalTests.SwiftTests/Info.plist;
+				INFOPLIST_FILE = ApprovalTests_SwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -987,7 +987,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ApprovalTests.SwiftTests/Info.plist;
+				INFOPLIST_FILE = ApprovalTests_SwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
