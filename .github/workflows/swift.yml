@@ -7,14 +7,12 @@ on:
     branches: [ master ]
 
 jobs:
-  buildMacOS:
+  buildSwiftPackage:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
     - name: Build
       run: swift build -v
-    - name: Run tests
-      run: swift test -v
 
   testMacOS:
     runs-on: macos-latest
@@ -23,7 +21,7 @@ jobs:
     - name: Run tests
       run: xcodebuild test -project ApprovalTests.Swift.xcodeproj -scheme ApprovalTests.Swift
 
-  buildIOS:
+  testIOS:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
