@@ -18,8 +18,9 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+<!-- begin-snippet: approvaltests_initialization_plist -->
 	<key>NSPrincipalClass</key>
-<!--	<string>ApprovalTests_SwiftTests.TestSetup</string>-->
 	<string>$(TARGET_NAME).TestSetup</string>
+<!-- end-snippet -->
 </dict>
 </plist>
