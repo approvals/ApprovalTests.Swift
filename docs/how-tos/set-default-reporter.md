@@ -19,7 +19,7 @@ XCTest has an init method that can do one-time set-up. Here is an example:
 <a id='snippet-approvaltests_initialization_class'></a>
 ```swift
 public class TestSetup: NSObject {
-
+    
     override init() {
         super.init()
 ```
