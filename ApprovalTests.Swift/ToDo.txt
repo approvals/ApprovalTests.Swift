@@ -1,5 +1,5 @@
 NEXT TIME:
-Implement register default reporter
+Write docs about default reporter
  
 Add starter project
 Add CI
