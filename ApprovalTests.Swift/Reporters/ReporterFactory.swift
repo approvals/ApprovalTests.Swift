@@ -1,11 +1,6 @@
 class ReporterFactory {
     static var defaultReporter: () -> ApprovalFailureReporter = { () -> ApprovalFailureReporter in
-        #if os(OSX)
-            let returned = ReportersForMac()
-        #elseif os(iOS)
-            let returned = ReportersForiOS()
-        #endif
-        return returned
+        return DefaultReporter()
     }
 
     public static var get: ApprovalFailureReporter {
@@ -29,3 +24,11 @@ class DefaultReporterDisposer {
         ReporterFactory.defaultReporter = oldCreator
     }
 }
+
+#if os(OSX)
+    public class DefaultReporter: ReportersForMac {
+    }
+#elseif os(iOS)
+    public class DefaultReporter: ReportersForiOS {
+    }
+#endif
