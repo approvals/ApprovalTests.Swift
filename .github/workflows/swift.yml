@@ -19,11 +19,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run tests
-      run: xcodebuild test -project ApprovalTests.Swift.xcodeproj -scheme ApprovalTests.Swift
+      run: ./run_tests_mac.sh
 
   testIOS:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
     - name: Run tests
-      run: xcodebuild test -project ApprovalTests.Swift.xcodeproj -scheme ApprovalTests_iOS -sdk iphonesimulator -destination "platform=iOS Simulator,OS=latest,name=iPhone 8"
+      run: ./run_tests_ios.sh
