@@ -1,5 +1,4 @@
 NEXT TIME:
-Get Mac tests to pass from command line by handling registration of setup class, currently done through Info.plist
 Implement register default reporter
  
 Add starter project
