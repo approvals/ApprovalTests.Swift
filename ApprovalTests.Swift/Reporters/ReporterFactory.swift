@@ -1,5 +1,5 @@
 class ReporterFactory {
-    static var defaultReporter: () -> ApprovalFailureReporter = { () -> ApprovalFailureReporter in
+    static var defaultReporter: () -> ApprovalFailureReporter = {
         DefaultReporter()
     }
 
