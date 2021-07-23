@@ -11,9 +11,11 @@ final class ReporterFactoryTests: XCTestCase {
         let reporter1 = ReporterFactory.get
         verifyDefaultReporter(reporter1, match: true)
         
-        for i in 1...1 { // To scope the variable
+        do {
             let disposable = ReporterFactory.registerDefaultReporter({ return TestReporter(success: false) })
-            verifyDefaultReporter(reporter1, match: false)
+            withExtendedLifetime(disposable) {
+                verifyDefaultReporter(reporter1, match: false)
+            }
         }
 
         verifyDefaultReporter(reporter1, match: true)
