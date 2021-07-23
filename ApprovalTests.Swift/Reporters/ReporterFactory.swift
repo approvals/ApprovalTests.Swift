@@ -1,14 +1,14 @@
 class ReporterFactory {
     static var defaultReporter: () -> ApprovalFailureReporter = { () -> ApprovalFailureReporter in
-        return DefaultReporter()
+        DefaultReporter()
     }
 
     public static var get: ApprovalFailureReporter {
-        return defaultReporter()
+        defaultReporter()
     }
     
     public static func registerDefaultReporter(_ newReporterCreator: @escaping () -> ApprovalFailureReporter) -> DefaultReporterDisposer {
-        return DefaultReporterDisposer(newReporterCreator)
+        DefaultReporterDisposer(newReporterCreator)
     }
 }
 
@@ -16,7 +16,7 @@ class DefaultReporterDisposer {
     private let oldCreator: () -> ApprovalFailureReporter 
 
     init(_ newCreator: @escaping () -> ApprovalFailureReporter) {
-        self.oldCreator = ReporterFactory.defaultReporter
+        oldCreator = ReporterFactory.defaultReporter
         ReporterFactory.defaultReporter = newCreator
     }
 
