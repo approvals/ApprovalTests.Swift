@@ -13,7 +13,7 @@ public class GenericDiffReporterBase: EquatableFailureReporter {
     }
 
     public override func report(received: String, approved: String) -> Bool {
-        if !FileManager.default.fileExists(atPath: programPath) {
+        if !doesProgramExist(programPath) {
             return false
         }
         do {
@@ -23,6 +23,10 @@ public class GenericDiffReporterBase: EquatableFailureReporter {
             print("Error in \(#function) for received \"\(received)\", approved \"\(approved)\": \(error)")
             return false
         }
+    }
+
+    public func doesProgramExist(_ programPath: String) -> Bool {
+        FileManager.default.fileExists(atPath: programPath)
     }
 
     public override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
