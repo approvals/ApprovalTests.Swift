@@ -1,3 +1,4 @@
+import Foundation
 import System
 
 public class ReportWithDiffMerge: GenericDiffReporter {
