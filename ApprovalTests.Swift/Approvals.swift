@@ -95,6 +95,13 @@ public enum Approvals {
         try verify(description, options, file: file, line: line)
     }
 
+    public static func verify(_ query: ExecutableQuery,
+                                 _ options: Options = Options(),
+                                 file: StaticString = #filePath,
+                                 line: UInt = #line) throws {
+        try verify(query.getQuery(), ExecutableReporter.wrap(options, query), file: file, line: line)
+    }
+
     public static func verify<Key: Hashable & Comparable, Value>(_ object: [Key: Value],
                                                                  _ options: Options = Options(),
                                                                  file: StaticString = #filePath,

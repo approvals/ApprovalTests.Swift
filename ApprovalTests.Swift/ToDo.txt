@@ -1,4 +1,5 @@
 NEXT TIME:
+Clean out query_results
 Write docs about default reporter
  
 Add starter project

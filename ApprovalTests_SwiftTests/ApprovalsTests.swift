@@ -29,6 +29,28 @@ final class ApprovalsTests: XCTestCase {
         }
     }
 
+    func testExecutableQuery() throws {
+        try Approvals.verify(MetMuseumPieceLoader(45734))
+    }
+}
+
+class MetMuseumPieceLoader: ExecutableQuery {
+    private let artID: Int
+
+    init(_ artID: Int) throws {
+        self.artID = artID
+    }
+
+    func getQuery() -> String {
+        "https://collectionapi.metmuseum.org/public/collection/v1/objects/\(artID)"
+    }
+
+    func executeQuery(_ query: String) -> String {
+        if query.isEmpty {
+            return ""
+        }
+        return readURL(query).replacingOccurrences(matchingPattern: ",") {_  in ",\n" }
+    }
 }
 
 private struct MyRect: Codable {
