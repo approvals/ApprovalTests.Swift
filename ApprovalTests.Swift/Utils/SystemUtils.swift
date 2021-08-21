@@ -13,7 +13,10 @@
     enum SystemUtils {
         public static func pasteToClipboard(_ text: String) {
             let pasteboard = NSPasteboard.general
-            pasteboard.setString(text, forType: .string)
+            let successful = pasteboard.setString(text, forType: .string)
+            if (!successful) {
+                print("pasteToClipboard not successful")
+            }
         }
     }
 #endif
