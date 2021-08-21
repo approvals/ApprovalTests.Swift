@@ -1,5 +1,5 @@
-class ReporterFactory {
-    static var defaultReporter: () -> ApprovalFailureReporter = {
+public class ReporterFactory {
+    public static var defaultReporter: () -> ApprovalFailureReporter = {
         DefaultReporter()
     }
 
@@ -12,10 +12,10 @@ class ReporterFactory {
     }
 }
 
-class DefaultReporterDisposer {
+public class DefaultReporterDisposer {
     private let oldCreator: () -> ApprovalFailureReporter 
 
-    init(_ newCreator: @escaping () -> ApprovalFailureReporter) {
+    public init(_ newCreator: @escaping () -> ApprovalFailureReporter) {
         oldCreator = ReporterFactory.defaultReporter
         ReporterFactory.defaultReporter = newCreator
     }
