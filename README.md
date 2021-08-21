@@ -2,7 +2,7 @@
 
 # ApprovalTests
 
-Capturing Human Intelligence - ApprovalTests is an open source assertion/verification library to aid unit testing.
+Capturing Human Intelligence — ApprovalTests is an open source assertion/verification library to aid unit testing.
 
 ApprovalsTest Swift is compatible with the XCUnit testing framework
 
