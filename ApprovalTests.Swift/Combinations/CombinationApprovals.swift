@@ -8,7 +8,7 @@ public enum CombinationApprovals {
     public static func verifyAllCombinations<IN1, OUT>(
             _ call: @escaping (IN1) -> OUT,
             _ params1: [IN1],
-            _ options: Options = Options(),
+            options: Options = Options(),
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
@@ -27,8 +27,7 @@ public enum CombinationApprovals {
                 callWithAllParameters,
                 params1,
                 unused, unused, unused, unused, unused, unused, unused, unused,
-                options,
-                file: file, line: line
+                options: options, file: file, line: line
         )
     }
 
@@ -36,7 +35,7 @@ public enum CombinationApprovals {
             _ call: @escaping (IN1, IN2) -> OUT,
             _ params1: [IN1],
             _ params2: [IN2],
-            _ options: Options = Options(),
+            options: Options = Options(),
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
@@ -54,8 +53,7 @@ public enum CombinationApprovals {
                 callWithAllParameters,
                 params1, params2,
                 unused, unused, unused, unused, unused, unused, unused,
-                options,
-                file: file, line: line
+                options: options, file: file, line: line
         )
     }
 
@@ -64,7 +62,7 @@ public enum CombinationApprovals {
             _ params1: [IN1],
             _ params2: [IN2],
             _ params3: [IN3],
-            _ options: Options = Options(),
+            options: Options = Options(),
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
@@ -81,8 +79,7 @@ public enum CombinationApprovals {
                 callWithAllParameters,
                 params1, params2, params3,
                 unused, unused, unused, unused, unused, unused,
-                options,
-                file: file, line: line
+                options: options, file: file, line: line
         )
     }
 
@@ -92,7 +89,7 @@ public enum CombinationApprovals {
             _ params2: [IN2],
             _ params3: [IN3],
             _ params4: [IN4],
-            _ options: Options = Options(),
+            options: Options = Options(),
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
@@ -108,8 +105,7 @@ public enum CombinationApprovals {
                 callWithAllParameters,
                 params1, params2, params3, params4,
                 unused, unused, unused, unused, unused,
-                options,
-                file: file, line: line
+                options: options, file: file, line: line
         )
     }
 
@@ -120,7 +116,7 @@ public enum CombinationApprovals {
             _ params3: [IN3],
             _ params4: [IN4],
             _ params5: [IN5],
-            _ options: Options = Options(),
+            options: Options = Options(),
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
@@ -135,8 +131,7 @@ public enum CombinationApprovals {
                 callWithAllParameters,
                 params1, params2, params3, params4, params5,
                 unused, unused, unused, unused,
-                options,
-                file: file, line: line
+                options: options, file: file, line: line
         )
     }
 
@@ -148,7 +143,7 @@ public enum CombinationApprovals {
             _ params4: [IN4],
             _ params5: [IN5],
             _ params6: [IN6],
-            _ options: Options = Options(),
+            options: Options = Options(),
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
@@ -162,8 +157,7 @@ public enum CombinationApprovals {
                 callWithAllParameters,
                 params1, params2, params3, params4, params5, params6,
                 unused, unused, unused,
-                options,
-                file: file, line: line
+                options: options, file: file, line: line
         )
     }
 
@@ -176,7 +170,7 @@ public enum CombinationApprovals {
             _ params5: [IN5],
             _ params6: [IN6],
             _ params7: [IN7],
-            _ options: Options = Options(),
+            options: Options = Options(),
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
@@ -189,8 +183,7 @@ public enum CombinationApprovals {
                 callWithAllParameters,
                 params1, params2, params3, params4, params5, params6, params7,
                 unused, unused,
-                options,
-                file: file, line: line
+                options: options, file: file, line: line
         )
     }
 
@@ -204,7 +197,7 @@ public enum CombinationApprovals {
             _ params6: [IN6],
             _ params7: [IN7],
             _ params8: [IN8],
-            _ options: Options = Options(),
+            options: Options = Options(),
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
@@ -216,8 +209,7 @@ public enum CombinationApprovals {
                 callWithAllParameters,
                 params1, params2, params3, params4, params5, params6, params7, params8,
                 unused,
-                options,
-                file: file, line: line
+                options: options, file: file, line: line
         )
     }
 
@@ -232,7 +224,7 @@ public enum CombinationApprovals {
             _ params7: [IN7],
             _ params8: [IN8],
             _ params9: [IN9],
-            _ options: Options = Options(),
+            options: Options = Options(),
             file: StaticString = #filePath,
             line: UInt = #line
     ) throws {
