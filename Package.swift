@@ -18,7 +18,8 @@ let package = Package(
             .target(
                     name: "ApprovalTests.Swift",
                     dependencies: [],
-                    path: "ApprovalTests.Swift"
+                    path: "ApprovalTests.Swift",
+                    exclude: ["Info.plist", "ToDo.txt"]
             ),
             .testTarget(
                     name: "ApprovalTests_SwiftTests",
