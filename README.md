@@ -50,7 +50,19 @@ If you prefer auditory learning, you might enjoy the following podcast
 ### Swift Package Manager
 See an example [package manifest](https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/blob/main/Package.swift#L17-L22) here
 
-snippet: package_include_approvals
+<!-- snippet: package_include_approvals -->
+<a id='snippet-package_include_approvals'></a>
+```swift
+dependencies: [
+    .package(
+        name: "ApprovalTests.Swift",
+        url: "https://github.com/approvals/ApprovalTests.Swift",
+        .branch("master")
+        ),
+],
+```
+<sup><a href='#snippet-package_include_approvals' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
 
 
 ### CocoaPods
