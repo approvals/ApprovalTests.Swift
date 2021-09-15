@@ -49,7 +49,7 @@ If you prefer auditory learning, you might enjoy the following podcast
 ## How to get it
 ### Swift Package Manager
 See an example [package manifest](https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/blob/main/Package.swift#L17-L22) here
-snippet: package_include_approvals
+snippet: package.swift
 
 ### CocoaPods
 ```
