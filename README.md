@@ -50,6 +50,8 @@ If you prefer auditory learning, you might enjoy the following podcast
 ### Swift Package Manager
 See an example [package manifest](https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/blob/main/Package.swift#L17-L22) here
 
+Get the following dependency
+
 <!-- snippet: package_include_approvals -->
 <a id='snippet-package_include_approvals'></a>
 ```swift
@@ -64,6 +66,9 @@ dependencies: [
 <sup><a href='#snippet-package_include_approvals' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
+And then add it to your test target
+
+snippet: package_add_test_target
 
 ### CocoaPods
 ```
