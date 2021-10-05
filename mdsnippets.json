@@ -1,5 +1,6 @@
 {
   "ExcludeDirectories": [ "target" ],
   "Convention": "InPlaceOverwrite",
-  "TocLevel": 5
+  "TocLevel": 5,
+  "UrlsAsSnippets": ["https://raw.githubusercontent.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/main/Package.swift"]
 }
