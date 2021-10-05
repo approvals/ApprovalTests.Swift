@@ -91,7 +91,7 @@ public enum Approvals {
                                  _ options: Options = Options(),
                                  file: StaticString = #filePath,
                                  line: UInt = #line) throws {
-        let description = String(describing: type(of: object.self)) + String(describing: object)
+        let description = String(describing: type(of: object.self)) + ": " + String(describing: object)
         try verify(description, options, file: file, line: line)
     }
 
