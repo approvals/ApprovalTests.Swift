@@ -16,7 +16,7 @@ import Foundation
 /// - Returns: the successfully parsed result
 /// - Throws: a SwiftSymbolParseError error that contains parse position when the error occurred.
 public func parseMangledSwiftSymbol(_ mangled: String, isType: Bool = false) throws -> SwiftSymbol {
-    return try parseMangledSwiftSymbol(mangled.unicodeScalars, isType: isType)
+    try parseMangledSwiftSymbol(mangled.unicodeScalars, isType: isType)
 }
 
 /// Pass a collection of `UnicodeScalars` containing a Swift mangled symbol or type, get a parsed SwiftSymbol structure which can then be directly examined or printed.
@@ -628,7 +628,7 @@ fileprivate extension SwiftSymbol.Kind {
     }
 
     var isEntity: Bool {
-        return self == .type || isContext
+        self == .type || isContext
     }
 
     var isRequirement: Bool {
@@ -667,7 +667,7 @@ fileprivate extension Demangler {
     }
 
     var failure: Error {
-        return scanner.unexpectedError()
+        scanner.unexpectedError()
     }
 
     mutating func readManglingPrefix() throws {
@@ -820,7 +820,7 @@ fileprivate extension Demangler {
     }
 
     mutating func demangleNatural() throws -> UInt64? {
-        return try scanner.conditionalInt()
+        try scanner.conditionalInt()
     }
 
     mutating func demangleIndex() throws -> UInt64 {
@@ -833,7 +833,7 @@ fileprivate extension Demangler {
     }
 
     mutating func demangleIndexAsName() throws -> SwiftSymbol {
-        return SwiftSymbol(kind: .number, contents: .index(try demangleIndex()))
+        SwiftSymbol(kind: .number, contents: .index(try demangleIndex()))
     }
 
     mutating func demangleMultiSubstitutions() throws -> SwiftSymbol {
@@ -867,15 +867,17 @@ fileprivate extension Demangler {
     }
 
     mutating func pop() -> SwiftSymbol? {
-        return nameStack.popLast()
+        nameStack.popLast()
     }
 
     mutating func pop(kind: SwiftSymbol.Kind) -> SwiftSymbol? {
-        return nameStack.last?.kind == kind ? pop() : nil
+        nameStack.last?
+                 .kind == kind ? pop() : nil
     }
 
     mutating func pop(where cond: (SwiftSymbol.Kind) -> Bool) -> SwiftSymbol? {
-        return nameStack.last.map({ cond($0.kind) }) == true ? pop() : nil
+        nameStack.last
+                 .map({ cond($0.kind) }) == true ? pop() : nil
     }
 
     mutating func popFunctionType(kind: SwiftSymbol.Kind) throws -> SwiftSymbol {
@@ -1021,7 +1023,7 @@ fileprivate extension Demangler {
     }
 
     mutating func popAnyProtocolConformance() -> SwiftSymbol? {
-        return pop { kind in
+        pop { kind in
             switch kind {
             case .concreteProtocolConformance, .dependentProtocolConformanceRoot, .dependentProtocolConformanceInherited, .dependentProtocolConformanceAssociated: return true
             default: return false
@@ -1042,7 +1044,7 @@ fileprivate extension Demangler {
     }
 
     mutating func popDependentProtocolConformance() -> SwiftSymbol? {
-        return pop { kind in
+        pop { kind in
             switch kind {
             case .dependentProtocolConformanceRoot, .dependentProtocolConformanceInherited, .dependentProtocolConformanceAssociated: return true
             default: return false
@@ -1104,7 +1106,8 @@ fileprivate extension Demangler {
     }
 
     mutating func popTypeAndGetChild() throws -> SwiftSymbol {
-        return try require(pop(kind: .type)?.children.first)
+        try require(pop(kind: .type)?.children
+                                     .first)
     }
 
     mutating func popTypeAndGetAnyGeneric() throws -> SwiftSymbol {
@@ -1570,7 +1573,7 @@ fileprivate extension Demangler {
     }
 
     mutating func demangleImplDifferentiability() -> SwiftSymbol {
-        return SwiftSymbol(kind: .implDifferentiability, contents: .name(scanner.conditional(scalar: "w") ? "@noDerivative" : ""))
+        SwiftSymbol(kind: .implDifferentiability, contents: .name(scanner.conditional(scalar: "w") ? "@noDerivative" : ""))
     }
 
     mutating func demangleImplFunctionType() throws -> SwiftSymbol {
@@ -2300,7 +2303,7 @@ fileprivate extension Demangler {
     }
 
     mutating func demangleVariable() throws -> SwiftSymbol {
-        return try demangleAccessor(child: demangleEntity(kind: .variable))
+        try demangleAccessor(child: demangleEntity(kind: .variable))
     }
 
     mutating func demangleSubscript() throws -> SwiftSymbol {
@@ -2329,7 +2332,7 @@ fileprivate extension Demangler {
     }
 
     mutating func demangleProtocolListType() throws -> SwiftSymbol {
-        return SwiftSymbol(kind: .type, child: try demangleProtocolList())
+        SwiftSymbol(kind: .type, child: try demangleProtocolList())
     }
 
     mutating func demangleGenericSignature(hasParamCounts: Bool) throws -> SwiftSymbol {
@@ -2876,7 +2879,7 @@ fileprivate extension Demangler {
     }
 
     func swiftStdLibType(_ kind: SwiftSymbol.Kind, named: String) -> SwiftSymbol {
-        return SwiftSymbol(kind: kind, children: [SwiftSymbol(kind: .module, contents: .name(stdlibName)), SwiftSymbol(kind: .identifier, contents: .name(named))])
+        SwiftSymbol(kind: kind, children: [SwiftSymbol(kind: .module, contents: .name(stdlibName)), SwiftSymbol(kind: .identifier, contents: .name(named))])
     }
 
     mutating func demangleSwift3SubstitutionIndex() throws -> SwiftSymbol {
@@ -3571,11 +3574,11 @@ fileprivate extension SwiftSymbol {
     }
 
     func isIdentifier(desired: String) -> Bool {
-        return kind == .identifier && text == desired
+        kind == .identifier && text == desired
     }
 
     var isSwiftModule: Bool {
-        return kind == .module && text == stdlibName
+        kind == .module && text == stdlibName
     }
 }
 
@@ -4666,27 +4669,27 @@ public enum SwiftSymbolParseError: Error {
 private extension UnicodeScalar {
     /// Tests if the scalar is within a range
     func isInRange(_ range: ClosedRange<UnicodeScalar>) -> Bool {
-        return range.contains(self)
+        range.contains(self)
     }
 
     /// Tests if the scalar is a plain ASCII digit
     var isDigit: Bool {
-        return ("0"..."9").contains(self)
+        ("0" ... "9").contains(self)
     }
 
     /// Tests if the scalar is a plain ASCII English alphabet lowercase letter
     var isLower: Bool {
-        return ("a"..."z").contains(self)
+        ("a" ... "z").contains(self)
     }
 
     /// Tests if the scalar is a plain ASCII English alphabet uppercase letter
     var isUpper: Bool {
-        return ("A"..."Z").contains(self)
+        ("A" ... "Z").contains(self)
     }
 
     /// Tests if the scalar is a plain ASCII English alphabet letter
     var isLetter: Bool {
-        return isLower || isUpper
+        isLower || isUpper
     }
 }
 
@@ -5077,11 +5080,11 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
 
     /// Returns a throwable error capturing the current scanner progress point.
     func unexpectedError() -> SwiftSymbolParseError {
-        return SwiftSymbolParseError.unexpected(at: consumed)
+        SwiftSymbolParseError.unexpected(at: consumed)
     }
 
     var isAtEnd: Bool {
-        return index == scalars.endIndex
+        index == scalars.endIndex
     }
 }
 
@@ -5093,7 +5096,8 @@ fileprivate extension String {
 
 fileprivate extension Array {
     func at(_ index: Int) -> Element? {
-        return self.indices.contains(index) ? self[index] : nil
+        self.indices
+            .contains(index) ? self[index] : nil
     }
     func slice(_ from: Int, _ to: Int) -> ArraySlice<Element> {
         if from > to || from > endIndex || to < startIndex {

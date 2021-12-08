@@ -12,7 +12,7 @@ final class ReporterFactoryTests: XCTestCase {
         verifyDefaultReporter(reporter1, match: true)
         
         do {
-            let disposable = ReporterFactory.registerDefaultReporter({ return TestReporter(success: false) })
+            let disposable = ReporterFactory.registerDefaultReporter({ TestReporter(success: false) })
             withExtendedLifetime(disposable) {
                 verifyDefaultReporter(reporter1, match: false)
             }

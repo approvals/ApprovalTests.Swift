@@ -14,7 +14,7 @@ public class TestSetup: NSObject {
         TestSetup.initialized = true
         // begin-snippet: register_default_reporter
         disposer = ReporterFactory.registerDefaultReporter {
-            return DefaultReporter()
+            DefaultReporter()
         }
         // end-snippet
     }
