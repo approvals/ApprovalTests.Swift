@@ -3563,7 +3563,7 @@ fileprivate extension SwiftSymbol.Kind {
 
 fileprivate extension SwiftSymbol {
     var needSpaceBeforeType: Bool {
-        switch self.kind {
+        switch kind {
         case .type: return children.first?.needSpaceBeforeType ?? false
         case .functionType, .noEscapeFunctionType, .uncurriedFunctionType, .dependentGenericType: return false
         default: return true
@@ -3599,8 +3599,8 @@ fileprivate struct SymbolPrinter {
     let options: SymbolPrintOptions
 
     init(options: SymbolPrintOptions = .default) {
-        self.target = ""
-        self.specializationPrefixPrinted = false
+        target = ""
+        specializationPrefixPrinted = false
         self.options = options
     }
 
@@ -4708,8 +4708,8 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
     /// Construct from a String.UnicodeScalarView and a context value
     init(scalars: C) {
         self.scalars = scalars
-        self.index = self.scalars.startIndex
-        self.consumed = 0
+        index = self.scalars.startIndex
+        consumed = 0
     }
 
     /// Sets the index back to the beginning and clears the consumed count
@@ -4722,10 +4722,10 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
     /// WARNING: `string` is used purely for its `unicodeScalars` property and matching is purely based on direct scalar comparison (no decomposition or normalization is performed).
     mutating func match(string: String) throws {
         let (newIndex, newConsumed) = try string.unicodeScalars.reduce((index: index, count: 0)) { (tuple: (index: C.Index, count: Int), scalar: UnicodeScalar) in
-            if tuple.index == self.scalars.endIndex || scalar != self.scalars[tuple.index] {
+            if tuple.index == scalars.endIndex || scalar != scalars[tuple.index] {
                 throw SwiftSymbolParseError.matchFailed(wanted: string, at: consumed)
             }
-            return (index: self.scalars.index(after: tuple.index), count: tuple.count + 1)
+            return (index: scalars.index(after: tuple.index), count: tuple.count + 1)
         }
         index = newIndex
         consumed += newConsumed
@@ -4736,7 +4736,7 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
         if index == scalars.endIndex || scalars[index] != scalar {
             throw SwiftSymbolParseError.matchFailed(wanted: String(scalar), at: consumed)
         }
-        index = self.scalars.index(after: index)
+        index = scalars.index(after: index)
         consumed += 1
     }
 
@@ -4745,7 +4745,7 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
         if index == scalars.endIndex || !test(scalars[index]) {
             throw SwiftSymbolParseError.matchFailed(wanted: "(match test function to succeed)", at: consumed)
         }
-        index = self.scalars.index(after: index)
+        index = scalars.index(after: index)
         consumed += 1
     }
 
@@ -4755,7 +4755,7 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
             throw SwiftSymbolParseError.matchFailed(wanted: "(read test function to succeed)", at: consumed)
         }
         let s = scalars[index]
-        index = self.scalars.index(after: index)
+        index = scalars.index(after: index)
         consumed += 1
         return s
     }
@@ -4817,7 +4817,7 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
                 break
             }
             string.unicodeScalars.append(scalars[index])
-            index = self.scalars.index(after: index)
+            index = scalars.index(after: index)
             consumed += 1
         }
         return string
@@ -4829,7 +4829,7 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
             if !test(scalars[index]) {
                 return
             }
-            index = self.scalars.index(after: index)
+            index = scalars.index(after: index)
             consumed += 1
         }
     }
@@ -4839,7 +4839,7 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
         var i = index
         var c = 0
         while i != scalars.endIndex && scalars[i] != scalar {
-            i = self.scalars.index(after: i)
+            i = scalars.index(after: i)
             c += 1
         }
         if i == scalars.endIndex {
@@ -4854,7 +4854,7 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
         var i = index
         var c = 0
         while i != scalars.endIndex && !inSet.contains(scalars[i]) {
-            i = self.scalars.index(after: i)
+            i = scalars.index(after: i)
             c += 1
         }
         if i == scalars.endIndex {
@@ -4882,23 +4882,23 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
                 if i == scalars.endIndex {
                     throw SwiftSymbolParseError.searchFailed(wanted: String(match), after: consumed)
                 }
-                i = self.scalars.index(after: i)
+                i = scalars.index(after: i)
                 c += 1
 
                 // Track the last index and consume count before hitting the match
                 j = i
                 d = c
             }
-            i = self.scalars.index(after: i)
+            i = scalars.index(after: i)
             c += 1
             for s in remainder {
-                if i == self.scalars.endIndex {
+                if i == scalars.endIndex {
                     throw SwiftSymbolParseError.searchFailed(wanted: String(match), after: consumed)
                 }
                 if scalars[i] != s {
                     continue outerLoop
                 }
-                i = self.scalars.index(after: i)
+                i = scalars.index(after: i)
                 c += 1
             }
             break
@@ -4919,7 +4919,7 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
                 if i == scalars.endIndex {
                     throw SwiftSymbolParseError.endedPrematurely(count: count, at: consumed)
                 }
-                i = self.scalars.index(after: i)
+                i = scalars.index(after: i)
                 c -= 1
             }
             index = i
@@ -4965,7 +4965,7 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
             if i == scalars.endIndex || s != scalars[i] {
                 return false
             }
-            i = self.scalars.index(after: i)
+            i = scalars.index(after: i)
             c += 1
         }
         index = i
@@ -4978,7 +4978,7 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
         if index == scalars.endIndex || scalar != scalars[index] {
             return false
         }
-        index = self.scalars.index(after: index)
+        index = scalars.index(after: index)
         consumed += 1
         return true
     }
@@ -4989,7 +4989,7 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
             return nil
         }
         let s = scalars[index]
-        index = self.scalars.index(after: index)
+        index = scalars.index(after: index)
         consumed += 1
         return s
     }
@@ -5007,7 +5007,7 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
         var i = index
         var c = skipCount
         while c > 0 && i != scalars.endIndex {
-            i = self.scalars.index(after: i)
+            i = scalars.index(after: i)
             c -= 1
         }
         if i == scalars.endIndex {
@@ -5022,7 +5022,7 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
             throw SwiftSymbolParseError.endedPrematurely(count: 1, at: consumed)
         }
         let result = scalars[index]
-        index = self.scalars.index(after: index)
+        index = scalars.index(after: index)
         consumed += 1
         return result
     }
@@ -5047,7 +5047,7 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
             // The Swift compiler allows overflow here for malformed inputs, so we're obliged to do the same
             result = result &* 10 &+ digit
 
-            i = self.scalars.index(after: i)
+            i = scalars.index(after: i)
             c += 1
         }
         if i == index {
@@ -5068,7 +5068,7 @@ fileprivate struct ScalarScanner<C: Collection> where C.Iterator.Element == Unic
                 throw SwiftSymbolParseError.endedPrematurely(count: count, at: consumed)
             }
             result.unicodeScalars.append(scalars[i])
-            i = self.scalars.index(after: i)
+            i = scalars.index(after: i)
         }
         index = i
         consumed += count
@@ -5096,10 +5096,10 @@ fileprivate extension Array {
         return self.indices.contains(index) ? self[index] : nil
     }
     func slice(_ from: Int, _ to: Int) -> ArraySlice<Element> {
-        if from > to || from > self.endIndex || to < self.startIndex {
+        if from > to || from > endIndex || to < startIndex {
             return ArraySlice()
         } else {
-            return self[(from > self.startIndex ? from : self.startIndex)..<(to < self.endIndex ? to : self.endIndex)]
+            return self[(from > startIndex ? from : startIndex)..<(to < endIndex ? to : endIndex)]
         }
     }
 }
