@@ -13,7 +13,7 @@ Doing a one-time setup in XCTest requires two parts:
 
 ### Create Initialization Class
 
-XCTest has an init method that can do one-time set-up. Here is an example:
+XCTest has an init method that can do one-time setup. Here is an example:
 
 <!-- snippet: approvaltests_initialization_class -->
 <a id='snippet-approvaltests_initialization_class'></a>
