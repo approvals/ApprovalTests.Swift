@@ -132,16 +132,6 @@ If you would like to verify line endings, simply add `[assembly: IgnoreLineEndin
 Do not add `*.received.*` files to your source control (they are transitory, and some SCMs like TFS will lock them or mark them read-only, which will break every dependent test).
 
 
-
-## More Info
-
-- [Blog](http://blog.approvaltests.com/)
-
-	
-## LICENSE
-[Apache 2.0 License](https://github.com/SignalR/SignalR/blob/master/LICENSE.md)
-
-
 ## Questions?
 
 Ask on Twitter: [@LlewellynFalco](https://twitter.com/#!/llewellynfalco) or #ApprovalTests
