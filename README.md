@@ -18,8 +18,6 @@ ApprovalsTest Swift is compatible with the XCTest testing framework.
     * [Swift Package Manager](#swift-package-manager)
     * [CocoaPods](#cocoapods)
   * [Approved File Artifacts](#approved-file-artifacts)
-  * [More Info](#more-info)
-  * [LICENSE](#license)
   * [Questions?](#questions)<!-- endToc -->
 
 ## Getting started
