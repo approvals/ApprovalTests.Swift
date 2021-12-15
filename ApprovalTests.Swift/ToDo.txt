@@ -1,9 +1,3 @@
 NEXT TIME:
-Clean out query_results
-Write docs about default reporter
- 
-Add starter project
-Add CI
-Add CI publishing
-Add MarkDown snippets
-Make documentation about supported reporters
+- Make ApprovalReporterWithCleanUp: have FileApprover use it in cleanUp
+- Then clean out query_results
