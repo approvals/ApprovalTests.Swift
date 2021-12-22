@@ -1,0 +1,9 @@
+ApprovalTests.Swift:
+  project: ApprovalTests.Swift.xcodeproj
+  sdks:
+  - macosx
+ApprovalTests_iOS:
+  project: ApprovalTests.Swift.xcodeproj
+  sdks:
+  - iphonesimulator
+  - iphoneos
