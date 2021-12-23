@@ -5,6 +5,7 @@
 #endif
 import XCTest
 
+// begin-snippet: sample_test
 final class SampleArrayTests: XCTestCase {
 
     func testList() throws {
@@ -17,6 +18,7 @@ final class SampleArrayTests: XCTestCase {
         let names: [String] = []
         try Approvals.verifyAll("Names", names)
     }
+// end-snippet
 
     func testListOf10() throws {
         let names = [

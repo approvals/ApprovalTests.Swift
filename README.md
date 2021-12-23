@@ -101,20 +101,27 @@ but with "Copy items into destination group's folder" disabled.
 
 ## Examples
 
-[Sample Code](https://github.com/approvals/ApprovalTests.Swift/blob/master/ApprovalTests.SwiftTests/Demo/SampleArrayTest.swift)
-```Swift
-class SampleTest: XCTestCase {
+<!-- snippet: sample_test -->
+<a id='snippet-sample_test'></a>
+```swift
+final class SampleArrayTests: XCTestCase {
 
     func testList() throws {
-        var names: [String] = ["Llewellyn", "James", "Dan", "Jason", "Katrina"]
+        var names = ["Llewellyn", "James", "Dan", "Jason", "Katrina"]
         names.sort()
         try Approvals.verifyAll("", names)
     }
-}
-```
-will produce a file
 
-    SampleTest.testList.received.txt
+    func testEmptyList() throws {
+        let names: [String] = []
+        try Approvals.verifyAll("Names", names)
+    }
+```
+<sup><a href='/ApprovalTests_SwiftTests/Demo/SampleArrayTests.swift#L8-L21' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample_test' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+will produce a file `SampleTest.testList.received.txt`:
+
     [0] = Dan
     [1] = James
     [2] = Jason
