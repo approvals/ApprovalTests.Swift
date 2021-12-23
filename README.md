@@ -104,7 +104,7 @@ but with "Copy items into destination group's folder" disabled.
 <!-- snippet: sample_test -->
 <a id='snippet-sample_test'></a>
 ```swift
-final class SampleArrayTests: XCTestCase {
+class SampleArrayTests: XCTestCase {
 
     func testList() throws {
         var names = ["Llewellyn", "James", "Dan", "Jason", "Katrina"]
@@ -115,13 +115,19 @@ final class SampleArrayTests: XCTestCase {
 <sup><a href='/ApprovalTests_SwiftTests/Demo/SampleArrayTests.swift#L8-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample_test' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
-will produce a file `SampleTest.testList.received.txt`:
+will produce a file `SampleArrayTests.testList.received.txt`:
 
-    [0] = Dan
-    [1] = James
-    [2] = Jason
-    [3] = Katrina
-    [4] = Llewellyn
+<!-- snippet: SampleArrayTests.testList.approved.txt -->
+<a id='snippet-SampleArrayTests.testList.approved.txt'></a>
+```txt
+[0] = Dan
+[1] = James
+[2] = Jason
+[3] = Katrina
+[4] = Llewellyn
+```
+<sup><a href='/ApprovalTests_SwiftTests/Demo/SampleArrayTests.testList.approved.txt#L1-L5' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleArrayTests.testList.approved.txt' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
 
 Simply rename this to SampleTest.testList.approved.txt, and the test will now pass.
 
