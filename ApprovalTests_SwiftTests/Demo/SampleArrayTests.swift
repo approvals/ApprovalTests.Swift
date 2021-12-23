@@ -6,7 +6,7 @@
 import XCTest
 
 // begin-snippet: sample_test
-final class SampleArrayTests: XCTestCase {
+class SampleArrayTests: XCTestCase {
 
     func testList() throws {
         var names = ["Llewellyn", "James", "Dan", "Jason", "Katrina"]
