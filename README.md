@@ -45,7 +45,9 @@ If you prefer auditory learning, you might enjoy the following podcast
 - [The Watir Podcast](http://watirpodcast.com/podcast-53/)
 
 ## How to get it
+
 ### Swift Package Manager
+
 See an example [package manifest](https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/blob/main/Package.swift#L17-L22) here
 
 Get the following dependency
@@ -79,25 +81,18 @@ And then add it to your test target
 <sup><a href='#snippet-package_add_test_target' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
-### CocoaPods
-```
-target 'MyApp' do
-  use_frameworks!
+### Carthage
 
-  # Pods for MyApp 
+Add the following to your Cartfile:
 
-  target 'MyAppTests' do
-    inherit! :search_paths
-    # Pods for testing
-    pod 'ApprovalTests_Swift', :git => 'https://github.com/approvals/ApprovalTests.Swift.git'
-  end
+    github "approvals/ApprovalTests.Swift" "HEAD"
 
-end
+Then drag the the built framework from the appropriate Carthage/Build directory into your project,
+but with "Copy items into destination group's folder" disabled.
 
-```
 
-Examples
----
+## Examples
+
 [Sample Code](https://github.com/approvals/ApprovalTests.Swift/blob/master/ApprovalTests.SwiftTests/Demo/SampleArrayTest.swift)
 ```Swift
 class SampleTest: XCTestCase {
