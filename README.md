@@ -108,7 +108,7 @@ class SampleTest: XCTestCase {
     func testList() throws {
         var names: [String] = ["Llewellyn", "James", "Dan", "Jason", "Katrina"]
         names.sort()
-        try Approvals.verifyAll("", names);
+        try Approvals.verifyAll("", names)
     }
 }
 ```
