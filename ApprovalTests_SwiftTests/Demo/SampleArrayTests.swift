@@ -13,12 +13,12 @@ final class SampleArrayTests: XCTestCase {
         names.sort()
         try Approvals.verifyAll("", names)
     }
+// end-snippet
 
     func testEmptyList() throws {
         let names: [String] = []
         try Approvals.verifyAll("Names", names)
     }
-// end-snippet
 
     func testListOf10() throws {
         let names = [
