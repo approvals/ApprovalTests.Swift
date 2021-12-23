@@ -21,29 +21,36 @@ ApprovalsTest Swift is compatible with the XCTest testing framework.
   * [Approved File Artifacts](#approved-file-artifacts)
   * [Questions?](#questions)<!-- endToc -->
 
+
 ## Getting started
 
 Clone the [macOS starter project](https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs)
+
 
 ## What can it be used for?
 
 Approval Tests can be used for verifying objects that require more than a simple assert.
 
+
 ## Video Tutorials
 
 You can watch a bunch of short videos on getting started and [using ApprovalTests in .Net](http://www.youtube.com/playlist?list=PL0C32F89E8BBB5368) at YouTube
+
 
 ## Documentation
 
 [Find the documentation here](./docs/README.md)
 
+
 ## Podcasts
-If you prefer auditory learning, you might enjoy the following podcast 
+
+If you prefer auditory learning, you might enjoy the following podcasts:
 
 - [This Agile Life](http://www.thisagilelife.com/46/)
 - [Hanselminutes](http://www.hanselminutes.com/360/approval-tests-with-llewellyn-falco)
 - [Herding Code](http://www.developerfusion.com/media/122649/herding-code-117-llewellyn-falcon-on-approval-tests/)
 - [The Watir Podcast](http://watirpodcast.com/podcast-53/)
+
 
 ## How to get it
 
@@ -98,14 +105,14 @@ but with "Copy items into destination group's folder" disabled.
 ```Swift
 class SampleTest: XCTestCase {
 
-    	func testList() throws {
-        	var names: [String] = ["Llewellyn", "James", "Dan", "Jason", "Katrina"]
-        	names.sort()
-        	try Approvals.verifyAll("", names);
-    	}
+    func testList() throws {
+        var names: [String] = ["Llewellyn", "James", "Dan", "Jason", "Katrina"]
+        names.sort()
+        try Approvals.verifyAll("", names);
+    }
 }
 ```
-Will Produce a File
+will produce a file
 
     SampleTest.testList.received.txt
     [0] = Dan
