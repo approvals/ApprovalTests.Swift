@@ -36,8 +36,4 @@ public class GenericDiffReporterBase: EquatableFailureReporter {
 
     public func runProcess(received: String, approved: String) throws {
     }
-
-    public func cleanUpFileNames(received: String, approved: String) -> (String, String) {
-        return (received, approved)
-    }
 }
