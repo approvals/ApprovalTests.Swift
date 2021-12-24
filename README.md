@@ -1,10 +1,10 @@
+# <img src="https://avatars3.githubusercontent.com/u/36907" height="30px"> ApprovalTests
+
 [![Build Status](https://github.com/approvals/ApprovalTests.Swift/actions/workflows/build.yml/badge.svg)](https://github.com/approvals/ApprovalTests.Swift/actions/workflows/build.yml)
 [![Swift Package Manager compatible](https://img.shields.io/badge/SPM-compatible-brightgreen.svg?style=flat&colorA=28a745&&colorB=4E4E4E)](https://github.com/apple/swift-package-manager)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-# ApprovalTests
-
-Capturing Human Intelligence — ApprovalTests is an open source assertion/verification library to aid unit testing.
+Also known as Golden Master Tests, Approval Tests are an alternative to asserts. They are great for testing objects with lots of properties, or collections of objects.
 
 ApprovalsTest Swift is compatible with the XCTest testing framework.
 
@@ -27,20 +27,6 @@ ApprovalsTest Swift is compatible with the XCTest testing framework.
 ## Getting Started
 
 Clone the [macOS starter project](https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs)
-
-
-## What Can I Use ApprovalTests For?
-
-You can use ApprovalTests to verify objects that require more than a simple assert. These include:
-
-- Long strings
-- Arrays
-- Dictionaries
-- JSON
-
-ApprovalTests really shines when you need a more granular look at a large test failure. Sometimes, trying to find a small difference in a long string is just too hard!
-
-ApprovalTests solves this problem by providing reporters which let you view the test results in one of many popular diff utilities.
 
 
 ## Video Tutorials
