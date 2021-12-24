@@ -23,19 +23,28 @@ ApprovalsTest Swift is compatible with the XCTest testing framework.
   * [Questions?](#questions)<!-- endToc -->
 
 
-## Getting started
+## Getting Started
 
 Clone the [macOS starter project](https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs)
 
 
-## What can it be used for?
+## What Can I Use ApprovalTests For?
 
-Approval Tests can be used for verifying objects that require more than a simple assert.
+You can use ApprovalTests to verify objects that require more than a simple assert. These include:
+
+- Long strings
+- Arrays
+- Dictionaries
+- JSON
+
+ApprovalTests really shines when you need a more granular look at a large test failure. Sometimes, trying to find a small difference in a long string is just too hard!
+
+ApprovalTests solves this problem by providing reporters which let you view the test results in one of many popular diff utilities.
 
 
 ## Video Tutorials
 
-You can watch a bunch of short videos on getting started and [using ApprovalTests in .Net](http://www.youtube.com/playlist?list=PL0C32F89E8BBB5368) at YouTube
+You can watch a bunch of short videos on getting started and [using ApprovalTests in .Net](http://www.youtube.com/playlist?list=PL0C32F89E8BBB5368) at YouTube.
 
 
 ## Documentation
@@ -53,7 +62,7 @@ If you prefer auditory learning, you might enjoy the following podcasts:
 - [The Watir Podcast](http://watirpodcast.com/podcast-53/)
 
 
-## How to get it
+## How to Get It
 
 ### Swift Package Manager
 
@@ -144,4 +153,4 @@ Do not add `*.received.*` files to your source control (they are transitory, and
 
 ## Questions?
 
-Ask on Twitter: [@LlewellynFalco](https://twitter.com/#!/llewellynfalco) or #ApprovalTests
+Ask on Twitter: [@LlewellynFalco](https://twitter.com/llewellynfalco) or #ApprovalTests
