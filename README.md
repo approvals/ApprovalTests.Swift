@@ -1,4 +1,4 @@
-[![Swift](https://github.com/approvals/ApprovalTests.Swift/actions/workflows/swift.yml/badge.svg)](https://github.com/approvals/ApprovalTests.Swift/actions/workflows/swift.yml)
+[![Build Status](https://github.com/approvals/ApprovalTests.Swift/actions/workflows/build.yml/badge.svg)](https://github.com/approvals/ApprovalTests.Swift/actions/workflows/build.yml)
 [![Swift Package Manager compatible](https://img.shields.io/badge/SPM-compatible-brightgreen.svg?style=flat&colorA=28a745&&colorB=4E4E4E)](https://github.com/apple/swift-package-manager)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
