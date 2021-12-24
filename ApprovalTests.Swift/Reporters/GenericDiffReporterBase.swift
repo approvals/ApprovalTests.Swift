@@ -38,20 +38,6 @@ public class GenericDiffReporterBase: EquatableFailureReporter {
     }
 
     public func cleanUpFileNames(received: String, approved: String) -> (String, String) {
-        var workingReceived = received
-        var workingApproved = approved
-
-        let newApproved = workingApproved.replacingOccurrences(of: ":::", with: "")
-        workingApproved = newApproved
-
-        let newReceived = workingReceived.replacingOccurrences(of: ":::", with: "")
-        workingReceived = newReceived
-
-        let newApproved2 = workingApproved.replacingOccurrences(of: " ", with: "\\ ")
-        workingApproved = newApproved2
-
-        let newReceived2 = workingReceived.replacingOccurrences(of: " ", with: "\\ ")
-        workingReceived = newReceived2
-        return (workingReceived, workingApproved)
+        return (received, approved)
     }
 }
