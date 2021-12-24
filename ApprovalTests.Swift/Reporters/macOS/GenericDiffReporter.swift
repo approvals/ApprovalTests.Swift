@@ -12,7 +12,7 @@
 
             let process = Process()
             process.executableURL = URL(fileURLWithPath: programPath)
-            process.arguments = arguments(workingReceived, workingApproved)
+            process.arguments = arguments(received, approved)
             process.terminationHandler = { (process) in
                 print("\ndidFinish: \(!process.isRunning)")
             }
