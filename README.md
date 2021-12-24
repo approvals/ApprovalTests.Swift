@@ -12,7 +12,6 @@ ApprovalsTest Swift is compatible with the XCTest testing framework.
 ## Contents
 
   * [Getting Started](#getting-started)
-  * [What Can I Use ApprovalTests For?](#what-can-i-use-approvaltests-for)
   * [Video Tutorials](#video-tutorials)
   * [Documentation](#documentation)
   * [Podcasts](#podcasts)
