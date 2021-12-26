@@ -40,8 +40,8 @@ public enum Approvals {
     }
 
     /// Verify an array
-    public static func verify<T>(label: String,
-                                 _ array: [T],
+    public static func verify<T>(_ array: [T],
+                                 label: String,
                                  _ options: Options = Options(),
                                  file: StaticString = #filePath,
                                  line: UInt = #line) throws {
