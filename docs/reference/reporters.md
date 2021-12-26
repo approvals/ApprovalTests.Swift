@@ -7,7 +7,7 @@
 
 ## Supported Diff Tools
 
-`ReportWithDiffTool` is a chain of possible reporters to find the first option installed on your system.
+`ReportWithDiffTool` is a chain of possible reporters to find the first diff tool installed on your system.
 Currently, the search goes in this order:
 
 <!-- snippet: reporters -->
