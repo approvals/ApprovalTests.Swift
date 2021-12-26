@@ -143,7 +143,6 @@
 		973086013CD2288DC3DE9F4E /* Namer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Namer.swift; sourceTree = "<group>"; };
 		97308657C3B3CEFB291EEBBD /* SampleArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleArrayTests.swift; sourceTree = "<group>"; };
 		973086C8511ED6F6F2F50094 /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
-		973086D51D21070606B41784 /* ToDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
 		973088485E8B1D043616B220 /* ApprovalWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalWriter.swift; sourceTree = "<group>"; };
 		97308B0163F571871E65B39A /* ApprovalNamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalNamer.swift; sourceTree = "<group>"; };
 		97308B6D486609330CC17CB0 /* CwlDemangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CwlDemangle.swift; sourceTree = "<group>"; };
@@ -159,7 +158,6 @@
 		BB1701AAB453E1C155CFB3B3 /* run_tests_ios.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = run_tests_ios.sh; sourceTree = "<group>"; };
 		BB1701DBF0B6E0AD00A62DDD /* ReportWithDiffTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportWithDiffTool.swift; sourceTree = "<group>"; };
 		BB1702FC3F3CF8B2887CDA19 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = docs/README.md; sourceTree = "<group>"; };
-		BB170500EAD221853C0E77FE /* how-tos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "how-tos"; sourceTree = "<group>"; };
 		BB17051531693F6FC252F7DF /* TestFailer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFailer.swift; sourceTree = "<group>"; };
 		BB17051DA6037ED58B6A29A3 /* TestSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSetup.swift; sourceTree = "<group>"; };
 		BB17059F97E2ED858F9C9A2F /* FirstWorkingReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstWorkingReporter.swift; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 		BB1707D5C3AF3A375FD117FC /* reporters.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = reporters.md; path = docs/reference/reporters.md; sourceTree = "<group>"; };
 		BB17082B52D144761FECC4FA /* run_tests_mac.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = run_tests_mac.sh; sourceTree = "<group>"; };
 		BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDiffReporterBase.swift; sourceTree = "<group>"; };
-		BB170A55E81B24DFBD31CC95 /* set-default-reporter.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = "set-default-reporter.md"; path = "how-tos/set-default-reporter.md"; sourceTree = "<group>"; };
 		BB170A69DD1A71C2E2A023E7 /* SystemUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemUtils.swift; sourceTree = "<group>"; };
 		BB170ABF2255D4F0B1D59D15 /* ReportWithEverything.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportWithEverything.swift; sourceTree = "<group>"; };
 		BB170B4E04C535C1000CA54A /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -234,8 +231,6 @@
 				BB1707D5C3AF3A375FD117FC /* reporters.md */,
 				BB1702FC3F3CF8B2887CDA19 /* README.md */,
 				BB1707104FED4CC2995D7B54 /* updateMarkdown.yml */,
-				BB170500EAD221853C0E77FE /* how-tos */,
-				BB170A55E81B24DFBD31CC95 /* set-default-reporter.md */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -315,7 +310,6 @@
 				973086E353683EE643DD4BA3 /* Writers */,
 				168C9627216023F9008F354C /* ApprovalTests_Swift.h */,
 				168C9628216023F9008F354C /* Info.plist */,
-				973086D51D21070606B41784 /* ToDo.txt */,
 			);
 			path = ApprovalTests.Swift;
 			sourceTree = "<group>";
