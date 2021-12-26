@@ -1,6 +1,6 @@
 import Foundation
 
-enum StringUtils {
+public enum StringUtils {
 
     public static func endWithNewline(_ text: String) -> String {
         var buffer = text
