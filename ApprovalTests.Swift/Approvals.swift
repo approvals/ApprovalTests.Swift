@@ -87,7 +87,7 @@ public enum Approvals {
         try verify(description, options, file: file, line: line)
     }
 
-    public static func verify<T>(_ label: String,
+    public static func verify<T>(label: String,
                                  _ array: [T],
                                  _ options: Options = Options(),
                                  file: StaticString = #filePath,
