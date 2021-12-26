@@ -16,14 +16,6 @@ public enum Approvals {
         try verify(StringUtils.toJSON(object), options.forFile.withExtension(".json"), file: file, line: line)
     }
 
-    public static func verifyAll<T>(_ label: String,
-                                    _ array: [T],
-                                    _ options: Options = Options(),
-                                    file: StaticString = #filePath,
-                                    line: UInt = #line) throws {
-        try verify(StringUtils.toString(label, array), options, file: file, line: line)
-    }
-
     public static func verifySequence<T>(_ initial: T,
                                          _ numberOfFrames: Int,
                                          _ getNextFrame: (Int) -> T,
@@ -95,11 +87,12 @@ public enum Approvals {
         try verify(description, options, file: file, line: line)
     }
 
-    public static func verify(_ query: ExecutableQuery,
+    public static func verify<T>(_ label: String,
+                                 _ array: [T],
                                  _ options: Options = Options(),
                                  file: StaticString = #filePath,
                                  line: UInt = #line) throws {
-        try verify(query.getQuery(), ExecutableReporter.wrap(options, query), file: file, line: line)
+        try verify(StringUtils.toString(label, array), options, file: file, line: line)
     }
 
     public static func verify<Key: Hashable & Comparable, Value>(_ object: [Key: Value],
@@ -107,5 +100,12 @@ public enum Approvals {
                                                                  file: StaticString = #filePath,
                                                                  line: UInt = #line) throws {
         try verify(StringUtils.printDictionary(object), options, file: file, line: line)
+    }
+
+    public static func verify(_ query: ExecutableQuery,
+                              _ options: Options = Options(),
+                              file: StaticString = #filePath,
+                              line: UInt = #line) throws {
+        try verify(query.getQuery(), ExecutableReporter.wrap(options, query), file: file, line: line)
     }
 }

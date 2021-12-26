@@ -11,13 +11,13 @@ class SampleArrayTests: XCTestCase {
     func testList() throws {
         var names = ["Llewellyn", "James", "Dan", "Jason", "Katrina"]
         names.sort()
-        try Approvals.verifyAll("", names)
+        try Approvals.verify("", names)
     }
 // end-snippet
 
     func testEmptyList() throws {
         let names: [String] = []
-        try Approvals.verifyAll("Names", names)
+        try Approvals.verify("Names", names)
     }
 
     func testListOf10() throws {
@@ -33,7 +33,7 @@ class SampleArrayTests: XCTestCase {
             "iota",
             "kappa",
         ]
-        try Approvals.verifyAll("Greek", names)
+        try Approvals.verify("Greek", names)
     }
 
     func testListOf11() throws {
@@ -50,7 +50,7 @@ class SampleArrayTests: XCTestCase {
             "kappa",
             "lambda"
         ]
-        try Approvals.verifyAll("Greek", names)
+        try Approvals.verify("Greek", names)
     }
 
     func testDictionary() throws {
