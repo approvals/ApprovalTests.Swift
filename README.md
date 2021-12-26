@@ -1,10 +1,11 @@
 # <img src="https://avatars3.githubusercontent.com/u/36907" height="30px"> ApprovalTests
 
 [![Build Status](https://github.com/approvals/ApprovalTests.Swift/actions/workflows/build.yml/badge.svg)](https://github.com/approvals/ApprovalTests.Swift/actions/workflows/build.yml)
-[![Swift Package Manager compatible](https://img.shields.io/badge/SPM-compatible-brightgreen.svg?style=flat&colorA=28a745&&colorB=4E4E4E)](https://github.com/apple/swift-package-manager)
+[![Swift Package Index Swift Version Compatibility](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fapprovals%2FApprovalTests.Swift%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/approvals/ApprovalTests.Swift)
+[![Swift Package Index Platform Compatibility](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fapprovals%2FApprovalTests.Swift%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/approvals/ApprovalTests.Swift)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-Also known as Golden Master Tests, Approval Tests are an alternative to asserts. They are great for testing objects with lots of properties, or collections of objects.
+Approval Tests are an alternative to assertions. They are great for testing objects with complex values (such as long strings), lots of properties, or collections of objects.
 
 ApprovalsTest Swift is compatible with the XCTest testing framework.
 
