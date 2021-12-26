@@ -9,6 +9,7 @@ public enum Approvals {
         ReporterFactory.get
     }
 
+    /// Verify object converted to JSON
     public static func verifyAsJSON<T: Encodable>(_ object: T,
                                                   _ options: Options = Options(),
                                                   file: StaticString = #filePath,
@@ -16,6 +17,54 @@ public enum Approvals {
         try verify(StringUtils.toJSON(object), options.forFile.withExtension(".json"), file: file, line: line)
     }
 
+    /// Verify a string
+    public static func verify(_ response: String,
+                              _ options: Options = Options(),
+                              file: StaticString = #filePath,
+                              line: UInt = #line
+    ) throws {
+        try verify(
+                ApprovalTextWriter(options.scrub(response), options.forFile.fileExtensionWithoutDot),
+                options,
+                file: file, line: line
+        )
+    }
+
+    /// Verify object that describes itself
+    public static func verify<T>(_ object: T,
+                                 _ options: Options = Options(),
+                                 file: StaticString = #filePath,
+                                 line: UInt = #line) throws {
+        let description = String(describing: type(of: object.self)) + ": " + String(describing: object)
+        try verify(description, options, file: file, line: line)
+    }
+
+    /// Verify an array
+    public static func verify<T>(label: String,
+                                 _ array: [T],
+                                 _ options: Options = Options(),
+                                 file: StaticString = #filePath,
+                                 line: UInt = #line) throws {
+        try verify(StringUtils.toString(label, array), options, file: file, line: line)
+    }
+
+    /// Verify a dictionary
+    public static func verify<Key: Hashable & Comparable, Value>(_ object: [Key: Value],
+                                                                 _ options: Options = Options(),
+                                                                 file: StaticString = #filePath,
+                                                                 line: UInt = #line) throws {
+        try verify(StringUtils.printDictionary(object), options, file: file, line: line)
+    }
+
+    /// Verify a network query
+    public static func verify(_ query: ExecutableQuery,
+                              _ options: Options = Options(),
+                              file: StaticString = #filePath,
+                              line: UInt = #line) throws {
+        try verify(query.getQuery(), ExecutableReporter.wrap(options, query), file: file, line: line)
+    }
+
+    /// Verify a sequence of frames to see how they change
     public static func verifySequence<T>(_ initial: T,
                                          _ numberOfFrames: Int,
                                          _ getNextFrame: (Int) -> T,
@@ -38,19 +87,7 @@ public enum Approvals {
         }
         try verify(output, options, file: file, line: line)
     }
-
-    public static func verify(_ response: String,
-                              _ options: Options = Options(),
-                              file: StaticString = #filePath,
-                              line: UInt = #line
-    ) throws {
-        try verify(
-                ApprovalTextWriter(options.scrub(response), options.forFile.fileExtensionWithoutDot),
-                options,
-                file: file, line: line
-        )
-    }
-
+    
     private static func verify(_ writer: ApprovalTextWriter,
                                _ options: Options = Options(),
                                file: StaticString,
@@ -77,35 +114,5 @@ public enum Approvals {
         } else {
             approver.cleanUpAfterSuccess(reporter: reporter)
         }
-    }
-
-    public static func verify<T>(_ object: T,
-                                 _ options: Options = Options(),
-                                 file: StaticString = #filePath,
-                                 line: UInt = #line) throws {
-        let description = String(describing: type(of: object.self)) + ": " + String(describing: object)
-        try verify(description, options, file: file, line: line)
-    }
-
-    public static func verify<T>(label: String,
-                                 _ array: [T],
-                                 _ options: Options = Options(),
-                                 file: StaticString = #filePath,
-                                 line: UInt = #line) throws {
-        try verify(StringUtils.toString(label, array), options, file: file, line: line)
-    }
-
-    public static func verify<Key: Hashable & Comparable, Value>(_ object: [Key: Value],
-                                                                 _ options: Options = Options(),
-                                                                 file: StaticString = #filePath,
-                                                                 line: UInt = #line) throws {
-        try verify(StringUtils.printDictionary(object), options, file: file, line: line)
-    }
-
-    public static func verify(_ query: ExecutableQuery,
-                              _ options: Options = Options(),
-                              file: StaticString = #filePath,
-                              line: UInt = #line) throws {
-        try verify(query.getQuery(), ExecutableReporter.wrap(options, query), file: file, line: line)
     }
 }
