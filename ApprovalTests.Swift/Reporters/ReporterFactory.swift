@@ -1,6 +1,6 @@
 public class ReporterFactory {
     public static var defaultReporter: () -> ApprovalFailureReporter = {
-        DefaultReporter()
+        ReportWithDiffTool()
     }
 
     public static var get: ApprovalFailureReporter {
@@ -24,9 +24,3 @@ public class DefaultReporterDisposer {
         ReporterFactory.defaultReporter = oldCreator
     }
 }
-
-#if os(OSX)
-    public typealias DefaultReporter = ReportWithDiffTool
-#elseif os(iOS)
-    public typealias DefaultReporter = ReportWithDiffTool
-#endif

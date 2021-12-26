@@ -14,7 +14,7 @@ public class TestSetup: NSObject {
         TestSetup.initialized = true
         // begin-snippet: register_default_reporter
         disposer = ReporterFactory.registerDefaultReporter {
-            DefaultReporter()
+            ReportWithDiffTool()
         }
         // end-snippet
     }
@@ -24,5 +24,5 @@ public class TestSetup: NSObject {
     static var initialized = false
 }
 
-//class YourPreferredReporter: DefaultReporter {
+//class YourPreferredReporter: ReportWithDiffTool {
 //}
