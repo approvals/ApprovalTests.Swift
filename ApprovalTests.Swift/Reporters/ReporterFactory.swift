@@ -26,7 +26,7 @@ public class DefaultReporterDisposer {
 }
 
 #if os(OSX)
-    public typealias DefaultReporter = ReportersForMac
+    public typealias DefaultReporter = ReportWithDiffTool
 #elseif os(iOS)
-    public typealias DefaultReporter = ReportersForiOS
+    public typealias DefaultReporter = ReportWithDiffTool
 #endif
