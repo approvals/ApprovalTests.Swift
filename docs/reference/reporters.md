@@ -3,9 +3,7 @@
 <!-- toc -->
 ## Contents
 
-  * [Supported Diff Tools](#supported-diff-tools)
-    * [Mac](#mac)
-    * [iOS](#ios)<!-- endToc -->
+  * [Supported Diff Tools](#supported-diff-tools)<!-- endToc -->
 
 ## Supported Diff Tools
 
