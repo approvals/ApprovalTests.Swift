@@ -6,6 +6,20 @@ private enum OptionDataKey {
 
 private typealias OptionData = [OptionDataKey: Any]
 
+/**
+ Specify options for any ApprovalTests verification.
+ 
+ Every verify call takes Options as an optional parameter. Options is a fluent interface, allowing
+ you to chain them together. Each returned object is a new copy.
+
+ Example:
+ ````
+ Options()
+     .withReporter(ReportWithKaleidoscope())
+     .withScrubber(ScrubDates())
+     .forFile.withExtension(".json")
+ ````
+ */
 public struct Options {
     private let data: OptionData
 
