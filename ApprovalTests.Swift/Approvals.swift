@@ -9,7 +9,12 @@ public enum Approvals {
         ReporterFactory.get
     }
 
-    /// Verify object converted to JSON
+    /**
+     Verify an object converted to JSON
+     
+     Use this to verify anything that is Encodable. A handy way to verify any composite object is
+     to declare it (and its properties) as Encodable from within your test code.
+     */
     public static func verifyAsJSON<T: Encodable>(_ object: T,
                                                   _ options: Options = Options(),
                                                   file: StaticString = #filePath,
@@ -30,7 +35,7 @@ public enum Approvals {
         )
     }
 
-    /// Verify object that describes itself
+    /// Verify an object that describes itself
     public static func verify<T>(_ object: T,
                                  _ options: Options = Options(),
                                  file: StaticString = #filePath,
@@ -56,7 +61,17 @@ public enum Approvals {
         try verify(StringUtils.printDictionary(object), options, file: file, line: line)
     }
 
-    /// Verify a network query
+    /**
+     Verify a query crosses an architectural boundary
+     
+     What is a query that crosses an architectural boundary? It can be a network call, or any other
+     slow or expensive operation that you don't want in fast unit tests.
+     
+     Make your query conform to ExecutableQuery from within your test code. Then verify will use a
+     special reporter that verifies the request expressed as a string by getQuery(). If the query
+     has changed, then it is also executed with executeQuery(_:). This gives you a chance to examine
+     the response so that you can decide whether to approve the new query.
+     */
     public static func verify(_ query: ExecutableQuery,
                               _ options: Options = Options(),
                               file: StaticString = #filePath,
@@ -64,7 +79,9 @@ public enum Approvals {
         try verify(query.getQuery(), ExecutableReporter.wrap(options, query), file: file, line: line)
     }
 
-    /// Verify a sequence of frames to see how they change
+    /**
+     Verify a sequence of frames to see how they change
+     */
     public static func verifySequence<T>(_ initial: T,
                                          _ numberOfFrames: Int,
                                          _ getNextFrame: (Int) -> T,
