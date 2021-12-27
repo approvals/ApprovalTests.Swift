@@ -29,9 +29,8 @@ final class OptionsTests: XCTestCase {
     }
 
     func testMutations() throws {
-        let reporter = ReportWithDiffTool()
         let scrubber = ScrubDates()
-        let options = Options(scrubber).withReporter(reporter)
+        let options = Options(scrubber)
         let scrubbed: String = try options.scrub("1970-01-01T00:16:40Z")
         XCTAssertEqual(scrubbed, "<date1>")
     }
