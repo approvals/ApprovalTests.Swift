@@ -43,9 +43,14 @@ public enum Approvals {
      Verifies an array of items against a previously approved array.
 
      Each element of the array is on a separate line, preceded by the label and its array index.
+
+     - Parameters:
+       - array: Array to verify.
+       - label: Optional string to label each element: `label[n] = value`.
+       - options: Optional ApprovalTests verification options.
      */
     public static func verifyAll<T>(_ array: [T],
-                                    label: String,
+                                    label: String = "",
                                     _ options: Options = Options(),
                                     file: StaticString = #filePath,
                                     line: UInt = #line) throws {

@@ -11,7 +11,7 @@ class SampleArrayTests: XCTestCase {
     func testList() throws {
         var names = ["Llewellyn", "James", "Dan", "Jason", "Katrina"]
         names.sort()
-        try Approvals.verifyAll(names, label: "")
+        try Approvals.verifyAll(names)
     }
 // end-snippet
 
