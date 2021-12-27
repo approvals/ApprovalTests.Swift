@@ -47,7 +47,7 @@ public enum Approvals {
      - Parameters:
        - array: Array to verify.
        - label: Optional string to label each element: `label[n] = value`.
-       - options: Optional ApprovalTests verification options.
+       - options: Optional verification options.
      */
     public static func verifyAll<T>(_ array: [T],
                                     label: String = "",
@@ -96,6 +96,7 @@ public enum Approvals {
        - numberOfFrames: Number of frames to generate after the initial starting point.
        - getNextFrame: Generates next frame. The closure takes the frame index as an argument, which
                        you are free to use or ignore.
+       - options: Optional verification options.
      */
     public static func verifySequence<T>(_ initial: T,
                                          numberOfFrames: Int,
