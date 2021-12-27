@@ -32,6 +32,11 @@ final class ScrubbersTests: XCTestCase {
                 Options(scrubber)
         )
     }
+
+    func test_scrubDates_withoutDates_shouldDoNothing() throws {
+        let scrubber = ScrubDates()
+        XCTAssertEqual(scrubber.scrub("hello"), "hello")
+    }
 }
 
 private struct TimeSheet: Codable {
