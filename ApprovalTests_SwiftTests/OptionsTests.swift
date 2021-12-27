@@ -20,6 +20,14 @@ final class OptionsTests: XCTestCase {
         XCTAssertEqual(o2.reporter as? EquatableFailureReporter, reporter)
     }
 
+    func test_optionsHasScrubbers() throws {
+        let scrubber = ScrubDates()
+        let o1 = Options(scrubber)
+        let o2 = Options().withScrubber(scrubber)
+        XCTAssertIdentical(o1.scrubber, scrubber)
+        XCTAssertIdentical(o2.scrubber, scrubber)
+    }
+
     func testMutations() throws {
         let reporter = ReportWithDiffTool()
         let scrubber = ScrubDates()
