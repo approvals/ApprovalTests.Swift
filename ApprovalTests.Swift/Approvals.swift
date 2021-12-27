@@ -45,11 +45,11 @@ public enum Approvals {
     }
 
     /// Verifies an array.
-    public static func verify<T>(_ array: [T],
-                                 label: String,
-                                 _ options: Options = Options(),
-                                 file: StaticString = #filePath,
-                                 line: UInt = #line) throws {
+    public static func verifyAll<T>(_ array: [T],
+                                    label: String,
+                                    _ options: Options = Options(),
+                                    file: StaticString = #filePath,
+                                    line: UInt = #line) throws {
         try verify(StringUtils.toString(label, array), options, file: file, line: line)
     }
 
