@@ -28,6 +28,7 @@ public enum StringUtils {
         return padding + text
     }
 
+    /// Converts object to JSON, sorted by key. Dates are converted to ISO8601.
     public static func toJSON<T: Encodable>(_ object: T) throws -> String {
         let jsonEncoder = JSONEncoder()
         if #available(iOS 10.0, *) {
@@ -37,7 +38,7 @@ public enum StringUtils {
             jsonEncoder.outputFormatting = JSONEncoder.OutputFormatting.prettyPrinted.union(.sortedKeys)
         }
         let jsonData = try jsonEncoder.encode(object)
-        return String(data: jsonData, encoding: .utf8) ?? ""
+        return String(decoding: jsonData, as: UTF8.self)
     }
 
     /// Prints dictionary sorted by key, returning it as a string.
