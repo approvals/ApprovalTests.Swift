@@ -17,12 +17,12 @@ public enum StringUtils {
         var buffer = ""
         let maxPadding = "\(array.count - 1)".count
         for (index, element) in array.enumerated() {
-            buffer += "\(name)[\(padNumber(index, maxPadding))] = \(element)\n"
+            buffer += "\(name)[\(pad(number: index, digits: maxPadding))] = \(element)\n"
         }
         return buffer
     }
 
-    private static func padNumber(_ number: Int, _ digits: Int) -> String {
+    private static func pad(number: Int, digits: Int) -> String {
         let text = "\(number)"
         let padding = String(repeating: "0", count: digits - text.count)
         return padding + text
