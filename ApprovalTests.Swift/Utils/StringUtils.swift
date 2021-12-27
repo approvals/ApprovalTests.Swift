@@ -51,9 +51,15 @@ public enum StringUtils {
         return buffer
     }
 
-    public static func printGrid(_ width: Int,
-                                 _ height: Int,
-                                 _ cellPrinter: (Int, Int) -> String) -> String {
+    /**
+     Prints grid of information, returning it as a string.
+     
+     - Parameters:
+       - width: Width of grid. 
+       - height: Height of grid.
+       - cellPrinter: Converts (x, y) coordinates into output. The first grid point is (0, 0).
+     */
+    public static func printGrid(width: Int, height: Int, cellPrinter: (Int, Int) -> String) -> String {
         var buffer = ""
         for y in 0 ..< height {
             for x in 0 ..< width {

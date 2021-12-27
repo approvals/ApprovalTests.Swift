@@ -88,7 +88,7 @@ private class GameOfLife {
 
 extension GameOfLife: CustomStringConvertible {
     var description: String {
-        StringUtils.printGrid(5, 5) { x, y in
+        StringUtils.printGrid(width: 5, height: 5) { x, y in
             board(x, y) ? "X " : ". "
         }
     }
