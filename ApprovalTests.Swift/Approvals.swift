@@ -87,7 +87,9 @@ public enum Approvals {
         }
         try verify(output, options, file: file, line: line)
     }
-    
+}
+
+extension Approvals {
     private static func verify(_ writer: ApprovalTextWriter,
                                _ options: Options = Options(),
                                file: StaticString,
