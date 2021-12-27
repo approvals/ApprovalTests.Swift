@@ -23,6 +23,11 @@ private typealias OptionData = [OptionDataKey: Any]
      .withScrubber(ScrubDates())
      .forFile.withExtension(".json")
  ````
+ 
+ By default, Options does:
+ - no scrubbing
+ - uses file extension `.txt`
+ - uses whatever is currently set as the default reporter.
  */
 public struct Options {
     private let data: OptionData
