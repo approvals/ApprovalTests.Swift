@@ -49,7 +49,7 @@ public enum Approvals {
                                     _ options: Options = Options(),
                                     file: StaticString = #filePath,
                                     line: UInt = #line) throws {
-        try verify(StringUtils.toString(label, array), options, file: file, line: line)
+        try verify(StringUtils.toString(array, name: label), options, file: file, line: line)
     }
 
     /**

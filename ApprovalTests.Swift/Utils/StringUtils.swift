@@ -10,7 +10,16 @@ public enum StringUtils {
         return buffer
     }
 
-    public static func toString<T>(_ name: String, _ array: [T]) -> String {
+    /**
+     Converts array of items to string.
+     
+     Each element of the array is on a separate line, preceded by the name and its array index.
+     
+     - Parameters:
+       - array: Array to print to string. 
+       - name: Name of the array, to describe each element as `name[i] = value`.
+     */
+    public static func toString<T>(_ array: [T], name: String) -> String {
         guard !array.isEmpty else {
             return "\(name).length = 0"
         }
