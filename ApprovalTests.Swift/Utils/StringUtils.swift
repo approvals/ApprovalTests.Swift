@@ -40,7 +40,8 @@ public enum StringUtils {
         return String(data: jsonData, encoding: .utf8) ?? ""
     }
 
-    public static func printDictionary<Key: Hashable & Comparable, Value>(_ dictionary: [Key: Value]) throws -> String {
+    /// Prints dictionary sorted by key, returning it as a string.
+    public static func printDictionary<Key: Hashable & Comparable, Value>(_ dictionary: [Key: Value]) -> String {
         var buffer = "[\n"
         var keys = Array(dictionary.keys)
         keys.sort()
