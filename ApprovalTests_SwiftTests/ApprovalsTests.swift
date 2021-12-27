@@ -23,7 +23,7 @@ final class ApprovalsTests: XCTestCase {
         var gameOfLife = GameOfLife { x, y in
             2 <= x && x <= 4 && y == 2
         }
-        try Approvals.verifySequence(gameOfLife, 2) { _ in
+        try Approvals.verifySequence(gameOfLife, numberOfFrames: 2) { _ in
             gameOfLife = gameOfLife.advance
             return gameOfLife
         }

@@ -80,11 +80,17 @@ public enum Approvals {
     }
 
     /**
-     Verifies a sequence of frames to see how they change.
+     Verifies a sequence to see how each frame changes.
+
+     - Parameters:
+       - initial: Starting point. 
+       - numberOfFrames: Number of frames to generate after the initial starting point.
+       - getNextFrame: Generates next frame. The closure takes the frame index as an argument, which
+                       you are free to use or ignore.
      */
     public static func verifySequence<T>(_ initial: T,
-                                         _ numberOfFrames: Int,
-                                         _ getNextFrame: (Int) -> T,
+                                         numberOfFrames: Int,
+                                         getNextFrame: (Int) -> T,
                                          _ options: Options = Options(),
                                          file: StaticString = #filePath,
                                          line: UInt = #line) throws {
