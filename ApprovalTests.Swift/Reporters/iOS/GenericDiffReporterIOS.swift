@@ -1,6 +1,7 @@
 #if os(iOS)
 
     import Foundation
+
     public class GenericDiffReporter: GenericDiffReporterBase {
         public override func runProcess(received: String, approved: String) throws {
             let arguments2 = arguments(received, approved)
