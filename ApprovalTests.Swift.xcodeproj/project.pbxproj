@@ -246,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				BB1705F1B761A7E6263D8FFB /* GenericDiffReporter.swift */,
+				BB170FA3E48957CD9F09940C /* ReportByOpeningReceivedFile.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -373,7 +374,6 @@
 				BB170C818D93ED50B092E659 /* ExecutableReporter.swift */,
 				BB17059F97E2ED858F9C9A2F /* FirstWorkingReporter.swift */,
 				BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */,
-				BB170FA3E48957CD9F09940C /* ReportByOpeningReceivedFile.swift */,
 				BB170EB6027F20F1764F9EF4 /* ReportContentsWithXCTest.swift */,
 				9730820AFFF03C5745F45021 /* ReporterFactory.swift */,
 				BB170BD5F95C651D0A332123 /* ReportMoveCommandToClipboard.swift */,
