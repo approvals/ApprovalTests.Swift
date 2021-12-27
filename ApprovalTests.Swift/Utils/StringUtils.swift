@@ -2,6 +2,7 @@ import Foundation
 
 public enum StringUtils {
 
+    /// Ends text with newline, unless it already ends with newline.
     public static func endWithNewline(_ text: String) -> String {
         var buffer = text
         if !buffer.hasSuffix("\n") {
