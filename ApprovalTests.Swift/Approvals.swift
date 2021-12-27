@@ -9,20 +9,7 @@ public enum Approvals {
         ReporterFactory.get
     }
 
-    /**
-     Verifies an object as converted to JSON.
-     
-     Use this to verify anything that is `Encodable`. A handy way to verify a composite object is to
-     declare it (and its properties) as `Encodable` from within your test code using extensions.
-     */
-    public static func verifyAsJSON<T: Encodable>(_ object: T,
-                                                  _ options: Options = Options(),
-                                                  file: StaticString = #filePath,
-                                                  line: UInt = #line) throws {
-        try verify(StringUtils.toJSON(object), options.forFile.withExtension(".json"), file: file, line: line)
-    }
-
-    /// Verifies a string.
+    /// Verifies a string against a previously approved version of the string.
     public static func verify(_ response: String,
                               _ options: Options = Options(),
                               file: StaticString = #filePath,
@@ -35,7 +22,7 @@ public enum Approvals {
         )
     }
 
-    /// Verifies an object that describes itself.
+    /// Verifies an object that describes itself against a previously approved description.
     public static func verify<T>(_ object: T,
                                  _ options: Options = Options(),
                                  file: StaticString = #filePath,
@@ -44,7 +31,19 @@ public enum Approvals {
         try verify(description, options, file: file, line: line)
     }
 
-    /// Verifies an array.
+    /// Verifies a dictionary of items against a previously approved dictionary.
+    public static func verify<Key: Hashable & Comparable, Value>(_ object: [Key: Value],
+                                                                 _ options: Options = Options(),
+                                                                 file: StaticString = #filePath,
+                                                                 line: UInt = #line) throws {
+        try verify(StringUtils.printDictionary(object), options, file: file, line: line)
+    }
+
+    /**
+     Verifies an array of items against a previously approved array.
+
+     Each element of the array is on a separate line, preceded by the label and its array index.
+     */
     public static func verifyAll<T>(_ array: [T],
                                     label: String,
                                     _ options: Options = Options(),
@@ -53,12 +52,17 @@ public enum Approvals {
         try verify(StringUtils.toString(label, array), options, file: file, line: line)
     }
 
-    /// Verifies a dictionary.
-    public static func verify<Key: Hashable & Comparable, Value>(_ object: [Key: Value],
-                                                                 _ options: Options = Options(),
-                                                                 file: StaticString = #filePath,
-                                                                 line: UInt = #line) throws {
-        try verify(StringUtils.printDictionary(object), options, file: file, line: line)
+    /**
+     Verifies an object as converted to JSON.
+     
+     Use this to verify anything that is `Encodable`. A handy way to verify a composite object is to
+     declare it (and its properties) as `Encodable` from within your test code using extensions.
+     */
+    public static func verifyAsJSON<T: Encodable>(_ object: T,
+                                                  _ options: Options = Options(),
+                                                  file: StaticString = #filePath,
+                                                  line: UInt = #line) throws {
+        try verify(StringUtils.toJSON(object), options.forFile.withExtension(".json"), file: file, line: line)
     }
 
     /**
