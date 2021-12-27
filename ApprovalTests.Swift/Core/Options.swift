@@ -9,8 +9,10 @@ private typealias OptionData = [OptionDataKey: Any]
 /**
  Specify options for any ApprovalTests verification.
  
- Every verify call takes Options as an optional parameter. Options is a fluent interface, allowing
- you to chain them together. Each returned object is a new copy.
+ Every verify call takes Options as an optional parameter.
+ 
+ ## Fluent Interface
+ Options is a fluent interface, allowing you to chain them together. Each returned object is a new copy.
 
  Example:
  ````
@@ -19,6 +21,9 @@ private typealias OptionData = [OptionDataKey: Any]
      .withScrubber(ScrubDates())
      .forFile.withExtension(".json")
  ````
+ # One
+ ## Two
+ ### Three
  */
 public struct Options {
     private let data: OptionData
