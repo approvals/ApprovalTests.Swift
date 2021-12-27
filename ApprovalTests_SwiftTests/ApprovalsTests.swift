@@ -49,7 +49,7 @@ class MetMuseumPieceLoader: ExecutableQuery {
         if query.isEmpty {
             return ""
         }
-        return readURL(query).replacingOccurrences(matchingPattern: ",") {_  in ",\n" }
+        return NetUtils.readURL(query).replacingOccurrences(matchingPattern: ",") {_  in ",\n" }
     }
 }
 
