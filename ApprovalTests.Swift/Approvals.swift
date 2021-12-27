@@ -10,10 +10,10 @@ public enum Approvals {
     }
 
     /**
-     Verify an object converted to JSON
+     Verifies an object as converted to JSON.
      
-     Use this to verify anything that is Encodable. A handy way to verify any composite object is
-     to declare it (and its properties) as Encodable from within your test code.
+     Use this to verify anything that is `Encodable`. A handy way to verify a composite object is to
+     declare it (and its properties) as `Encodable` from within your test code using extensions.
      */
     public static func verifyAsJSON<T: Encodable>(_ object: T,
                                                   _ options: Options = Options(),
@@ -22,7 +22,7 @@ public enum Approvals {
         try verify(StringUtils.toJSON(object), options.forFile.withExtension(".json"), file: file, line: line)
     }
 
-    /// Verify a string
+    /// Verifies a string.
     public static func verify(_ response: String,
                               _ options: Options = Options(),
                               file: StaticString = #filePath,
@@ -35,7 +35,7 @@ public enum Approvals {
         )
     }
 
-    /// Verify an object that describes itself
+    /// Verifies an object that describes itself.
     public static func verify<T>(_ object: T,
                                  _ options: Options = Options(),
                                  file: StaticString = #filePath,
@@ -44,7 +44,7 @@ public enum Approvals {
         try verify(description, options, file: file, line: line)
     }
 
-    /// Verify an array
+    /// Verifies an array.
     public static func verify<T>(_ array: [T],
                                  label: String,
                                  _ options: Options = Options(),
@@ -53,7 +53,7 @@ public enum Approvals {
         try verify(StringUtils.toString(label, array), options, file: file, line: line)
     }
 
-    /// Verify a dictionary
+    /// Verifies a dictionary.
     public static func verify<Key: Hashable & Comparable, Value>(_ object: [Key: Value],
                                                                  _ options: Options = Options(),
                                                                  file: StaticString = #filePath,
@@ -62,15 +62,15 @@ public enum Approvals {
     }
 
     /**
-     Verify a query crosses an architectural boundary
+     Verifies a query that crosses an architectural boundary.
      
-     What is a query that crosses an architectural boundary? It can be a network call, or any other
-     slow or expensive operation that you don't want in fast unit tests.
+     What is a such a query? It can be a network call, or any other slow or expensive operation that
+     you don't want in fast-running unit tests.
      
-     Make your query conform to ExecutableQuery from within your test code. Then verify will use a
-     special reporter that verifies the request expressed as a string by getQuery(). If the query
-     has changed, then it is also executed with executeQuery(_:). This gives you a chance to examine
-     the response so that you can decide whether to approve the new query.
+     Make your query conform to `ExecutableQuery` from within your test code. Then verify will use a
+     special reporter that verifies the request expressed as a string by `getQuery()`. If the query
+     has changed, then it is also executed with `executeQuery(_:)`. This gives you a chance to
+     examine the response so that you can decide whether to approve the new query.
      */
     public static func verify(_ query: ExecutableQuery,
                               _ options: Options = Options(),
@@ -80,7 +80,7 @@ public enum Approvals {
     }
 
     /**
-     Verify a sequence of frames to see how they change
+     Verifies a sequence of frames to see how they change.
      */
     public static func verifySequence<T>(_ initial: T,
                                          _ numberOfFrames: Int,
