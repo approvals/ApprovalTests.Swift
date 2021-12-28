@@ -36,6 +36,19 @@ final class ReporterTests: XCTestCase {
     }
 
     #if os(OSX)
+        func test_clipboardReporterOnMac() throws {
+            let reporter = ReportMoveCommandToClipboard()
+
+            let success = reporter.report(received: "r.text", approved: "a.text")
+
+            XCTAssertTrue(success)
+            let pasteboard = NSPasteboard.general
+            let command = pasteboard.string(forType: .string)
+            XCTAssertEqual(command, "mv r.text a.text")
+        }
+    #endif
+        
+    #if os(OSX)
         func test_fileLaunchingOnMac() throws {
             let reporter = ReportByOpeningReceivedFile()
             let process = reporter.makeProcess(received: "r.html", approved: "a.html")
