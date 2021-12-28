@@ -1,22 +1,4 @@
 import Foundation
-import System
-
-public class ReportWithDiffMerge: GenericDiffReporter {
-    public init() {
-        super.init(
-                programPath: "/Applications/DiffMerge.app/Contents/MacOS/DiffMerge",
-                arguments: { received, approved in
-                    ["--nosplash", received, approved]
-                }
-        )
-    }
-}
-
-public class ReportWithBeyondCompare: GenericDiffReporter {
-    public init() {
-        super.init(programPath: "/Applications/Beyond Compare.app/Contents/MacOS/bcomp")
-    }
-}
 
 // Requires Tools->Create Command-line Launcher
 public class ReportWithAppCode: GenericDiffReporter {
@@ -30,12 +12,18 @@ public class ReportWithAppCode: GenericDiffReporter {
     }
 }
 
-public class ReportWithKdiff3: GenericDiffReporter {
+public class ReportWithBeyondCompare: GenericDiffReporter {
+    public init() {
+        super.init(programPath: "/Applications/Beyond Compare.app/Contents/MacOS/bcomp")
+    }
+}
+
+public class ReportWithDiffMerge: GenericDiffReporter {
     public init() {
         super.init(
-                programPath: "/Applications/kdiff3.app/Contents/MacOS/kdiff3",
+                programPath: "/Applications/DiffMerge.app/Contents/MacOS/DiffMerge",
                 arguments: { received, approved in
-                    [received, approved, "-m"]
+                    ["--nosplash", received, approved]
                 }
         )
     }
@@ -44,6 +32,17 @@ public class ReportWithKdiff3: GenericDiffReporter {
 public class ReportWithKaleidoscope: GenericDiffReporter {
     public init() {
         super.init(programPath: "/usr/local/bin/ksdiff")
+    }
+}
+
+public class ReportWithKdiff3: GenericDiffReporter {
+    public init() {
+        super.init(
+                programPath: "/Applications/kdiff3.app/Contents/MacOS/kdiff3",
+                arguments: { received, approved in
+                    [received, approved, "-m"]
+                }
+        )
     }
 }
 
