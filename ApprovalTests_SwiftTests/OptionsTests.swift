@@ -38,7 +38,7 @@ final class OptionsTests: XCTestCase {
     func testFileExtension() throws {
         var options = Options()
         XCTAssertEqual(options.forFile.fileExtensionWithDot, ".txt")
-        options = options.forFile.withExtension(".json")
+        options = options.forFile.with(extensionWithDot: ".json")
         XCTAssertEqual(options.forFile.fileExtensionWithDot, ".json")
         XCTAssertEqual(options.forFile.fileExtensionWithoutDot, "json")
     }

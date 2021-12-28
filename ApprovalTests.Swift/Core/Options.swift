@@ -21,7 +21,7 @@ private typealias OptionData = [OptionDataKey: Any]
  Options()
      .with(reporter: ReportWithKaleidoscope())
      .with(scrubber: ScrubDates())
-     .forFile.withExtension(".json")
+     .forFile.with(fileExtensionWithDot: ".json")
  ````
  
  By default, Options does:
@@ -90,7 +90,7 @@ public struct FileOptions {
         String(fileExtensionWithDot.dropFirst())
     }
 
-    public func withExtension(_ extensionWithDot: String) -> Options {
+    public func with(extensionWithDot: String) -> Options {
         Options(data, key: .fileExtension, value: extensionWithDot)
     }
 }

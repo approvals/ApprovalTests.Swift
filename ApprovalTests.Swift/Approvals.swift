@@ -67,7 +67,7 @@ public enum Approvals {
                                                   _ options: Options = Options(),
                                                   file: StaticString = #filePath,
                                                   line: UInt = #line) throws {
-        try verify(StringUtils.toJSON(object), options.forFile.withExtension(".json"), file: file, line: line)
+        try verify(StringUtils.toJSON(object), options.forFile.with(extensionWithDot: ".json"), file: file, line: line)
     }
 
     /**
