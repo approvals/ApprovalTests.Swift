@@ -8,6 +8,7 @@ import XCTest
  and also places it on the clipboard.
  */
 public class ReportContentsWithXCTest: EquatableFailureReporter {
+    public override init() {}
 
     public override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
         other is ReportContentsWithXCTest
