@@ -27,7 +27,7 @@ extension String {
         let matches = expression.matches(in: self, options: [], range: NSRange(startIndex ..< endIndex, in: self))
         guard matches.count > 0 else { return self }
         var splitStart = startIndex
-        return matches.map { (match) -> (String, [String]) in
+        return matches.map { match -> (String, [String]) in
                           let range = Range(match.range, in: self)!
                           let split = String(self[splitStart ..< range.lowerBound])
                           splitStart = range.upperBound

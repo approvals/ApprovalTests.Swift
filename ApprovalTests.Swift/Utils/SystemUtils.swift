@@ -15,7 +15,7 @@
             let pasteboard = NSPasteboard.general
             pasteboard.declareTypes([.string], owner: nil)
             let successful = pasteboard.setString(text, forType: .string)
-            if (!successful) {
+            if !successful {
                 print("pasteToClipboard not successful")
             }
         }
