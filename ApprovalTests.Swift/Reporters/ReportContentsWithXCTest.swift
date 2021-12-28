@@ -15,14 +15,14 @@ public class ReportContentsWithXCTest: EquatableFailureReporter {
 
     public override func report(received: String, approved: String) -> Bool {
         // read the files into strings
-        let approvedUrl = URL(fileURLWithPath: approved)
-        let receivedUrl = URL(fileURLWithPath: received)
+        let approvedURL = URL(fileURLWithPath: approved)
+        let receivedURL = URL(fileURLWithPath: received)
 
         var aText = ""
         var rText = ""
         do {
-            aText = try String(contentsOf: approvedUrl)
-            rText = try String(contentsOf: receivedUrl)
+            aText = try String(contentsOf: approvedURL)
+            rText = try String(contentsOf: receivedURL)
         } catch {
             print("Error in \(#function) for received \"\(received)\", approved \"\(approved)\": \(error)")
         }

@@ -18,9 +18,9 @@ public struct ApprovalTextWriter: ApprovalWriter {
     }
 
     public func writeReceivedFile(_ received: String) {
-        let fileUrl = URL(fileURLWithPath: received)
+        let fileURL = URL(fileURLWithPath: received)
         do {
-            try text.write(toFile: fileUrl.path, atomically: true, encoding: .utf8)
+            try text.write(toFile: fileURL.path, atomically: true, encoding: .utf8)
         } catch {
             print("Error in \(#function) for received \"\(received)\": \(error)")
         }

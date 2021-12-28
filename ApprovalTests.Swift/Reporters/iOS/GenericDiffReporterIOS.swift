@@ -14,11 +14,11 @@
             let process1 = "\(programPath) \(arguments2.joined(separator: " "))"
 
             let process = "#!/bin/bash\n\(process1)"
-            var fileUrl = URL(fileURLWithPath: received)
-            fileUrl.deleteLastPathComponent()
-            fileUrl = fileUrl.appendingPathComponent("command.sh")
+            var fileURL = URL(fileURLWithPath: received)
+            fileURL.deleteLastPathComponent()
+            fileURL = fileURL.appendingPathComponent("command.sh")
             do {
-                try process.write(toFile: fileUrl.path, atomically: true, encoding: .utf8)
+                try process.write(toFile: fileURL.path, atomically: true, encoding: .utf8)
             } catch {
                 print("An error occurred writing file:" + received)
                 print("Error: \(error)")
