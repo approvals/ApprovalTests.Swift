@@ -20,20 +20,6 @@ public class ReportMoveCommandToClipboard: EquatableFailureReporter {
     }
 
     public static func makeCommandLineMove(received: String, approved: String) -> String {
-        let workingReceived = ReportMoveCommandToClipboard.cleanPathString(received)
-        let workingApproved = ReportMoveCommandToClipboard.cleanPathString(approved)
-        return "mv \(workingReceived) \(workingApproved)"
-    }
-
-    private static func cleanPathString(_ pathString: String) -> String {
-        var workingPathString = pathString
-
-        let removedColons = workingPathString.replacingOccurrences(of: ":::", with: "")
-        workingPathString = removedColons
-
-        let escapedSpaces = workingPathString.replacingOccurrences(of: " ", with: "\\ ")
-        workingPathString = escapedSpaces
-
-        return workingPathString
+        "mv \"\(received)\" \"\(approved)\""
     }
 }

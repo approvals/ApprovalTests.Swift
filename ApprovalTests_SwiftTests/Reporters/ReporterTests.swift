@@ -39,12 +39,12 @@ final class ReporterTests: XCTestCase {
         func test_clipboardReporterOnIOS() throws {
             let reporter = ReportMoveCommandToClipboard()
 
-            let success = reporter.report(received: "r.text", approved: "a.text")
+            let success = reporter.report(received: "/path with spaces/r.text", approved: "/path with spaces/a.text")
 
             XCTAssertTrue(success)
             let pasteboard = UIPasteboard.general
             let command = pasteboard.string
-            XCTAssertEqual(command, "mv r.text a.text")
+            XCTAssertEqual(command, "mv \"/path with spaces/r.text\" \"/path with spaces/a.text\"")
         }
     #endif
 
@@ -52,12 +52,12 @@ final class ReporterTests: XCTestCase {
         func test_clipboardReporterOnMac() throws {
             let reporter = ReportMoveCommandToClipboard()
 
-            let success = reporter.report(received: "r.text", approved: "a.text")
+            let success = reporter.report(received: "/path with spaces/r.text", approved: "/path with spaces/a.text")
 
             XCTAssertTrue(success)
             let pasteboard = NSPasteboard.general
             let command = pasteboard.string(forType: .string)
-            XCTAssertEqual(command, "mv r.text a.text")
+            XCTAssertEqual(command, "mv \"/path with spaces/r.text\" \"/path with spaces/a.text\"")
         }
     #endif
         
