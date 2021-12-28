@@ -19,7 +19,7 @@ private typealias OptionData = [OptionDataKey: Any]
  copy. Example:
  ````
  Options()
-     .withReporter(ReportWithKaleidoscope())
+     .with(reporter: ReportWithKaleidoscope())
      .withScrubber(ScrubDates())
      .forFile.withExtension(".json")
  ````
@@ -58,7 +58,7 @@ public struct Options {
         data[.scrubber] as? Scrubber ?? ScrubNothing()
     }
 
-    public func withReporter(_ reporter: ApprovalFailureReporter) -> Options {
+    public func with(reporter: ApprovalFailureReporter) -> Options {
         Options(data, key: .reporter, value: reporter)
     }
 

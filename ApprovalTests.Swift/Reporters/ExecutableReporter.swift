@@ -42,6 +42,6 @@ public class ExecutableReporter: ApprovalFailureReporter {
     class func wrap(_ options: Options, _ query: ExecutableQuery) throws -> Options {
         let reporter = options.reporter
         let reporter2 = ExecutableReporter(reporter, query)
-        return options.withReporter(reporter2)
+        return options.with(reporter: reporter2)
     }
 }
