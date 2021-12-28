@@ -63,6 +63,7 @@
 		BB1701908E6AD828958295FF /* TestFailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17051531693F6FC252F7DF /* TestFailer.swift */; };
 		BB1702CC0E11C261EEA5D889 /* TestFailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17051531693F6FC252F7DF /* TestFailer.swift */; };
 		BB17030411282D1203B9BFF6 /* ReportWithDiffTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1701DBF0B6E0AD00A62DDD /* ReportWithDiffTool.swift */; };
+		BB170328E32BD1B280211D80 /* ReportByCallingScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1705B9C16FF40144A3AC52 /* ReportByCallingScript.swift */; };
 		BB1704AD2E598DDE7364EEEA /* NetUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170EF94A9CEE9D2A038041 /* NetUtils.swift */; };
 		BB1704E7E6A9EF2621DF755B /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170F2E5E36C79487539555 /* Options.swift */; };
 		BB17050D1CB42D26415F09D6 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170F2E5E36C79487539555 /* Options.swift */; };
@@ -88,6 +89,7 @@
 		BB170C2F89553360BB7D93DE /* TestSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17051DA6037ED58B6A29A3 /* TestSetup.swift */; };
 		BB170C6E8500DD54788F22AC /* ReportContentsWithXCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170EB6027F20F1764F9EF4 /* ReportContentsWithXCTest.swift */; };
 		BB170CAAE3C02DCE74BC4555 /* ScrubWithRegExWithReplacementAliasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170E5ED77EF744D7F2D311 /* ScrubWithRegExWithReplacementAliasing.swift */; };
+		BB170CC9A14AD34695481E74 /* ReportByCallingScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1705B9C16FF40144A3AC52 /* ReportByCallingScript.swift */; };
 		BB170CCEA1FCAC1D1490EB06 /* ScrubNothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1700D4E088787C48D2EA63 /* ScrubNothing.swift */; };
 		BB170D510FCEB3E5C338FCF0 /* GenericDiffReporterBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */; };
 		BB170DC9538E09528B1564BB /* ExecutableReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170C818D93ED50B092E659 /* ExecutableReporter.swift */; };
@@ -159,6 +161,7 @@
 		BB17051531693F6FC252F7DF /* TestFailer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFailer.swift; sourceTree = "<group>"; };
 		BB17051DA6037ED58B6A29A3 /* TestSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSetup.swift; sourceTree = "<group>"; };
 		BB17059F97E2ED858F9C9A2F /* FirstWorkingReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstWorkingReporter.swift; sourceTree = "<group>"; };
+		BB1705B9C16FF40144A3AC52 /* ReportByCallingScript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportByCallingScript.swift; sourceTree = "<group>"; };
 		BB1705F1B761A7E6263D8FFB /* GenericDiffReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDiffReporter.swift; sourceTree = "<group>"; };
 		BB1705F8B220353ECE8102B0 /* TestSetupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSetupTests.swift; sourceTree = "<group>"; };
 		BB17064685A20DAA7CFE6421 /* ReporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterTests.swift; sourceTree = "<group>"; };
@@ -374,6 +377,7 @@
 				BB170C818D93ED50B092E659 /* ExecutableReporter.swift */,
 				BB17059F97E2ED858F9C9A2F /* FirstWorkingReporter.swift */,
 				BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */,
+				BB1705B9C16FF40144A3AC52 /* ReportByCallingScript.swift */,
 				BB170EB6027F20F1764F9EF4 /* ReportContentsWithXCTest.swift */,
 				9730820AFFF03C5745F45021 /* ReporterFactory.swift */,
 				BB170BD5F95C651D0A332123 /* ReportMoveCommandToClipboard.swift */,
@@ -653,6 +657,7 @@
 				BB170F60FA4B4AE0DFE75605 /* ExecutableQuery.swift in Sources */,
 				BB1705210A44C7B2D8D4BCF0 /* NetUtils.swift in Sources */,
 				BB170DC9538E09528B1564BB /* ExecutableReporter.swift in Sources */,
+				BB170328E32BD1B280211D80 /* ReportByCallingScript.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +717,7 @@
 				BB170834EB534E8522C61F95 /* ExecutableQuery.swift in Sources */,
 				BB1704AD2E598DDE7364EEEA /* NetUtils.swift in Sources */,
 				BB170F90162446909479E0CB /* ExecutableReporter.swift in Sources */,
+				BB170CC9A14AD34695481E74 /* ReportByCallingScript.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
