@@ -35,6 +35,19 @@ final class ReporterTests: XCTestCase {
         XCTAssertEqual(reporter3.approved, "a.text")
     }
 
+    #if os(iOS)
+        func test_clipboardReporterOnIOS() throws {
+            let reporter = ReportMoveCommandToClipboard()
+
+            let success = reporter.report(received: "r.text", approved: "a.text")
+
+            XCTAssertTrue(success)
+            let pasteboard = UIPasteboard.general
+            let command = pasteboard.string
+            XCTAssertEqual(command, "mv r.text a.text")
+        }
+    #endif
+
     #if os(OSX)
         func test_clipboardReporterOnMac() throws {
             let reporter = ReportMoveCommandToClipboard()
