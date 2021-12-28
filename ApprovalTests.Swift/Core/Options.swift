@@ -20,7 +20,7 @@ private typealias OptionData = [OptionDataKey: Any]
  ````
  Options()
      .with(reporter: ReportWithKaleidoscope())
-     .withScrubber(ScrubDates())
+     .with(scrubber: ScrubDates())
      .forFile.withExtension(".json")
  ````
  
@@ -62,7 +62,7 @@ public struct Options {
         Options(data, key: .reporter, value: reporter)
     }
 
-    public func withScrubber(_ scrubber: Scrubber) -> Options {
+    public func with(scrubber: Scrubber) -> Options {
         Options(data, key: .scrubber, value: scrubber)
     }
 

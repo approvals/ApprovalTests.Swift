@@ -23,7 +23,7 @@ final class OptionsTests: XCTestCase {
     func test_optionsHasScrubbers() throws {
         let scrubber = ScrubDates()
         let o1 = Options(scrubber)
-        let o2 = Options().withScrubber(scrubber)
+        let o2 = Options().with(scrubber: scrubber)
         XCTAssertIdentical(o1.scrubber, scrubber)
         XCTAssertIdentical(o2.scrubber, scrubber)
     }
