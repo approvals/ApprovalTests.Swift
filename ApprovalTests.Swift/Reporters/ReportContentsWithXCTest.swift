@@ -1,5 +1,12 @@
 import XCTest
 
+/**
+ A reporter that outputs straight to XCTest.
+ 
+ In addition to reporting the change using a standard XCTest assertion, this reporter also creates a
+ command line `mv` command for approving the last failed test. It writes this command to the console
+ and also places it on the clipboard.
+ */
 public class ReportContentsWithXCTest: EquatableFailureReporter {
 
     public override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
