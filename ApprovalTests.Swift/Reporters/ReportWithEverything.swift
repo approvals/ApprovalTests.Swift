@@ -1,3 +1,7 @@
+/**
+ A composite reporter that goes through a list of reporters, running all that are available
+ on the current machine.
+ */
 public class ReportWithEverything: EquatableFailureReporter {
     private let reporters: [EquatableFailureReporter]
 
