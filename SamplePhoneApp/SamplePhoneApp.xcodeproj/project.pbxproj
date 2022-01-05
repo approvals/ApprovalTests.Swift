@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BB1704096CBED6A2D5F2005D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB17077369DAFB41E587E32F /* LaunchScreen.storyboard */; };
-		BB17055C652FE0303049A47F /* SamplePhoneAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170DAC77C2C6A7453C7504 /* SamplePhoneAppTests.swift */; };
+		BB17055C652FE0303049A47F /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170DAC77C2C6A7453C7504 /* ViewControllerTests.swift */; };
 		BB1708D2EA66D6B83E6101C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB170A15CA32D3B73E1143F8 /* Main.storyboard */; };
 		BB170A90F7BCDEC586382276 /* RollOutputsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1707BB060EB77A6ACF6718 /* RollOutputsView.swift */; };
 		BB170C5835B8F0D197E81261 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1709D2262295685249F804 /* AppDelegate.swift */; };
@@ -38,7 +38,7 @@
 		BB1709D2262295685249F804 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB170B1503C61E4481E948F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB170C1A2B69DA7CA6ADEFE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BB170DAC77C2C6A7453C7504 /* SamplePhoneAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePhoneAppTests.swift; sourceTree = "<group>"; };
+		BB170DAC77C2C6A7453C7504 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,7 @@
 		BB170A05D5AE82D8B0C0C289 /* SamplePhoneAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				BB170DAC77C2C6A7453C7504 /* SamplePhoneAppTests.swift */,
+				BB170DAC77C2C6A7453C7504 /* ViewControllerTests.swift */,
 			);
 			path = SamplePhoneAppTests;
 			sourceTree = "<group>";
@@ -191,7 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB17055C652FE0303049A47F /* SamplePhoneAppTests.swift in Sources */,
+				BB17055C652FE0303049A47F /* ViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,7 +4,7 @@ class ViewController: UIViewController {
     @IBOutlet private(set) var maxInputTextField: UITextField!
     @IBOutlet private(set) var rollOutputsView: RollOutputsView!
 
-    @IBAction private func roll() {
+    @IBAction func roll() {
         rollOutputsView.setRoll(getRandomNumber(max: getMax()))
     }
 
