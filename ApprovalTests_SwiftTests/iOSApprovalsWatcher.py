@@ -5,6 +5,16 @@ import stat
 import subprocess
 import sys
 
+class WatchedFile:
+    path = ''
+    date = datetime.datetime(2000,1,1)
+    
+    def __init__(self, path):
+        self.path = path
+ 
+    def __repr__ (self):
+        return 'WatchedFile(path=' + self.path + ', date=' + str(self.date) + ')'
+
 def monitor_file(file_name):
     date = datetime.datetime(2000,1,1)
     while (True):
@@ -19,8 +29,7 @@ def monitor_file(file_name):
 def watchlist(relative_path):
     absolute_path = os.path.abspath(relative_path)
     directories = directories_in(absolute_path)
-    date = datetime.datetime(2000,1,1)
-    return [(os.path.join(dir, 'command.sh'), date) for dir in directories]
+    return [WatchedFile(os.path.join(dir, 'command.sh')) for dir in directories]
 
 def directories_in(root):
     paths = []
