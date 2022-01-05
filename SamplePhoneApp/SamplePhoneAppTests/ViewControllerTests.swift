@@ -13,13 +13,13 @@ class ViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.rollOutputsView.rollResultLabel.text)
 
         let myView = sut.view!
-        UIGraphicsBeginImageContextWithOptions(myView.layer.frame.size, false, 3.0)
-        myView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let viewImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        if let data = viewImage.pngData() {
-            let filename = URL(fileURLWithPath: "/tmp/image.png")
-            try data.write(to: filename)
+        let traitCollection = UITraitCollection()
+        let rendererFormat = UIGraphicsImageRendererFormat(for: traitCollection)
+        let renderer = UIGraphicsImageRenderer(bounds: myView.bounds, format: rendererFormat)
+        let data = renderer.pngData { rendererContext in
+            myView.layer.render(in: rendererContext.cgContext)
         }
+        let fileURL = URL(fileURLWithPath: "/tmp/image.png")
+        try data.write(to: fileURL)
     }
 }
