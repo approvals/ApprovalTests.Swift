@@ -23,7 +23,7 @@ ReportWithTKDiff(),
 ReportWithVisualStudioCode(),
 ReportContentsWithXCTest()
 ```
-<sup><a href='/ApprovalTests.Swift/Reporters/ReportWithDiffTool.swift#L12-L22' title='Snippet source file'>snippet source</a> | <a href='#snippet-reporters' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/ApprovalTests.Swift/Reporters/ReportWithDiffTool.swift#L11-L21' title='Snippet source file'>snippet source</a> | <a href='#snippet-reporters' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ---
