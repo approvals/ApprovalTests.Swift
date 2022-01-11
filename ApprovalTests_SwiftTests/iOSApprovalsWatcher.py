@@ -14,17 +14,20 @@ class WatchedFile:
  
     def __repr__ (self):
         return 'WatchedFile(path=' + self.path + ', date=' + str(self.date) + ')'
+    
+    def monitor(self):
+        if os.path.exists(self.path):
+            current_date = datetime.datetime.fromtimestamp(os.stat(self.path).st_mtime)
+            if self.date < current_date:
+                self.date = current_date
+                print(self)
+                os.chmod(self.path, os.stat(self.path).st_mode | stat.S_IEXEC) 
+                subprocess.Popen("./" + self.path)
 
 def monitor_file(file_name):
-    date = datetime.datetime(2000,1,1)
+    watched_file = WatchedFile(file_name)
     while (True):
-        if os.path.exists(file_name):
-            current_date = datetime.datetime.fromtimestamp(os.stat(file_name).st_mtime)
-            if date < current_date:
-                print("date: " + str(current_date))
-                date = current_date
-                os.chmod(file_name, os.stat(file_name).st_mode | stat.S_IEXEC) 
-                subprocess.Popen("./" + file_name)
+        watched_file.monitor()
 
 def watchlist(relative_path):
     absolute_path = os.path.abspath(relative_path)
@@ -41,6 +44,6 @@ def directories_in(root):
     return paths
 
 if __name__ == "__main__":
-    relative_path = sys.argv[1]
-    print(watchlist(relative_path))
-#    monitor_file("command.sh")
+#    relative_path = sys.argv[1]
+#    print(watchlist(relative_path))
+    monitor_file("command.sh")
