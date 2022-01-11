@@ -1,6 +1,5 @@
 /**
- A composite reporter that goes through a list of reporters, running the first one that is available
- on the current machine.
+ A composite reporter that goes through a list of reporters, running the first one that is available on the current machine.
  */
 public class FirstWorkingReporter: EquatableFailureReporter {
     private let reporters: [EquatableFailureReporter]

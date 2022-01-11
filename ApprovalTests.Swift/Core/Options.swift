@@ -12,11 +12,9 @@ private typealias OptionData = [OptionDataKey: Any]
  Every `verify()` call takes Options as an optional parameter.
  - **Reporters** launch diff tools upon failure.
  - **Scrubbers** clean output to help remove inconsistent pieces of text, such as dates.
- - **File Options** customizes the `.approved` and `.received` files. For now, it just controls the
-    file extension.
+ - **File Options** customizes the `.approved` and `.received` files. For now, it just controls the file extension.
  
- Options is a fluent interface, allowing you to chain them together. Each returned object is a new
- copy. Example:
+ Options is a fluent interface, allowing you to chain them together. Each returned object is a new copy. Example:
  ````
  Options()
      .with(reporter: ReportWithKaleidoscope())

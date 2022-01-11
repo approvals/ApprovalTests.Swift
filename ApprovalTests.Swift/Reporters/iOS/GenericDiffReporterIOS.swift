@@ -5,8 +5,7 @@
     /**
      A reporter that launches an external diff tool.
      
-     For iOS, run ApprovalTests_SwiftTests/iOSApprovalsWatcher.py to have your Mac watch for
-     received files and launch the diff tool.
+     For iOS, run ApprovalTests_SwiftTests/iOSApprovalsWatcher.py to have your Mac watch for received files and launch the diff tool.
      */
     public class GenericDiffReporter: GenericDiffReporterBase {
         public override func runProcess(received: String, approved: String) throws {

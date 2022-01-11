@@ -60,8 +60,7 @@ public enum Approvals {
     /**
      Verifies an object as converted to JSON.
      
-     Use this to verify anything that is `Encodable`. A handy way to verify a composite object is to
-     declare it (and its properties) as `Encodable` from within your test code using extensions.
+     Use this to verify anything that is `Encodable`. A handy way to verify a composite object is to declare it (and its properties) as `Encodable` from within your test code using extensions.
      */
     public static func verifyAsJSON<T: Encodable>(_ object: T,
                                                   _ options: Options = Options(),
@@ -73,13 +72,9 @@ public enum Approvals {
     /**
      Verifies a query that crosses an architectural boundary.
      
-     What is a such a query? It can be a network call, or any other slow or expensive operation that
-     you don't want in fast-running unit tests.
+     What is a such a query? It can be a network call, or any other slow or expensive operation that you don't want in fast-running unit tests.
      
-     Make your query conform to `ExecutableQuery` from within your test code. Then verify will use a
-     special reporter that verifies the request expressed as a string by `getQuery()`. If the query
-     has changed, then it is also executed with `executeQuery(_:)`. This gives you a chance to
-     examine the response so that you can decide whether to approve the new query.
+     Make your query conform to `ExecutableQuery` from within your test code. Then verify will use a special reporter that verifies the request expressed as a string by `getQuery()`. If the query has changed, then it is also executed with `executeQuery(_:)`. This gives you a chance to examine the response so that you can decide whether to approve the new query.
      */
     public static func verify(_ query: ExecutableQuery,
                               _ options: Options = Options(),
@@ -94,8 +89,7 @@ public enum Approvals {
      - Parameters:
        - initial: Starting point. 
        - numberOfFrames: Number of frames to generate after the initial starting point.
-       - getNextFrame: Generates next frame. The closure takes the frame index as an argument, which
-                       you are free to use or ignore.
+       - getNextFrame: Generates next frame. The closure takes the frame index as an argument, which you are free to use or ignore.
        - options: Optional verification options.
      */
     public static func verifySequence<T>(_ initial: T,

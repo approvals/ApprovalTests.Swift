@@ -1,8 +1,7 @@
 import Foundation
 
 /**
- A reporter that creates a command line `mv` command for approving the last failed test, and places
- it on the clipboard.
+ A reporter that creates a command line `mv` command for approving the last failed test, and places it on the clipboard.
  
  This will overwrite the previous clipboard contents.
  */

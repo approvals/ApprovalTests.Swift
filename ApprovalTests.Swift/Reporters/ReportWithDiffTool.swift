@@ -1,6 +1,5 @@
 /**
- ReportWithDiffTool goes through a chain of possible diffing tools to find the first one installed
- on your system.
+ ReportWithDiffTool goes through a chain of possible diffing tools to find the first one installed on your system.
  
  If none are found, it falls back to writing the diffs to XCTest.
  
