@@ -20,14 +20,13 @@ class WatchedFile:
             current_date = datetime.datetime.fromtimestamp(os.stat(self.path).st_mtime)
             if self.date < current_date:
                 self.date = current_date
-                print(self)
                 os.chmod(self.path, os.stat(self.path).st_mode | stat.S_IEXEC) 
-                subprocess.Popen("./" + self.path)
+                subprocess.Popen(self.path)
 
-def monitor_file(file_name):
-    watched_file = WatchedFile(file_name)
+def monitor_files(files):
+    print files[0]
     while (True):
-        watched_file.monitor()
+        files[0].monitor()
 
 def watchlist(relative_path, search_for):
     absolute_path = os.path.abspath(relative_path)
@@ -44,6 +43,6 @@ def directories_in(root):
     return paths
 
 if __name__ == "__main__":
-#    relative_path = sys.argv[1]
-#    print(watchlist(relative_path, 'command.sh'))
-    monitor_file("command.sh")
+    relative_path = sys.argv[1]
+    watched_files = watchlist(relative_path, 'command.sh')
+    monitor_files(watched_files)
