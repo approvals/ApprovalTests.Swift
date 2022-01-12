@@ -29,13 +29,13 @@ def monitor_file(file_name):
     while (True):
         watched_file.monitor()
 
-def watchlist(relative_path):
+def watchlist(relative_path, search_for):
     absolute_path = os.path.abspath(relative_path)
     directories = directories_in(absolute_path)
-    return [WatchedFile(os.path.join(dir, 'command.sh')) for dir in directories]
+    return [WatchedFile(os.path.join(dir, search_for)) for dir in directories]
 
 def directories_in(root):
-    paths = []
+    paths = [root]
     for file in os.listdir(root):
         path = os.path.join(root, file)
         if os.path.isdir(path):
@@ -45,5 +45,5 @@ def directories_in(root):
 
 if __name__ == "__main__":
 #    relative_path = sys.argv[1]
-#    print(watchlist(relative_path))
+#    print(watchlist(relative_path, 'command.sh'))
     monitor_file("command.sh")
