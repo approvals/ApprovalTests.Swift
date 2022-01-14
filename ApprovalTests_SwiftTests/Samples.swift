@@ -5,7 +5,7 @@
 #endif
 import XCTest
 
-private class Samples: XCTestCase {
+final class Samples: XCTestCase {
     func testString() throws {
         var s = "Approval"
         s += "Tests"
@@ -14,7 +14,7 @@ private class Samples: XCTestCase {
 
     func testObject() throws {
         let myObject = MyClass()
-        try Approvals.verify(String(describing: myObject))
+        try Approvals.verify(myObject)
     }
 
     func testArray() throws {
@@ -25,8 +25,8 @@ private class Samples: XCTestCase {
     }
 }
 
-class MyClass: CustomStringConvertible {
-    var val = "ApprovalTests"
+private class MyClass: CustomStringConvertible {
+    var value = "ApprovalTests"
 
-    var description: String { "MyClass: \(val)" }
+    var description: String { value }
 }
