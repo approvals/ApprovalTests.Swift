@@ -136,6 +136,7 @@
 		168C962D216023F9008F354C /* ApprovalTests_SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApprovalTests_SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		168C9632216023F9008F354C /* ApprovalTests_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalTests_SwiftTests.swift; sourceTree = "<group>"; };
 		168C9634216023F9008F354C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		489094C2279132C000DC7E60 /* iOSApprovalsWatcher.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = iOSApprovalsWatcher.py; sourceTree = "<group>"; };
 		48B6BFF42629519600B956A4 /* XcodeWarnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = XcodeWarnings.xcconfig; sourceTree = "<group>"; };
 		9730820AFFF03C5745F45021 /* ReporterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterFactory.swift; sourceTree = "<group>"; };
 		9730821C2686EF2FBA95FAEE /* CombinationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinationTests.swift; sourceTree = "<group>"; };
@@ -165,7 +166,6 @@
 		BB1705F1B761A7E6263D8FFB /* GenericDiffReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDiffReporter.swift; sourceTree = "<group>"; };
 		BB1705F8B220353ECE8102B0 /* TestSetupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSetupTests.swift; sourceTree = "<group>"; };
 		BB17064685A20DAA7CFE6421 /* ReporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterTests.swift; sourceTree = "<group>"; };
-		BB1706F98B5163B28C84D8D5 /* iOSApprovalsWatcher.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = iOSApprovalsWatcher.py; sourceTree = "<group>"; };
 		BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDiffReporterBase.swift; sourceTree = "<group>"; };
 		BB170A69DD1A71C2E2A023E7 /* SystemUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemUtils.swift; sourceTree = "<group>"; };
 		BB170ABF2255D4F0B1D59D15 /* ReportWithEverything.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportWithEverything.swift; sourceTree = "<group>"; };
@@ -269,8 +269,9 @@
 				168C9631216023F9008F354C /* ApprovalTests_SwiftTests */,
 				163E184A217F827400A54A48 /* ApprovalTests_iOS */,
 				163E1855217F827400A54A48 /* ApprovalTests_iOSTests */,
-				168C9625216023F9008F354C /* Products */,
 				1637CE7A2164633700994238 /* Frameworks */,
+				489094C2279132C000DC7E60 /* iOSApprovalsWatcher.py */,
+				168C9625216023F9008F354C /* Products */,
 				48B6BFF42629519600B956A4 /* XcodeWarnings.xcconfig */,
 			);
 			sourceTree = "<group>";
@@ -308,7 +309,6 @@
 			isa = PBXGroup;
 			children = (
 				168C9634216023F9008F354C /* Info.plist */,
-				BB1706F98B5163B28C84D8D5 /* iOSApprovalsWatcher.py */,
 				97308D241492E13CB5BF5866 /* ApprovalsTests.swift */,
 				168C9632216023F9008F354C /* ApprovalTests_SwiftTests.swift */,
 				BB170DC8AAB0910AD476210C /* OptionsTests.swift */,
