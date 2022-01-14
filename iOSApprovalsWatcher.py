@@ -16,7 +16,7 @@ class WatchedFile:
         self.path = path
  
     def __repr__(self):
-        return 'WatchedFile(path=' + self.path + ', date=' + str(self.date) + ')'
+        return str(self.date) + ' ' + self.path 
     
     def monitor(self):
         if os.path.exists(self.path):
