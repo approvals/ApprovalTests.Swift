@@ -16,8 +16,12 @@ class WatchedFile:
         self.path = path
  
     def __repr__(self):
-        return str(self.date) + ' ' + self.path 
-    
+        return str(self.date) + ' ' + self.path
+
+    def remove(self):
+        if os.path.exists(self.path):
+            os.remove(self.path)
+
     def monitor(self):
         if os.path.exists(self.path):
             current_date = datetime.datetime.fromtimestamp(os.stat(self.path).st_mtime)
@@ -33,6 +37,11 @@ def monitor_files(files):
         time.sleep(0.5)
         for watched_file in files:
             watched_file.monitor()
+
+
+def remove(files):
+    for watched_file in files:
+        watched_file.remove()
 
 
 def directories_in(root):
@@ -60,4 +69,5 @@ def parse_arguments():
 if __name__ == '__main__':
     args = parse_arguments()
     watched_files = watchlist(args.test_directory, 'command.sh')
+    remove(watched_files)
     monitor_files(watched_files)
