@@ -1,4 +1,5 @@
 #! /usr/bin/env python
+import argparse
 import datetime
 import os
 import stat
@@ -49,6 +50,8 @@ def watchlist(relative_path, search_for):
 
 
 if __name__ == "__main__":
-    path_to_watch = sys.argv[1]
-    watched_files = watchlist(path_to_watch, 'command.sh')
+    parser = argparse.ArgumentParser(description='Watch for iOS approvals.')
+    parser.add_argument('test_directory', type=str, help='Path to test directory')
+    args = parser.parse_args()
+    watched_files = watchlist(args.test_directory, 'command.sh')
     monitor_files(watched_files)
