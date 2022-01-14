@@ -51,9 +51,13 @@ def watchlist(relative_path, search_for):
     return [WatchedFile(os.path.join(directory, search_for)) for directory in directories]
 
 
-if __name__ == "__main__":
+def parse_arguments():
     parser = argparse.ArgumentParser(description='Watch for iOS approvals.')
     parser.add_argument('test_directory', type=str, help='Path to test directory')
-    args = parser.parse_args()
+    return parser.parse_args()
+
+
+if __name__ == "__main__":
+    args = parse_arguments()
     watched_files = watchlist(args.test_directory, 'command.sh')
     monitor_files(watched_files)
