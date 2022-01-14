@@ -28,8 +28,8 @@ class WatchedFile:
 
 def monitor_files(files):
     while True:
-        for file in files:
-            file.monitor()
+        for watched_file in files:
+            watched_file.monitor()
 
 
 def directories_in(root):
