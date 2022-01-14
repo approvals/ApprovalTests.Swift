@@ -53,7 +53,7 @@ class MetMuseumPieceLoader: ExecutableQuery {
     }
 }
 
-private struct MyRect: Codable {
+private struct MyRect: Encodable {
     let x: Int
     let y: Int
     let width: Int
