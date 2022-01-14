@@ -20,15 +20,16 @@ class WatchedFile:
         if os.path.exists(self.path):
             current_date = datetime.datetime.fromtimestamp(os.stat(self.path).st_mtime)
             if self.date < current_date:
-                print(self)
                 self.date = current_date
+                print(self)
                 os.chmod(self.path, os.stat(self.path).st_mode | stat.S_IEXEC) 
                 subprocess.Popen(self.path)
 
 
 def monitor_files(files):
     while True:
-        files[0].monitor()
+        for file in files:
+            file.monitor()
 
 
 def directories_in(root):
