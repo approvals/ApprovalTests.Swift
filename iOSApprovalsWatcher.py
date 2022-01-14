@@ -5,6 +5,7 @@ import os
 import stat
 import subprocess
 import sys
+import time
 
 
 class WatchedFile:
@@ -29,6 +30,7 @@ class WatchedFile:
 
 def monitor_files(files):
     while True:
+        time.sleep(0.5)
         for watched_file in files:
             watched_file.monitor()
 
