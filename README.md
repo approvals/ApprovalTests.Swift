@@ -5,7 +5,7 @@
 [![Swift Package Index Platform Compatibility](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fapprovals%2FApprovalTests.Swift%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/approvals/ApprovalTests.Swift)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-Approval Tests are an alternative to assertions. They are great for testing objects with complex values (such as long strings), lots of properties, or collections of objects.
+Approval Tests are an alternative to assertions. You will find them useful for testing objects with complex values (such as long strings), lots of properties, or collections of objects.
 
 ApprovalsTest Swift is compatible with the XCTest testing framework.
 
@@ -41,7 +41,7 @@ You can watch a bunch of short videos on getting started and [using ApprovalTest
 
 ## Podcasts
 
-If you prefer auditory learning, you might enjoy the following podcasts:
+Prefer learning by listening? Then you might enjoy the following podcasts:
 
 - [This Agile Life](http://www.thisagilelife.com/46/)
 - [Hanselminutes](http://www.hanselminutes.com/360/approval-tests-with-llewellyn-falco)
@@ -55,7 +55,7 @@ If you prefer auditory learning, you might enjoy the following podcasts:
 
 See an example [package manifest](https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/blob/main/Package.swift#L17-L22) here
 
-Get the following dependency
+Get the following dependency:
 
 <!-- snippet: package_include_approvals -->
 <a id='snippet-package_include_approvals'></a>
@@ -71,7 +71,7 @@ dependencies: [
 <sup><a href='#snippet-package_include_approvals' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
-And then add it to your test target
+Then add it to your test target:
 
 <!-- snippet: package_add_test_target -->
 <a id='snippet-package_add_test_target'></a>
@@ -93,7 +93,7 @@ Add the following to your Cartfile:
     github "approvals/ApprovalTests.Swift" "HEAD"
 
 Then drag the the built framework from the appropriate Carthage/Build directory into your project,
-but with "Copy items into destination group's folder" disabled.
+but with “Copy items into destination group’s folder” disabled.
 
 
 ## Examples
@@ -112,7 +112,7 @@ class SampleArrayTests: XCTestCase {
 <sup><a href='/ApprovalTests_SwiftTests/Demo/SampleArrayTests.swift#L8-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample_test' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
-will produce a file `SampleArrayTests.testList.received.txt`:
+This test will produce a file `SampleArrayTests.testList.received.txt`:
 
 <!-- snippet: SampleArrayTests.testList.approved.txt -->
 <a id='snippet-SampleArrayTests.testList.approved.txt'></a>
