@@ -7,7 +7,7 @@
 
 Approval Tests are an alternative to assertions. You will find them useful for testing objects with complex values (such as long strings), lots of properties, or collections of objects.
 
-ApprovalsTest Swift is compatible with the XCTest testing framework.
+ApprovalTests.Swift is compatible with the XCTest testing framework.
 
 <!-- toc -->
 ## Contents
@@ -23,6 +23,54 @@ ApprovalsTest Swift is compatible with the XCTest testing framework.
   * [Approved File Artifacts](#approved-file-artifacts)
   * [Questions?](#questions)<!-- endToc -->
 
+
+## My First Approval Test
+
+We'll start by writing a simple unit test to verify a list of names. But instead of using XCTest's `XCTAssertEqual()` function, we'll use `Approvals.verifyAll()`:
+
+<!-- snippet: sample_test -->
+<a id='snippet-sample_test'></a>
+```swift
+class SampleArrayTests: XCTestCase {
+
+    func testList() throws {
+        var names = ["Llewellyn", "James", "Dan", "Jason", "Katrina"]
+        names.sort()
+        try Approvals.verifyAll(names)
+    }
+```
+<sup><a href='/ApprovalTests_SwiftTests/Demo/SampleArrayTests.swift#L8-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample_test' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+The `verifyAll()` function performs a test assertion for a list of items. Unlike a normal assertion, it doesn’t specify an expected list. Instead, this will produce a “received” file matching the name of your test suite and test case. In this example, it will write a file `SampleArrayTests.testList.received.txt`:
+
+<!-- snippet: SampleArrayTests.testList.approved.txt -->
+<a id='snippet-SampleArrayTests.testList.approved.txt'></a>
+```txt
+[0] = Dan
+[1] = James
+[2] = Jason
+[3] = Katrina
+[4] = Llewellyn
+```
+<sup><a href='/ApprovalTests_SwiftTests/Demo/SampleArrayTests.testList.approved.txt#L1-L5' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleArrayTests.testList.approved.txt' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+It also opens two files in a diff editor—the “received” file, and the “approved” file.
+
+![Results shown in diff editor](FirstTestResult.png)
+
+To approve the results, tell the diff editor to apply changes from the left side to the right side:
+
+![Results copied from received to approved](FirstTestApproved.png)
+
+Most of the time, you will use one of the ![supported diff tools](docs/reference/reporters.md) to examine and approve the result.
+
+Alternatively, you can rename the received file to `SampleArrayTests.testList.approved.txt` and the test will now pass.
+
+Simply rename this to SampleTest.testList.approved.txt, and the test will now pass.
+
+**Note:** ApprovalTests doesn’t open diff tools when tests pass. It only opens them on failure.
 
 ## Getting Started
 
@@ -94,39 +142,6 @@ Add the following to your Cartfile:
 
 Then drag the the built framework from the appropriate Carthage/Build directory into your project,
 but with “Copy items into destination group’s folder” disabled.
-
-
-## Examples
-
-<!-- snippet: sample_test -->
-<a id='snippet-sample_test'></a>
-```swift
-class SampleArrayTests: XCTestCase {
-
-    func testList() throws {
-        var names = ["Llewellyn", "James", "Dan", "Jason", "Katrina"]
-        names.sort()
-        try Approvals.verifyAll(names)
-    }
-```
-<sup><a href='/ApprovalTests_SwiftTests/Demo/SampleArrayTests.swift#L8-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample_test' title='Start of snippet'>anchor</a></sup>
-<!-- endSnippet -->
-
-This test will produce a file `SampleArrayTests.testList.received.txt`:
-
-<!-- snippet: SampleArrayTests.testList.approved.txt -->
-<a id='snippet-SampleArrayTests.testList.approved.txt'></a>
-```txt
-[0] = Dan
-[1] = James
-[2] = Jason
-[3] = Katrina
-[4] = Llewellyn
-```
-<sup><a href='/ApprovalTests_SwiftTests/Demo/SampleArrayTests.testList.approved.txt#L1-L5' title='Snippet source file'>snippet source</a> | <a href='#snippet-SampleArrayTests.testList.approved.txt' title='Start of snippet'>anchor</a></sup>
-<!-- endSnippet -->
-
-Simply rename this to SampleTest.testList.approved.txt, and the test will now pass.
 
 
 ## Approved File Artifacts
