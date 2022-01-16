@@ -13,6 +13,7 @@ ApprovalTests.Swift is compatible with the XCTest testing framework.
 ## Contents
 
   * [My First Approval Test](#my-first-approval-test)
+  * [Predefined Verifiers](#predefined-verifiers)
   * [Getting Started](#getting-started)
   * [Video Tutorials](#video-tutorials)
   * [Documentation](#documentation)
