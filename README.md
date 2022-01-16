@@ -26,7 +26,7 @@ ApprovalTests.Swift is compatible with the XCTest testing framework.
 
 ## My First Approval Test
 
-We'll start by writing a simple unit test to verify a list of names. But instead of using XCTest's `XCTAssertEqual()` function, we'll use `Approvals.verifyAll()`:
+We'll start by writing a simple unit test to verify a list of names. But instead of using XCTest's `XCTAssertEqual` function, we'll use `Approvals.verifyAll`:
 
 <!-- snippet: sample_test -->
 <a id='snippet-sample_test'></a>
@@ -64,13 +64,19 @@ To approve the results, tell the diff editor to apply changes from the left side
 
 ![Results copied from received to approved](FirstTestApproved.png)
 
-Most of the time, you will use one of the ![supported diff tools](docs/reference/reporters.md) to examine and approve the result.
+Most of the time, you will use one of the [supported diff tools](docs/reference/reporters.md) to examine and approve the result. If you don’t have any of these diff tools, you can rename the received file to `SampleArrayTests.testList.approved.txt` and the test will now pass.
 
-Alternatively, you can rename the received file to `SampleArrayTests.testList.approved.txt` and the test will now pass.
 
-Simply rename this to SampleTest.testList.approved.txt, and the test will now pass.
+## Predefined Verifiers
 
-**Note:** ApprovalTests doesn’t open diff tools when tests pass. It only opens them on failure.
+ApprovalTests.Swift comes with useful verifiers:
+
+- `Approvals.verify` — verify object or dictionary
+- `Approvals.verifyAll` — verify array of items
+- `Approvals.verifyAsJSON` — verify Encodable object converted to JSON
+- `Approvals.verifyQuery` — verify query, also showing query results on failure
+- `Approvals.verifySequence` — verify sequence of changing values
+
 
 ## Getting Started
 
