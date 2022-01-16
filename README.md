@@ -12,6 +12,7 @@ ApprovalTests.Swift is compatible with the XCTest testing framework.
 <!-- toc -->
 ## Contents
 
+  * [My First Approval Test](#my-first-approval-test)
   * [Getting Started](#getting-started)
   * [Video Tutorials](#video-tutorials)
   * [Documentation](#documentation)
@@ -19,7 +20,6 @@ ApprovalTests.Swift is compatible with the XCTest testing framework.
   * [How to Get It](#how-to-get-it)
     * [Swift Package Manager](#swift-package-manager)
     * [Carthage](#carthage)
-  * [Examples](#examples)
   * [Approved File Artifacts](#approved-file-artifacts)
   * [Questions?](#questions)<!-- endToc -->
 
