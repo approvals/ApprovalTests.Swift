@@ -30,7 +30,7 @@ final class ApprovalsTests: XCTestCase {
     }
 
     func testExecutableQuery() throws {
-        try Approvals.verify(MetMuseumPieceLoader(45734))
+        try Approvals.verifyQuery(MetMuseumPieceLoader(45734))
     }
 }
 
