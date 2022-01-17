@@ -115,7 +115,7 @@ dependencies: [
     .package(
         name: "ApprovalTests.Swift",
         url: "https://github.com/approvals/ApprovalTests.Swift",
-        .branch("master")
+        from: "1.0.0"
         ),
 ],
 ```
