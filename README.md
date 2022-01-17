@@ -83,7 +83,7 @@ ApprovalTests.Swift comes with useful verifiers:
 
 ## How to Use with iOS
 
-ApprovalTests.Swift runs out-of-the-box for macOS tests. But for iOS tests, you need a separate process running on your Mac to watch for diffs. Run `iOSApprovalsWatcher.py` from your command line, giving it the path to your test directory.
+ApprovalTests.Swift runs out-of-the-box for macOS tests. But for iOS tests, you need a separate process running on your Mac to watch for diffs. Run [iOSApprovalsWatcher.py](https://github.com/approvals/ApprovalTests.Swift/blob/master/iOSApprovalsWatcher.py) from your command line, giving it the path to your test directory.
 
 
 ## Which File Artifacts to Exclude from Source Control
