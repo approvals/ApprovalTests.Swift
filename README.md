@@ -95,10 +95,6 @@ If you have iOS tests, you should also add `command.sh` to your `.gitignore`. (T
 
 ## How to Get It
 
-### macOS Starter Project
-
-The [macOS starter project](https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs) is a quick way to set up a new project on GitHub. Just click the “Use This Template” button.
-
 ### Swift Package Manager
 
 See an example [package manifest](https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/blob/main/Package.swift#L17-L22) here
@@ -143,11 +139,22 @@ Add the following to your Cartfile:
 Then drag the the built framework from the appropriate Carthage/Build directory into your project,
 but with “Copy items into destination group’s folder” disabled.
 
+### macOS Starter Project
+
+The [macOS starter project](https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs) is a quick way to set up a new project on GitHub. Just click the “Use this template” button.
+
+It comes ready with:
+
+- A Swift package definition adding ApprovalTests.Swift to the test target
+- A suitable `.gitignore`
+- A GitHub action to build and run tests
+- A build status badge
+
 ## For More Information
 
 ### Questions?
 
-Ask [@LlewellynFalco](https://twitter.com/llewellynfalco) or [qcoding](https://twitter.com/qcoding) on Twitter.
+Ask [@LlewellynFalco](https://twitter.com/llewellynfalco) or [@qcoding](https://twitter.com/qcoding) on Twitter.
 
 ### Video Tutorials
 
