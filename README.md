@@ -91,32 +91,11 @@ You must add any “approved” files to your source control system. But “rece
 If you have iOS tests, you should also add `command.sh` to your `.gitignore`. (They are scripts written by the iOS side for the file monitor to execute from the macOS side.)
 
 
-## Getting Started
-
-Clone the [macOS starter project](https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs)
-
-
-## Video Tutorials
-
-You can watch a bunch of short videos on getting started and [using ApprovalTests in .Net](http://www.youtube.com/playlist?list=PL0C32F89E8BBB5368) at YouTube.
-
-
-## Documentation
-
-[Find the documentation here](./docs/README.md)
-
-
-## Podcasts
-
-Prefer learning by listening? Then you might enjoy the following podcasts:
-
-- [This Agile Life](http://www.thisagilelife.com/46/)
-- [Hanselminutes](http://www.hanselminutes.com/360/approval-tests-with-llewellyn-falco)
-- [Herding Code](http://www.developerfusion.com/media/122649/herding-code-117-llewellyn-falcon-on-approval-tests/)
-- [The Watir Podcast](http://watirpodcast.com/podcast-53/)
-
-
 ## How to Get It
+
+### macOS Starter Project
+
+The [macOS starter project](https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs) is a quick way to set up a new project on GitHub. Just click the “Use This Template” button.
 
 ### Swift Package Manager
 
@@ -162,7 +141,25 @@ Add the following to your Cartfile:
 Then drag the the built framework from the appropriate Carthage/Build directory into your project,
 but with “Copy items into destination group’s folder” disabled.
 
+## For More Information
 
-## Questions?
+### Questions?
 
-Ask on Twitter: [@LlewellynFalco](https://twitter.com/llewellynfalco) or #ApprovalTests
+Ask [@LlewellynFalco](https://twitter.com/llewellynfalco) or [qcoding](https://twitter.com/qcoding) on Twitter.
+
+### Video Tutorials
+
+You can watch [a series of short videos about using ApprovalTests in .Net](http://www.youtube.com/playlist?list=PL0C32F89E8BBB5368) on YouTube.
+
+### Documentation
+
+[Find extra documentation here](./docs/README.md).
+
+### Podcasts
+
+Prefer learning by listening? Then you might enjoy the following podcasts:
+
+- [This Agile Life](http://www.thisagilelife.com/46/)
+- [Hanselminutes](http://www.hanselminutes.com/360/approval-tests-with-llewellyn-falco)
+- [Herding Code](http://www.developerfusion.com/media/122649/herding-code-117-llewellyn-falcon-on-approval-tests/)
+- [The Watir Podcast](http://watirpodcast.com/podcast-53/)
