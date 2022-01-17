@@ -92,6 +92,13 @@ You must add any “approved” files to your source control system. But “rece
 
 If you have iOS tests, you should also add `command.sh` to your `.gitignore`. (They are scripts written by the iOS side for the file monitor to execute from the macOS side.)
 
+So for iOS testing, make sure to exclude:
+
+```
+*.received.*
+command.sh
+```
+
 
 ## How to Get It
 
