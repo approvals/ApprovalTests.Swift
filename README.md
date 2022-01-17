@@ -5,7 +5,7 @@
 [![Swift Package Index Platform Compatibility](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fapprovals%2FApprovalTests.Swift%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/approvals/ApprovalTests.Swift)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-Approval Tests are an alternative to assertions. You will find them useful for testing objects with complex values (such as long strings), lots of properties, or collections of objects.
+Approval Tests are an alternative to assertions. You’ll find them useful for testing objects with complex values (such as long strings), lots of properties, or collections of objects.
 
 ApprovalTests.Swift is compatible with the XCTest testing framework.
 
@@ -67,7 +67,7 @@ To approve the results, tell the diff editor to apply changes from the left side
 
 ![Results copied from received to approved](FirstTestApproved.png)
 
-Most of the time, you will use one of the [supported diff tools](docs/reference/reporters.md#supported-diff-tools) to examine and approve the result. If you don’t have any of these diff tools, you can rename the received file to `SampleArrayTests.testList.approved.txt` and the test will now pass.
+Most of the time, you’ll use one of the [supported diff tools](docs/reference/reporters.md#supported-diff-tools) to examine and approve the result. If you don’t have any of these diff tools, you can rename the received file to `SampleArrayTests.testList.approved.txt` and the test will now pass.
 
 
 ## Predefined Verifiers
@@ -88,7 +88,7 @@ ApprovalTests.Swift runs out-of-the-box for macOS tests. But for iOS tests, you 
 
 ## Which File Artifacts to Exclude from Source Control
 
-You must add any “approved” files to your source control system. But “received” files can change with any run and should be ignored.  For Git, add `*.received.*` to your `.gitignore`.
+You must add any “approved” files to your source control system. But “received” files can change with any run and should be ignored. For Git, add `*.received.*` to your `.gitignore`.
 
 If you have iOS tests, you should also add `command.sh` to your `.gitignore`. (They are scripts written by the iOS side for the file monitor to execute from the macOS side.)
 
@@ -154,7 +154,7 @@ It comes ready with:
 
 ### Questions?
 
-Ask [@LlewellynFalco](https://twitter.com/llewellynfalco) or [@qcoding](https://twitter.com/qcoding) on Twitter.
+Ask Llewellyn Falco [@LlewellynFalco](https://twitter.com/llewellynfalco) or Jon Reid [@qcoding](https://twitter.com/qcoding) on Twitter.
 
 ### Video Tutorials
 
