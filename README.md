@@ -65,7 +65,7 @@ To approve the results, tell the diff editor to apply changes from the left side
 
 ![Results copied from received to approved](FirstTestApproved.png)
 
-Most of the time, you will use one of the [supported diff tools](docs/reference/reporters.md) to examine and approve the result. If you don’t have any of these diff tools, you can rename the received file to `SampleArrayTests.testList.approved.txt` and the test will now pass.
+Most of the time, you will use one of the [supported diff tools](docs/reference/reporters.md#supported-diff-tools) to examine and approve the result. If you don’t have any of these diff tools, you can rename the received file to `SampleArrayTests.testList.approved.txt` and the test will now pass.
 
 
 ## Predefined Verifiers
@@ -77,6 +77,18 @@ ApprovalTests.Swift comes with useful verifiers:
 - `Approvals.verifyAsJSON` — verify Encodable object converted to JSON
 - `Approvals.verifyQuery` — verify query, also showing query results on failure
 - `Approvals.verifySequence` — verify sequence of changing values
+
+
+## How to Use with iOS
+
+ApprovalTests.Swift runs out-of-the-box for macOS tests. But for iOS tests, you need a separate process running on your Mac to watch for diffs. Run `iOSApprovalsWatcher.py` from your command line, giving it the path to your test directory.
+
+
+## Which File Artifacts to Exclude from Source Control
+
+You must add any “approved” files to your source control system. But “received” files can change with any run and should be ignored.  For Git, add `*.received.*` to your `.gitignore`.
+
+If you have iOS tests, you should also add `command.sh` to your `.gitignore`. (They are scripts written by the iOS side for the file monitor to execute from the macOS side.)
 
 
 ## Getting Started
@@ -149,15 +161,6 @@ Add the following to your Cartfile:
 
 Then drag the the built framework from the appropriate Carthage/Build directory into your project,
 but with “Copy items into destination group’s folder” disabled.
-
-
-## Approved File Artifacts
-
-The `*.approved.*` files must be checked into source your source control. ApprovalTests now ignores line endings by default (so you can remove `*.approved.* binary` from your .gitattributes file if you added previously).
-
-If you would like to verify line endings, simply add `[assembly: IgnoreLineEndingsAttribute(false)]` to your AssemblyInfo.cs
-
-Do not add `*.received.*` files to your source control (they are transitory, and some SCMs like TFS will lock them or mark them read-only, which will break every dependent test).
 
 
 ## Questions?
