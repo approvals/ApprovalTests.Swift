@@ -22,8 +22,8 @@ ApprovalTests.Swift is compatible with the XCTest testing framework.
     * [macOS Starter Project](#macos-starter-project)
   * [For More Information](#for-more-information)
     * [Questions?](#questions)
-    * [Video Tutorials](#video-tutorials)
     * [Documentation](#documentation)
+    * [Video Tutorials](#video-tutorials)
     * [Podcasts](#podcasts)<!-- endToc -->
 
 
@@ -113,10 +113,10 @@ Get the following dependency:
 ```swift
 dependencies: [
     .package(
-        name: "ApprovalTests.Swift",
-        url: "https://github.com/approvals/ApprovalTests.Swift",
-        from: "1.0.0"
-        ),
+            name: "ApprovalTests.Swift",
+            url: "https://github.com/approvals/ApprovalTests.Swift",
+            from: "1.0.0"
+    ),
 ],
 ```
 <sup><a href='#snippet-package_include_approvals' title='Start of snippet'>anchor</a></sup>
