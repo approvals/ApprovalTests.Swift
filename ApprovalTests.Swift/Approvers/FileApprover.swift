@@ -34,14 +34,15 @@ public class FileApprover: ApprovalApprover {
             fileManager.createFile(atPath: expected, contents: Data())
         }
 
-        do {
-            let t1 = FileManager.default.contents(atPath: expected)!
-            let t2 = FileManager.default.contents(atPath: actual)!
-            return t1 == t2
-        } catch {
-            print("Error in \(#function) for approved \"\(expected)\", received \"\(actual)\": \(error)")
+        guard let t1 = FileManager.default.contents(atPath: expected) else {
+            print("Error in \(#function) reading expected \"\(expected)\"")
             return false
         }
+        guard let t2 = FileManager.default.contents(atPath: actual) else {
+            print("Error in \(#function) reading actual \"\(actual)\"")
+            return false
+        }
+        return t1 == t2
     }
 
     public func cleanUpAfterSuccess(reporter: ApprovalFailureReporter) {
