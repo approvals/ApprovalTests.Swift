@@ -35,8 +35,8 @@ public class FileApprover: ApprovalApprover {
         }
 
         do {
-            let t1 = try String(contentsOfFile: expected)
-            let t2 = try String(contentsOfFile: actual)
+            let t1 = FileManager.default.contents(atPath: expected)!
+            let t2 = FileManager.default.contents(atPath: actual)!
             return t1 == t2
         } catch {
             print("Error in \(#function) for approved \"\(expected)\", received \"\(actual)\": \(error)")

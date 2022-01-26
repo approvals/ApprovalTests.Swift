@@ -81,17 +81,21 @@
 		BB17082BCD15B0EC24818BB6 /* ReportWithEverything.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170ABF2255D4F0B1D59D15 /* ReportWithEverything.swift */; };
 		BB170834EB534E8522C61F95 /* ExecutableQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170DCFB6F009A8073F8C69 /* ExecutableQuery.swift */; };
 		BB1708557C9CC88CA569503E /* VariousReporters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170F8F083E3D6B5172BF7A /* VariousReporters.swift */; };
+		BB1709123AD32B09554293DF /* UIWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1704A1B9EB69E78E335F4C /* UIWriter.swift */; };
 		BB17091A9C60F6653944C673 /* Scrubber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170FF2F8319026C4E149FF /* Scrubber.swift */; };
 		BB17092C827110A024C37290 /* ScrubWithRegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170E78802A85D68B77CAA0 /* ScrubWithRegEx.swift */; };
 		BB1709DEFFE6129029D2E405 /* SystemUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170A69DD1A71C2E2A023E7 /* SystemUtils.swift */; };
+		BB170AA381D03A76D76123C3 /* UIWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1704A1B9EB69E78E335F4C /* UIWriter.swift */; };
 		BB170B23B4B633C2A1740C43 /* ReportByOpeningReceivedFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170FA3E48957CD9F09940C /* ReportByOpeningReceivedFile.swift */; };
 		BB170B666CED34E67E36EB1C /* ReportMoveCommandToClipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170BD5F95C651D0A332123 /* ReportMoveCommandToClipboard.swift */; };
 		BB170C2F89553360BB7D93DE /* TestSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17051DA6037ED58B6A29A3 /* TestSetup.swift */; };
 		BB170C6E8500DD54788F22AC /* ReportContentsWithXCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170EB6027F20F1764F9EF4 /* ReportContentsWithXCTest.swift */; };
+		BB170C84615B9F893E7446DB /* UIKitApprovals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1703F5E2DF90F144B284F0 /* UIKitApprovals.swift */; };
 		BB170CAAE3C02DCE74BC4555 /* ScrubWithRegExWithReplacementAliasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170E5ED77EF744D7F2D311 /* ScrubWithRegExWithReplacementAliasing.swift */; };
 		BB170CC9A14AD34695481E74 /* ReportByCallingScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1705B9C16FF40144A3AC52 /* ReportByCallingScript.swift */; };
 		BB170CCEA1FCAC1D1490EB06 /* ScrubNothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1700D4E088787C48D2EA63 /* ScrubNothing.swift */; };
 		BB170D510FCEB3E5C338FCF0 /* GenericDiffReporterBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */; };
+		BB170D7ABE1F3DAE57164D95 /* UIKitApprovals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1703F5E2DF90F144B284F0 /* UIKitApprovals.swift */; };
 		BB170DC9538E09528B1564BB /* ExecutableReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170C818D93ED50B092E659 /* ExecutableReporter.swift */; };
 		BB170DCF03123E17CD8049F9 /* VariousReporters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170F8F083E3D6B5172BF7A /* VariousReporters.swift */; };
 		BB170DD606509A7F5AA1321E /* ReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17064685A20DAA7CFE6421 /* ReporterTests.swift */; };
@@ -159,6 +163,8 @@
 		BB1700D4E088787C48D2EA63 /* ScrubNothing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrubNothing.swift; sourceTree = "<group>"; };
 		BB17016A18A40B0D9FFC03E0 /* ReporterFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterFactoryTests.swift; sourceTree = "<group>"; };
 		BB1701DBF0B6E0AD00A62DDD /* ReportWithDiffTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportWithDiffTool.swift; sourceTree = "<group>"; };
+		BB1703F5E2DF90F144B284F0 /* UIKitApprovals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIKitApprovals.swift; path = UIKit/UIKitApprovals.swift; sourceTree = "<group>"; };
+		BB1704A1B9EB69E78E335F4C /* UIWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWriter.swift; sourceTree = "<group>"; };
 		BB17051531693F6FC252F7DF /* TestFailer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFailer.swift; sourceTree = "<group>"; };
 		BB17051DA6037ED58B6A29A3 /* TestSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSetup.swift; sourceTree = "<group>"; };
 		BB17059F97E2ED858F9C9A2F /* FirstWorkingReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstWorkingReporter.swift; sourceTree = "<group>"; };
@@ -301,6 +307,7 @@
 				973086E353683EE643DD4BA3 /* Writers */,
 				168C9627216023F9008F354C /* ApprovalTests_Swift.h */,
 				168C9628216023F9008F354C /* Info.plist */,
+				BB1703F5E2DF90F144B284F0 /* UIKitApprovals.swift */,
 			);
 			path = ApprovalTests.Swift;
 			sourceTree = "<group>";
@@ -359,6 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				97308FC331B73ECB0A9BA7EE /* ApprovalTextWriter.swift */,
+				BB1704A1B9EB69E78E335F4C /* UIWriter.swift */,
 			);
 			path = Writers;
 			sourceTree = "<group>";
@@ -658,6 +666,8 @@
 				BB1705210A44C7B2D8D4BCF0 /* NetUtils.swift in Sources */,
 				BB170DC9538E09528B1564BB /* ExecutableReporter.swift in Sources */,
 				BB170328E32BD1B280211D80 /* ReportByCallingScript.swift in Sources */,
+				BB170AA381D03A76D76123C3 /* UIWriter.swift in Sources */,
+				BB170D7ABE1F3DAE57164D95 /* UIKitApprovals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,6 +728,8 @@
 				BB1704AD2E598DDE7364EEEA /* NetUtils.swift in Sources */,
 				BB170F90162446909479E0CB /* ExecutableReporter.swift in Sources */,
 				BB170CC9A14AD34695481E74 /* ReportByCallingScript.swift in Sources */,
+				BB1709123AD32B09554293DF /* UIWriter.swift in Sources */,
+				BB170C84615B9F893E7446DB /* UIKitApprovals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     }
 
     private func getRandomNumber(max: Int) -> Int {
-        Int.random(in: 1...max)
+        4
+//        Int.random(in: 1...max)
     }
 }
