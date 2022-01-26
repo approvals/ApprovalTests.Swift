@@ -1,4 +1,5 @@
 #if os(iOS)
+
     import UIKit
 
     public class UIWriter: ApprovalWriter {
@@ -30,4 +31,5 @@
             try! data.write(to: fileURL)
         }
     }
+
 #endif
