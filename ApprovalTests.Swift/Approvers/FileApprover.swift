@@ -25,10 +25,10 @@ public class FileApprover: ApprovalApprover {
 
     public func approve() -> Bool {
         writer.writeReceivedFile(received)
-        return approveTextFile(approved: approved, received: received)
+        return approveFile(approved: approved, received: received)
     }
 
-    private func approveTextFile(approved expected: String, received actual: String) -> Bool {
+    private func approveFile(approved expected: String, received actual: String) -> Bool {
         guard fileManager.fileExists(atPath: actual) else { return false }
         if !fileManager.fileExists(atPath: expected) {
             fileManager.createFile(atPath: expected, contents: Data())
