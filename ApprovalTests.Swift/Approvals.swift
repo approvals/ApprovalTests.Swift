@@ -123,14 +123,14 @@ public enum Approvals {
 }
 
 extension Approvals {
-    private static func verify(_ writer: ApprovalTextWriter,
+    public static func verify(_ writer: ApprovalWriter,
                                _ options: Options = Options(),
-                               file: StaticString,
-                               line: UInt) throws {
+                              file: StaticString = #filePath,
+                              line: UInt = #line) throws {
         try verify(writer, makeNamer(forFile: file.description), options, file: file, line: line)
     }
 
-    private static func verify(_ writer: ApprovalTextWriter,
+    private static func verify(_ writer: ApprovalWriter,
                                _ namer: ApprovalNamer,
                                _ options: Options = Options(),
                                file: StaticString,

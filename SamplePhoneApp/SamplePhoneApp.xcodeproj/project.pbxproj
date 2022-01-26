@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48C8B4C627A0C7A100C85377 /* ApprovalTests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C8B4C527A0C7A100C85377 /* ApprovalTests_iOS.framework */; };
 		BB1704096CBED6A2D5F2005D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB17077369DAFB41E587E32F /* LaunchScreen.storyboard */; };
 		BB17055C652FE0303049A47F /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170DAC77C2C6A7453C7504 /* ViewControllerTests.swift */; };
 		BB1708D2EA66D6B83E6101C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB170A15CA32D3B73E1143F8 /* Main.storyboard */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48C8B4C327A0C78F00C85377 /* ApprovalTests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ApprovalTests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48C8B4C527A0C7A100C85377 /* ApprovalTests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ApprovalTests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB1700CECC2642633A782240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		BB17021F848D8D3861F6253B /* SamplePhoneAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SamplePhoneAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB1703E57F64EE74BE3430EE /* SamplePhoneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamplePhoneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C8B4C627A0C7A100C85377 /* ApprovalTests_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48C8B4C227A0C78F00C85377 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48C8B4C527A0C7A100C85377 /* ApprovalTests_iOS.framework */,
+				48C8B4C327A0C78F00C85377 /* ApprovalTests_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BB1706D423F560EE08D488CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +110,7 @@
 				BB1706D423F560EE08D488CB /* Products */,
 				BB1709953764754AA266B1E7 /* SamplePhoneApp */,
 				BB170A05D5AE82D8B0C0C289 /* SamplePhoneAppTests */,
+				48C8B4C227A0C78F00C85377 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
