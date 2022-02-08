@@ -169,7 +169,8 @@ Ask Llewellyn Falco [@LlewellynFalco](https://twitter.com/llewellynfalco) or Jon
 
 ### Video Tutorials
 
-[Getting Started with ApprovalTests.Swift](https://qualitycoding.org/approvaltests-swift-getting-started/)
+- [Getting Started with ApprovalTests.Swift](https://qualitycoding.org/approvaltests-swift-getting-started/)
+- [See How to Simplify Test-Driven Development with ApprovalTests.Swift](https://qualitycoding.org/simplify-tdd-approvaltests-swift/)
 
 You can also watch a series of short videos about [using ApprovalTests in .Net](http://www.youtube.com/playlist?list=PL0C32F89E8BBB5368) on YouTube.
 
