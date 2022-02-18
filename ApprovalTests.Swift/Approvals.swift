@@ -46,11 +46,11 @@ public enum Approvals {
 
      - Parameters:
        - array: Array to verify.
-       - label: Optional string to label each element: `label[n] = value`.
+       - label: Label for each element: `label[n] = value`. Can be empty string.
        - options: Optional verification options.
      */
     public static func verifyAll<T>(_ array: [T],
-                                    label: String = "",
+                                    label: String,
                                     _ options: Options = Options(),
                                     file: StaticString = #filePath,
                                     line: UInt = #line) throws {
