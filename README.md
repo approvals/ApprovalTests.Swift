@@ -39,7 +39,7 @@ class SampleArrayTests: XCTestCase {
     func testList() throws {
         var names = ["Llewellyn", "James", "Dan", "Jason", "Katrina"]
         names.sort()
-        try Approvals.verifyAll(names)
+        try Approvals.verifyAll(names, label: "")
     }
 ```
 <sup><a href='/ApprovalTests_SwiftTests/Demo/SampleArrayTests.swift#L8-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample_test' title='Start of snippet'>anchor</a></sup>
