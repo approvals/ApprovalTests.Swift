@@ -13,6 +13,6 @@ jobs:
       with:
         repository: approvals/ApprovalTests.Swift.StarterProject.MacOS
     - name: Build
-      run: ./build.sh
+      run: pwd && ./build.sh
     - name: Run tests
       run: ./run_tests.sh
