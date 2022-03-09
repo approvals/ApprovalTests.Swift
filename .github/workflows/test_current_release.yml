@@ -14,6 +14,10 @@ jobs:
         repository: approvals/ApprovalTests.Swift.StarterProject.MacOS
         path: ApprovalTests.Swift.StarterProject.MacOS
     - name: Build
-      run: pwd && ls -la && ./build.sh
+      run: |
+        cd ApprovalTests.Swift.StarterProject.MacOS
+        ./build.sh
     - name: Run tests
-      run: ./run_tests.sh
+      run: |
+        cd ApprovalTests.Swift.StarterProject.MacOS
+        ./run_tests.sh
