@@ -26,7 +26,7 @@ public enum StringUtils {
                                    label: String = ""
     ) -> String {
         guard !array.isEmpty else {
-            var name = label.isEmpty ? "array" : label
+            let name = label.isEmpty ? "array" : label
             return "\(name).length = 0"
         }
         var buffer = ""
