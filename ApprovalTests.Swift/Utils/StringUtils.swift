@@ -32,8 +32,8 @@ public enum StringUtils {
         var buffer = ""
         var labeler = labeler
         if labeler == nil || !label.isEmpty {
-            var count = 0
             let maxPadding = "\(array.count - 1)".count
+            var count = 0
             labeler = { element in
                 count += 1
                 return "\(label)[\(pad(number: count - 1, digits: maxPadding))] = \(element)"
