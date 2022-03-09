@@ -17,8 +17,10 @@ public enum StringUtils {
      Each element of the array is on a separate line, preceded by the name and its array index.
      
      - Parameters:
+       - header: Header line above array.
        - array: Array to print to string. 
-       - name: Name of the array, to describe each element as `name[i] = value`.
+       - labeler: Optional closure converting array element to String.
+       - label: Describe each element as `label[i] = value`.
      */
     public static func toString<T>(_ header: String = "",
                                    _ array: [T],
