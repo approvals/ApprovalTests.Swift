@@ -19,10 +19,26 @@ final class SampleTests: XCTestCase {
     }
 
     func testArray() throws {
+        try Approvals.verifyAll(getWords(), label: "Text")
+    }
+
+    func testArray2() throws {
+        try Approvals.verifyAll("words", getWords())
+    }
+
+    func testArrayWithLabeler() throws {
+        try Approvals.verifyAll("uppercased", getWords()) { w in "\(w) -> \(w.uppercased())" }
+    }
+
+    func testArrayWithLabeler2() throws {
+        try Approvals.verifyAll("", getWords(), label: "text")
+    }
+
+    private func getWords() -> [String] {
         var s: [String] = []
         s.append("Approval")
         s.append("Tests")
-        try Approvals.verifyAll(s, label: "Text")
+        return s
     }
 }
 

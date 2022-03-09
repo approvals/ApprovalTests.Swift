@@ -21,13 +21,33 @@ public enum StringUtils {
        - name: Name of the array, to describe each element as `name[i] = value`.
      */
     public static func toString<T>(_ array: [T], name: String) -> String {
+        return toString("", array, nil, label: name)
+    }
+
+    public static func toString<T>(_ header: String = "",
+                                   _ array: [T],
+                                   _ labeler: ((T) -> String)? = nil,
+                                   label: String = ""
+    ) -> String {
         guard !array.isEmpty else {
+            var name = label.isEmpty ? "array" : label
             return "\(name).length = 0"
         }
         var buffer = ""
-        let maxPadding = "\(array.count - 1)".count
-        for (index, element) in array.enumerated() {
-            buffer += "\(name)[\(pad(number: index, digits: maxPadding))] = \(element)\n"
+        var labeler_ = labeler
+        if labeler_ == nil || !label.isEmpty {
+            var count = 0
+            let maxPadding = "\(array.count - 1)".count
+            labeler_ = { element in
+                count += 1
+                return "\(label)[\(pad(number: count - 1, digits: maxPadding))] = \(element)"
+            }
+        }
+        if !header.isEmpty {
+            buffer += header + "\n\n"
+        }
+        for element in array {
+            buffer += labeler_!(element) + "\n"
         }
         return buffer
     }

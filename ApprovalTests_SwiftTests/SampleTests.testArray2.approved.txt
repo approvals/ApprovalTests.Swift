@@ -1,0 +1,4 @@
+words
+
+[0] = Approval
+[1] = Tests

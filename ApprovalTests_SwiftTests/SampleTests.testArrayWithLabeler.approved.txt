@@ -1,0 +1,4 @@
+uppercased
+
+Approval -> APPROVAL
+Tests -> TESTS
