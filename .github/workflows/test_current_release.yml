@@ -12,11 +12,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         repository: approvals/ApprovalTests.Swift.StarterProject.MacOS
-    - name: Change Directory Name
-      run: |
-        cd ..
-        mv ApprovalTests.Swift ApprovalTests.Swift.StarterProject.MacOS
-        cd ApprovalTests.Swift.StarterProject.MacOS
+        path: ApprovalTests.Swift.StarterProject.MacOS
     - name: Build
       run: pwd && ls -la && ./build.sh
     - name: Run tests
