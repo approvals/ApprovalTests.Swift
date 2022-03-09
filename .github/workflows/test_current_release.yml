@@ -6,7 +6,7 @@ on:
     - cron: '00 23 * * 2'  # <https://crontab.guru/#00_23_*_*_2>
 
 jobs:
-  buildAndTest:
+  buildAndTestMacOS:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
@@ -20,4 +20,19 @@ jobs:
     - name: Run tests
       run: |
         cd ApprovalTests.Swift.StarterProject.MacOS
+        ./run_tests.sh
+  buildAndTestiOs:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        repository: approvals/ApprovalTests.Swift.StarterProject.iOs
+        path: ApprovalTests.Swift.StarterProject.iOs
+    - name: Build
+      run: |
+        cd ApprovalTests.Swift.StarterProject.iOs
+        ./build.sh
+    - name: Run tests
+      run: |
+        cd ApprovalTests.Swift.StarterProject.iOs
         ./run_tests.sh
