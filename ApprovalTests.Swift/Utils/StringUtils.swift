@@ -20,10 +20,6 @@ public enum StringUtils {
        - array: Array to print to string. 
        - name: Name of the array, to describe each element as `name[i] = value`.
      */
-    public static func toString<T>(_ array: [T], name: String) -> String {
-        return toString("", array, nil, label: name)
-    }
-
     public static func toString<T>(_ header: String = "",
                                    _ array: [T],
                                    _ labeler: ((T) -> String)? = nil,
