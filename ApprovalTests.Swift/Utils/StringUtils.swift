@@ -30,11 +30,11 @@ public enum StringUtils {
             return "\(name).length = 0"
         }
         var buffer = ""
-        var labeler_ = labeler
-        if labeler_ == nil || !label.isEmpty {
+        var labeler = labeler
+        if labeler == nil || !label.isEmpty {
             var count = 0
             let maxPadding = "\(array.count - 1)".count
-            labeler_ = { element in
+            labeler = { element in
                 count += 1
                 return "\(label)[\(pad(number: count - 1, digits: maxPadding))] = \(element)"
             }
@@ -43,7 +43,7 @@ public enum StringUtils {
             buffer += header + "\n\n"
         }
         for element in array {
-            buffer += labeler_!(element) + "\n"
+            buffer += labeler!(element) + "\n"
         }
         return buffer
     }
