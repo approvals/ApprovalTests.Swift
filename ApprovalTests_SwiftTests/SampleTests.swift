@@ -27,7 +27,9 @@ final class SampleTests: XCTestCase {
     }
 
     func testArrayWithLabeler() throws {
-        try Approvals.verifyAll("uppercased", getWords()) { w in "\(w) -> \(w.uppercased())" }
+        try Approvals.verifyAll("uppercased", getWords()) { w in
+            "\(w) -> \(w.uppercased())"
+        }
     }
 
     func testArrayWithLabeler2() throws {
