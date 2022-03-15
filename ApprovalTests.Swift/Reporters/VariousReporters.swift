@@ -31,7 +31,7 @@ public class ReportWithDiffMerge: GenericDiffReporter {
 
 public class ReportWithKaleidoscope: GenericDiffReporter {
     public init() {
-        super.init(programPath: "/usr/local/bin/ksdiff")
+        super.init(programPath: "/usr/local/bin/ksdiff", TEXT_AND_IMAGES)
     }
 }
 
@@ -39,6 +39,7 @@ public class ReportWithKdiff3: GenericDiffReporter {
     public init() {
         super.init(
                 programPath: "/Applications/kdiff3.app/Contents/MacOS/kdiff3",
+                TEXT,
                 arguments: { received, approved in
                     [received, approved, "-m"]
                 }

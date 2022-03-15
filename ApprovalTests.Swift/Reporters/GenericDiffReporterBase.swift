@@ -1,19 +1,29 @@
 import Foundation
 
+public let TEXT = [".txt", ".csv", ".htm", ".html", ".xml", ".eml", ".java", ".css", ".js", ".json", ".md"]
+public let IMAGES = [".png", ".gif", ".jpg", ".jpeg", ".bmp", ".tif", ".tiff"]
+public let TEXT_AND_IMAGES = TEXT + IMAGES
+
 public class GenericDiffReporterBase: EquatableFailureReporter {
     let programPath: String
+    let fileTypes: [String]
     let arguments: (String, String) -> [String]
 
     public init(programPath: String,
+                _ fileTypes: [String] = TEXT,
                 arguments: @escaping (String, String) -> [String] = { received, approved in
                     [received, approved]
                 }) {
         self.programPath = programPath
+        self.fileTypes = fileTypes
         self.arguments = arguments
     }
 
     public override func report(received: String, approved: String) -> Bool {
         if !doesProgramExist(programPath) {
+            return false
+        }
+        if !isFileExtensionHandled(received) {
             return false
         }
         do {
@@ -23,6 +33,11 @@ public class GenericDiffReporterBase: EquatableFailureReporter {
             print("Error in \(#function) for received \"\(received)\", approved \"\(approved)\": \(error)")
             return false
         }
+    }
+
+    private func isFileExtensionHandled(_ filePath: String) -> Bool {
+        let fileExtension = (filePath as NSString).pathExtension
+        return fileTypes.contains(fileExtension)
     }
 
     public func doesProgramExist(_ programPath: String) -> Bool {
