@@ -54,17 +54,25 @@ public enum Approvals {
                                     _ options: Options = Options(),
                                     file: StaticString = #filePath,
                                     line: UInt = #line) throws {
-        try verifyAll("", array, nil, label: label, options, file: file, line: line)
+        try verifyAll("", array, label: label, options, file: file, line: line)
     }
 
     public static func verifyAll<T>(_ header: String = "",
                                     _ array: [T],
-                                    _ labeler: ((T) -> String)? = nil,
                                     label: String = "",
                                     _ options: Options = Options(),
                                     file: StaticString = #filePath,
                                     line: UInt = #line) throws {
-        try verify(StringUtils.toString(header, array, labeler, label: label), options, file: file, line: line)
+        try verify(StringUtils.toString(header, array, nil, label: label), options, file: file, line: line)
+    }
+
+    public static func verifyAll<T>(_ header: String = "",
+                                    _ array: [T],
+                                    _ labeler: ((T) -> String)?,
+                                    _ options: Options = Options(),
+                                    file: StaticString = #filePath,
+                                    line: UInt = #line) throws {
+        try verify(StringUtils.toString(header, array, labeler, label: ""), options, file: file, line: line)
     }
 
     /**
