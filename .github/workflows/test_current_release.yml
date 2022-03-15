@@ -3,7 +3,7 @@ name: Test Current Release
 on: 
   workflow_dispatch:
   schedule:
-    - cron: '00 23 * * 2'  # <https://crontab.guru/#00_23_*_*_2>
+    - cron: '00 22 * * 2'  # <https://crontab.guru/#00_22_*_*_2>
 
 jobs:
   buildAndTestMacOS:
