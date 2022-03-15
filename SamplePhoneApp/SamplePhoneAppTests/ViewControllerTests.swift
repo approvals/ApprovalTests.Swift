@@ -15,6 +15,7 @@ class ViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.rollOutputsView.rollResultLabel.text)
 
         let myView = sut.view!
-        try UIKitApprovals.verify(view: myView, Options().with(reporter: ReportWithEverything(ReportWithKaleidoscope(), ReportMoveCommandToConsole())))
+        let options = Options().with(reporter: ReportWithEverything(ReportWithKaleidoscope(), ReportMoveCommandToConsole()))
+        try UIKitApprovals.verify(view: myView)
     }
 }

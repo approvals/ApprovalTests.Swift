@@ -36,8 +36,8 @@ public class GenericDiffReporterBase: EquatableFailureReporter {
     }
 
     private func isFileExtensionHandled(_ filePath: String) -> Bool {
-        let fileExtension = (filePath as NSString).pathExtension
-        return fileTypes.contains(fileExtension)
+        let fileExtensionWithDot = "." + (filePath as NSString).pathExtension
+        return fileTypes.contains(fileExtensionWithDot)
     }
 
     public func doesProgramExist(_ programPath: String) -> Bool {

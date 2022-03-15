@@ -9,10 +9,10 @@ public class ReportWithDiffTool: FirstWorkingReporter {
     public init() {
         super.init(
                 // begin-snippet: reporters
-                ReportWithKaleidoscope(),
                 ReportWithBeyondCompare(),
                 ReportWithAppCode(),
                 ReportWithDiffMerge(),
+                ReportWithKaleidoscope(),
                 ReportWithP4Merge(),
                 ReportWithKdiff3(),
                 ReportWithTKDiff(),
