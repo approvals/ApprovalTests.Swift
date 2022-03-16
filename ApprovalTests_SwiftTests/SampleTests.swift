@@ -37,10 +37,10 @@ final class SampleTests: XCTestCase {
     }
 
     private func getWords() -> [String] {
-        var s: [String] = []
-        s.append("Approval")
-        s.append("Tests")
-        return s
+        [
+            "Approval",
+            "Tests",
+        ]
     }
 }
 
