@@ -395,12 +395,12 @@
 				BB170EB6027F20F1764F9EF4 /* ReportContentsWithXCTest.swift */,
 				9730820AFFF03C5745F45021 /* ReporterFactory.swift */,
 				BB170BD5F95C651D0A332123 /* ReportMoveCommandToClipboard.swift */,
+				BB1700DA3D732E2D291AF5CE /* ReportMoveCommandToConsole.swift */,
 				BB1701DBF0B6E0AD00A62DDD /* ReportWithDiffTool.swift */,
 				BB170ABF2255D4F0B1D59D15 /* ReportWithEverything.swift */,
 				BB170F8F083E3D6B5172BF7A /* VariousReporters.swift */,
 				163E1880217FA9C700A54A48 /* iOS */,
 				163E187F217FA9A500A54A48 /* macOS */,
-				BB1700DA3D732E2D291AF5CE /* ReportMoveCommandToConsole.swift */,
 			);
 			path = Reporters;
 			sourceTree = "<group>";
@@ -418,10 +418,10 @@
 			children = (
 				97308B6D486609330CC17CB0 /* CwlDemangle.swift */,
 				BB170DCFB6F009A8073F8C69 /* ExecutableQuery.swift */,
+				BB1705B0AD3DD5E08F4EA601 /* HelpMessages.swift */,
 				BB170EF94A9CEE9D2A038041 /* NetUtils.swift */,
 				973086C8511ED6F6F2F50094 /* StringUtils.swift */,
 				BB170A69DD1A71C2E2A023E7 /* SystemUtils.swift */,
-				BB1705B0AD3DD5E08F4EA601 /* HelpMessages.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
