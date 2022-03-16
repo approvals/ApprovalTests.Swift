@@ -81,6 +81,7 @@
 		BB17082BCD15B0EC24818BB6 /* ReportWithEverything.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170ABF2255D4F0B1D59D15 /* ReportWithEverything.swift */; };
 		BB170834EB534E8522C61F95 /* ExecutableQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170DCFB6F009A8073F8C69 /* ExecutableQuery.swift */; };
 		BB1708557C9CC88CA569503E /* VariousReporters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170F8F083E3D6B5172BF7A /* VariousReporters.swift */; };
+		BB1708A1834C9BC86BF7AC4C /* HelpMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1705B0AD3DD5E08F4EA601 /* HelpMessages.swift */; };
 		BB1709123AD32B09554293DF /* UIWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1704A1B9EB69E78E335F4C /* UIWriter.swift */; };
 		BB17091A9C60F6653944C673 /* Scrubber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170FF2F8319026C4E149FF /* Scrubber.swift */; };
 		BB17092C827110A024C37290 /* ScrubWithRegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170E78802A85D68B77CAA0 /* ScrubWithRegEx.swift */; };
@@ -98,6 +99,7 @@
 		BB170D7ABE1F3DAE57164D95 /* UIKitApprovals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1703F5E2DF90F144B284F0 /* UIKitApprovals.swift */; };
 		BB170DC9538E09528B1564BB /* ExecutableReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170C818D93ED50B092E659 /* ExecutableReporter.swift */; };
 		BB170DCF03123E17CD8049F9 /* VariousReporters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170F8F083E3D6B5172BF7A /* VariousReporters.swift */; };
+		BB170DD1C5DF4262200EA715 /* HelpMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1705B0AD3DD5E08F4EA601 /* HelpMessages.swift */; };
 		BB170DD606509A7F5AA1321E /* ReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17064685A20DAA7CFE6421 /* ReporterTests.swift */; };
 		BB170E346922548F2216AEA2 /* ReportByOpeningReceivedFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170FA3E48957CD9F09940C /* ReportByOpeningReceivedFile.swift */; };
 		BB170E455F9D597F98E2147D /* GenericDiffReporterIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1700198EEF7F2B448074E8 /* GenericDiffReporterIOS.swift */; };
@@ -168,6 +170,7 @@
 		BB17051531693F6FC252F7DF /* TestFailer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFailer.swift; sourceTree = "<group>"; };
 		BB17051DA6037ED58B6A29A3 /* TestSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSetup.swift; sourceTree = "<group>"; };
 		BB17059F97E2ED858F9C9A2F /* FirstWorkingReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstWorkingReporter.swift; sourceTree = "<group>"; };
+		BB1705B0AD3DD5E08F4EA601 /* HelpMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpMessages.swift; sourceTree = "<group>"; };
 		BB1705B9C16FF40144A3AC52 /* ReportByCallingScript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportByCallingScript.swift; sourceTree = "<group>"; };
 		BB1705F1B761A7E6263D8FFB /* GenericDiffReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDiffReporter.swift; sourceTree = "<group>"; };
 		BB1705F8B220353ECE8102B0 /* TestSetupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSetupTests.swift; sourceTree = "<group>"; };
@@ -414,6 +417,7 @@
 				BB170EF94A9CEE9D2A038041 /* NetUtils.swift */,
 				973086C8511ED6F6F2F50094 /* StringUtils.swift */,
 				BB170A69DD1A71C2E2A023E7 /* SystemUtils.swift */,
+				BB1705B0AD3DD5E08F4EA601 /* HelpMessages.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -668,6 +672,7 @@
 				BB170328E32BD1B280211D80 /* ReportByCallingScript.swift in Sources */,
 				BB170AA381D03A76D76123C3 /* UIWriter.swift in Sources */,
 				BB170D7ABE1F3DAE57164D95 /* UIKitApprovals.swift in Sources */,
+				BB1708A1834C9BC86BF7AC4C /* HelpMessages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,6 +735,7 @@
 				BB170CC9A14AD34695481E74 /* ReportByCallingScript.swift in Sources */,
 				BB1709123AD32B09554293DF /* UIWriter.swift in Sources */,
 				BB170C84615B9F893E7446DB /* UIKitApprovals.swift in Sources */,
+				BB170DD1C5DF4262200EA715 /* HelpMessages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
