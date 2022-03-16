@@ -1,7 +1,7 @@
 import Foundation
 
 public class HelpMessages {
-    static let lineSeparator = "*********************************************************"
+    static let lineSeparator = "*****************************************************************************************"
 
     public static func displayIOSWatcherMessage() {
         print(lineSeparator)
