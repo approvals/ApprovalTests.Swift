@@ -46,7 +46,7 @@ public enum Approvals {
 
      - Parameters:
        - array: Array to verify.
-       - label: Label for each element: `label[n] = value`. Can be empty string.
+       - label: Label for each element: `label[n] = value`.
        - options: Optional verification options.
      */
     public static func verifyAll<T>(_ array: [T],
@@ -57,22 +57,44 @@ public enum Approvals {
         try verifyAll("", array, label: label, options, file: file, line: line)
     }
 
+    /**
+     Verifies an array of items against a previously approved array.
+
+     Each element of the array is on a separate line, preceded by the label and its array index.
+
+     - Parameters:
+       - header: Header line above array.
+       - array: Array to verify.
+       - label: Label for each element: `label[n] = value`.
+       - options: Optional verification options.
+     */
     public static func verifyAll<T>(_ header: String = "",
                                     _ array: [T],
                                     label: String = "",
                                     _ options: Options = Options(),
                                     file: StaticString = #filePath,
                                     line: UInt = #line) throws {
-        try verify(StringUtils.toString(header, array, nil, label: label), options, file: file, line: line)
+        try verify(StringUtils.toString(header, array, label: label), options, file: file, line: line)
     }
 
+    /**
+     Verifies an array of items against a previously approved array.
+
+     Each element of the array is on a separate line, converted by the labeler.
+
+     - Parameters:
+       - header: Header line above array.
+       - array: Array to verify.
+       - labeler: Closure converting array element to String.
+       - options: Optional verification options.
+     */
     public static func verifyAll<T>(_ header: String = "",
                                     _ array: [T],
-                                    _ labeler: ((T) -> String)?,
+                                    _ labeler: (T) -> String,
                                     _ options: Options = Options(),
                                     file: StaticString = #filePath,
                                     line: UInt = #line) throws {
-        try verify(StringUtils.toString(header, array, labeler, label: ""), options, file: file, line: line)
+        try verify(StringUtils.toString(header, array, labeler), options, file: file, line: line)
     }
 
     /**

@@ -19,33 +19,49 @@ public enum StringUtils {
      - Parameters:
        - header: Header line above array.
        - array: Array to print to string. 
-       - labeler: Optional closure converting array element to String.
        - label: Describe each element as `label[i] = value`.
      */
     public static func toString<T>(_ header: String = "",
                                    _ array: [T],
-                                   _ labeler: ((T) -> String)? = nil,
                                    label: String = ""
     ) -> String {
         guard !array.isEmpty else {
             let name = label.isEmpty ? "array" : label
             return "\(name).length = 0"
         }
-        var buffer = ""
-        var labeler = labeler
-        if labeler == nil || !label.isEmpty {
-            let maxPadding = "\(array.count - 1)".count
-            var count = 0
-            labeler = { element in
-                count += 1
-                return "\(label)[\(pad(number: count - 1, digits: maxPadding))] = \(element)"
-            }
+        let maxPadding = "\(array.count - 1)".count
+        var count = 0
+        let labeler: (T) -> String = { element in
+            count += 1
+            return "\(label)[\(pad(number: count - 1, digits: maxPadding))] = \(element)"
         }
+        return toString(header, array, labeler)
+    }
+
+    /**
+     Converts array of items to string.
+     
+     Each element of the array is on a separate line, preceded by the name and its array index.
+     
+     - Parameters:
+       - header: Header line above array.
+       - array: Array to print to string. 
+       - labeler: Closure converting array element to String.
+     */
+    public static func toString<T>(_ header: String = "",
+                                   _ array: [T],
+                                   _ labeler: (T) -> String
+    ) -> String {
+        guard !array.isEmpty else {
+            let name = "array"
+            return "\(name).length = 0"
+        }
+        var buffer = ""
         if !header.isEmpty {
             buffer += header + "\n\n"
         }
         for element in array {
-            buffer += labeler!(element) + "\n"
+            buffer += labeler(element) + "\n"
         }
         return buffer
     }
