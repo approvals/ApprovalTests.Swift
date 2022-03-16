@@ -22,20 +22,3 @@ public class ReportMoveCommandToClipboard: EquatableFailureReporter {
         "mv \"\(received)\" \"\(approved)\""
     }
 }
-
-public class ReportMoveCommandToConsole: EquatableFailureReporter {
-    public override init() {}
-
-    public override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
-        other is ReportMoveCommandToConsole
-    }
-
-    public override func report(received: String, approved: String) -> Bool {
-        print(HelpMessages.lineSeparator)
-        print("To approve:\n")
-        let command = ReportMoveCommandToClipboard.makeCommandLineMove(received: received, approved: approved)
-        print(command)
-        print(HelpMessages.lineSeparator)
-        return true
-    }
-}
