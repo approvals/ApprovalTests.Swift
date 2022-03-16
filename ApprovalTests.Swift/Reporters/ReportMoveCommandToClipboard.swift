@@ -31,10 +31,22 @@ public class ReportMoveCommandToConsole: EquatableFailureReporter {
     }
 
     public override func report(received: String, approved: String) -> Bool {
-        print("*********************************************************\nTo approve:\n")
+        print(HelpMessages.lineSeparator)
+        print("To approve:\n")
         let command = ReportMoveCommandToClipboard.makeCommandLineMove(received: received, approved: approved)
         print(command)
-        print("*********************************************************")
+        print(HelpMessages.lineSeparator)
         return true
+    }
+}
+
+public class HelpMessages {
+    static let lineSeparator = "*********************************************************"
+
+    public static func displayIOSWatcherMessage() {
+        print(HelpMessages.lineSeparator)
+        print("You are running tests from iOS. You will need to turn on the watcher to launch reporters.")
+        print("./iOSApprovalsWatcher.py [path_to_tests]")
+        print(HelpMessages.lineSeparator)
     }
 }

@@ -9,6 +9,7 @@
      */
     public class GenericDiffReporter: GenericDiffReporterBase {
         public override func runProcess(received: String, approved: String) throws {
+            HelpMessages.displayIOSWatcherMessage()
             let arguments2 = arguments(received, approved)
             let process1 = "\(programPath) \(arguments2.joined(separator: " "))"
 
