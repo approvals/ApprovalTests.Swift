@@ -29,7 +29,7 @@ private struct StackDemangler {
     func extractNames() -> StackNames {
         do {
             let callStack = Thread.callStackSymbols
-            let testMethodDepth = selectElement(callStack)
+            let testMethodDepth = findTestMethod(in: callStack)
             let dollarSignIndex = callStack[testMethodDepth].range(of: "$")?.lowerBound
             let mangledNameAndOffset = String(callStack[testMethodDepth].suffix(from: dollarSignIndex!))
             let firstSpaceIndex = mangledNameAndOffset.range(of: " ")?.lowerBound
@@ -48,9 +48,9 @@ private struct StackDemangler {
         }
     }
 
-    private func selectElement(_ symbols: [String]) -> Int {
+    private func findTestMethod(in callStack: [String]) -> Int {
         var depth = 0
-        for element in symbols {
+        for element in callStack {
             if isXCTestAssertion(element) {
                 break
             }
@@ -58,7 +58,7 @@ private struct StackDemangler {
         }
         while depth > 0 {
             depth -= 1
-            if isTestMethod(symbols[depth]) {
+            if isTestMethod(callStack[depth]) {
                 return depth
             }
         }
