@@ -28,15 +28,15 @@ private struct StackNames {
 private struct StackDemangler {
     func extractNames() -> StackNames {
         do {
-            let symbols = Thread.callStackSymbols
-            let testDepth = selectElement(symbols: symbols)
-            let index = symbols[testDepth].range(of: "$")?.lowerBound
-            let tempName = String(symbols[testDepth].suffix(from: index!))
-            let indexEnd = tempName.range(of: " ")?.lowerBound
-            let mangledName = String(tempName.prefix(upTo: indexEnd!))
+            let callStack = Thread.callStackSymbols
+            let testMethodDepth = selectElement(callStack)
+            let dollarSignIndex = callStack[testMethodDepth].range(of: "$")?.lowerBound
+            let mangledNameAndOffset = String(callStack[testMethodDepth].suffix(from: dollarSignIndex!))
+            let firstSpaceIndex = mangledNameAndOffset.range(of: " ")?.lowerBound
+            let mangledName = String(mangledNameAndOffset.prefix(upTo: firstSpaceIndex!))
             let swiftSymbol = try parseMangledSwiftSymbol(mangledName)
-            let result = swiftSymbol.print(using: SymbolPrintOptions.simplified.union(.synthesizeSugarOnTypes))
-            let splitResult = result.split(separator: " ")
+            let unmangledDescription = swiftSymbol.print(using: SymbolPrintOptions.simplified.union(.synthesizeSugarOnTypes))
+            let splitResult = unmangledDescription.split(separator: " ")
             let classAndMethod = splitResult.last!
             return StackNames(
                     className: extractClassName(classAndMethod),
@@ -48,9 +48,9 @@ private struct StackDemangler {
         }
     }
 
-    private func selectElement(symbols trace: [String]) -> Int {
+    private func selectElement(_ symbols: [String]) -> Int {
         var depth = 0
-        for element in trace {
+        for element in symbols {
             if isXCTestAssertion(element) {
                 break
             }
@@ -58,7 +58,7 @@ private struct StackDemangler {
         }
         while depth > 0 {
             depth -= 1
-            if isTestMethod(trace[depth]) {
+            if isTestMethod(symbols[depth]) {
                 return depth
             }
         }
