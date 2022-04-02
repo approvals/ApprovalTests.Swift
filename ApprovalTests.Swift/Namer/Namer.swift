@@ -66,11 +66,11 @@ private struct StackDemangler {
     }
 
     private func isTestCase(_ element: String) -> Bool {
-        element.range(of: "XCTest", options: .caseInsensitive) != nil
+        element.contains("XCTest")
     }
 
     private func isTest(_ element: String) -> Bool {
-        element.range(of: "test", options: []) != nil
+        element.contains("test")
     }
 
     private func extractClassName(_ classAndMethod: String.SubSequence) -> String {
