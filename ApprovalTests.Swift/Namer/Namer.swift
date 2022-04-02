@@ -29,15 +29,15 @@ private struct StackDemangler {
     func extractNames() -> StackNames {
         do {
             let callStack = Thread.callStackSymbols
-            let testMethodDepth = findTestMethod(in: callStack)
-            let dollarSignIndex = callStack[testMethodDepth].range(of: "$")?.lowerBound
-            let mangledNameAndOffset = String(callStack[testMethodDepth].suffix(from: dollarSignIndex!))
+            let testMethodIndex = findTestMethod(in: callStack)
+            let dollarSignIndex = callStack[testMethodIndex].range(of: "$")?.lowerBound
+            let mangledNameAndOffset = String(callStack[testMethodIndex].suffix(from: dollarSignIndex!))
             let firstSpaceIndex = mangledNameAndOffset.range(of: " ")?.lowerBound
             let mangledName = String(mangledNameAndOffset.prefix(upTo: firstSpaceIndex!))
             let swiftSymbol = try parseMangledSwiftSymbol(mangledName)
-            let unmangledDescription = swiftSymbol.print(using: SymbolPrintOptions.simplified.union(.synthesizeSugarOnTypes))
-            let splitResult = unmangledDescription.split(separator: " ")
-            let classAndMethod = splitResult.last!
+            let readableDescription = swiftSymbol.print(using: SymbolPrintOptions.simplified.union(.synthesizeSugarOnTypes))
+            let readableWords = readableDescription.split(separator: " ")
+            let classAndMethod = readableWords.last!
             return StackNames(
                     className: extractClassName(classAndMethod),
                     testName: extractTestName(classAndMethod)
