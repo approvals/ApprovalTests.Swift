@@ -56,11 +56,21 @@ private struct StackDemangler {
             }
             depth += 1
         }
-        return depth - 3
+        while depth > 0 {
+            depth -= 1
+            if isTest(trace[depth]) {
+                return depth
+            }
+        }
+        return depth
     }
 
     private func isTestCase(_ element: String) -> Bool {
         element.range(of: "XCTest", options: .caseInsensitive) != nil
+    }
+
+    private func isTest(_ element: String) -> Bool {
+        element.range(of: "test", options: []) != nil
     }
 
     private func extractClassName(_ classAndMethod: String.SubSequence) -> String {
