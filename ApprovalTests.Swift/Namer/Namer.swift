@@ -51,25 +51,25 @@ private struct StackDemangler {
     private func selectElement(symbols trace: [String]) -> Int {
         var depth = 0
         for element in trace {
-            if isTestCase(element) {
+            if isXCTestAssertion(element) {
                 break
             }
             depth += 1
         }
         while depth > 0 {
             depth -= 1
-            if isTest(trace[depth]) {
+            if isTestMethod(trace[depth]) {
                 return depth
             }
         }
         return depth
     }
 
-    private func isTestCase(_ element: String) -> Bool {
+    private func isXCTestAssertion(_ element: String) -> Bool {
         element.contains("XCTest")
     }
 
-    private func isTest(_ element: String) -> Bool {
+    private func isTestMethod(_ element: String) -> Bool {
         element.contains("test")
     }
 
