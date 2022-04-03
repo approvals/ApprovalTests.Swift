@@ -56,8 +56,8 @@ private class StackDemangler {
 
     private func searchDownForXCTestAssertion() -> Int {
         var depth = 0
-        for element in callStack {
-            if isXCTestAssertion(element) {
+        while depth < callStack.count {
+            if isXCTestAssertion(depth) {
                 break
             }
             depth += 1
@@ -69,19 +69,19 @@ private class StackDemangler {
         var depth = depth
         while depth > 0 {
             depth -= 1
-            if isTestMethod(callStack[depth]) {
+            if isTestMethod(depth) {
                 break
             }
         }
         return depth
     }
 
-    private func isXCTestAssertion(_ element: String) -> Bool {
-        element.contains("XCTest")
+    private func isXCTestAssertion(_ depth: Int) -> Bool {
+        callStack[depth].contains("XCTest")
     }
 
-    private func isTestMethod(_ element: String) -> Bool {
-        element.contains("test")
+    private func isTestMethod(_ depth: Int) -> Bool {
+        callStack[depth].contains("test")
     }
 
     private func extractClassName(_ classAndMethod: String.SubSequence) -> String {
