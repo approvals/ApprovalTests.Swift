@@ -23,6 +23,16 @@ public struct Namer: ApprovalNamer {
 private struct ClassAndMethod {
     let className: String
     let testName: String
+
+    fileprivate init(className: String, testName: String, classAndMethod: String) {
+        self.className = className
+        self.testName = testName
+    }
+
+    fileprivate init(className: String, testName: String) {
+        self.className = className
+        self.testName = testName
+    }
 }
 
 private class StackDemangler {
@@ -38,11 +48,8 @@ private class StackDemangler {
             let swiftSymbol = try parseMangledSwiftSymbol(mangledName)
             let readableDescription = swiftSymbol.print(using: SymbolPrintOptions.simplified.union(.synthesizeSugarOnTypes))
             let readableWords = readableDescription.split(separator: " ")
-            let classAndMethod = readableWords.last!
-            return ClassAndMethod(
-                    className: extractClassName(classAndMethod),
-                    testName: extractTestName(classAndMethod)
-            )
+            let classAndMethod = String(readableWords.last!)
+            return ClassAndMethod(className: extractClassName(classAndMethod), testName: extractTestName(classAndMethod), classAndMethod: classAndMethod)
         } catch {
             print("Error in \(#function): \(error)")
             return ClassAndMethod(className: "ERROR", testName: "ERROR")
@@ -84,11 +91,11 @@ private class StackDemangler {
         callStack[depth].contains("test")
     }
 
-    private func extractClassName(_ classAndMethod: String.SubSequence) -> String {
+    private func extractClassName(_ classAndMethod: String) -> String {
         String(classAndMethod.split(separator: ".").first!)
     }
 
-    private func extractTestName(_ classAndMethod: String.SubSequence) -> String {
+    private func extractTestName(_ classAndMethod: String) -> String {
         let testNameWithParens = String(classAndMethod.split(separator: ".").last!)
         return String(testNameWithParens.split(separator: "(").first!)
     }
