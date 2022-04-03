@@ -32,8 +32,8 @@ private struct StackDemangler {
             let testMethodIndex = findTestMethod(in: callStack)
             let dollarSignIndex = callStack[testMethodIndex].firstIndex(of: "$")!
             let mangledNameAndOffset = callStack[testMethodIndex].suffix(from: dollarSignIndex)
-            let firstSpaceIndex = mangledNameAndOffset.range(of: " ")?.lowerBound
-            let mangledName = String(mangledNameAndOffset.prefix(upTo: firstSpaceIndex!))
+            let firstSpaceIndex = mangledNameAndOffset.firstIndex(of: " ")!
+            let mangledName = String(mangledNameAndOffset.prefix(upTo: firstSpaceIndex))
             let swiftSymbol = try parseMangledSwiftSymbol(mangledName)
             let readableDescription = swiftSymbol.print(using: SymbolPrintOptions.simplified.union(.synthesizeSugarOnTypes))
             let readableWords = readableDescription.split(separator: " ")
