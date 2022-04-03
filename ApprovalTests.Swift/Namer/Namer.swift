@@ -14,8 +14,7 @@ public struct Namer: ApprovalNamer {
 
     public func sourceFilePath() -> String {
         let names = StackDemangler().extractNames()
-        let fileExtension = fromFile.range(of: ".swift")!.lowerBound
-        let baseName = fromFile.prefix(upTo: fileExtension)
+        let baseName = (fromFile as NSString).deletingPathExtension
         return baseName + "." + names.testName
     }
 }
