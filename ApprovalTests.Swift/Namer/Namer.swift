@@ -52,8 +52,7 @@ private class StackDemangler {
             let mangledName = mangledName(depth: findTestMethod())
             let swiftSymbol = try parseMangledSwiftSymbol(mangledName)
             let readableDescription = swiftSymbol.print(using: SymbolPrintOptions.simplified.union(.synthesizeSugarOnTypes))
-            let readableWords = readableDescription.split(separator: " ")
-            let classAndMethod = String(readableWords.last!)
+            let classAndMethod = String(readableDescription.split(separator: " ").last!)
             return ClassAndMethod(classAndMethod: classAndMethod)
         } catch {
             print("Error in \(#function): \(error)")
