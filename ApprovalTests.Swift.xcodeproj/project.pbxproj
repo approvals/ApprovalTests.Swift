@@ -487,9 +487,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 163E185E217F827400A54A48 /* Build configuration list for PBXNativeTarget "ApprovalTests_iOS" */;
 			buildPhases = (
+				163E1846217F827400A54A48 /* Headers */,
 				163E1844217F827400A54A48 /* Sources */,
 				163E1845217F827400A54A48 /* Frameworks */,
-				163E1846217F827400A54A48 /* Headers */,
 				163E1847217F827400A54A48 /* Resources */,
 			);
 			buildRules = (
@@ -523,9 +523,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 168C9638216023F9008F354C /* Build configuration list for PBXNativeTarget "ApprovalTests.Swift" */;
 			buildPhases = (
+				168C9621216023F9008F354C /* Headers */,
 				168C961F216023F9008F354C /* Sources */,
 				168C9620216023F9008F354C /* Frameworks */,
-				168C9621216023F9008F354C /* Headers */,
 				168C9622216023F9008F354C /* Resources */,
 			);
 			buildRules = (
