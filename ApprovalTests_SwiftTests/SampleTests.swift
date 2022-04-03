@@ -24,17 +24,17 @@ final class SampleTests: XCTestCase {
     }
 
     func testArray2() throws {
-        try Approvals.verifyAll("words", getWords)
+        try Approvals.verifyAll(header: "words", getWords)
     }
 
     func testArrayWithLabeler() throws {
-        try Approvals.verifyAll("uppercased", getWords) { w in
+        try Approvals.verifyAll(header: "uppercased", getWords) { w in
             "\(w) -> \(w.uppercased())"
         }
     }
     
     func testArrayWithLabeler2() throws {
-        try Approvals.verifyAll("", getWords, label: "text")
+        try Approvals.verifyAll(header: "", getWords, label: "text")
     }
 }
 

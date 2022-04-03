@@ -38,25 +38,7 @@ public enum Approvals {
                                                                  line: UInt = #line) throws {
         try verify(StringUtils.printDictionary(object), options, file: file, line: line)
     }
-
-    /**
-     Verifies an array of items against a previously approved array.
-
-     Each element of the array is on a separate line, preceded by the label and its array index.
-
-     - Parameters:
-       - array: Array to verify.
-       - label: Label for each element: `label[n] = value`.
-       - options: Optional verification options.
-     */
-    public static func verifyAll<T>(_ array: [T],
-                                    label: String,
-                                    _ options: Options = Options(),
-                                    file: StaticString = #filePath,
-                                    line: UInt = #line) throws {
-        try verifyAll("", array, label: label, options, file: file, line: line)
-    }
-
+    
     /**
      Verifies an array of items against a previously approved array.
 
@@ -68,7 +50,7 @@ public enum Approvals {
        - label: Label for each element: `label[n] = value`.
        - options: Optional verification options.
      */
-    public static func verifyAll<T>(_ header: String = "",
+    public static func verifyAll<T>(header: String = "",
                                     _ array: [T],
                                     label: String = "",
                                     _ options: Options = Options(),
@@ -88,9 +70,9 @@ public enum Approvals {
        - labeler: Closure converting array element to String.
        - options: Optional verification options.
      */
-    public static func verifyAll<T>(_ header: String = "",
+    public static func verifyAll<T>(header: String = "",
                                     _ array: [T],
-                                    _ labeler: (T) -> String,
+                                    labeler: (T) -> String,
                                     _ options: Options = Options(),
                                     file: StaticString = #filePath,
                                     line: UInt = #line) throws {
