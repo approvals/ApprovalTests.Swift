@@ -20,7 +20,7 @@ public struct Namer: ApprovalNamer {
     }
 }
 
-private struct StackNames {
+private struct ClassAndMethod {
     let className: String
     let testName: String
 }
@@ -28,7 +28,7 @@ private struct StackNames {
 private class StackDemangler {
     private let callStack = Thread.callStackSymbols
 
-    func extractNames() -> StackNames {
+    func extractNames() -> ClassAndMethod {
         do {
             let testMethodIndex = findTestMethod()
             let dollarSignIndex = callStack[testMethodIndex].firstIndex(of: "$")!
@@ -39,13 +39,13 @@ private class StackDemangler {
             let readableDescription = swiftSymbol.print(using: SymbolPrintOptions.simplified.union(.synthesizeSugarOnTypes))
             let readableWords = readableDescription.split(separator: " ")
             let classAndMethod = readableWords.last!
-            return StackNames(
+            return ClassAndMethod(
                     className: extractClassName(classAndMethod),
                     testName: extractTestName(classAndMethod)
             )
         } catch {
             print("Error in \(#function): \(error)")
-            return StackNames(className: "ERROR", testName: "ERROR")
+            return ClassAndMethod(className: "ERROR", testName: "ERROR")
         }
     }
 
