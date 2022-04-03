@@ -1,10 +1,10 @@
 import Foundation
 
 public struct Namer: ApprovalNamer {
-    private let fromFile: String
+    private let fileName: String
 
     public init(_ file: String) {
-        fromFile = file
+        fileName = file
     }
 
     public func approvalName() -> String {
@@ -14,7 +14,7 @@ public struct Namer: ApprovalNamer {
 
     public func sourceFilePath() -> String {
         let names = StackDemangler().extractNames()
-        let baseName = (fromFile as NSString).deletingPathExtension
+        let baseName = (fileName as NSString).deletingPathExtension
         return baseName + "." + names.testName
     }
 }
