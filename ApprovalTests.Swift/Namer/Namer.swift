@@ -85,13 +85,11 @@ private class StackDemangler {
     }
 
     private func extractClassName(_ classAndMethod: String.SubSequence) -> String {
-        let className = classAndMethod.prefix(upTo: (classAndMethod.range(of: ".")?.lowerBound)!)
-        return String(className)
+        String(classAndMethod.split(separator: ".").first!)
     }
 
     private func extractTestName(_ classAndMethod: String.SubSequence) -> String {
-        let testNameWithParens = classAndMethod.suffix(from: (classAndMethod.range(of: ".")?.upperBound)!)
-        let testName = testNameWithParens.prefix(upTo: (testNameWithParens.range(of: "(")?.lowerBound)!)
-        return String(testName)
+        let testNameWithParens = String(classAndMethod.split(separator: ".").last!)
+        return String(testNameWithParens.split(separator: "(").first!)
     }
 }
