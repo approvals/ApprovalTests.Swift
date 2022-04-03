@@ -49,6 +49,11 @@ private struct StackDemangler {
     }
 
     private func findTestMethod(in callStack: [String]) -> Int {
+        let depth = searchDownForXCTestAssertion(callStack)
+        return searchUpForTestMethod(callStack, from: depth)
+    }
+
+    private func searchDownForXCTestAssertion(_ callStack: [String]) -> Int {
         var depth = 0
         for element in callStack {
             if isXCTestAssertion(element) {
@@ -56,11 +61,10 @@ private struct StackDemangler {
             }
             depth += 1
         }
-        depth = searchUpForTestMethod(callStack: callStack, from: depth)
         return depth
     }
 
-    private func searchUpForTestMethod(callStack: [String], from depth: Int) -> Int {
+    private func searchUpForTestMethod(_ callStack: [String], from depth: Int) -> Int {
         var depth = depth
         while depth > 0 {
             depth -= 1
