@@ -49,19 +49,23 @@ private class StackDemangler {
 
     func extractNames() -> ClassAndMethod {
         do {
-            let testMethodIndex = findTestMethod()
-            let dollarSignIndex = callStack[testMethodIndex].firstIndex(of: "$")!
-            let mangledNameAndOffset = callStack[testMethodIndex].suffix(from: dollarSignIndex)
-            let firstSpaceIndex = mangledNameAndOffset.firstIndex(of: " ")!
-            let mangledName = String(mangledNameAndOffset.prefix(upTo: firstSpaceIndex))
+            let mangledName = mangledName(depth: findTestMethod())
             let swiftSymbol = try parseMangledSwiftSymbol(mangledName)
             let readableDescription = swiftSymbol.print(using: SymbolPrintOptions.simplified.union(.synthesizeSugarOnTypes))
             let readableWords = readableDescription.split(separator: " ")
-            return ClassAndMethod(classAndMethod: String(readableWords.last!))
+            let classAndMethod = String(readableWords.last!)
+            return ClassAndMethod(classAndMethod: classAndMethod)
         } catch {
             print("Error in \(#function): \(error)")
             return ClassAndMethod(className: "ERROR", testName: "ERROR")
         }
+    }
+
+    private func mangledName(depth: Int) -> String {
+        let dollarSignIndex = callStack[depth].firstIndex(of: "$")!
+        let mangledNameAndOffset = callStack[depth].suffix(from: dollarSignIndex)
+        let firstSpaceIndex = mangledNameAndOffset.firstIndex(of: " ")!
+        return String(mangledNameAndOffset.prefix(upTo: firstSpaceIndex))
     }
 
     private func findTestMethod() -> Int {
