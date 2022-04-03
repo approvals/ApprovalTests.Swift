@@ -3,14 +3,15 @@ UPCOMING RELEASE
 
 **Fixes:**
 
-- Was broken for Xcode 13.3 change in call stack, now fixed.
+- Was broken for Xcode 13.3 changes in the call stack. Now fixed.
 
 **Features:**
 
-- Display reminder to turn on the watcher for iOS tests.
-- Skip reporters that can't handle the file type.
-- `verifyAll`:  Now has versions with a labeler closure to format each line, along with a header.
-- `verifyAll` : Any `label` is no longer optional. If you omitted it previously, add `label: ""`. Though this may mean a change to test code, the approved artifacts won't change.
+- `verifyAll` improvements:
+  - Now has an optional `header` to print above the array.
+  - A new `verifyAll` takes a `labeler` closure to format each line. Use `{ $0 }` when you don't care about absolute indices, only relative order. This also provides a simple way to do parameterized tests: verify an array of inputs, and use the closure to print both the input and the output.
+- Skip reporters that can't handle the file type. So if you have an image artifact, Approvals.Swift will use the first reporter that can show image differences.
+- Print reminder to console output to turn on the watcher for iOS tests.
 
 
 Version 1.0.0
