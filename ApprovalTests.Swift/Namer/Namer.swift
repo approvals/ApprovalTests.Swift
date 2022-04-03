@@ -8,15 +8,15 @@ public struct Namer: ApprovalNamer {
     }
 
     public func approvalName() -> String {
-        let stack = StackDemangler().extractNames()
-        return stack.className + "." + stack.testName
+        let names = StackDemangler().extractNames()
+        return names.className + "." + names.testName
     }
 
     public func sourceFilePath() -> String {
-        let stack = StackDemangler().extractNames()
+        let names = StackDemangler().extractNames()
         let fileExtension = fromFile.range(of: ".swift")!.lowerBound
         let baseName = fromFile.prefix(upTo: fileExtension)
-        return baseName + "." + stack.testName
+        return baseName + "." + names.testName
     }
 }
 
@@ -24,15 +24,25 @@ private struct ClassAndMethod {
     let className: String
     let testName: String
 
-    fileprivate init(className: String, testName: String, classAndMethod: String) {
-        self.className = className
-        self.testName = testName
+    fileprivate init(classAndMethod: String) {
+        className = ClassAndMethod.extractClassName(classAndMethod)
+        testName = ClassAndMethod.extractMethodName(classAndMethod)
     }
 
     fileprivate init(className: String, testName: String) {
         self.className = className
         self.testName = testName
     }
+
+    private static func extractClassName(_ classAndMethod: String) -> String {
+        String(classAndMethod.split(separator: ".").first!)
+    }
+
+    private static func extractMethodName(_ classAndMethod: String) -> String {
+        let testNameWithParens = String(classAndMethod.split(separator: ".").last!)
+        return String(testNameWithParens.split(separator: "(").first!)
+    }
+
 }
 
 private class StackDemangler {
@@ -49,7 +59,7 @@ private class StackDemangler {
             let readableDescription = swiftSymbol.print(using: SymbolPrintOptions.simplified.union(.synthesizeSugarOnTypes))
             let readableWords = readableDescription.split(separator: " ")
             let classAndMethod = String(readableWords.last!)
-            return ClassAndMethod(className: extractClassName(classAndMethod), testName: extractTestName(classAndMethod), classAndMethod: classAndMethod)
+            return ClassAndMethod(classAndMethod: classAndMethod)
         } catch {
             print("Error in \(#function): \(error)")
             return ClassAndMethod(className: "ERROR", testName: "ERROR")
@@ -89,14 +99,5 @@ private class StackDemangler {
 
     private func isTestMethod(_ depth: Int) -> Bool {
         callStack[depth].contains("test")
-    }
-
-    private func extractClassName(_ classAndMethod: String) -> String {
-        String(classAndMethod.split(separator: ".").first!)
-    }
-
-    private func extractTestName(_ classAndMethod: String) -> String {
-        let testNameWithParens = String(classAndMethod.split(separator: ".").last!)
-        return String(testNameWithParens.split(separator: "(").first!)
     }
 }
