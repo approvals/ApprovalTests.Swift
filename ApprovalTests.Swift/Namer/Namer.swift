@@ -23,12 +23,12 @@ private struct ClassAndMethod {
     let className: String
     let testName: String
 
-    fileprivate init(classAndMethod: String) {
+    init(classAndMethod: String) {
         className = ClassAndMethod.extractClassName(classAndMethod)
         testName = ClassAndMethod.extractMethodName(classAndMethod)
     }
 
-    fileprivate init(className: String, testName: String) {
+    init(className: String, testName: String) {
         self.className = className
         self.testName = testName
     }
