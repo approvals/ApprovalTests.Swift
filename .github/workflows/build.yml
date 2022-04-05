@@ -7,13 +7,6 @@ on:
     branches: [ master ]
 
 jobs:
-  buildSwiftPackage:
-    runs-on: macos-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Build
-      run: swift build -v
-
   testMacOS:
     runs-on: macos-latest
     steps:
@@ -28,7 +21,16 @@ jobs:
     - name: Run tests
       run: ./run_tests_ios.sh
 
+  buildSwiftPackage:
+    needs: [ testMacOS, testIOS ]
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build
+      run: swift build -v
+
   buildCarthage:
+    needs: [ testMacOS, testIOS ]
     name: Build Carthage
     runs-on: macos-latest
     steps:
@@ -37,7 +39,7 @@ jobs:
       run: carthage build --configuration Release --no-skip-current --use-xcframeworks
 
   auto-merge:
-    needs: [buildSwiftPackage, testMacOS, testIOS, buildCarthage]
+    needs: [buildSwiftPackage, buildCarthage]
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
