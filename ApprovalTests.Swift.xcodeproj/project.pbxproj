@@ -167,6 +167,7 @@
 		BB1700D4E088787C48D2EA63 /* ScrubNothing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrubNothing.swift; sourceTree = "<group>"; };
 		BB1700DA3D732E2D291AF5CE /* ReportMoveCommandToConsole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportMoveCommandToConsole.swift; sourceTree = "<group>"; };
 		BB17016A18A40B0D9FFC03E0 /* ReporterFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterFactoryTests.swift; sourceTree = "<group>"; };
+		BB17018C5E4465089A19D138 /* dependabot.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; name = dependabot.yml; path = .github/dependabot.yml; sourceTree = "<group>"; };
 		BB1701DBF0B6E0AD00A62DDD /* ReportWithDiffTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportWithDiffTool.swift; sourceTree = "<group>"; };
 		BB1703F5E2DF90F144B284F0 /* UIKitApprovals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIKitApprovals.swift; path = UIKit/UIKitApprovals.swift; sourceTree = "<group>"; };
 		BB1704A1B9EB69E78E335F4C /* UIWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWriter.swift; sourceTree = "<group>"; };
@@ -236,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				163E188B218018E100A54A48 /* XCTest.framework */,
+				BB17018C5E4465089A19D138 /* dependabot.yml */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
