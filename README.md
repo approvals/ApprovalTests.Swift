@@ -70,6 +70,23 @@ To approve the results, tell the diff editor to apply changes from the left side
 Most of the time, you’ll use one of the [supported diff tools](docs/reference/reporters.md#supported-diff-tools) to examine and approve the result. If you don’t have any of these diff tools, you can rename the received file to `SampleArrayTests.testList.approved.txt` and the test will now pass.
 
 
+## Getting started
+
+The best way to get started is download and open one of the starter projects:
+* [macOS](https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs)
+* [iOS](https://github.com/approvals/ApprovalTests.Swift.StarterProject.IOs)
+
+These are standard projects and can be imported into any editor or IDE.  
+They also all have CI with Github actions.
+
+It comes ready with:
+
+- A Swift package definition adding ApprovalTests.Swift to the test target
+- A suitable `.gitignore`
+- A GitHub action to build and run tests
+- A build status badge
+
+
 ## Predefined Verifiers
 
 ApprovalTests.Swift comes with useful verifiers:
@@ -145,17 +162,6 @@ Add the following to your Cartfile:
 
 Then drag the the built framework from the appropriate Carthage/Build directory into your project,
 but with “Copy items into destination group’s folder” disabled.
-
-### macOS Starter Project
-
-The [macOS starter project](https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs) is a quick way to set up a new project on GitHub. Just click the “Use this template” button.
-
-It comes ready with:
-
-- A Swift package definition adding ApprovalTests.Swift to the test target
-- A suitable `.gitignore`
-- A GitHub action to build and run tests
-- A build status badge
 
 ## For More Information
 
