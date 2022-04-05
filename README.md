@@ -13,13 +13,13 @@ ApprovalTests.Swift is compatible with the XCTest testing framework.
 ## Contents
 
   * [My First Approval Test](#my-first-approval-test)
+  * [Getting started](#getting-started)
   * [Predefined Verifiers](#predefined-verifiers)
   * [How to Use with iOS](#how-to-use-with-ios)
   * [Which File Artifacts to Exclude from Source Control](#which-file-artifacts-to-exclude-from-source-control)
   * [How to Get It](#how-to-get-it)
     * [Swift Package Manager](#swift-package-manager)
     * [Carthage](#carthage)
-    * [macOS Starter Project](#macos-starter-project)
   * [For More Information](#for-more-information)
     * [Questions?](#questions)
     * [Documentation](#documentation)
