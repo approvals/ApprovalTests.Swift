@@ -10,21 +10,21 @@ jobs:
   buildSwiftPackage:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Build
       run: swift build -v
 
   testMacOS:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Run tests
       run: ./run_tests_mac.sh
 
   testIOS:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Run tests
       run: ./run_tests_ios.sh
 
@@ -32,7 +32,7 @@ jobs:
     name: Build Carthage
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Build
       run: carthage build --configuration Release --no-skip-current --use-xcframeworks
 
