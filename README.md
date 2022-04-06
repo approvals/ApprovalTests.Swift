@@ -70,7 +70,7 @@ To approve the results, tell the diff editor to apply changes from the left side
 Most of the time, you’ll use one of the [supported diff tools](docs/reference/reporters.md#supported-diff-tools) to examine and approve the result. If you don’t have any of these diff tools, you can rename the received file to `SampleArrayTests.testList.approved.txt` and the test will now pass.
 
 
-## Getting started
+## Getting Started
 
 The best way to get started is download and open one of the starter projects:
 * [macOS](https://github.com/approvals/ApprovalTests.Swift.StarterProject.MacOs)
@@ -79,12 +79,12 @@ The best way to get started is download and open one of the starter projects:
 These are standard projects and can be imported into any editor or IDE.  
 They also all have CI with Github actions.
 
-It comes ready with:
+They come ready with:
 
 - A Swift package definition adding ApprovalTests.Swift to the test target
-- A suitable `.gitignore`
+- A suitable `.gitignore` to exclude approval artifacts
 - A GitHub action to build and run tests
-- A build status badge
+- A GitHub build status badge
 
 
 ## Predefined Verifiers
@@ -92,7 +92,7 @@ It comes ready with:
 ApprovalTests.Swift comes with useful verifiers:
 
 - `Approvals.verify` — verify object or dictionary
-- `Approvals.verifyAll` — verify array of items
+- `Approvals.verifyAll` — verify array of items (or use array as inputs)
 - `Approvals.verifyAsJSON` — verify Encodable object converted to JSON
 - `Approvals.verifyQuery` — verify query, also showing query results on failure
 - `Approvals.verifySequence` — verify sequence of changing values
@@ -117,7 +117,7 @@ command.sh
 ```
 
 
-## How to Get It
+## Other Ways to Get It
 
 ### Swift Package Manager
 
