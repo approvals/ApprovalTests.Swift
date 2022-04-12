@@ -58,6 +58,7 @@
 		97308FF1569559F04D5ACAED /* CwlDemangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97308B6D486609330CC17CB0 /* CwlDemangle.swift */; };
 		BB17001927AF3FBB44EB00AA /* FirstWorkingReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17059F97E2ED858F9C9A2F /* FirstWorkingReporter.swift */; };
 		BB17003FDDE7E5E6AC29C8C4 /* ReportMoveCommandToClipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170BD5F95C651D0A332123 /* ReportMoveCommandToClipboard.swift */; };
+		BB1700A7D0E7F399572F423D /* SimpleLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1706AEE30243891CC410D9 /* SimpleLogger.swift */; };
 		BB1700BEA64E5553DECC0A6F /* GenericDiffReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1705F1B761A7E6263D8FFB /* GenericDiffReporter.swift */; };
 		BB1701081A81B0B15E271256 /* TestSetupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1705F8B220353ECE8102B0 /* TestSetupTests.swift */; };
 		BB1701908E6AD828958295FF /* TestFailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17051531693F6FC252F7DF /* TestFailer.swift */; };
@@ -78,6 +79,7 @@
 		BB17078180CE0797EE88E7D4 /* ReporterFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17016A18A40B0D9FFC03E0 /* ReporterFactoryTests.swift */; };
 		BB170785D01DD8502B5130E1 /* ScrubWithRegExWithReplacementAliasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170E5ED77EF744D7F2D311 /* ScrubWithRegExWithReplacementAliasing.swift */; };
 		BB1707B50E22A8C58F5A3563 /* ReporterFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17016A18A40B0D9FFC03E0 /* ReporterFactoryTests.swift */; };
+		BB17080D744920E17C422692 /* SimpleLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1706AEE30243891CC410D9 /* SimpleLogger.swift */; };
 		BB17082BCD15B0EC24818BB6 /* ReportWithEverything.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170ABF2255D4F0B1D59D15 /* ReportWithEverything.swift */; };
 		BB170834EB534E8522C61F95 /* ExecutableQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170DCFB6F009A8073F8C69 /* ExecutableQuery.swift */; };
 		BB1708557C9CC88CA569503E /* VariousReporters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170F8F083E3D6B5172BF7A /* VariousReporters.swift */; };
@@ -179,6 +181,7 @@
 		BB1705F1B761A7E6263D8FFB /* GenericDiffReporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDiffReporter.swift; sourceTree = "<group>"; };
 		BB1705F8B220353ECE8102B0 /* TestSetupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSetupTests.swift; sourceTree = "<group>"; };
 		BB17064685A20DAA7CFE6421 /* ReporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterTests.swift; sourceTree = "<group>"; };
+		BB1706AEE30243891CC410D9 /* SimpleLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleLogger.swift; sourceTree = "<group>"; };
 		BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDiffReporterBase.swift; sourceTree = "<group>"; };
 		BB170A69DD1A71C2E2A023E7 /* SystemUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemUtils.swift; sourceTree = "<group>"; };
 		BB170ABF2255D4F0B1D59D15 /* ReportWithEverything.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportWithEverything.swift; sourceTree = "<group>"; };
@@ -424,6 +427,7 @@
 				BB170EF94A9CEE9D2A038041 /* NetUtils.swift */,
 				973086C8511ED6F6F2F50094 /* StringUtils.swift */,
 				BB170A69DD1A71C2E2A023E7 /* SystemUtils.swift */,
+				BB1706AEE30243891CC410D9 /* SimpleLogger.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -680,6 +684,7 @@
 				BB170D7ABE1F3DAE57164D95 /* UIKitApprovals.swift in Sources */,
 				BB1708A1834C9BC86BF7AC4C /* HelpMessages.swift in Sources */,
 				BB170A6D76BAC3BE8A8C3522 /* ReportMoveCommandToConsole.swift in Sources */,
+				BB1700A7D0E7F399572F423D /* SimpleLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -744,6 +749,7 @@
 				BB170C84615B9F893E7446DB /* UIKitApprovals.swift in Sources */,
 				BB170DD1C5DF4262200EA715 /* HelpMessages.swift in Sources */,
 				BB1708850548872ABDBA03A2 /* ReportMoveCommandToConsole.swift in Sources */,
+				BB17080D744920E17C422692 /* SimpleLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

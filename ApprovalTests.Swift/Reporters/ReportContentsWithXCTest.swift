@@ -23,6 +23,7 @@ public class ReportContentsWithXCTest: EquatableFailureReporter {
             aText = try String(contentsOf: approvedURL)
             rText = try String(contentsOf: receivedURL)
         } catch {
+            SimpleLogger.printLineNumber()
             print("Error in \(#function) for received \"\(received)\", approved \"\(approved)\": \(error)")
         }
         let command = ReportMoveCommandToClipboard.makeCommandLineMove(received: received, approved: approved)
