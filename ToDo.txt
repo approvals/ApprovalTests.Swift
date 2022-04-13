@@ -1,3 +1,0 @@
-NEXT TIME:
-- Make ApprovalReporterWithCleanUp: have FileApprover use it in cleanUp
-- Then clean out query_results
