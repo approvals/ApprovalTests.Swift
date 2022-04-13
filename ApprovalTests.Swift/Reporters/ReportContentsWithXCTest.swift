@@ -25,6 +25,7 @@ public class ReportContentsWithXCTest: EquatableFailureReporter {
         } catch {
             SimpleLogger.printLineNumber()
             print("Error in \(#function) for received \"\(received)\", approved \"\(approved)\": \(error)")
+            return false
         }
         let command = ReportMoveCommandToClipboard.makeCommandLineMove(received: received, approved: approved)
 
