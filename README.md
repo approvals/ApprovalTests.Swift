@@ -176,7 +176,8 @@ Ask Llewellyn Falco [@LlewellynFalco](https://twitter.com/llewellynfalco) or Jon
 ### Video Tutorials
 
 - [Getting Started with ApprovalTests.Swift](https://qualitycoding.org/approvaltests-swift-getting-started/)
-- [See How to Simplify Test-Driven Development with ApprovalTests.Swift](https://qualitycoding.org/simplify-tdd-approvaltests-swift/)
+- [How to Verify Objects (and Simplify TDD) using ApprovalTests.Swift](https://qualitycoding.org/approvaltests-swift-verify-objects/)
+- [How to Verify Arrays and See Simple, Clear Diffs using ApprovalTests.Swift](https://qualitycoding.org/verify-arrays-approvaltests-swift/)
 
 You can also watch a series of short videos about [using ApprovalTests in .Net](http://www.youtube.com/playlist?list=PL0C32F89E8BBB5368) on YouTube.
 
