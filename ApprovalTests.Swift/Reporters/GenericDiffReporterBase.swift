@@ -13,13 +13,14 @@ public class GenericDiffReporterBase: EquatableFailureReporter {
                 _ fileTypes: [String] = TEXT,
                 arguments: @escaping (String, String) -> [String] = { received, approved in
                     [received, approved]
-                }) {
+                })
+    {
         self.programPath = programPath
         self.fileTypes = fileTypes
         self.arguments = arguments
     }
 
-    public override func report(received: String, approved: String) -> Bool {
+    override public func report(received: String, approved: String) -> Bool {
         if !doesProgramExist(programPath) {
             return false
         }
@@ -44,11 +45,10 @@ public class GenericDiffReporterBase: EquatableFailureReporter {
         FileManager.default.fileExists(atPath: programPath)
     }
 
-    public override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
+    override public func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
         guard let other = other as? GenericDiffReporterBase else { return false }
         return programPath == other.programPath
     }
 
-    public func runProcess(received: String, approved: String) throws {
-    }
+    public func runProcess(received _: String, approved _: String) throws {}
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-public class HelpMessages {
+public enum HelpMessages {
     static let lineSeparator = "*****************************************************************************************"
 
     public static func displayIOSWatcherMessage() {

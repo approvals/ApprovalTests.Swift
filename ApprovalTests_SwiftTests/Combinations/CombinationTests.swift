@@ -6,7 +6,6 @@
 import XCTest
 
 final class CombinationTests: XCTestCase {
-
     private func threeParams(_ in1: Int, _ in2: Int, _ in3: Int) -> Int {
         in1 + in2 + in3
     }
@@ -33,29 +32,29 @@ final class CombinationTests: XCTestCase {
 
     func testCombinationsSingleParameterInt() throws {
         try CombinationApprovals.verifyAllCombinations(
-                doubleInt,
-                [1, 2, 3, 4, 5]
+            doubleInt,
+            [1, 2, 3, 4, 5]
         )
     }
 
     func testCombinationsSingleParameterFloat() throws {
         try CombinationApprovals.verifyAllCombinations(
-                doubleFloat,
-                [1.1, 2.2, 3.3, 4.4, 5.5]
+            doubleFloat,
+            [1.1, 2.2, 3.3, 4.4, 5.5]
         )
     }
 
     func testCombinationsTwoParametersInt() throws {
         try CombinationApprovals.verifyAllCombinations(
-                twoIntParams,
-                [1, 2], [3, 4]
+            twoIntParams,
+            [1, 2], [3, 4]
         )
     }
 
     func testCombinationsMixedParameters() throws {
         try CombinationApprovals.verifyAllCombinations(
-                threeMixedParams,
-                [1, 2, 3], [4.4, 5.5], ["String1", "String2", "String3", "String4"]
+            threeMixedParams,
+            [1, 2, 3], [4.4, 5.5], ["String1", "String2", "String3", "String4"]
         )
     }
 
@@ -75,8 +74,8 @@ final class CombinationTests: XCTestCase {
         }
 
         try CombinationApprovals.verifyAllCombinations(
-                inCall,
-                [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11]
+            inCall,
+            [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11]
         )
     }
 
@@ -87,8 +86,8 @@ final class CombinationTests: XCTestCase {
         }
 
         try CombinationApprovals.verifyAllCombinations(
-                inCall,
-                [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13]
+            inCall,
+            [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13]
         )
     }
 
@@ -99,8 +98,8 @@ final class CombinationTests: XCTestCase {
         }
 
         try CombinationApprovals.verifyAllCombinations(
-                inCall,
-                [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13], [14, 15]
+            inCall,
+            [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13], [14, 15]
         )
     }
 
@@ -111,8 +110,8 @@ final class CombinationTests: XCTestCase {
         }
 
         try CombinationApprovals.verifyAllCombinations(
-                inCall,
-                [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13], [14, 15], [16, 17]
+            inCall,
+            [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13], [14, 15], [16, 17]
         )
     }
 
@@ -123,8 +122,8 @@ final class CombinationTests: XCTestCase {
         }
 
         try CombinationApprovals.verifyAllCombinations(
-                inCall,
-                [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13], [14, 15], [16, 17], [18, 19]
+            inCall,
+            [1, 2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13], [14, 15], [16, 17], [18, 19]
         )
     }
 }

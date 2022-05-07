@@ -41,7 +41,6 @@ private struct ClassAndMethod {
         let testNameWithParens = String(classAndMethod.split(separator: ".").last!)
         return String(testNameWithParens.split(separator: "(").first!)
     }
-
 }
 
 private class StackDemangler {

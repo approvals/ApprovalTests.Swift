@@ -2,17 +2,17 @@ import XCTest
 
 /**
  A reporter that outputs straight to XCTest.
- 
+
  In addition to reporting the change using a standard XCTest assertion, this reporter also creates a command line `mv` command for approving the last failed test. It writes this command to the console and also places it on the clipboard.
  */
 public class ReportContentsWithXCTest: EquatableFailureReporter {
-    public override init() {}
+    override public init() {}
 
-    public override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
+    override public func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
         other is ReportContentsWithXCTest
     }
 
-    public override func report(received: String, approved: String) -> Bool {
+    override public func report(received: String, approved: String) -> Bool {
         // read the files into strings
         let approvedURL = URL(fileURLWithPath: approved)
         let receivedURL = URL(fileURLWithPath: received)

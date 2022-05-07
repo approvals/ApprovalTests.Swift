@@ -7,7 +7,6 @@ import Foundation
 
 // begin-snippet: approvaltests_initialization_class
 public class TestSetup: NSObject {
-    
     override init() {
         super.init()
         // end-snippet
@@ -24,5 +23,5 @@ public class TestSetup: NSObject {
     static var initialized = false
 }
 
-//class YourPreferredReporter: ReportWithDiffTool {
-//}
+// class YourPreferredReporter: ReportWithDiffTool {
+// }

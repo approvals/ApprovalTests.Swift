@@ -6,7 +6,6 @@
 import XCTest
 
 final class OptionsTests: XCTestCase {
-
     func testOptionsGivesTheDefaultReporter() throws {
         let o = Options()
         XCTAssertEqual(o.reporter as? EquatableFailureReporter, Approvals.reporter as? EquatableFailureReporter)
@@ -42,5 +41,4 @@ final class OptionsTests: XCTestCase {
         XCTAssertEqual(options.forFile.fileExtensionWithDot, ".json")
         XCTAssertEqual(options.forFile.fileExtensionWithoutDot, "json")
     }
-
 }

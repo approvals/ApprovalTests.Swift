@@ -13,7 +13,7 @@ class ViewController: UIViewController {
         return Int(maxInputTextField.text!) ?? defaultDie
     }
 
-    private func getRandomNumber(max: Int) -> Int {
+    private func getRandomNumber(max _: Int) -> Int {
         4
 //        Int.random(in: 1...max)
     }

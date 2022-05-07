@@ -8,7 +8,7 @@ public class FirstWorkingReporter: EquatableFailureReporter {
         self.reporters = reporters
     }
 
-    public override func report(received: String, approved: String) -> Bool {
+    override public func report(received: String, approved: String) -> Bool {
         for reporter in reporters {
             if reporter.report(received: received, approved: approved) {
                 return true
@@ -17,7 +17,7 @@ public class FirstWorkingReporter: EquatableFailureReporter {
         return false
     }
 
-    public override func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
+    override public func isEqualTo(_ other: ApprovalFailureReporter) -> Bool {
         guard let other = other as? FirstWorkingReporter else { return false }
         return reporters == other.reporters
     }

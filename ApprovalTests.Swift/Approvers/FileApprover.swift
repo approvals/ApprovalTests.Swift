@@ -45,7 +45,7 @@ public class FileApprover: ApprovalApprover {
         return t1 == t2
     }
 
-    public func cleanUpAfterSuccess(reporter: ApprovalFailureReporter) {
+    public func cleanUpAfterSuccess(reporter _: ApprovalFailureReporter) {
         do {
             try fileManager.removeItem(atPath: received)
         } catch {

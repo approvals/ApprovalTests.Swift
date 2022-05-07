@@ -6,7 +6,6 @@
 import XCTest
 
 final class ApprovalTests_SwiftTests: XCTestCase {
-
     func testApprovalName() throws {
         let name = Approvals.makeNamer(forFile: "DUMMY")
         XCTAssertEqual(name.approvalName(), "ApprovalTests_SwiftTests.testApprovalName")
@@ -16,10 +15,10 @@ final class ApprovalTests_SwiftTests: XCTestCase {
         let name = Approvals.makeNamer(forFile: #file)
         let sourceFilePath = name.sourceFilePath()
         XCTAssertTrue(
-                sourceFilePath.hasSuffix(
-                        "/ApprovalTests.Swift/ApprovalTests_SwiftTests/ApprovalTests_SwiftTests.testSourceFilePath"
-                ),
-                "was \(sourceFilePath)"
+            sourceFilePath.hasSuffix(
+                "/ApprovalTests.Swift/ApprovalTests_SwiftTests/ApprovalTests_SwiftTests.testSourceFilePath"
+            ),
+            "was \(sourceFilePath)"
         )
     }
 
@@ -41,7 +40,7 @@ final class ApprovalTests_SwiftTests: XCTestCase {
 private class TestFailer: Failer {
     var failed = false
 
-    func fail(_ message: String, file: StaticString, line: UInt) throws {
+    func fail(_: String, file _: StaticString, line _: UInt) throws {
         failed = true
     }
 }

@@ -6,20 +6,20 @@ public class OutMarker {
     init(_ text: String) {
         self.text = text
     }
-    
+
     deinit {
         print("<- out: " + text)
     }
 }
 
 public class SimpleLogger {
-    public class func useMarkers(_ function: String = #function, file: StaticString = #file, line: UInt = #line) -> OutMarker {
+    public class func useMarkers(_ function: String = #function, file: StaticString = #file, line _: UInt = #line) -> OutMarker {
         let text = function + getFileInfo(file)
         print("-> in: " + text)
         return OutMarker(text)
     }
 
-    class func printLineNumber(_ function: String = #function, file: StaticString = #file, line: UInt = #line) {
+    class func printLineNumber(_: String = #function, file: StaticString = #file, line: UInt = #line) {
         print("## " + getFileInfo(file) + ":\(line)")
     }
 

@@ -7,7 +7,6 @@ import XCTest
 
 // begin-snippet: sample_test
 class SampleArrayTests: XCTestCase {
-
     func testList() throws {
         var names = ["Llewellyn", "James", "Dan", "Jason", "Katrina"]
         names.sort()
@@ -48,7 +47,7 @@ class SampleArrayTests: XCTestCase {
             "theta",
             "iota",
             "kappa",
-            "lambda"
+            "lambda",
         ]
         try Approvals.verifyAll(names, label: "Greek")
     }
@@ -61,5 +60,4 @@ class SampleArrayTests: XCTestCase {
         ]
         try Approvals.verify(dict)
     }
-
 }

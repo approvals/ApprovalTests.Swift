@@ -6,14 +6,13 @@
 import XCTest
 
 final class ReporterTests: XCTestCase {
-
     func testFirstWorking() throws {
         let reporter1 = TestReporter(success: false)
         let reporter2 = TestReporter(success: true)
         let reporter3 = TestReporter(success: true)
 
         let success = FirstWorkingReporter(reporter1, reporter2, reporter3)
-                .report(received: "r.text", approved: "a.text")
+            .report(received: "r.text", approved: "a.text")
 
         XCTAssertTrue(success)
         XCTAssertEqual(reporter1.approved, "a.text")
@@ -27,7 +26,7 @@ final class ReporterTests: XCTestCase {
         let reporter3 = TestReporter(success: true)
 
         let success = ReportWithEverything(reporter1, reporter2, reporter3)
-                .report(received: "r.text", approved: "a.text")
+            .report(received: "r.text", approved: "a.text")
 
         XCTAssertTrue(success)
         XCTAssertEqual(reporter1.approved, "a.text")
@@ -60,7 +59,7 @@ final class ReporterTests: XCTestCase {
             XCTAssertEqual(command, "mv \"/path with spaces/r.text\" \"/path with spaces/a.text\"")
         }
     #endif
-        
+
     #if os(OSX)
         func test_fileLaunchingOnMac() throws {
             let reporter = ReportByOpeningReceivedFile()

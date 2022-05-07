@@ -1,7 +1,6 @@
 import Foundation
 
 public enum StringUtils {
-
     /// Ends text with newline, unless it already ends with newline.
     public static func endWithNewline(_ text: String) -> String {
         var buffer = text
@@ -13,18 +12,18 @@ public enum StringUtils {
 
     /**
      Converts array of items to string.
-     
+
      Each element of the array is on a separate line, preceded by the name and its array index.
-     
+
      - Parameters:
        - header: Header line above array.
-       - array: Array to print to string. 
+       - array: Array to print to string.
        - label: Describe each element as `label[i] = value`.
      */
     public static func toString<T>(_ header: String = "",
                                    _ array: [T],
-                                   label: String = ""
-    ) -> String {
+                                   label: String = "") -> String
+    {
         guard !array.isEmpty else {
             let name = label.isEmpty ? "array" : label
             return "\(name).length = 0"
@@ -40,18 +39,18 @@ public enum StringUtils {
 
     /**
      Converts array of items to string.
-     
+
      Each element of the array is on a separate line, preceded by the name and its array index.
-     
+
      - Parameters:
        - header: Header line above array.
-       - array: Array to print to string. 
+       - array: Array to print to string.
        - labeler: Closure converting array element to String.
      */
     public static func toString<T>(_ header: String = "",
                                    _ array: [T],
-                                   _ labeler: (T) -> String
-    ) -> String {
+                                   _ labeler: (T) -> String) -> String
+    {
         guard !array.isEmpty else {
             let name = "array"
             return "\(name).length = 0"
@@ -99,9 +98,9 @@ public enum StringUtils {
 
     /**
      Prints grid of information, returning it as a string.
-     
+
      - Parameters:
-       - width: Width of grid. 
+       - width: Width of grid.
        - height: Height of grid.
        - cellPrinter: Converts (x, y) coordinates into output. The first grid point is (0, 0).
      */

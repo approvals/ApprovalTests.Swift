@@ -4,10 +4,10 @@ import Foundation
 public class ReportWithAppCode: GenericDiffReporter {
     public init() {
         super.init(
-                programPath: "/usr/local/bin/appcode",
-                arguments: { received, approved in
-                    ["diff", received, approved]
-                }
+            programPath: "/usr/local/bin/appcode",
+            arguments: { received, approved in
+                ["diff", received, approved]
+            }
         )
     }
 }
@@ -21,10 +21,10 @@ public class ReportWithBeyondCompare: GenericDiffReporter {
 public class ReportWithDiffMerge: GenericDiffReporter {
     public init() {
         super.init(
-                programPath: "/Applications/DiffMerge.app/Contents/MacOS/DiffMerge",
-                arguments: { received, approved in
-                    ["--nosplash", received, approved]
-                }
+            programPath: "/Applications/DiffMerge.app/Contents/MacOS/DiffMerge",
+            arguments: { received, approved in
+                ["--nosplash", received, approved]
+            }
         )
     }
 }
@@ -38,11 +38,11 @@ public class ReportWithKaleidoscope: GenericDiffReporter {
 public class ReportWithKdiff3: GenericDiffReporter {
     public init() {
         super.init(
-                programPath: "/Applications/kdiff3.app/Contents/MacOS/kdiff3",
-                TEXT,
-                arguments: { received, approved in
-                    [received, approved, "-m"]
-                }
+            programPath: "/Applications/kdiff3.app/Contents/MacOS/kdiff3",
+            TEXT,
+            arguments: { received, approved in
+                [received, approved, "-m"]
+            }
         )
     }
 }
@@ -62,11 +62,10 @@ public class ReportWithTKDiff: GenericDiffReporter {
 public class ReportWithVisualStudioCode: GenericDiffReporter {
     public init() {
         super.init(
-                programPath: "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code",
-                arguments: { received, approved in
-                    ["-d", received, approved]
-                }
+            programPath: "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code",
+            arguments: { received, approved in
+                ["-d", received, approved]
+            }
         )
     }
 }
-

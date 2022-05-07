@@ -6,11 +6,11 @@ public enum CombinationApprovals {
     private static var unused: [UNUSED] { [UNUSED()] }
 
     public static func verifyAllCombinations<IN1, OUT>(
-            _ call: @escaping (IN1) -> OUT,
-            _ params1: [IN1],
-            options: Options = Options(),
-            file: StaticString = #filePath,
-            line: UInt = #line
+        _ call: @escaping (IN1) -> OUT,
+        _ params1: [IN1],
+        options: Options = Options(),
+        file: StaticString = #filePath,
+        line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED) -> OUT = {
             let _ = $1
@@ -24,20 +24,20 @@ public enum CombinationApprovals {
             return call($0)
         }
         try verifyAllCombinations(
-                callWithAllParameters,
-                params1,
-                unused, unused, unused, unused, unused, unused, unused, unused,
-                options: options, file: file, line: line
+            callWithAllParameters,
+            params1,
+            unused, unused, unused, unused, unused, unused, unused, unused,
+            options: options, file: file, line: line
         )
     }
 
     public static func verifyAllCombinations<IN1, IN2, OUT>(
-            _ call: @escaping (IN1, IN2) -> OUT,
-            _ params1: [IN1],
-            _ params2: [IN2],
-            options: Options = Options(),
-            file: StaticString = #filePath,
-            line: UInt = #line
+        _ call: @escaping (IN1, IN2) -> OUT,
+        _ params1: [IN1],
+        _ params2: [IN2],
+        options: Options = Options(),
+        file: StaticString = #filePath,
+        line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED) -> OUT = {
             let _ = $2
@@ -50,21 +50,21 @@ public enum CombinationApprovals {
             return call($0, $1)
         }
         try verifyAllCombinations(
-                callWithAllParameters,
-                params1, params2,
-                unused, unused, unused, unused, unused, unused, unused,
-                options: options, file: file, line: line
+            callWithAllParameters,
+            params1, params2,
+            unused, unused, unused, unused, unused, unused, unused,
+            options: options, file: file, line: line
         )
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, OUT>(
-            _ call: @escaping (IN1, IN2, IN3) -> OUT,
-            _ params1: [IN1],
-            _ params2: [IN2],
-            _ params3: [IN3],
-            options: Options = Options(),
-            file: StaticString = #filePath,
-            line: UInt = #line
+        _ call: @escaping (IN1, IN2, IN3) -> OUT,
+        _ params1: [IN1],
+        _ params2: [IN2],
+        _ params3: [IN3],
+        options: Options = Options(),
+        file: StaticString = #filePath,
+        line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, IN3, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED) -> OUT = {
             let _ = $3
@@ -76,22 +76,22 @@ public enum CombinationApprovals {
             return call($0, $1, $2)
         }
         try verifyAllCombinations(
-                callWithAllParameters,
-                params1, params2, params3,
-                unused, unused, unused, unused, unused, unused,
-                options: options, file: file, line: line
+            callWithAllParameters,
+            params1, params2, params3,
+            unused, unused, unused, unused, unused, unused,
+            options: options, file: file, line: line
         )
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, OUT>(
-            _ call: @escaping (IN1, IN2, IN3, IN4) -> OUT,
-            _ params1: [IN1],
-            _ params2: [IN2],
-            _ params3: [IN3],
-            _ params4: [IN4],
-            options: Options = Options(),
-            file: StaticString = #filePath,
-            line: UInt = #line
+        _ call: @escaping (IN1, IN2, IN3, IN4) -> OUT,
+        _ params1: [IN1],
+        _ params2: [IN2],
+        _ params3: [IN3],
+        _ params4: [IN4],
+        options: Options = Options(),
+        file: StaticString = #filePath,
+        line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, IN3, IN4, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED) -> OUT = {
             let _ = $4
@@ -102,23 +102,23 @@ public enum CombinationApprovals {
             return call($0, $1, $2, $3)
         }
         try verifyAllCombinations(
-                callWithAllParameters,
-                params1, params2, params3, params4,
-                unused, unused, unused, unused, unused,
-                options: options, file: file, line: line
+            callWithAllParameters,
+            params1, params2, params3, params4,
+            unused, unused, unused, unused, unused,
+            options: options, file: file, line: line
         )
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, OUT>(
-            _ call: @escaping (IN1, IN2, IN3, IN4, IN5) -> OUT,
-            _ params1: [IN1],
-            _ params2: [IN2],
-            _ params3: [IN3],
-            _ params4: [IN4],
-            _ params5: [IN5],
-            options: Options = Options(),
-            file: StaticString = #filePath,
-            line: UInt = #line
+        _ call: @escaping (IN1, IN2, IN3, IN4, IN5) -> OUT,
+        _ params1: [IN1],
+        _ params2: [IN2],
+        _ params3: [IN3],
+        _ params4: [IN4],
+        _ params5: [IN5],
+        options: Options = Options(),
+        file: StaticString = #filePath,
+        line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, IN3, IN4, IN5, UNUSED, UNUSED, UNUSED, UNUSED) -> OUT = {
             let _ = $5
@@ -128,24 +128,24 @@ public enum CombinationApprovals {
             return call($0, $1, $2, $3, $4)
         }
         try verifyAllCombinations(
-                callWithAllParameters,
-                params1, params2, params3, params4, params5,
-                unused, unused, unused, unused,
-                options: options, file: file, line: line
+            callWithAllParameters,
+            params1, params2, params3, params4, params5,
+            unused, unused, unused, unused,
+            options: options, file: file, line: line
         )
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, OUT>(
-            _ call: @escaping (IN1, IN2, IN3, IN4, IN5, IN6) -> OUT,
-            _ params1: [IN1],
-            _ params2: [IN2],
-            _ params3: [IN3],
-            _ params4: [IN4],
-            _ params5: [IN5],
-            _ params6: [IN6],
-            options: Options = Options(),
-            file: StaticString = #filePath,
-            line: UInt = #line
+        _ call: @escaping (IN1, IN2, IN3, IN4, IN5, IN6) -> OUT,
+        _ params1: [IN1],
+        _ params2: [IN2],
+        _ params3: [IN3],
+        _ params4: [IN4],
+        _ params5: [IN5],
+        _ params6: [IN6],
+        options: Options = Options(),
+        file: StaticString = #filePath,
+        line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, IN3, IN4, IN5, IN6, UNUSED, UNUSED, UNUSED) -> OUT = {
             let _ = $6
@@ -154,25 +154,25 @@ public enum CombinationApprovals {
             return call($0, $1, $2, $3, $4, $5)
         }
         try verifyAllCombinations(
-                callWithAllParameters,
-                params1, params2, params3, params4, params5, params6,
-                unused, unused, unused,
-                options: options, file: file, line: line
+            callWithAllParameters,
+            params1, params2, params3, params4, params5, params6,
+            unused, unused, unused,
+            options: options, file: file, line: line
         )
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, IN7, OUT>(
-            _ call: @escaping (IN1, IN2, IN3, IN4, IN5, IN6, IN7) -> OUT,
-            _ params1: [IN1],
-            _ params2: [IN2],
-            _ params3: [IN3],
-            _ params4: [IN4],
-            _ params5: [IN5],
-            _ params6: [IN6],
-            _ params7: [IN7],
-            options: Options = Options(),
-            file: StaticString = #filePath,
-            line: UInt = #line
+        _ call: @escaping (IN1, IN2, IN3, IN4, IN5, IN6, IN7) -> OUT,
+        _ params1: [IN1],
+        _ params2: [IN2],
+        _ params3: [IN3],
+        _ params4: [IN4],
+        _ params5: [IN5],
+        _ params6: [IN6],
+        _ params7: [IN7],
+        options: Options = Options(),
+        file: StaticString = #filePath,
+        line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, IN3, IN4, IN5, IN6, IN7, UNUSED, UNUSED) -> OUT = {
             let _ = $7
@@ -180,53 +180,53 @@ public enum CombinationApprovals {
             return call($0, $1, $2, $3, $4, $5, $6)
         }
         try verifyAllCombinations(
-                callWithAllParameters,
-                params1, params2, params3, params4, params5, params6, params7,
-                unused, unused,
-                options: options, file: file, line: line
+            callWithAllParameters,
+            params1, params2, params3, params4, params5, params6, params7,
+            unused, unused,
+            options: options, file: file, line: line
         )
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, OUT>(
-            _ call: @escaping (IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8) -> OUT,
-            _ params1: [IN1],
-            _ params2: [IN2],
-            _ params3: [IN3],
-            _ params4: [IN4],
-            _ params5: [IN5],
-            _ params6: [IN6],
-            _ params7: [IN7],
-            _ params8: [IN8],
-            options: Options = Options(),
-            file: StaticString = #filePath,
-            line: UInt = #line
+        _ call: @escaping (IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8) -> OUT,
+        _ params1: [IN1],
+        _ params2: [IN2],
+        _ params3: [IN3],
+        _ params4: [IN4],
+        _ params5: [IN5],
+        _ params6: [IN6],
+        _ params7: [IN7],
+        _ params8: [IN8],
+        options: Options = Options(),
+        file: StaticString = #filePath,
+        line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, UNUSED) -> OUT = {
             let _ = $8
             return call($0, $1, $2, $3, $4, $5, $6, $7)
         }
         try verifyAllCombinations(
-                callWithAllParameters,
-                params1, params2, params3, params4, params5, params6, params7, params8,
-                unused,
-                options: options, file: file, line: line
+            callWithAllParameters,
+            params1, params2, params3, params4, params5, params6, params7, params8,
+            unused,
+            options: options, file: file, line: line
         )
     }
 
     public static func verifyAllCombinations<IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, OUT>(
-            _ call: (IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9) -> OUT,
-            _ params1: [IN1],
-            _ params2: [IN2],
-            _ params3: [IN3],
-            _ params4: [IN4],
-            _ params5: [IN5],
-            _ params6: [IN6],
-            _ params7: [IN7],
-            _ params8: [IN8],
-            _ params9: [IN9],
-            options: Options = Options(),
-            file: StaticString = #filePath,
-            line: UInt = #line
+        _ call: (IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9) -> OUT,
+        _ params1: [IN1],
+        _ params2: [IN2],
+        _ params3: [IN3],
+        _ params4: [IN4],
+        _ params5: [IN5],
+        _ params6: [IN6],
+        _ params7: [IN7],
+        _ params8: [IN8],
+        _ params9: [IN9],
+        options: Options = Options(),
+        file: StaticString = #filePath,
+        line: UInt = #line
     ) throws {
         var output = ""
         for in1 in params1 {

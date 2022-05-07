@@ -6,7 +6,6 @@
 import XCTest
 
 final class ScrubbersTests: XCTestCase {
-
     func testSimpleScrub() throws {
         let randomNumber = Int.random(in: 1 ... 10)
         let s = "\(randomNumber) is a nice number"
@@ -28,8 +27,8 @@ final class ScrubbersTests: XCTestCase {
         let date = Date(timeIntervalSince1970: 1000)
         let date2 = Date(timeIntervalSince1970: 2000)
         try Approvals.verifyAsJSON(
-                TimeSheet(startTime: date, breakTime: date, breakEnd: date2, endOfDay: date2),
-                Options(scrubber)
+            TimeSheet(startTime: date, breakTime: date, breakEnd: date2, endOfDay: date2),
+            Options(scrubber)
         )
     }
 

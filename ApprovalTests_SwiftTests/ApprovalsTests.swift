@@ -6,7 +6,6 @@
 import XCTest
 
 final class ApprovalsTests: XCTestCase {
-
     func testToString() throws {
         try Approvals.verify(CGRect(x: 5, y: 10, width: 100, height: 200))
     }
@@ -21,7 +20,7 @@ final class ApprovalsTests: XCTestCase {
 
     func testSequence() throws {
         var gameOfLife = GameOfLife { x, y in
-            2 <= x && x <= 4 && y == 2
+            x >= 2 && x <= 4 && y == 2
         }
         try Approvals.verifySequence(gameOfLife, numberOfFrames: 2) { _ in
             gameOfLife = gameOfLife.advance
@@ -49,7 +48,7 @@ class MetMuseumPieceLoader: ExecutableQuery {
         if query.isEmpty {
             return ""
         }
-        return NetUtils.readURL(query).replacingOccurrences(matchingPattern: ",") {_  in ",\n" }
+        return NetUtils.readURL(query).replacingOccurrences(matchingPattern: ",") { _ in ",\n" }
     }
 }
 

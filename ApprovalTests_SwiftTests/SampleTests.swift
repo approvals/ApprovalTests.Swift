@@ -6,7 +6,7 @@
 import XCTest
 
 final class SampleTests: XCTestCase {
-    private var getWords = ["Approval", "Tests" ]
+    private var getWords = ["Approval", "Tests"]
 
     func testString() throws {
         var s = "Approval"
@@ -32,7 +32,7 @@ final class SampleTests: XCTestCase {
             "\(w) -> \(w.uppercased())"
         }
     }
-    
+
     func testArrayWithLabeler2() throws {
         try Approvals.verifyAll(header: "", getWords, label: "text")
     }

@@ -6,7 +6,7 @@
      A reporter that launches an external diff tool.
      */
     public class GenericDiffReporter: GenericDiffReporterBase {
-        public override func runProcess(received: String, approved: String) throws {
+        override public func runProcess(received: String, approved: String) throws {
             let process = makeProcess(received: received, approved: approved)
             try process.run()
         }

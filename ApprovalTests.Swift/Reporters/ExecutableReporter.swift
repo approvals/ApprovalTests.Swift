@@ -24,21 +24,21 @@ public class ExecutableReporter: ApprovalFailureReporter {
             let queryText = (try! String(contentsOf: URL(fileURLWithPath: queryFile))).trimmingCharacters(in: .whitespacesAndNewlines)
             let queryResult = query.executeQuery(queryText)
             let fileText = """
-                           Do NOT approve
-                               This file will be deleted
-                               It is for feedback purposes only
+            Do NOT approve
+                This file will be deleted
+                It is for feedback purposes only
 
-                           query:
-                           \(queryText)
+            query:
+            \(queryText)
 
-                           result:
-                           \(queryResult)
-                           """
+            result:
+            \(queryResult)
+            """
             try! fileText.write(toFile: fileName, atomically: true, encoding: .utf8)
         }
         return fileName
     }
-    
+
     class func wrap(_ options: Options, _ query: ExecutableQuery) throws -> Options {
         let reporter = options.reporter
         let reporter2 = ExecutableReporter(reporter, query)
