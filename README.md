@@ -35,14 +35,13 @@ We'll start by writing a simple unit test to verify a list of names. But instead
 <a id='snippet-sample_test'></a>
 ```swift
 class SampleArrayTests: XCTestCase {
-
     func testList() throws {
         var names = ["Llewellyn", "James", "Dan", "Jason", "Katrina"]
         names.sort()
         try Approvals.verifyAll(names, label: "")
     }
 ```
-<sup><a href='/ApprovalTests_SwiftTests/Demo/SampleArrayTests.swift#L8-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample_test' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/ApprovalTests_SwiftTests/Demo/SampleArrayTests.swift#L8-L15' title='Snippet source file'>snippet source</a> | <a href='#snippet-sample_test' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 The `verifyAll()` function performs a test assertion for a list of items. Unlike a normal assertion, it doesn’t specify an expected list. Instead, this will produce a “received” file matching the name of your test suite and test case. In this example, it will write a file `SampleArrayTests.testList.received.txt`:

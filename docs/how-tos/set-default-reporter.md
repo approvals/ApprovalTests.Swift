@@ -19,11 +19,10 @@ XCTest has an init method that can do one-time setup. Here is an example:
 <a id='snippet-approvaltests_initialization_class'></a>
 ```swift
 public class TestSetup: NSObject {
-    
     override init() {
         super.init()
 ```
-<sup><a href='/ApprovalTests_SwiftTests/TestSetup.swift#L8-L13' title='Snippet source file'>snippet source</a> | <a href='#snippet-approvaltests_initialization_class' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/ApprovalTests_SwiftTests/TestSetup.swift#L8-L12' title='Snippet source file'>snippet source</a> | <a href='#snippet-approvaltests_initialization_class' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ### Set Initialization Class in Your Plist
