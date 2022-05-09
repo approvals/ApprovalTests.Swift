@@ -1,3 +1,5 @@
+// swiftlint:disable strict_fileprivate
+
 private enum OptionDataKey {
     case reporter
     case scrubber
