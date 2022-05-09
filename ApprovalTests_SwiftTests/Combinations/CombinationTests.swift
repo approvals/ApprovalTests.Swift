@@ -5,6 +5,8 @@
 #endif
 import XCTest
 
+// swiftlint:disable anonymous_argument_in_multiline_closure multiline_arguments
+
 final class CombinationTests: XCTestCase {
     private func threeParams(_ in1: Int, _ in2: Int, _ in3: Int) -> Int {
         in1 + in2 + in3
