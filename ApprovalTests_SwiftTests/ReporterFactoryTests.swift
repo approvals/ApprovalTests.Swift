@@ -20,10 +20,11 @@ final class ReporterFactoryTests: XCTestCase {
         verifyDefaultReporter(reporter1, match: true)
     }
 
-    private func verifyDefaultReporter(_ reporter1: ApprovalFailureReporter, match: Bool,
-                                       file: StaticString = #filePath,
-                                       line: UInt = #line)
-    {
+    private func verifyDefaultReporter(
+        _ reporter1: ApprovalFailureReporter, match: Bool,
+        file: StaticString = #filePath,
+        line: UInt = #line
+    ) {
         let reporter3 = ReporterFactory.get
         XCTAssertEqual(reporter1 as? EquatableFailureReporter == reporter3 as? EquatableFailureReporter, match, file: file, line: line)
     }

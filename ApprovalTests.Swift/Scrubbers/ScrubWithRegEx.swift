@@ -21,9 +21,10 @@ public class ScrubWithRegEx: Scrubber {
 }
 
 public extension String {
-    func replacingOccurrences(matchingPattern pattern: String,
-                              replacementProvider: (String) -> String?) -> String
-    {
+    func replacingOccurrences(
+        matchingPattern pattern: String,
+        replacementProvider: (String) -> String?
+    ) -> String {
         let expression = try! NSRegularExpression(pattern: pattern, options: [])
         let matches = expression.matches(in: self, options: [], range: NSRange(startIndex ..< endIndex, in: self))
         guard matches.count > 0 else { return self }

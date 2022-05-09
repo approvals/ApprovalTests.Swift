@@ -20,10 +20,11 @@ public enum StringUtils {
        - array: Array to print to string.
        - label: Describe each element as `label[i] = value`.
      */
-    public static func toString<T>(_ header: String = "",
-                                   _ array: [T],
-                                   label: String = "") -> String
-    {
+    public static func toString<T>(
+        _ header: String = "",
+        _ array: [T],
+        label: String = ""
+    ) -> String {
         guard !array.isEmpty else {
             let name = label.isEmpty ? "array" : label
             return "\(name).length = 0"
@@ -47,10 +48,11 @@ public enum StringUtils {
        - array: Array to print to string.
        - labeler: Closure converting array element to String.
      */
-    public static func toString<T>(_ header: String = "",
-                                   _ array: [T],
-                                   _ labeler: (T) -> String) -> String
-    {
+    public static func toString<T>(
+        _ header: String = "",
+        _ array: [T],
+        _ labeler: (T) -> String
+    ) -> String {
         guard !array.isEmpty else {
             let name = "array"
             return "\(name).length = 0"

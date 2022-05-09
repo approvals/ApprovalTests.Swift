@@ -9,12 +9,13 @@ public class GenericDiffReporterBase: EquatableFailureReporter {
     let fileTypes: [String]
     let arguments: (String, String) -> [String]
 
-    public init(programPath: String,
-                _ fileTypes: [String] = TEXT,
-                arguments: @escaping (String, String) -> [String] = { received, approved in
-                    [received, approved]
-                })
-    {
+    public init(
+        programPath: String,
+        _ fileTypes: [String] = TEXT,
+        arguments: @escaping (String, String) -> [String] = { received, approved in
+            [received, approved]
+        }
+    ) {
         self.programPath = programPath
         self.fileTypes = fileTypes
         self.arguments = arguments
