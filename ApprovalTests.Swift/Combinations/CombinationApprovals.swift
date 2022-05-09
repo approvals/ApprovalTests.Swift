@@ -13,14 +13,14 @@ public enum CombinationApprovals {
         line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED) -> OUT = {
-            let _ = $1
-            let _ = $2
-            let _ = $3
-            let _ = $4
-            let _ = $5
-            let _ = $6
-            let _ = $7
-            let _ = $8
+            _ = $1
+            _ = $2
+            _ = $3
+            _ = $4
+            _ = $5
+            _ = $6
+            _ = $7
+            _ = $8
             return call($0)
         }
         try verifyAllCombinations(
@@ -40,13 +40,13 @@ public enum CombinationApprovals {
         line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED) -> OUT = {
-            let _ = $2
-            let _ = $3
-            let _ = $4
-            let _ = $5
-            let _ = $6
-            let _ = $7
-            let _ = $8
+            _ = $2
+            _ = $3
+            _ = $4
+            _ = $5
+            _ = $6
+            _ = $7
+            _ = $8
             return call($0, $1)
         }
         try verifyAllCombinations(
@@ -67,12 +67,12 @@ public enum CombinationApprovals {
         line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, IN3, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED) -> OUT = {
-            let _ = $3
-            let _ = $4
-            let _ = $5
-            let _ = $6
-            let _ = $7
-            let _ = $8
+            _ = $3
+            _ = $4
+            _ = $5
+            _ = $6
+            _ = $7
+            _ = $8
             return call($0, $1, $2)
         }
         try verifyAllCombinations(
@@ -94,11 +94,11 @@ public enum CombinationApprovals {
         line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, IN3, IN4, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED) -> OUT = {
-            let _ = $4
-            let _ = $5
-            let _ = $6
-            let _ = $7
-            let _ = $8
+            _ = $4
+            _ = $5
+            _ = $6
+            _ = $7
+            _ = $8
             return call($0, $1, $2, $3)
         }
         try verifyAllCombinations(
@@ -121,10 +121,10 @@ public enum CombinationApprovals {
         line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, IN3, IN4, IN5, UNUSED, UNUSED, UNUSED, UNUSED) -> OUT = {
-            let _ = $5
-            let _ = $6
-            let _ = $7
-            let _ = $8
+            _ = $5
+            _ = $6
+            _ = $7
+            _ = $8
             return call($0, $1, $2, $3, $4)
         }
         try verifyAllCombinations(
@@ -148,9 +148,9 @@ public enum CombinationApprovals {
         line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, IN3, IN4, IN5, IN6, UNUSED, UNUSED, UNUSED) -> OUT = {
-            let _ = $6
-            let _ = $7
-            let _ = $8
+            _ = $6
+            _ = $7
+            _ = $8
             return call($0, $1, $2, $3, $4, $5)
         }
         try verifyAllCombinations(
@@ -175,8 +175,8 @@ public enum CombinationApprovals {
         line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, IN3, IN4, IN5, IN6, IN7, UNUSED, UNUSED) -> OUT = {
-            let _ = $7
-            let _ = $8
+            _ = $7
+            _ = $8
             return call($0, $1, $2, $3, $4, $5, $6)
         }
         try verifyAllCombinations(
@@ -202,7 +202,7 @@ public enum CombinationApprovals {
         line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, UNUSED) -> OUT = {
-            let _ = $8
+            _ = $8
             return call($0, $1, $2, $3, $4, $5, $6, $7)
         }
         try verifyAllCombinations(
