@@ -1,11 +1,11 @@
 // swiftlint:disable anonymous_argument_in_multiline_closure function_parameter_count multiline_arguments
 
 public enum CombinationApprovals {
-    private struct UNUSED {
-        static let parameter = [UNUSED()]
+    private enum UNUSED {
+        case unused
     }
 
-    private static var unused: [UNUSED] { [UNUSED()] }
+    private static var unused: [UNUSED] { [.unused] }
 
     public static func verifyAllCombinations<IN1, OUT>(
         _ call: @escaping (IN1) -> OUT,
