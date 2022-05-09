@@ -12,14 +12,14 @@ public class OutMarker {
     }
 }
 
-public class SimpleLogger {
-    public class func useMarkers(_ function: String = #function, file: StaticString = #file, line _: UInt = #line) -> OutMarker {
+public enum SimpleLogger {
+    public static func useMarkers(_ function: String = #function, file: StaticString = #file, line _: UInt = #line) -> OutMarker {
         let text = function + getFileInfo(file)
         print("-> in: " + text)
         return OutMarker(text)
     }
 
-    class func printLineNumber(_: String = #function, file: StaticString = #file, line: UInt = #line) {
+    public static func printLineNumber(_: String = #function, file: StaticString = #file, line: UInt = #line) {
         print("## " + getFileInfo(file) + ":\(line)")
     }
 
