@@ -15,7 +15,7 @@ public class ScrubWithRegEx: Scrubber {
     }
 
     public func scrub(_ input: String) -> String {
-        if pattern == "" { return input }
+        if pattern.isEmpty { return input }
         return input.replacingOccurrences(matchingPattern: pattern, replacementProvider: replacementFunction)
     }
 }
