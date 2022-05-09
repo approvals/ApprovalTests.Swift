@@ -59,7 +59,6 @@ opt_in_rules:
   - multiline_parameters
   - multiline_parameters_brackets
   - nimble_operator
-  - no_extension_access_modifier
   - nslocalizedstring_key
   - object_literal
   - operator_usage_whitespace
