@@ -27,7 +27,7 @@ public extension String {
     ) -> String {
         let expression = try! NSRegularExpression(pattern: pattern, options: [])
         let matches = expression.matches(in: self, options: [], range: NSRange(startIndex ..< endIndex, in: self))
-        guard matches.count > 0 else { return self }
+        guard !matches.isEmpty else { return self }
         var splitStart = startIndex
         return matches.map { match -> (String, [String]) in
             let range = Range(match.range, in: self)!
