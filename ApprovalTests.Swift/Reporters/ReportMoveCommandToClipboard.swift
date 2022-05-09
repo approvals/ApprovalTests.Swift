@@ -13,7 +13,7 @@ public class ReportMoveCommandToClipboard: EquatableFailureReporter {
     }
 
     override public func report(received: String, approved: String) -> Bool {
-        let command = ReportMoveCommandToClipboard.makeCommandLineMove(received: received, approved: approved)
+        let command = Self.makeCommandLineMove(received: received, approved: approved)
         SystemUtils.pasteToClipboard(command)
         return true
     }

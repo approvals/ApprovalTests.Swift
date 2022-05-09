@@ -24,8 +24,8 @@ private struct ClassAndMethod {
     let testName: String
 
     init(classAndMethod: String) {
-        className = ClassAndMethod.extractClassName(classAndMethod)
-        testName = ClassAndMethod.extractMethodName(classAndMethod)
+        className = Self.extractClassName(classAndMethod)
+        testName = Self.extractMethodName(classAndMethod)
     }
 
     init(className: String, testName: String) {

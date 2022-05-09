@@ -10,7 +10,7 @@ public class TestSetup: NSObject {
     override init() {
         super.init()
         // end-snippet
-        TestSetup.initialized = true
+        Self.initialized = true
         // begin-snippet: register_default_reporter
         disposer = ReporterFactory.registerDefaultReporter {
             ReportWithDiffTool()

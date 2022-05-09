@@ -4,11 +4,11 @@ public class FileApprover: ApprovalApprover {
     private static var failer: Failer = XCTFailer()
 
     public static func registerFailer(_ failer: Failer) {
-        FileApprover.failer = failer
+        Self.failer = failer
     }
 
     public static func resetFailer() {
-        FileApprover.failer = XCTFailer()
+        Self.failer = XCTFailer()
     }
 
     private let fileManager = FileManager.default
@@ -55,7 +55,7 @@ public class FileApprover: ApprovalApprover {
 
     public func fail(file: StaticString, line: UInt) throws {
         let message = "Failed Approval \nApproved:\(approved) \nReceived:\(received)"
-        try FileApprover.failer.fail(message, file: file, line: line)
+        try Self.failer.fail(message, file: file, line: line)
     }
 
     public func reportFailure(reporter: ApprovalFailureReporter) {
