@@ -21,7 +21,8 @@ final class ReporterFactoryTests: XCTestCase {
     }
 
     private func verifyDefaultReporter(
-        _ reporter1: ApprovalFailureReporter, match: Bool,
+        _ reporter1: ApprovalFailureReporter,
+        match: Bool,
         file: StaticString = #filePath,
         line: UInt = #line
     ) {

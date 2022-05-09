@@ -19,7 +19,8 @@ public enum Approvals {
         try verify(
             ApprovalTextWriter(options.scrub(response), options.forFile.fileExtensionWithoutDot),
             options,
-            file: file, line: line
+            file: file,
+            line: line
         )
     }
 
