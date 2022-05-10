@@ -1,0 +1,7 @@
+StringBuffer: 
+-> in: test()SimpleLoggerTests.swift
+  ## SimpleLoggerTests.swift:13
+  -> in: test()SimpleLoggerTests.swift
+    variable: name = llewellyn
+  <- out: test()SimpleLoggerTests.swift
+<- out: test()SimpleLoggerTests.swift

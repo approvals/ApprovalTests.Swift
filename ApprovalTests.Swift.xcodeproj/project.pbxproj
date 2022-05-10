@@ -63,6 +63,7 @@
 		BB1701081A81B0B15E271256 /* TestSetupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1705F8B220353ECE8102B0 /* TestSetupTests.swift */; };
 		BB1701908E6AD828958295FF /* TestFailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17051531693F6FC252F7DF /* TestFailer.swift */; };
 		BB1702CC0E11C261EEA5D889 /* TestFailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17051531693F6FC252F7DF /* TestFailer.swift */; };
+		BB1702D09375636272A65EDC /* SimpleLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1707A5421EDB96B04A9380 /* SimpleLoggerTests.swift */; };
 		BB17030411282D1203B9BFF6 /* ReportWithDiffTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1701DBF0B6E0AD00A62DDD /* ReportWithDiffTool.swift */; };
 		BB170328E32BD1B280211D80 /* ReportByCallingScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1705B9C16FF40144A3AC52 /* ReportByCallingScript.swift */; };
 		BB1704AD2E598DDE7364EEEA /* NetUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170EF94A9CEE9D2A038041 /* NetUtils.swift */; };
@@ -91,6 +92,7 @@
 		BB1709DEFFE6129029D2E405 /* SystemUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170A69DD1A71C2E2A023E7 /* SystemUtils.swift */; };
 		BB170A6D76BAC3BE8A8C3522 /* ReportMoveCommandToConsole.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1700DA3D732E2D291AF5CE /* ReportMoveCommandToConsole.swift */; };
 		BB170AA381D03A76D76123C3 /* UIWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1704A1B9EB69E78E335F4C /* UIWriter.swift */; };
+		BB170B1A77724F95304BEF9F /* SimpleLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1707A5421EDB96B04A9380 /* SimpleLoggerTests.swift */; };
 		BB170B23B4B633C2A1740C43 /* ReportByOpeningReceivedFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170FA3E48957CD9F09940C /* ReportByOpeningReceivedFile.swift */; };
 		BB170B666CED34E67E36EB1C /* ReportMoveCommandToClipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB170BD5F95C651D0A332123 /* ReportMoveCommandToClipboard.swift */; };
 		BB170C2F89553360BB7D93DE /* TestSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB17051DA6037ED58B6A29A3 /* TestSetup.swift */; };
@@ -182,6 +184,7 @@
 		BB1705F8B220353ECE8102B0 /* TestSetupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSetupTests.swift; sourceTree = "<group>"; };
 		BB17064685A20DAA7CFE6421 /* ReporterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporterTests.swift; sourceTree = "<group>"; };
 		BB1706AEE30243891CC410D9 /* SimpleLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleLogger.swift; sourceTree = "<group>"; };
+		BB1707A5421EDB96B04A9380 /* SimpleLoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleLoggerTests.swift; sourceTree = "<group>"; };
 		BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDiffReporterBase.swift; sourceTree = "<group>"; };
 		BB170A69DD1A71C2E2A023E7 /* SystemUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemUtils.swift; sourceTree = "<group>"; };
 		BB170ABF2255D4F0B1D59D15 /* ReportWithEverything.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportWithEverything.swift; sourceTree = "<group>"; };
@@ -339,6 +342,7 @@
 				97308D78086F701623ED654B /* Demo */,
 				BB17064E8F6B27C1C626D959 /* Reporters */,
 				BB170341B90F8DAC2106366B /* Scrubbers */,
+				BB1700CFF366C565286F2463 /* Utils */,
 			);
 			path = ApprovalTests_SwiftTests;
 			sourceTree = "<group>";
@@ -438,6 +442,14 @@
 				97308657C3B3CEFB291EEBBD /* SampleArrayTests.swift */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		BB1700CFF366C565286F2463 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BB1707A5421EDB96B04A9380 /* SimpleLoggerTests.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		BB170341B90F8DAC2106366B /* Scrubbers */ = {
@@ -704,6 +716,7 @@
 				BB1706D0B12712EB693FA222 /* TestSetup.swift in Sources */,
 				BB170FB920D68002B14C4A5A /* TestSetupTests.swift in Sources */,
 				BB17078180CE0797EE88E7D4 /* ReporterFactoryTests.swift in Sources */,
+				BB170B1A77724F95304BEF9F /* SimpleLoggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,6 +782,7 @@
 				BB170C2F89553360BB7D93DE /* TestSetup.swift in Sources */,
 				BB1701081A81B0B15E271256 /* TestSetupTests.swift in Sources */,
 				BB1707B50E22A8C58F5A3563 /* ReporterFactoryTests.swift in Sources */,
+				BB1702D09375636272A65EDC /* SimpleLoggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
