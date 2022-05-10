@@ -3,5 +3,6 @@ StringBuffer:
   ## SimpleLoggerTests.swift:13
   -> in: test()SimpleLoggerTests.swift
     variable: name = llewellyn
+    .........1.........2.........3.........4..
   <- out: test()SimpleLoggerTests.swift
 <- out: test()SimpleLoggerTests.swift

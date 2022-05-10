@@ -15,6 +15,9 @@ final class SimpleLoggerTests: XCTestCase {
                 let m2 = SimpleLogger.useMarkers()
                 let name = "llewellyn"
                 SimpleLogger.variable("name", name);
+                for i in 0..<42 {
+                    SimpleLogger.hourGlass();
+                }
             }
         }
         try Approvals.verify(output)
