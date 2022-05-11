@@ -8,68 +8,45 @@ public class OutMarker {
     }
 
     deinit {
-        SimpleLogger.indent -= 1
-        SimpleLogger.log("<- out: " + text)
+        SimpleLogger.markerOut(text)
     }
 }
 
 public class StringBuffer: CustomStringConvertible {
+    private var string = ""
+
     public var description: String {
         "\n" + string
     }
 
-    var string: String = ""
-    
     public func append(_ s: String) {
         string += s
     }
 }
 
 public enum SimpleLogger {
-    static var indent = 0
-    private static var hourGlassWrap: Int = 100
-    private static var hourGlassCount: Int = 0
+    public static var printer: (String) -> Void = { print($0, terminator: "") }
+    private static var indent = 0
+    private static var hourGlassCount = 0
+    private static var hourGlassWrap = 100
 
-    public static func hourGlass() {
-        if (hourGlassWrap <= hourGlassCount)
-        {
-            clearHourGlass()
-        }
-        if (hourGlassCount == 0)
-        {
-            Self.printer(getIndentation())
-        }
-        hourGlassCount += 1
-        let mark: String = ((hourGlassCount % 10) == 0) ? (String(hourGlassCount / 10)) : ".";
-        Self.printer(mark)
+    public static func getIndentation() -> String {
+        String(repeating: " ", count: indent * 2)
     }
 
     public static func logToString() -> StringBuffer {
-        let output = StringBuffer()
-        Self.printer = { s in 
-            output.append(s)
-        }
-        return output
+        let buffer = StringBuffer()
+        printer = { buffer.append($0) }
+        return buffer
     }
 
-    public static func variable<T>(_ label: String, _ value: T) {
-        Self.log("variable: \(label) = \(String(describing: value))")
-    }
-
-    static var printer: (String) -> Void = { w in
-        print(w, terminator: "")
-    }
-    
     public static func log(_ s: String) {
         clearHourGlass()
-        Self.printer(Self.getIndentation() + s + "\n")
+        printer(getIndentation() + s + "\n")
     }
 
-    private static func clearHourGlass() {
-        if hourGlassCount != 0 {
-            hourGlassCount = 0
-            Self.printer("\n")
-        }
+    public static func printLineNumber(file: StaticString = #file, line: UInt = #line) {
+        log("## " + getFileInfo(file) + ":\(line)")
     }
 
     public static func useMarkers(_ function: String = #function, file: StaticString = #file, line _: UInt = #line) -> OutMarker {
@@ -79,17 +56,37 @@ public enum SimpleLogger {
         return OutMarker(text)
     }
 
-    public static func getIndentation() -> String {
-        String(repeating: " ", count: indent * 2)
+    public static func variable<T>(_ label: String, _ value: T) {
+        log("variable: \(label) = \(String(describing: value))")
     }
 
-    public static func printLineNumber(_: String = #function, file: StaticString = #file, line: UInt = #line) {
-        log("## " + getFileInfo(file) + ":\(line)")
+    public static func hourGlass() {
+        if hourGlassWrap <= hourGlassCount {
+            clearHourGlass()
+        }
+        if hourGlassCount == 0 {
+            printer(getIndentation())
+        }
+        hourGlassCount += 1
+        let mark = hourGlassCount.isMultiple(of: 10) ? String(hourGlassCount / 10) : "."
+        printer(mark)
+    }
+
+    private static func clearHourGlass() {
+        if hourGlassCount != 0 {
+            hourGlassCount = 0
+            printer("\n")
+        }
     }
 
     private static func getFileInfo(_ file: StaticString) -> String {
         let f = "\(file)"
         let fileName = "\((f as NSString).pathComponents.last!)"
         return fileName
+    }
+
+    fileprivate static func markerOut(_ text: String) {
+        indent -= 1
+        log("<- out: " + text)
     }
 }
