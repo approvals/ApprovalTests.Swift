@@ -1,0 +1,3 @@
+--exclude ApprovalTests.Swift/Utils/CwlDemangle.swift
+
+--disable spaceAroundComments
