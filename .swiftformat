@@ -1,3 +1,11 @@
 --exclude ApprovalTests.Swift/Utils/CwlDemangle.swift
 
 --disable spaceAroundComments
+
+--enable acronyms
+--enable blankLinesBetweenImports
+--enable isEmpty
+--enable preferDouble
+--enable sortedSwitchCases
+--enable wrapEnumCases
+--enable wrapSwitchCases
