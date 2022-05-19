@@ -1,6 +1,9 @@
 name: Update markdown snippets
+
 on:
   push:
+    branches: [ main ]
+
 jobs:
   update-markdown-snippets:
     runs-on: windows-latest
@@ -21,4 +24,3 @@ jobs:
           branch="${GITHUB_REF:11}"
           git push "${remote}" ${branch} || echo "nothing to push"
         shell: bash
-  
