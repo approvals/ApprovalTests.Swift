@@ -104,11 +104,13 @@ ApprovalTests.Swift runs out-of-the-box for macOS tests. But for iOS tests, you 
 
 ## Which File Artifacts to Exclude from Source Control
 
-You must add any “approved” files to your source control system. But “received” files can change with any run and should be ignored. For Git, add `*.received.*` to your `.gitignore`.
+You must add any “approved” files to your source control system. But “received” files can change with any run and should be ignored. For Git, add this to your `.gitignore`:
 
-If you have iOS tests, you should also add `command.sh` to your `.gitignore`. (They are scripts written by the iOS side for the file monitor to execute from the macOS side.)
+```
+*.received.*
+```
 
-So for iOS testing, make sure to exclude:
+If you have iOS tests, you should also add `command.sh` to your `.gitignore`. (They are scripts written by the iOS side for the file monitor to execute from the macOS side.) So for iOS testing, make sure to exclude:
 
 ```
 *.received.*
