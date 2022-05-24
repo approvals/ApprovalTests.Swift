@@ -29,20 +29,42 @@ public enum SimpleLogger {
     private static var indent = 0
     private static var hourGlassCount = 0
     private static var hourGlassWrap = 100
+    public static var timestamp = true
+    public static var timer: () -> Date = { Date() }
+    private static var lastDate: Date?
 
     public static func getIndentation() -> String {
         String(repeating: " ", count: indent * 2)
     }
 
     public static func logToString() -> StringBuffer {
+        timestamp = false
         let buffer = StringBuffer()
         printer = { buffer.append($0) }
         return buffer
     }
 
+    public static func event(_ label: String) {
+        log("event: \(label)")
+    }
+
     public static func log(_ s: String) {
         clearHourGlass()
+        addTimestamp()
         printer(getIndentation() + s + "\n")
+    }
+
+    private static func addTimestamp() {
+        if !timestamp { return }
+        let time = timer()
+        if lastDate == nil {
+            lastDate = time
+        }
+        let difference = Int(1000 * (time.timeIntervalSince1970 - lastDate!.timeIntervalSince1970))
+        let formatter = ISO8601DateFormatter()
+        let datestamp = "[\(formatter.string(from: time)) ~\(String(format: "%06d", difference))ms] "
+        printer(datestamp)
+        lastDate = time
     }
 
     public static func printLineNumber(file: StaticString = #file, line: UInt = #line) {
@@ -65,6 +87,7 @@ public enum SimpleLogger {
             clearHourGlass()
         }
         if hourGlassCount == 0 {
+            addTimestamp()
             printer(getIndentation())
         }
         hourGlassCount += 1

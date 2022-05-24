@@ -22,6 +22,23 @@ final class SimpleLoggerTests: XCTestCase {
         }
         try Approvals.verify(output)
     }
+
+    func test_timestamps() throws {
+        let output = SimpleLogger.logToString()
+        SimpleLogger.timestamp = true
+        var dates: [Date] = [
+            Date(timeIntervalSince1970: 0),
+            Date(timeIntervalSince1970: 0.5),
+        ] 
+        SimpleLogger.timer = {
+            let first = dates.first
+            dates = Array(dates.dropFirst())
+            return first!
+        }
+        SimpleLogger.event("1")
+        SimpleLogger.event("2")
+        try Approvals.verify(output)
+    }
 }
 
 /*
