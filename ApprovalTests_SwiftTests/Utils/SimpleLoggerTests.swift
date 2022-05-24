@@ -15,7 +15,7 @@ final class SimpleLoggerTests: XCTestCase {
                 let m2 = SimpleLogger.useMarkers()
                 let name = "llewellyn"
                 SimpleLogger.variable("name", name)
-                for _ in 0 ..< 42 {
+                for _ in 0 ..< 142 {
                     SimpleLogger.hourGlass()
                 }
             }
