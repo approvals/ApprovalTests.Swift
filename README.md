@@ -131,9 +131,8 @@ Get the following dependency:
 ```swift
 dependencies: [
     .package(
-            name: "ApprovalTests.Swift",
-            url: "https://github.com/approvals/ApprovalTests.Swift",
-            from: "1.0.0"
+        url: "https://github.com/approvals/ApprovalTests.Swift",
+        branch: "master"
     ),
 ],
 ```
@@ -146,11 +145,11 @@ Then add it to your test target:
 <a id='snippet-package_add_test_target'></a>
 ```swift
 .testTarget(
-        name: "ApprovalTests.Swift.StarterProject.MacOSTests",
-        dependencies: [
-            "ApprovalTests.Swift.StarterProject.MacOS",
-            "ApprovalTests.Swift"
-        ],
+    name: "ApprovalTests.Swift.StarterProject.MacOSTests",
+    dependencies: [
+        "ApprovalTests.Swift.StarterProject.MacOS",
+        "ApprovalTests.Swift",
+    ],
 ```
 <sup><a href='#snippet-package_add_test_target' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
