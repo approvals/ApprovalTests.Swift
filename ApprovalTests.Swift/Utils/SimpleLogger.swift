@@ -25,12 +25,12 @@ public class StringBuffer: CustomStringConvertible {
 }
 
 public enum SimpleLogger {
+    public static var timestamp = true
     public static var printer: (String) -> Void = { print($0, terminator: "") }
+    public static var timer: () -> Date = { Date() }
     private static var indent = 0
     private static var hourGlassCount = 0
     private static var hourGlassWrap = 100
-    public static var timestamp = true
-    public static var timer: () -> Date = { Date() }
     private static var lastDate: Date?
 
     public static func getIndentation() -> String {
