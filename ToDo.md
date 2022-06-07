@@ -1,11 +1,8 @@
 NEXT TIME:
-- SimpleLogger
-  - Test
-  - Log to string
-  - Indentation
-  - Time stamps / Number of milliseconds since last call
-
+- Sort out Namer approvalName() vs. sourceFilePath()
+- Add Verifiable
 - Fix apps with spaces: command.sh not quoting file names
 - Make ApprovalReporterWithCleanUp: have FileApprover use it in cleanUp
-- Then clean out query_results
+  - Then clean out query_results
 - Consider breaking change: Drop output of type
+- Improve story-telling in documentation
