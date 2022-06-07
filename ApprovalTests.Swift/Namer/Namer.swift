@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Namer: ApprovalNamer {
+public class Namer: ApprovalNamer {
     private let fileName: String
 
     public init(_ file: String) {

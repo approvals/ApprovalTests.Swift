@@ -1,6 +1,8 @@
 import Foundation
 
 public enum Approvals {
+    public typealias Namer1 = NamerFactory
+
     public static func makeNamer(forFile file: String) -> ApprovalNamer {
         Namer(file)
     }
@@ -8,7 +10,7 @@ public enum Approvals {
     public static var reporter: ApprovalFailureReporter {
         ReporterFactory.get
     }
-
+    
     /// Verifies a string against a previously approved version of the string.
     public static func verify(
         _ response: String,
@@ -167,7 +169,8 @@ extension Approvals {
         file: StaticString = #filePath,
         line: UInt = #line
     ) throws {
-        try verify(writer, makeNamer(forFile: file.description), options, file: file, line: line)
+        let namer = options.getNamer(file.description)
+        try verify(writer, namer, options, file: file, line: line)
     }
 
     private static func verify(

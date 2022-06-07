@@ -1,6 +1,7 @@
 // swiftlint:disable strict_fileprivate
 
 private enum OptionDataKey {
+    case namer
     case reporter
     case scrubber
     case fileExtension
@@ -30,6 +31,10 @@ private typealias OptionData = [OptionDataKey: Any]
  - uses whatever is currently set as the default reporter.
  */
 public struct Options {
+    func with(_ namerCreator: @escaping (String) -> ApprovalNamer) -> Options {
+        Options(data, key: .namer, value: namerCreator)
+    }
+
     private let data: OptionData
 
     public init() {
@@ -72,6 +77,12 @@ public struct Options {
 
     public var forFile: FileOptions {
         FileOptions(data)
+    }
+
+    func getNamer(_ path: String) -> ApprovalNamer {
+        var c = data[.namer] as? (String) -> ApprovalNamer ?? Approvals.makeNamer
+        return c(path)
+//        Approvals.makeNamer(forFile: path)
     }
 }
 
