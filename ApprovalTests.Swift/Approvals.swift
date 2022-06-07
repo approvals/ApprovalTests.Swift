@@ -1,7 +1,7 @@
 import Foundation
 
 public enum Approvals {
-    public typealias Namer1 = NamerFactory
+    public typealias Names = NamerFactory
 
     public static func makeNamer(forFile file: String) -> ApprovalNamer {
         Namer(file)
