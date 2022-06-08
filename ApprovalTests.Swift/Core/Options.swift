@@ -31,10 +31,6 @@ private typealias OptionData = [OptionDataKey: Any]
  - uses whatever is currently set as the default reporter.
  */
 public struct Options {
-    func with(_ namerCreator: @escaping (String) -> ApprovalNamer) -> Options {
-        Options(data, key: .namer, value: namerCreator)
-    }
-
     private let data: OptionData
 
     public init() {
@@ -61,6 +57,10 @@ public struct Options {
 
     public var scrubber: Scrubber {
         data[.scrubber] as? Scrubber ?? ScrubNothing()
+    }
+
+    public func with(_ namerCreator: @escaping (String) -> ApprovalNamer) -> Options {
+        Options(data, key: .namer, value: namerCreator)
     }
 
     public func with(reporter: ApprovalFailureReporter) -> Options {
