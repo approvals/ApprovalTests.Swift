@@ -1,5 +1,3 @@
-import Foundation
-
 public enum HelpMessages {
     static let lineSeparator = "*****************************************************************************************"
 

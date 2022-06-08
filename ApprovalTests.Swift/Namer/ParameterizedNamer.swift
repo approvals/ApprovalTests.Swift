@@ -1,5 +1,3 @@
-import Foundation
-
 class ParameterizedNamer: Namer {
     private let parameters: [String]
 

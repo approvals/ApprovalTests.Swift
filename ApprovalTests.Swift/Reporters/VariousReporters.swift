@@ -1,4 +1,3 @@
-import Foundation
 
 // Requires Tools->Create Command-line Launcher
 public class ReportWithAppCode: GenericDiffReporter {

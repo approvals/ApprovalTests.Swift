@@ -1,7 +1,6 @@
 #if os(macOS)
 
-    import Foundation
-
+    
     /**
      A reporter that attempts to open the received file using the system default file viewer.
 

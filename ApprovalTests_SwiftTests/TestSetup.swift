@@ -3,7 +3,6 @@
 #elseif os(iOS)
     import ApprovalTests_iOS
 #endif
-import Foundation
 
 // begin-snippet: approvaltests_initialization_class
 public class TestSetup: NSObject {

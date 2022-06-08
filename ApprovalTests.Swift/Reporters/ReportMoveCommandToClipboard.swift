@@ -1,4 +1,3 @@
-import Foundation
 
 /**
  A reporter that creates a command line `mv` command for approving the last failed test, and places it on the clipboard.

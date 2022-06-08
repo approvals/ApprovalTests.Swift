@@ -1,5 +1,3 @@
-import Foundation
-
 public enum Approvals {
     public typealias Names = NamerFactory
 

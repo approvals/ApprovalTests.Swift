@@ -1,7 +1,6 @@
 #if os(iOS)
 
-    import Foundation
-
+    
     /**
      A reporter that launches an external diff tool.
 
