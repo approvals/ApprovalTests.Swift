@@ -59,7 +59,7 @@ public struct Options {
         data[.scrubber] as? Scrubber ?? ScrubNothing()
     }
 
-    public func with(_ namerCreator: @escaping (String) -> ApprovalNamer) -> Options {
+    public func with(namerCreator: @escaping (String) -> ApprovalNamer) -> Options {
         Options(data, key: .namer, value: namerCreator)
     }
 
