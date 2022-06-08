@@ -80,9 +80,8 @@ public struct Options {
     }
 
     func getNamer(_ path: String) -> ApprovalNamer {
-        var c = data[.namer] as? (String) -> ApprovalNamer ?? Approvals.makeNamer
+        let c = data[.namer] as? (String) -> ApprovalNamer ?? Approvals.makeNamer
         return c(path)
-//        Approvals.makeNamer(forFile: path)
     }
 }
 
