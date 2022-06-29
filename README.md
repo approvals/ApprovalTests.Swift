@@ -178,6 +178,7 @@ Ask Llewellyn Falco [@LlewellynFalco](https://twitter.com/llewellynfalco) or Jon
 - [Getting Started with ApprovalTests.Swift](https://qualitycoding.org/approvaltests-swift-getting-started/)
 - [How to Verify Objects (and Simplify TDD)](https://qualitycoding.org/approvaltests-swift-verify-objects/)
 - [Verifying Arrays](https://qualitycoding.org/verify-arrays-approvaltests-swift/)
+- [Write Parameterized Tests by Transforming Sequences](https://qualitycoding.org/parameterized-tests-approvaltests-swift/)
 
 You can also watch a series of short videos about [using ApprovalTests in .Net](http://www.youtube.com/playlist?list=PL0C32F89E8BBB5368) on YouTube.
 
