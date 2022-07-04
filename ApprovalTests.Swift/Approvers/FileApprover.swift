@@ -58,7 +58,7 @@ public class FileApprover: ApprovalApprover {
         try Self.failer.fail(message, file: file, line: line)
     }
 
-    public func reportFailure(reporter: ApprovalFailureReporter) {
-        _ = reporter.report(received: received, approved: approved)
+    public func reportFailure(reporter: ApprovalFailureReporter, file: StaticString, line: UInt) {
+        _ = reporter.report(received: received, approved: approved, file: file, line: line)
     }
 }

@@ -12,7 +12,11 @@ public class ReportContentsWithXCTest: EquatableFailureReporter {
         other is ReportContentsWithXCTest
     }
 
-    override public func report(received: String, approved: String) -> Bool {
+    override public func report(received: String,
+                                approved: String,
+                                file _: StaticString,
+                                line _: UInt) -> Bool
+    {
         // read the files into strings
         let approvedURL = URL(fileURLWithPath: approved)
         let receivedURL = URL(fileURLWithPath: received)

@@ -8,9 +8,12 @@ public class FirstWorkingReporter: EquatableFailureReporter {
         self.reporters = reporters
     }
 
-    override public func report(received: String, approved: String) -> Bool {
+    public override func report(received: String,
+                                approved: String,
+                                file: StaticString = #filePath,
+                                line: UInt = #line) -> Bool {
         for reporter in reporters {
-            if reporter.report(received: received, approved: approved) {
+            if reporter.report(received: received, approved: approved, file: file, line: line) {
                 return true
             }
         }

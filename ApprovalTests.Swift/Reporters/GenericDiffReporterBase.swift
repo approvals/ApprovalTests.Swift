@@ -21,7 +21,11 @@ public class GenericDiffReporterBase: EquatableFailureReporter {
         self.arguments = arguments
     }
 
-    override public func report(received: String, approved: String) -> Bool {
+    override public func report(received: String,
+                                approved: String,
+                                file _: StaticString,
+                                line _: UInt) -> Bool
+    {
         if !doesProgramExist(programPath) {
             return false
         }

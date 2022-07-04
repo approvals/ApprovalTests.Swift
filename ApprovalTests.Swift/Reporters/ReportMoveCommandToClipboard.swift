@@ -11,7 +11,10 @@ public class ReportMoveCommandToClipboard: EquatableFailureReporter {
         other is ReportMoveCommandToClipboard
     }
 
-    override public func report(received: String, approved: String) -> Bool {
+    public override func report(received: String,
+                                approved: String,
+                                file: StaticString = #filePath,
+                                line: UInt = #line) -> Bool {
         let command = Self.makeCommandLineMove(received: received, approved: approved)
         SystemUtils.pasteToClipboard(command)
         return true

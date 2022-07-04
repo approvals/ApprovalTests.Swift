@@ -9,13 +9,18 @@ public class ExecutableReporter: ApprovalFailureReporter {
         self.query = query
     }
 
-    public func report(received: String, approved: String) -> Bool {
-        if !reporter.report(received: received, approved: approved) {
+    public func report(received: String, approved: String, file: StaticString, line: UInt) -> Bool {
+        if !reporter.report(received: received, approved: approved, file: file, line: line) {
             return false
         }
         let receivedExpanded = expand(received)
         let approvedExpanded = expand(approved)
-        return reporter.report(received: receivedExpanded, approved: approvedExpanded)
+        return reporter.report(
+            received: receivedExpanded,
+            approved: approvedExpanded,
+            file: file,
+            line: line
+        )
     }
 
     private func expand(_ queryFile: String) -> String {

@@ -2,5 +2,5 @@ public protocol ApprovalApprover {
     func approve() -> Bool
     func cleanUpAfterSuccess(reporter: ApprovalFailureReporter)
     func fail(file: StaticString, line: UInt) throws
-    func reportFailure(reporter: ApprovalFailureReporter)
+    func reportFailure(reporter: ApprovalFailureReporter, file: StaticString, line: UInt)
 }

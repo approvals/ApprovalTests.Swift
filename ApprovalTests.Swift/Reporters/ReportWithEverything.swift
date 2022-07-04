@@ -8,10 +8,15 @@ public class ReportWithEverything: EquatableFailureReporter {
         self.reporters = reporters
     }
 
-    override public func report(received: String, approved: String) -> Bool {
+    override public func report(received: String,
+                                approved: String,
+                                file: StaticString = #filePath,
+                                line: UInt = #line) -> Bool
+    {
         var worked = false
         for reporter in reporters {
-            worked = reporter.report(received: received, approved: approved) || worked
+            worked = reporter.report(received: received, approved: approved, file: file, line: line)
+                || worked
         }
         return worked
     }
