@@ -14,8 +14,8 @@ public class ReportContentsWithXCTest: EquatableFailureReporter {
 
     override public func report(received: String,
                                 approved: String,
-                                file _: StaticString,
-                                line _: UInt) -> Bool
+                                file: StaticString,
+                                line: UInt) -> Bool
     {
         // read the files into strings
         let approvedURL = URL(fileURLWithPath: approved)
@@ -39,7 +39,7 @@ public class ReportContentsWithXCTest: EquatableFailureReporter {
         // send command to system out
         let approveCommand = "To approve run : " + command
         print(approveCommand)
-        XCTAssertEqual(aText, rText)
+        XCTAssertEqual(aText, rText, file: file, line: line)
 
         return true
     }
