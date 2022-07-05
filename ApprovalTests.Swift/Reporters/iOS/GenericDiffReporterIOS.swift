@@ -9,7 +9,7 @@
     public class GenericDiffReporter: GenericDiffReporterBase {
         override public func runProcess(received: String, approved: String) throws {
             HelpMessages.displayIOSWatcherMessage()
-            let process = createCommandLine(received: received, approved: approved)
+            let process = Self.createCommandLine(received, approved, arguments, programPath)
             var fileURL = URL(fileURLWithPath: received)
             fileURL.deleteLastPathComponent()
             fileURL = fileURL.appendingPathComponent("command.sh")
@@ -21,11 +21,21 @@
             }
         }
 
-        func createCommandLine(received: String, approved: String) -> String {
-            let arguments2 = arguments(received, approved)
+        public static func createCommandLine(_ received: String,
+                                       _ approved: String,
+                                       _ arguments: (String, String) -> [String],
+                                       _ programPath: String) -> String {
+            let arguments2 = arguments(formatForCommandLine(received), formatForCommandLine(approved))
             let process1 = "\(programPath) \(arguments2.joined(separator: " "))"
             let process = "#!/bin/bash\n\(process1)"
             return process
+        }
+
+        private class func formatForCommandLine(_ fileName: String) -> String {
+            if fileName.contains(" ") {
+                return "\"\(fileName)\""
+            }
+            return fileName
         }
     }
 #endif

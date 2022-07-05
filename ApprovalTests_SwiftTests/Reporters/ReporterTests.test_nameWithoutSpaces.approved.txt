@@ -1,0 +1,2 @@
+#!/bin/bash
+diff /path_without_spaces/r.text /path_without_spaces/a.text

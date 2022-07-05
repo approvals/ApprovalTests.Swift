@@ -47,6 +47,26 @@ final class ReporterTests: XCTestCase {
         }
     #endif
 
+    #if os(iOS)
+        func test_nameWithSpaces() throws {
+            let output = GenericDiffReporter.createCommandLine("/path with spaces/r.text", "/path with spaces/a.text", {
+                received,
+                approved in
+                [received, approved]
+            }, "diff")
+            try Approvals.verify(output)
+        }
+
+        func test_nameWithoutSpaces() throws {
+            let output = GenericDiffReporter.createCommandLine("/path_without_spaces/r.text", "/path_without_spaces/a.text", {
+                received,
+                approved in
+                [received, approved]
+            }, "diff")
+            try Approvals.verify(output)
+        }
+    #endif
+
     #if os(OSX)
         func test_clipboardReporterOnMac() throws {
             let reporter = ReportMoveCommandToClipboard()
