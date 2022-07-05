@@ -420,6 +420,7 @@
 				BB17059F97E2ED858F9C9A2F /* FirstWorkingReporter.swift */,
 				BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */,
 				BB1705B9C16FF40144A3AC52 /* ReportByCallingScript.swift */,
+				BB17079958CB92B280C0B2FA /* ReportByOpeningReceivedFile.swift */,
 				BB170EB6027F20F1764F9EF4 /* ReportContentsWithXCTest.swift */,
 				9730820AFFF03C5745F45021 /* ReporterFactory.swift */,
 				BB170BD5F95C651D0A332123 /* ReportMoveCommandToClipboard.swift */,
@@ -429,7 +430,6 @@
 				BB170F8F083E3D6B5172BF7A /* VariousReporters.swift */,
 				163E1880217FA9C700A54A48 /* iOS */,
 				163E187F217FA9A500A54A48 /* macOS */,
-				BB17079958CB92B280C0B2FA /* ReportByOpeningReceivedFile.swift */,
 			);
 			path = Reporters;
 			sourceTree = "<group>";
