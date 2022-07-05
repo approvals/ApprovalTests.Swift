@@ -9,10 +9,7 @@
     public class GenericDiffReporter: GenericDiffReporterBase {
         override public func runProcess(received: String, approved: String) throws {
             HelpMessages.displayIOSWatcherMessage()
-            let arguments2 = arguments(received, approved)
-            let process1 = "\(programPath) \(arguments2.joined(separator: " "))"
-
-            let process = "#!/bin/bash\n\(process1)"
+            let process = createCommandLine(received: received, approved: approved)
             var fileURL = URL(fileURLWithPath: received)
             fileURL.deleteLastPathComponent()
             fileURL = fileURL.appendingPathComponent("command.sh")
@@ -22,6 +19,13 @@
                 print("An error occurred writing file:" + received)
                 print("Error: \(error)")
             }
+        }
+
+        func createCommandLine(received: String, approved: String) -> String {
+            let arguments2 = arguments(received, approved)
+            let process1 = "\(programPath) \(arguments2.joined(separator: " "))"
+            let process = "#!/bin/bash\n\(process1)"
+            return process
         }
     }
 #endif
