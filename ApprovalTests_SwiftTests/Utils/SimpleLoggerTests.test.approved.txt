@@ -1,4 +1,4 @@
-StringBuffer: 
+
 -> in: test()SimpleLoggerTests.swift
   ## SimpleLoggerTests.swift:13
   -> in: test()SimpleLoggerTests.swift

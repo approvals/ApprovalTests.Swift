@@ -31,8 +31,19 @@ public enum Approvals {
         file: StaticString = #filePath,
         line: UInt = #line
     ) throws {
-        let description = String(describing: type(of: object.self)) + ": " + String(describing: object)
+        let description = String(describing: object)
         try verify(description, options, file: file, line: line)
+    }
+
+    public static func verify(
+        _ object: Verifiable,
+        _ options: Options = Options(),
+        file: StaticString = #filePath,
+        line: UInt = #line
+    ) throws {
+        let description = String(describing: object)
+        let parameters = object.getVerifyParameters(options)
+        try verify(description, parameters.options, file: file, line: line)
     }
 
     /// Verifies a dictionary of items against a previously approved dictionary.
