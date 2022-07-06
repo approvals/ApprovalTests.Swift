@@ -8,7 +8,7 @@ public enum Approvals {
     public static var reporter: ApprovalFailureReporter {
         ReporterFactory.get
     }
-    
+
     /// Verifies a string against a previously approved version of the string.
     public static func verify(
         _ response: String,

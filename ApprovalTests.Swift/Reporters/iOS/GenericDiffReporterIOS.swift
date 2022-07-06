@@ -21,10 +21,12 @@
             }
         }
 
-        public static func createCommandLine(_ received: String,
-                                       _ approved: String,
-                                       _ arguments: (String, String) -> [String],
-                                       _ programPath: String) -> String {
+        public static func createCommandLine(
+            _ received: String,
+            _ approved: String,
+            _ arguments: (String, String) -> [String],
+            _ programPath: String
+        ) -> String {
             let arguments2 = arguments(formatForCommandLine(received), formatForCommandLine(approved))
             let process1 = "\(programPath) \(arguments2.joined(separator: " "))"
             let process = "#!/bin/bash\n\(process1)"

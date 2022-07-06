@@ -7,7 +7,7 @@ import XCTest
 
 class SampleMarkdown: Verifiable, CustomStringConvertible {
     func getVerifyParameters(_ options: Options) -> VerifyParameters {
-        return VerifyParameters(options.forFile.with(extensionWithDot: ".md"))
+        VerifyParameters(options.forFile.with(extensionWithDot: ".md"))
     }
 
     public var description: String {
