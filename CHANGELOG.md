@@ -4,6 +4,10 @@ UPCOMING RELEASE
 **Breaking Changes:**
 
 - Stop reporting the object type.
+```diff
+- String: Hello world
++ Hello world
+```
 
 **Fixes:**
 
