@@ -10,8 +10,8 @@ For example,
 ```
 will produce these changes in your `.approved.` files
 ```diff
-- String: Hello world
-+ Hello world
+- CGRect: (5.0, 10.0, 100.0, 200.0)
++ (5.0, 10.0, 100.0, 200.0)
 ```
 
 ## Fixes:
