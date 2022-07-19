@@ -1,34 +1,44 @@
 UPCOMING RELEASE
 ----------------
 
-**Breaking Changes:**
+## Breaking Changes:
 
 - Stop reporting the object type.
+For example,
+```swift
+  try Approvals.verify("Hello world")
+```
+will produce these changes in your `.approved.` files
 ```diff
 - String: Hello world
 + Hello world
 ```
 
-**Fixes:**
+## Fixes:
 
-- Was broken for Xcode 13.3 changes in the call stack. Now fixed.
+- Works with Xcode 13.3. Changes in Xcode 13.3's call stack caused this issue.
 - Skip reporters that can't handle the file type. So if you have an image artifact, Approvals.Swift will use the first reporter that can show image differences.
 - Fix iOS results watcher to support project paths with spaces.
 
-**Features:**
+## Features:
 
 - `verifyAll` improvements:
   - Now has an optional `header` to print above the array.
-  - A new `verifyAll` takes a `labeler` closure to format each line. Use `{ $0 }` when you don't care about absolute indices, only relative order. This also provides a simple way to do parameterized tests: verify an array of inputs, and use the closure to print both the input and the output.
-- For iOS tests, print reminder to console to turn on the watcher.
-- SimpleLogger
-- New verify:
-  * UIKitApprovals.verify for verifying UIViews and rendered UIViewControllers.
-  * Verifiable
+  - A new `verifyAll` takes a `labeler` closure to format each line.
+For example, here's a way to make lists without indices:
+```swift
+  try Approvals.verifyAll(header: "grocery list", groceries) { $0 }
+```
+- For iOS tests, ApprovalTests will print a reminder to turn on the watcher.
+- SimpleLogger: an easy way to log and do performance profiling.
+- UIKitApprovals.verify for verifying UIViews and rendered UIViewControllers.
 - New reporters:
   * ReportMoveCommandToConsole
   * Make ReportByOpeningReceivedFile available on iOS, not just macOS
 
+### Verifiable
+
+Approvals now offers a [Verifiable interface](docs/reference/verifiable.md) that understands approvals.
 
 Version 1.0.0
 -------------
