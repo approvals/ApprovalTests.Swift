@@ -1,12 +1,13 @@
-UPCOMING RELEASE
-----------------
+Version 2.0.0
+-------------
+_19 Jul 2022_
 
 ## Breaking Changes:
 
 - Stop reporting the object type.
 For example,
 ```swift
-  try Approvals.verify("Hello world")
+try Approvals.verify(CGRect(x: 5, y: 10, width: 100, height: 200))
 ```
 will produce these changes in your `.approved.` files
 ```diff
