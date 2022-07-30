@@ -158,7 +158,7 @@ Then add it to your test target:
 
 Add the following to your Cartfile:
 
-    github "approvals/ApprovalTests.Swift" ~> 1.0
+    github "approvals/ApprovalTests.Swift" ~> 2.0
 
 Then drag the the built framework from the appropriate Carthage/Build directory into your project,
 but with “Copy items into destination group’s folder” disabled.
