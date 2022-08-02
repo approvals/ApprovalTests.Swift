@@ -9,4 +9,8 @@ class ParameterizedNamer: Namer {
     override func sourceFilePath() -> String {
         super.sourceFilePath() + "." + parameters.joined(separator: ".")
     }
+
+    func getParameters() -> [String] {
+        return parameters
+    }
 }

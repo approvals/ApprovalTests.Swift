@@ -31,6 +31,10 @@ private typealias OptionData = [OptionDataKey: Any]
  - uses whatever is currently set as the default reporter.
  */
 public struct Options {
+    public func and(_ closure: (Options) -> Options) -> Options {
+        return closure(self)
+    }
+
     private let data: OptionData
 
     public init() {
@@ -79,7 +83,7 @@ public struct Options {
         FileOptions(data)
     }
 
-    func getNamer(_ path: String) -> ApprovalNamer {
+    public func getNamer(_ path: String) -> ApprovalNamer {
         let c = data[.namer] as? (String) -> ApprovalNamer ?? Approvals.makeNamer
         return c(path)
     }
