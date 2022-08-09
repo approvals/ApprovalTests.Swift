@@ -10,4 +10,17 @@ public enum NamerFactory {
             ParameterizedNamer(filePath, parameters)
         }
     }
+
+    public static func asChipArchitectureSpecificTest(options: Options = Options()) throws -> Options {
+        let architecture = getMachineHardwareName()
+        return withParameters(options: options, architecture)
+    }
+}
+
+public func getMachineHardwareName() -> String {
+    var sysInfo = utsname()
+    let retVal = uname(&sysInfo)
+    guard retVal == EXIT_SUCCESS else { return "uname_failure" }
+
+    return String(cString: &sysInfo.machine.0, encoding: .utf8) ?? "uh oh"
 }

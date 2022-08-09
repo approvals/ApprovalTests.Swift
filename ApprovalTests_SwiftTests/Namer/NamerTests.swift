@@ -16,4 +16,8 @@ final class NamerTests: XCTestCase {
         let name: String = foo.getNamer("").sourceFilePath()
         XCTAssertEqual(name, ".test_multipleParameters.story1.part1")
     }
+
+    func test_chipArchitecture() throws {
+        try Approvals.verify("chip architecture is \(getMachineHardwareName())", Approvals.Names.asChipArchitectureSpecificTest())
+    }
 }
