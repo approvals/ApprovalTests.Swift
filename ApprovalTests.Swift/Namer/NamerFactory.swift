@@ -1,5 +1,9 @@
 public enum NamerFactory {
     public static func withParameters(options: Options = Options(), _ parameters: String ...) -> Options {
+        return withParameters(options: options, parameters)
+    }
+
+    public static func withParameters(options: Options = Options(), _ parameters: [String]) -> Options {
         let namer = options.getNamer("")
         var parameters = parameters
         if namer is ParameterizedNamer {
@@ -14,6 +18,12 @@ public enum NamerFactory {
     public static func asChipArchitectureSpecificTest(options: Options = Options()) -> Options {
         let architecture = getMachineHardwareName()
         return withParameters(options: options, architecture)
+    }
+
+    public static func withAdditionalParameters(_ parameters: String ...) -> (Options) -> Options {
+        return { (options: Options) -> Options in
+            withParameters(options: options, parameters)
+        }
     }
 }
 
