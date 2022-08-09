@@ -11,7 +11,7 @@ public enum NamerFactory {
         }
     }
 
-    public static func asChipArchitectureSpecificTest(options: Options = Options()) throws -> Options {
+    public static func asChipArchitectureSpecificTest(options: Options = Options()) -> Options {
         let architecture = getMachineHardwareName()
         return withParameters(options: options, architecture)
     }
