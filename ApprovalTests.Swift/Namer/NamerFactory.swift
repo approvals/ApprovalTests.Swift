@@ -27,10 +27,24 @@ public enum NamerFactory {
     }
 }
 
-public func getMachineHardwareName() -> String {
-    var sysInfo = utsname()
-    let retVal = uname(&sysInfo)
-    guard retVal == EXIT_SUCCESS else { return "uname_failure" }
+//    return Host.current().localizedName ?? "unknown_host"
 
-    return String(cString: &sysInfo.machine.0, encoding: .utf8) ?? "uh oh"
+public func getMachineHardwareName() -> String {
+    #if arch(arm)
+        return "arm"
+    #elseif arch(arm64)
+        return "arm64"
+    #elseif arch(i386)
+        return "i386"
+    #elseif arch(powerpc64)
+        return "powerpc64"
+    #elseif arch(x86_64)
+        return "x86_64"
+    #elseif arch(s390x)
+        return "s390x"
+    #elseif arch(wasm32)
+        return "wasm32"
+    #else
+        return "unknown_machine_architecture"
+    #endif
 }
