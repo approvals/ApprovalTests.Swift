@@ -18,6 +18,6 @@ final class NamerTests: XCTestCase {
     }
 
     func test_chipArchitecture() throws {
-        try Approvals.verify("chip architecture is \(getMachineHardwareName())", Approvals.Names.asChipArchitectureSpecificTest())
+        try Approvals.verify("chip architecture is \(getMachineArchitecture())", Approvals.Names.asChipArchitectureSpecificTest())
     }
 }

@@ -16,8 +16,11 @@ public enum NamerFactory {
     }
 
     public static func asChipArchitectureSpecificTest(options: Options = Options()) -> Options {
-        let architecture = getMachineHardwareName()
-        return withParameters(options: options, architecture)
+        withParameters(options: options, getMachineArchitecture())
+    }
+
+    public static func asMachineNameSpecificTest(options: Options = Options()) -> Options {
+        withParameters(options: options, getMachineName())
     }
 
     public static func withAdditionalParameters(_ parameters: String ...) -> (Options) -> Options {
@@ -27,9 +30,11 @@ public enum NamerFactory {
     }
 }
 
-//    return Host.current().localizedName ?? "unknown_host"
+public func getMachineName() -> String {
+    Host.current().localizedName ?? "unknown_host"
+}
 
-public func getMachineHardwareName() -> String {
+public func getMachineArchitecture() -> String {
     #if arch(arm)
         return "arm"
     #elseif arch(arm64)
