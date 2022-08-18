@@ -1,38 +1,29 @@
-#
-#  Be sure to run `pod spec lint ApprovalTests_Swift.podspec' to ensure this is a
-#  valid spec and to remove all comments including this before submitting the spec.
-#
-#  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
-#  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
-#
-
 Pod::Spec.new do |s|
-  s.name         = "ApprovalTests_Swift"
-  s.version      = "0.0.1"
-  s.summary      = "ApprovalTests for Swift."
+  s.name         = 'ApprovalTests_Swift'
+  s.version      = '2.0.0'
+  s.summary      = 'ApprovalTests for Swift, a powerful alternative to assertions'
 
-  s.description  = <<-DESC
-Capturing Human Intelligence - ApprovalTests is an open source assertion/verification library to aid unit testing.
-ApprovalsTest Swift is compatible with the XCUnit testing framework
-                   DESC
+  s.description = <<-DESC
+                    Approval Tests are an alternative to assertions. You’ll find them useful for
+                    testing objects with complex values (such as long strings), lots of properties,
+                    or collections of objects.
 
-  s.homepage     = "https://github.com/approvals"
+                    ApprovalTests.Swift is compatible with the XCTest testing framework.
+                  DESC
 
-  s.license      = { :type => "Apache 2.0 License", :file => "LICENSE" }
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.homepage = 'https://github.com/approvals/ApprovalTests.Swift'
+  s.license  = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
+  s.author   = { 'Jon Reid' => 'jon@qualitycoding.org' }
+  s.social_media_url = 'https://twitter.com/qcoding'
 
-  s.author    = "Matthew Carlson"
+  s.swift_version = '5.0'
+  s.ios.deployment_target = '12.0'
+  s.osx.deployment_target = '10.15'
 
-  s.swift_version = '4.1'
-  s.ios.deployment_target = "11.0"
-  s.osx.deployment_target = "10.13"
-
-  s.source       = { :git => "https://github.com/approvals/ApprovalTests.Swift.git" }
-
-  s.framework = "XCTest"
-
-  s.source_files      = "ApprovalTests.Swift", "ApprovalTests.Swift/**/*.swift" 
-  s.ios.exclude_files = "ApprovalTests.Swift/**/DiffMergReporter.swift"
-  s.osx.exclude_files = "ApprovalTests.Swift/reporters/ios/XCTReporter.swift"
+  s.source = { :git => 'https://github.com/approvals/ApprovalTests.Swift.git', :tag => 'v2.0.0' }
+  s.framework = 'XCTest'
+  s.source_files      = "ApprovalTests.Swift/iOSApprovalsWatcher.py", "ApprovalTests.Swift/**/*.swift" 
+  s.ios.exclude_files = "ApprovalTests.Swift/Reporters/macOS/*.swift"
+  s.osx.exclude_files = "ApprovalTests.Swift/Reporters/iOS/*.swift"
 
 end
