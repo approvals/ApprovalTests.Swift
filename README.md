@@ -4,6 +4,7 @@
 [![Swift Package Index Swift Version Compatibility](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fapprovals%2FApprovalTests.Swift%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/approvals/ApprovalTests.Swift)
 [![Swift Package Index Platform Compatibility](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fapprovals%2FApprovalTests.Swift%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/approvals/ApprovalTests.Swift)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![CocoaPods Version](https://cocoapod-badges.herokuapp.com/v/ApprovalTests_Swift/badge.png)](https://cocoapods.org/pods/ApprovalTests_Swift)
 
 Approval Tests are an alternative to assertions. You’ll find them useful for testing objects with complex values (such as long strings), lots of properties, or collections of objects.
 
@@ -162,6 +163,20 @@ Add the following to your Cartfile:
 
 Then drag the the built framework from the appropriate Carthage/Build directory into your project,
 but with “Copy items into destination group’s folder” disabled.
+
+### CocoaPods
+
+If you want to add ApprovalTests.Swift using Cocoapods then add the following dependency to your Podfile.
+Most people will want ApprovalTests.Swift in their test targets, and not include any pods from their main
+targets:
+
+```ruby
+target 'MyTests' do
+  inherit! :search_paths
+  use_frameworks!
+  pod 'ApprovalTests_Swift', '~> 2.0'
+end
+```
 
 ## For More Information
 
