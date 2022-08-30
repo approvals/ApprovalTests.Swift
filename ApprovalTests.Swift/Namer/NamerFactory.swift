@@ -37,8 +37,10 @@ public enum NamerFactory {
 public func getMachineName() -> String {
     #if os(iOS)
         UIDevice.current.name
-    #else
+    #elseif canImport(Host)
         Host.current().localizedName ?? "unknown_host"
+    #else
+        "unknown_host"
     #endif
 }
 
