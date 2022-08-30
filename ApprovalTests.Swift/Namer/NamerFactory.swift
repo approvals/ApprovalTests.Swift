@@ -1,3 +1,7 @@
+#if os(iOS)
+import UIKit
+#endif
+
 public enum NamerFactory {
     public static func withParameters(options: Options = Options(), _ parameters: String ...) -> Options {
         return withParameters(options: options, parameters)
@@ -31,7 +35,11 @@ public enum NamerFactory {
 }
 
 public func getMachineName() -> String {
-    Host.current().localizedName ?? "unknown_host"
+    #if os(iOS)
+        UIDevice.current.name
+    #else
+        Host.current().localizedName ?? "unknown_host"
+    #endif
 }
 
 public func getMachineArchitecture() -> String {
