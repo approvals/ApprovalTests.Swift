@@ -1,0 +1,3 @@
+
+-> in: add(1, 2)SimpleLoggerTests.swift
+<- out: add(_:_:)

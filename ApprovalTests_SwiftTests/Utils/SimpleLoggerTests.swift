@@ -39,6 +39,18 @@ final class SimpleLoggerTests: XCTestCase {
         SimpleLogger.event("2")
         try Approvals.verify(output)
     }
+
+    func test_markers() throws {
+        let output = SimpleLogger.logToString()
+        add(1, 2)
+        try Approvals.verify(output)
+    }
+
+    private func add(_ a: Int, _ b: Int) {
+        do {
+            let m = SimpleLogger.useMarkers("\(a), \(b)")
+        }
+    }
 }
 
 /*

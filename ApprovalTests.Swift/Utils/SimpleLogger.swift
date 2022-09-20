@@ -71,11 +71,20 @@ public enum SimpleLogger {
         log("## " + getFileInfo(file) + ":\(line)")
     }
 
-    public static func useMarkers(_ function: String = #function, file: StaticString = #file, line _: UInt = #line) -> OutMarker {
-        let text = function + getFileInfo(file)
+    public static func useMarkers(_ parameters: String = "",
+                                  function: String = #function,
+                                  file: StaticString = #file,
+                                  line: UInt = #line) -> OutMarker {
+        var text: String
+        if parameters.isEmpty {
+            text = function + getFileInfo(file)
+        } else {
+            let f = function.substring(to: function.index(of: "(")!)
+            text = "\(f)(\(parameters))\(getFileInfo(file))"
+        }
         log("-> in: " + text)
         indent += 1
-        return OutMarker(text)
+        return OutMarker(function)
     }
 
     public static func variable<T>(_ label: String, _ value: T) {
