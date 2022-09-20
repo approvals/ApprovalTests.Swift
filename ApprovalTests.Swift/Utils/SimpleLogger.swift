@@ -77,10 +77,10 @@ public enum SimpleLogger {
                                   line: UInt = #line) -> OutMarker {
         var text: String
         if parameters.isEmpty {
-            text = function + getFileInfo(file)
+            text = "\(function) in \(getFileInfo(file))"
         } else {
             let f = function.substring(to: function.index(of: "(")!)
-            text = "\(f)(\(parameters))\(getFileInfo(file))"
+            text = "\(f)(\(parameters)) in \(getFileInfo(file))"
         }
         log("-> in: " + text)
         indent += 1

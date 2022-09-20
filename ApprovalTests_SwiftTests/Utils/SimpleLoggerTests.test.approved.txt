@@ -1,7 +1,7 @@
 
--> in: test()SimpleLoggerTests.swift
+-> in: test() in SimpleLoggerTests.swift
   ## SimpleLoggerTests.swift:13
-  -> in: test()SimpleLoggerTests.swift
+  -> in: test() in SimpleLoggerTests.swift
     variable: name = llewellyn
     .........1.........2.........3.........4.........5.........6.........7.........8.........9.........10
     .........1.........2.........3.........4..
