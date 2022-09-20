@@ -87,8 +87,28 @@ public enum SimpleLogger {
         return OutMarker(function)
     }
 
-    public static func variable<T>(_ label: String, _ value: T) {
-        log("variable: \(label) = \(String(describing: value))")
+    public static func variable<T>(_ label: String, _ value: T, showTypes: Bool = false) {
+        var typeText = ""
+        if showTypes {
+            typeText = " <\(type(of: value))>"
+        }
+        log("variable: \(label) = \(String(describing: value))\(typeText)")
+    }
+
+    public static func variable<T>(_ label: String, _ values: [T], showTypes: Bool = false) {
+        var typeText = ""
+        if showTypes {
+            typeText = "<\(type(of: values))>"
+        }
+        log("variable: \(label)\(typeText).count = \(values.count)")
+        indent += 1
+        for (i, value) in values.enumerated() {
+            if showTypes {
+                typeText = " <\(type(of: value))>"
+            }
+            log("\(label)[\(i)] = \(value)\(typeText)")
+        }
+        indent -= 1
     }
 
     public static func hourGlass() {

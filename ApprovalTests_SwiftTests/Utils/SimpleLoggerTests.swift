@@ -46,6 +46,18 @@ final class SimpleLoggerTests: XCTestCase {
         try Approvals.verify(output)
     }
 
+    func test_variable() throws {
+        let output = SimpleLogger.logToString()
+        SimpleLogger.variable("name", "Jon")
+        SimpleLogger.variable("name", "Jon", showTypes: true)
+        let reporters = [ReportWithBeyondCompare(), ReportWithDiffMerge()]
+        SimpleLogger.variable("reporters", reporters)
+        SimpleLogger.variable("reporters", reporters, showTypes: true)
+        let mix: [Any] = [1, false, "fred"]
+        SimpleLogger.variable("mix", mix, showTypes: true)
+        try Approvals.verify(output)
+    }
+
     private func add(_ a: Int, _ b: Int) {
         do {
             let m = SimpleLogger.useMarkers("\(a), \(b)")

@@ -1,0 +1,13 @@
+
+variable: name = Jon
+variable: name = Jon <String>
+variable: reporters.count = 2
+  reporters[0] = ApprovalTests_Swift.ReportWithBeyondCompare
+  reporters[1] = ApprovalTests_Swift.ReportWithDiffMerge
+variable: reporters<Array<GenericDiffReporter>>.count = 2
+  reporters[0] = ApprovalTests_Swift.ReportWithBeyondCompare <ReportWithBeyondCompare>
+  reporters[1] = ApprovalTests_Swift.ReportWithDiffMerge <ReportWithDiffMerge>
+variable: mix<Array<Any>>.count = 3
+  mix[0] = 1 <Any>
+  mix[1] = false <Any>
+  mix[2] = fred <Any>
