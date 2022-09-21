@@ -50,9 +50,9 @@ final class SimpleLoggerTests: XCTestCase {
         let output = SimpleLogger.logToString()
         SimpleLogger.variable("name", "Jon")
         SimpleLogger.variable("name", "Jon", showTypes: true)
-        let reporters = [ReportWithBeyondCompare(), ReportWithDiffMerge()]
-        SimpleLogger.variable("reporters", reporters)
-        SimpleLogger.variable("reporters", reporters, showTypes: true)
+        let subclasses = [ExtendA(), ExtendB()]
+        SimpleLogger.variable("subclasses", subclasses)
+        SimpleLogger.variable("subclasses", subclasses, showTypes: true)
         let mix: [Any] = [1, false, "fred"]
         SimpleLogger.variable("mix", mix, showTypes: true)
         try Approvals.verify(output)
@@ -63,6 +63,14 @@ final class SimpleLoggerTests: XCTestCase {
             let m = SimpleLogger.useMarkers("\(a), \(b)")
         }
     }
+}
+
+class Base {}
+class ExtendA: Base, CustomStringConvertible {
+    private(set) var description: String = "ExtendA"
+}
+class ExtendB: Base, CustomStringConvertible {
+    private(set) var description: String = "ExtendB"
 }
 
 /*
