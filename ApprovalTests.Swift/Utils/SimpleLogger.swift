@@ -79,7 +79,7 @@ public enum SimpleLogger {
         if parameters.isEmpty {
             text = "\(function) in \(getFileInfo(file))"
         } else {
-            let f = function.substring(to: function.firstIndex(of: "(")!)
+            let f = function.substring(to: function.index(of: "(")!)
             text = "\(f)(\(parameters)) in \(getFileInfo(file))"
         }
         log("-> in: " + text)
