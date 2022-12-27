@@ -35,19 +35,6 @@ final class ReporterTests: XCTestCase {
     }
 
     #if os(iOS)
-        func test_clipboardReporterOnIOS() throws {
-            let reporter = ReportMoveCommandToClipboard()
-
-            let success = reporter.report(received: "/path with spaces/r.text", approved: "/path with spaces/a.text")
-
-            XCTAssertTrue(success)
-            let pasteboard = UIPasteboard.general
-            let command = pasteboard.string
-            XCTAssertEqual(command, "mv \"/path with spaces/r.text\" \"/path with spaces/a.text\"")
-        }
-    #endif
-
-    #if os(iOS)
         func test_nameWithSpaces() throws {
             let output = GenericDiffReporter.createCommandLine("/path with spaces/r.text", "/path with spaces/a.text", {
                 received,
