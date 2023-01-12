@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 import argparse
 import datetime
 import os
@@ -70,5 +70,5 @@ if __name__ == '__main__':
     args = parse_arguments()
     watched_files = watchlist(args.test_directory, 'command.sh')
     remove(watched_files)
-    print 'Ready for iOS Approval Tests. Control-C to quit.'
+    print('Ready for iOS Approval Tests. Control-C to quit.')
     monitor_files(watched_files)
