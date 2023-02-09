@@ -8,13 +8,11 @@ public class Namer: ApprovalNamer {
   public init(_ file: String,_ function: String) {
     self.file = file
     self.fileName = URL(fileURLWithPath: file).deletingPathExtension().lastPathComponent
-    print("#@#", file, fileName, function)
     functionName = function.dropLast(2).description
   }
 
   public func approvalName() -> String {
-    let names = StackDemangler().extractNames()
-    return names.className + "." + functionName
+    return fileName + "." + functionName
   }
 
   public func sourceFilePath() -> String {
