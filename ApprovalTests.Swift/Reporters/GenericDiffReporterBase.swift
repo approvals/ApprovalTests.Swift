@@ -24,6 +24,7 @@ public class GenericDiffReporterBase: EquatableFailureReporter {
     override public func report(received: String,
                                 approved: String,
                                 file _: StaticString,
+                                function _: StaticString,
                                 line _: UInt) -> Bool
     {
         if !doesProgramExist(programPath) {

@@ -11,11 +11,12 @@ public class ReportWithEverything: EquatableFailureReporter {
     override public func report(received: String,
                                 approved: String,
                                 file: StaticString = #filePath,
+                                function: StaticString = #function,
                                 line: UInt = #line) -> Bool
     {
         var worked = false
         for reporter in reporters {
-            worked = reporter.report(received: received, approved: approved, file: file, line: line)
+            worked = reporter.report(received: received, approved: approved, file: file, function: function, line: line)
                 || worked
         }
         return worked

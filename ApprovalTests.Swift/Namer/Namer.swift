@@ -2,9 +2,11 @@ import Foundation
 
 public class Namer: ApprovalNamer {
   private let fileName: String
+  private let functionName: String
 
-  public init(_ file: String) {
+  public init(_ file: String,_ function: String) {
     fileName = file
+    functionName = function
   }
 
   public func approvalName() -> String {

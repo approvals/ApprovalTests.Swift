@@ -53,12 +53,12 @@ public class FileApprover: ApprovalApprover {
         }
     }
 
-    public func fail(file: StaticString, line: UInt) throws {
+    public func fail(file: StaticString, function: StaticString, line: UInt) throws {
         let message = "Failed Approval \nApproved:\(approved) \nReceived:\(received)"
-        try Self.failer.fail(message, file: file, line: line)
+        try Self.failer.fail(message, file: file, function: function, line: line)
     }
 
-    public func reportFailure(reporter: ApprovalFailureReporter, file: StaticString, line: UInt) {
-        _ = reporter.report(received: received, approved: approved, file: file, line: line)
+  public func reportFailure(reporter: ApprovalFailureReporter, file: StaticString, function:StaticString, line: UInt) {
+      _ = reporter.report(received: received, approved: approved, file: file, function: function, line: line)
     }
 }

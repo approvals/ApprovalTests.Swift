@@ -24,6 +24,7 @@ final class ReporterFactoryTests: XCTestCase {
         _ reporter1: ApprovalFailureReporter,
         match: Bool,
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) {
         let reporter3 = ReporterFactory.get

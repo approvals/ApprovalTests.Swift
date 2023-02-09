@@ -7,12 +7,12 @@ import XCTest
 
 final class ApprovalTests_SwiftTests: XCTestCase {
     func testApprovalName() throws {
-        let name = Approvals.makeNamer(forFile: "DUMMY")
+      let name = Approvals.makeNamer(forFile: "DUMMY", function: "testApprovalName")
         XCTAssertEqual(name.approvalName(), "ApprovalTests_SwiftTests.testApprovalName")
     }
 
     func testSourceFilePath() throws {
-        let name = Approvals.makeNamer(forFile: #file)
+      let name = Approvals.makeNamer(forFile: #file, function: "testSourceFilePath")
         let sourceFilePath = name.sourceFilePath()
         XCTAssertTrue(
             sourceFilePath.hasSuffix(
@@ -40,7 +40,7 @@ final class ApprovalTests_SwiftTests: XCTestCase {
 private class TestFailer: Failer {
     var failed = false
 
-    func fail(_: String, file _: StaticString, line _: UInt) throws {
+  func fail(_: String, file _: StaticString, function _: StaticString, line _: UInt) throws {
         failed = true
     }
 }

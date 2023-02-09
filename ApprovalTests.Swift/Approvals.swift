@@ -1,8 +1,8 @@
 public enum Approvals {
     public typealias Names = NamerFactory
 
-    public static func makeNamer(forFile file: String) -> ApprovalNamer {
-        Namer(file)
+  public static func makeNamer(forFile file: String, function: String) -> ApprovalNamer {
+        Namer(file, function)
     }
 
     public static var reporter: ApprovalFailureReporter {
@@ -14,12 +14,14 @@ public enum Approvals {
         _ response: String,
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
         try verify(
             ApprovalTextWriter(options.scrub(response), options.forFile.fileExtensionWithoutDot),
             options,
             file: file,
+            function: function,
             line: line
         )
     }
@@ -29,21 +31,23 @@ public enum Approvals {
         _ object: T,
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
         let description = String(describing: object)
-        try verify(description, options, file: file, line: line)
+        try verify(description, options, file: file, function: function, line: line)
     }
 
     public static func verify(
         _ object: Verifiable,
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
         let description = String(describing: object)
         let parameters = object.getVerifyParameters(options)
-        try verify(description, parameters.options, file: file, line: line)
+        try verify(description, parameters.options, file: file, function: function, line: line)
     }
 
     /// Verifies a dictionary of items against a previously approved dictionary.
@@ -51,9 +55,10 @@ public enum Approvals {
         _ object: [Key: Value],
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
-        try verify(StringUtils.printDictionary(object), options, file: file, line: line)
+        try verify(StringUtils.printDictionary(object), options, file: file, function: function, line: line)
     }
 
     /**
@@ -73,9 +78,10 @@ public enum Approvals {
         label: String = "",
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
-        try verify(StringUtils.toString(header, array, label: label), options, file: file, line: line)
+        try verify(StringUtils.toString(header, array, label: label), options, file: file, function: function, line: line)
     }
 
     /**
@@ -95,9 +101,10 @@ public enum Approvals {
         labeler: (T) -> String,
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
-        try verify(StringUtils.toString(header, array, labeler), options, file: file, line: line)
+        try verify(StringUtils.toString(header, array, labeler), options, file: file, function: function, line: line)
     }
 
     /**
@@ -109,9 +116,10 @@ public enum Approvals {
         _ object: T,
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
-        try verify(StringUtils.toJSON(object), options.forFile.with(extensionWithDot: ".json"), file: file, line: line)
+        try verify(StringUtils.toJSON(object), options.forFile.with(extensionWithDot: ".json"), file: file, function: function, line: line)
     }
 
     /**
@@ -131,9 +139,10 @@ public enum Approvals {
         _ query: ExecutableQuery,
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
-        try verify(query.getQuery(), ExecutableReporter.wrap(options, query), file: file, line: line)
+        try verify(query.getQuery(), ExecutableReporter.wrap(options, query), file: file, function: function, line: line)
     }
 
     /**
@@ -151,6 +160,7 @@ public enum Approvals {
         getNextFrame: (Int) -> T,
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
         var output = """
@@ -167,7 +177,7 @@ public enum Approvals {
 
             """
         }
-        try verify(output, options, file: file, line: line)
+        try verify(output, options, file: file, function: function, line: line)
     }
 }
 
@@ -176,10 +186,11 @@ extension Approvals {
         _ writer: ApprovalWriter,
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
-        let namer = options.getNamer(file.description)
-        try verify(writer, namer, options, file: file, line: line)
+      let namer = options.getNamer(file.description, function.description)
+        try verify(writer, namer, options, file: file, function: function, line: line)
     }
 
     private static func verify(
@@ -187,21 +198,23 @@ extension Approvals {
         _ namer: ApprovalNamer,
         _ options: Options = Options(),
         file: StaticString,
+        function: StaticString,
         line: UInt
     ) throws {
-        try verify(FileApprover(writer, namer), options, file: file, line: line)
+        try verify(FileApprover(writer, namer), options, file: file, function: function, line: line)
     }
 
     private static func verify(
         _ approver: FileApprover,
         _ options: Options = Options(),
         file: StaticString,
+        function: StaticString,
         line: UInt
     ) throws {
         let reporter = options.reporter
         if !approver.approve() {
-            approver.reportFailure(reporter: reporter, file: file, line: line)
-            try approver.fail(file: file, line: line)
+            approver.reportFailure(reporter: reporter, file: file, function: function, line: line)
+            try approver.fail(file: file, function: function, line: line)
         } else {
             approver.cleanUpAfterSuccess(reporter: reporter)
         }
