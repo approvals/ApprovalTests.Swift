@@ -1,7 +1,7 @@
-#if os(OSX)
-    import ApprovalTests_Swift
-#elseif os(iOS)
-    import ApprovalTests_iOS
+#if os(iOS)
+  import ApprovalTests_iOS
+#else
+  import ApprovalTests_Swift
 #endif
 import XCTest
 
@@ -28,9 +28,11 @@ final class ApprovalsTests: XCTestCase {
         }
     }
 
+  #if os(macOS)
     func testExecutableQuery() throws {
         try Approvals.verifyQuery(MetMuseumPieceLoader(45734))
     }
+  #endif
 }
 
 class MetMuseumPieceLoader: ExecutableQuery {
