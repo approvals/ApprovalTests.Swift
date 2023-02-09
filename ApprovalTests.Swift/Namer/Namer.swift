@@ -1,23 +1,25 @@
 import Foundation
 
 public class Namer: ApprovalNamer {
+  private let file: String
   private let fileName: String
   private let functionName: String
 
   public init(_ file: String,_ function: String) {
-    fileName = file
-    functionName = function
+    self.file = file
+    self.fileName = URL(fileURLWithPath: file).deletingPathExtension().lastPathComponent
+    print("#@#", file, fileName, function)
+    functionName = function.dropLast(2).description
   }
 
   public func approvalName() -> String {
     let names = StackDemangler().extractNames()
-    return names.className + "." + names.testName
+    return names.className + "." + functionName
   }
 
   public func sourceFilePath() -> String {
-    let names = StackDemangler().extractNames()
-    let baseName = (fileName as NSString).deletingPathExtension
-    return baseName + "." + names.testName
+    let baseName = (file as NSString).deletingPathExtension
+    return baseName + "." + functionName
   }
 }
 
