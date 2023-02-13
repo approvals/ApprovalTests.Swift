@@ -72,8 +72,8 @@ public enum SimpleLogger {
     }
 
     public static func useMarkers(_ parameters: String = "",
-                                  function: String = #function,
                                   file: StaticString = #file,
+                                  function: String = #function,
                                   line: UInt = #line) -> OutMarker {
         var text: String
         if parameters.isEmpty {

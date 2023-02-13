@@ -213,8 +213,8 @@ extension Approvals {
     ) throws {
         let reporter = options.reporter
         if !approver.approve() {
-            approver.reportFailure(reporter: reporter, file: file, function: function, line: line)
-            try approver.fail(file: file, function: function, line: line)
+            approver.reportFailure(reporter: reporter, file: file, line: line)
+            try approver.fail(file: file, line: line)
         } else {
             approver.cleanUpAfterSuccess(reporter: reporter)
         }

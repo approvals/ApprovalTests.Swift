@@ -15,7 +15,6 @@ public class ReportContentsWithXCTest: EquatableFailureReporter {
     override public func report(received: String,
                                 approved: String,
                                 file: StaticString,
-                                function: StaticString,
                                 line: UInt) -> Bool
     {
         // read the files into strings

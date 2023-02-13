@@ -13,7 +13,7 @@ class TestReporter: EquatableFailureReporter {
     self.success = success
   }
 
-  override func report(received: String, approved: String, file: StaticString, function:StaticString, line: UInt) -> Bool {
+  override func report(received: String, approved: String, file: StaticString, line: UInt) -> Bool {
     self.received = received
     self.approved = approved
     return success

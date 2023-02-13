@@ -12,7 +12,7 @@ public class ReportMoveCommandToConsole: EquatableFailureReporter {
     override public func report(received: String,
                                 approved: String,
                                 file _: StaticString,
-                                function _: StaticString,
+                                
                                 line _: UInt) -> Bool
     {
         print(HelpMessages.lineSeparator)

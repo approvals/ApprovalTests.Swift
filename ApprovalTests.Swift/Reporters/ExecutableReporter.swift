@@ -9,8 +9,8 @@ public class ExecutableReporter: ApprovalFailureReporter {
         self.query = query
     }
 
-  public func report(received: String, approved: String, file: StaticString, function: StaticString, line: UInt) -> Bool {
-        if !reporter.report(received: received, approved: approved, file: file, function: function,  line: line) {
+  public func report(received: String, approved: String, file: StaticString, line: UInt) -> Bool {
+        if !reporter.report(received: received, approved: approved, file: file, line: line) {
             return false
         }
         let receivedExpanded = expand(received)
@@ -19,7 +19,6 @@ public class ExecutableReporter: ApprovalFailureReporter {
             received: receivedExpanded,
             approved: approvedExpanded,
             file: file,
-            function: function,
             line: line
         )
     }

@@ -40,7 +40,7 @@ final class ApprovalTests_SwiftTests: XCTestCase {
 private class TestFailer: Failer {
     var failed = false
 
-  func fail(_: String, file _: StaticString, function _: StaticString, line _: UInt) throws {
+  func fail(_: String, file _: StaticString,  line _: UInt) throws {
         failed = true
     }
 }
