@@ -1,8 +1,8 @@
 public enum Approvals {
     public typealias Names = NamerFactory
 
-    public static func makeNamer(forFile file: String) -> ApprovalNamer {
-        Namer(file)
+    public static func makeNamer(forFile file: String, function: String) -> ApprovalNamer {
+        Namer(file, function)
     }
 
     public static var reporter: ApprovalFailureReporter {
@@ -14,6 +14,7 @@ public enum Approvals {
         _ response: String,
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
         try verify(
@@ -176,9 +177,10 @@ extension Approvals {
         _ writer: ApprovalWriter,
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
-        let namer = options.getNamer(file.description)
+        let namer = options.getNamer(file.description, function.description)
         try verify(writer, namer, options, file: file, line: line)
     }
 

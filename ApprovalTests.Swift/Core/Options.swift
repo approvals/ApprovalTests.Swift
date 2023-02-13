@@ -63,7 +63,7 @@ public struct Options {
         data[.scrubber] as? Scrubber ?? ScrubNothing()
     }
 
-    public func with(namerCreator: @escaping (String) -> ApprovalNamer) -> Options {
+    public func with(namerCreator: @escaping (String, String) -> ApprovalNamer) -> Options {
         Options(data, key: .namer, value: namerCreator)
     }
 
@@ -83,9 +83,9 @@ public struct Options {
         FileOptions(data)
     }
 
-    public func getNamer(_ path: String) -> ApprovalNamer {
-        let c = data[.namer] as? (String) -> ApprovalNamer ?? Approvals.makeNamer
-        return c(path)
+    public func getNamer(_ path: String, _ function:String) -> ApprovalNamer {
+        let c = data[.namer] as? (String, String) -> ApprovalNamer ?? Approvals.makeNamer
+        return c(path, function)
     }
 }
 
