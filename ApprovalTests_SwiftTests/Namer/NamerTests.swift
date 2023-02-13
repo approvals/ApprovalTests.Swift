@@ -17,7 +17,7 @@ final class NamerTests: XCTestCase {
     func test_multipleParameters() throws {
         let foo = Approvals.Names.withParameters("story1")
                     .and(Approvals.Names.withAdditionalParameters("part1"))
-        let name: String = foo.getNamer("", "").sourceFilePath()
+      let name: String = foo.getNamer("", #function).sourceFilePath()
         XCTAssertEqual(name, ".test_multipleParameters.story1.part1")
     }
 

@@ -21,6 +21,7 @@ public enum Approvals {
             ApprovalTextWriter(options.scrub(response), options.forFile.fileExtensionWithoutDot),
             options,
             file: file,
+            function: function,
             line: line
         )
     }
@@ -30,21 +31,23 @@ public enum Approvals {
         _ object: T,
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
         let description = String(describing: object)
-        try verify(description, options, file: file, line: line)
+        try verify(description, options, file: file, function: function, line: line)
     }
 
     public static func verify(
         _ object: Verifiable,
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
         let description = String(describing: object)
         let parameters = object.getVerifyParameters(options)
-        try verify(description, parameters.options, file: file, line: line)
+        try verify(description, parameters.options, file: file, function: function, line: line)
     }
 
     /// Verifies a dictionary of items against a previously approved dictionary.
@@ -52,9 +55,10 @@ public enum Approvals {
         _ object: [Key: Value],
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
-        try verify(StringUtils.printDictionary(object), options, file: file, line: line)
+        try verify(StringUtils.printDictionary(object), options, file: file, function: function, line: line)
     }
 
     /**
@@ -74,9 +78,10 @@ public enum Approvals {
         label: String = "",
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
-        try verify(StringUtils.toString(header, array, label: label), options, file: file, line: line)
+        try verify(StringUtils.toString(header, array, label: label), options, file: file, function: function, line: line)
     }
 
     /**
@@ -96,9 +101,10 @@ public enum Approvals {
         labeler: (T) -> String,
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
-        try verify(StringUtils.toString(header, array, labeler), options, file: file, line: line)
+        try verify(StringUtils.toString(header, array, labeler), options, file: file, function: function, line: line)
     }
 
     /**
@@ -110,9 +116,10 @@ public enum Approvals {
         _ object: T,
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
-        try verify(StringUtils.toJSON(object), options.forFile.with(extensionWithDot: ".json"), file: file, line: line)
+      try verify(StringUtils.toJSON(object), options.forFile.with(extensionWithDot: ".json"), file: file, function: function, line: line)
     }
 
     /**
@@ -132,9 +139,10 @@ public enum Approvals {
         _ query: ExecutableQuery,
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
-        try verify(query.getQuery(), ExecutableReporter.wrap(options, query), file: file, line: line)
+        try verify(query.getQuery(), ExecutableReporter.wrap(options, query), file: file, function: function, line: line)
     }
 
     /**
@@ -152,6 +160,7 @@ public enum Approvals {
         getNextFrame: (Int) -> T,
         _ options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
         var output = """
@@ -168,7 +177,7 @@ public enum Approvals {
 
             """
         }
-        try verify(output, options, file: file, line: line)
+        try verify(output, options, file: file, function: function, line: line)
     }
 }
 

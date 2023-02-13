@@ -11,13 +11,13 @@ public class Namer: ApprovalNamer {
 
     public func approvalName() -> String {
         let names = StackDemangler().extractNames()
-        return names.className + "." + names.testName
+        return names.className + "." + functionName
     }
 
     public func sourceFilePath() -> String {
         let names = StackDemangler().extractNames()
         let baseName = (fileName as NSString).deletingPathExtension
-        return baseName + "." + names.testName
+      return baseName + "." + "\(functionName.dropLast(2))"
     }
 }
 
