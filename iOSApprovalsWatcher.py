@@ -16,8 +16,8 @@ class WatchedFile:
         self.path = path
  
     def __repr__(self):
-        return str(self.date) + ' ' + self.path
-
+        return f'{str(self.date)} {self.path}'
+ 
     def remove(self):
         if os.path.exists(self.path):
             os.remove(self.path)
