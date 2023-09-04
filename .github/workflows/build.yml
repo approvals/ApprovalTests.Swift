@@ -10,14 +10,14 @@ jobs:
   testMacOS:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Run tests
       run: ./run_tests_mac.sh
 
   testIOS:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Run tests
       run: ./run_tests_ios.sh
 
@@ -25,7 +25,7 @@ jobs:
     needs: [ testMacOS, testIOS ]
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Build
       run: swift build -v
 
@@ -34,7 +34,7 @@ jobs:
     name: Build Carthage
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Build
       run: carthage build --configuration Release --no-skip-current --use-xcframeworks
 
@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: auto-merge
         if: |
           github.actor == 'dependabot[bot]' &&
