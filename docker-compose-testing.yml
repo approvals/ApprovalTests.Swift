@@ -1,0 +1,11 @@
+# 1
+version: '3'
+# 2
+services:
+  # 3
+  approval-test-swift:
+    # 4
+    # 5
+    build:
+      context: .
+      dockerfile: testing.Dockerfile

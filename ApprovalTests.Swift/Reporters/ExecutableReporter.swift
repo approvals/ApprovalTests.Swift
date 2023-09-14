@@ -9,7 +9,7 @@ public class ExecutableReporter: ApprovalFailureReporter {
         self.query = query
     }
 
-    public func report(received: String, approved: String, file: StaticString, line: UInt) -> Bool {
+  public func report(received: String, approved: String, file: StaticString, line: UInt) -> Bool {
         if !reporter.report(received: received, approved: approved, file: file, line: line) {
             return false
         }

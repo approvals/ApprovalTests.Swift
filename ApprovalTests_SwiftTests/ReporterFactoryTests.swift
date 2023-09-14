@@ -1,7 +1,7 @@
-#if os(OSX)
-    import ApprovalTests_Swift
-#elseif os(iOS)
-    import ApprovalTests_iOS
+#if os(iOS)
+  import ApprovalTests_iOS
+#else
+  import ApprovalTests_Swift
 #endif
 import XCTest
 
@@ -24,6 +24,7 @@ final class ReporterFactoryTests: XCTestCase {
         _ reporter1: ApprovalFailureReporter,
         match: Bool,
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) {
         let reporter3 = ReporterFactory.get

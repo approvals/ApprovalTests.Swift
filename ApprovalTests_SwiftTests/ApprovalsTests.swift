@@ -1,14 +1,17 @@
-#if os(OSX)
-    import ApprovalTests_Swift
-#elseif os(iOS)
-    import ApprovalTests_iOS
+#if os(iOS)
+  import ApprovalTests_iOS
+#else
+  import ApprovalTests_Swift
 #endif
 import XCTest
+import Foundation
 
 final class ApprovalsTests: XCTestCase {
-    func testToString() throws {
-        try Approvals.verify(CGRect(x: 5, y: 10, width: 100, height: 200))
-    }
+    #if os(macOS)
+        func testToString() throws {
+            try Approvals.verify(CGRect(x: 5, y: 10, width: 100, height: 200))
+        }
+    #endif
 
     func testAsJson() throws {
         try Approvals.verifyAsJSON(CGRect(x: 5, y: 10, width: 100, height: 200))
@@ -28,9 +31,11 @@ final class ApprovalsTests: XCTestCase {
         }
     }
 
+  #if os(macOS)
     func testExecutableQuery() throws {
         try Approvals.verifyQuery(MetMuseumPieceLoader(45734))
     }
+  #endif
 }
 
 class MetMuseumPieceLoader: ExecutableQuery {

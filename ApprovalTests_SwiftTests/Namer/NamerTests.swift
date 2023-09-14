@@ -1,7 +1,7 @@
-#if os(OSX)
-    import ApprovalTests_Swift
-#elseif os(iOS)
-    import ApprovalTests_iOS
+#if os(iOS)
+  import ApprovalTests_iOS
+#else
+  import ApprovalTests_Swift
 #endif
 import XCTest
 
@@ -13,7 +13,7 @@ final class NamerTests: XCTestCase {
     func test_multipleParameters() throws {
         let foo = Approvals.Names.withParameters("story1")
                     .and(Approvals.Names.withAdditionalParameters("part1"))
-        let name: String = foo.getNamer("").sourceFilePath()
+        let name: String = foo.getNamer("", "test_multipleParameters()").sourceFilePath()
         XCTAssertEqual(name, ".test_multipleParameters.story1.part1")
     }
 

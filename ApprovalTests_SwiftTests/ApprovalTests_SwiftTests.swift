@@ -1,22 +1,22 @@
-#if os(OSX)
-    import ApprovalTests_Swift
-#elseif os(iOS)
-    import ApprovalTests_iOS
+#if os(iOS)
+  import ApprovalTests_iOS
+#else
+  import ApprovalTests_Swift
 #endif
 import XCTest
 
 final class ApprovalTests_SwiftTests: XCTestCase {
     func testApprovalName() throws {
-        let name = Approvals.makeNamer(forFile: "DUMMY")
-        XCTAssertEqual(name.approvalName(), "ApprovalTests_SwiftTests.testApprovalName")
+      let name = Approvals.makeNamer(forFile: "DUMMY", function: "testApprovalName()")
+        XCTAssertEqual(name.approvalName(), "DUMMY.testApprovalName")
     }
 
     func testSourceFilePath() throws {
-        let name = Approvals.makeNamer(forFile: #file)
+      let name = Approvals.makeNamer(forFile: #file, function: "testSourceFilePath()")
         let sourceFilePath = name.sourceFilePath()
         XCTAssertTrue(
             sourceFilePath.hasSuffix(
-                "/ApprovalTests.Swift/ApprovalTests_SwiftTests/ApprovalTests_SwiftTests.testSourceFilePath"
+                "ApprovalTests_SwiftTests/ApprovalTests_SwiftTests.testSourceFilePath"
             ),
             "was \(sourceFilePath)"
         )
@@ -40,7 +40,7 @@ final class ApprovalTests_SwiftTests: XCTestCase {
 private class TestFailer: Failer {
     var failed = false
 
-    func fail(_: String, file _: StaticString, line _: UInt) throws {
+  func fail(_: String, file _: StaticString,  line _: UInt) throws {
         failed = true
     }
 }

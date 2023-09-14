@@ -13,7 +13,7 @@ public class FirstWorkingReporter: EquatableFailureReporter {
                                 file: StaticString = #filePath,
                                 line: UInt = #line) -> Bool {
         for reporter in reporters {
-            if reporter.report(received: received, approved: approved, file: file, line: line) {
+          if reporter.report(received: received, approved: approved, file: file, line: line) {
                 return true
             }
         }
