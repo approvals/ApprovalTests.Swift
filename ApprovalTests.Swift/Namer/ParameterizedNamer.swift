@@ -1,9 +1,9 @@
 class ParameterizedNamer: Namer {
     private let parameters: [String]
 
-    public init(_ filePath: String, _ parameters: [String]) {
+  public init(_ filePath: String, _ function: String, _ parameters: [String]) {
         self.parameters = parameters
-        super.init(filePath)
+        super.init(filePath, function)
     }
     
     override func sourceFilePath() -> String {

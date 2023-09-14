@@ -12,6 +12,7 @@ public enum CombinationApprovals {
         _ params1: [IN1],
         options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED) -> OUT = {
@@ -29,7 +30,7 @@ public enum CombinationApprovals {
             callWithAllParameters,
             params1,
             unused, unused, unused, unused, unused, unused, unused, unused,
-            options: options, file: file, line: line
+            options: options, file: file, function: function, line: line
         )
     }
 
@@ -39,6 +40,7 @@ public enum CombinationApprovals {
         _ params2: [IN2],
         options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED) -> OUT = {
@@ -55,7 +57,7 @@ public enum CombinationApprovals {
             callWithAllParameters,
             params1, params2,
             unused, unused, unused, unused, unused, unused, unused,
-            options: options, file: file, line: line
+            options: options, file: file, function: function, line: line
         )
     }
 
@@ -66,6 +68,7 @@ public enum CombinationApprovals {
         _ params3: [IN3],
         options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, IN3, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED) -> OUT = {
@@ -81,7 +84,7 @@ public enum CombinationApprovals {
             callWithAllParameters,
             params1, params2, params3,
             unused, unused, unused, unused, unused, unused,
-            options: options, file: file, line: line
+            options: options, file: file, function: function, line: line
         )
     }
 
@@ -93,6 +96,7 @@ public enum CombinationApprovals {
         _ params4: [IN4],
         options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, IN3, IN4, UNUSED, UNUSED, UNUSED, UNUSED, UNUSED) -> OUT = {
@@ -107,7 +111,7 @@ public enum CombinationApprovals {
             callWithAllParameters,
             params1, params2, params3, params4,
             unused, unused, unused, unused, unused,
-            options: options, file: file, line: line
+            options: options, file: file, function: function, line: line
         )
     }
 
@@ -120,6 +124,7 @@ public enum CombinationApprovals {
         _ params5: [IN5],
         options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, IN3, IN4, IN5, UNUSED, UNUSED, UNUSED, UNUSED) -> OUT = {
@@ -133,7 +138,7 @@ public enum CombinationApprovals {
             callWithAllParameters,
             params1, params2, params3, params4, params5,
             unused, unused, unused, unused,
-            options: options, file: file, line: line
+            options: options, file: file, function: function, line: line
         )
     }
 
@@ -147,6 +152,7 @@ public enum CombinationApprovals {
         _ params6: [IN6],
         options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, IN3, IN4, IN5, IN6, UNUSED, UNUSED, UNUSED) -> OUT = {
@@ -159,7 +165,7 @@ public enum CombinationApprovals {
             callWithAllParameters,
             params1, params2, params3, params4, params5, params6,
             unused, unused, unused,
-            options: options, file: file, line: line
+            options: options, file: file, function: function, line: line
         )
     }
 
@@ -174,6 +180,7 @@ public enum CombinationApprovals {
         _ params7: [IN7],
         options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, IN3, IN4, IN5, IN6, IN7, UNUSED, UNUSED) -> OUT = {
@@ -185,7 +192,7 @@ public enum CombinationApprovals {
             callWithAllParameters,
             params1, params2, params3, params4, params5, params6, params7,
             unused, unused,
-            options: options, file: file, line: line
+            options: options, file: file, function: function, line: line
         )
     }
 
@@ -201,6 +208,7 @@ public enum CombinationApprovals {
         _ params8: [IN8],
         options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
         let callWithAllParameters: (IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, UNUSED) -> OUT = {
@@ -211,7 +219,7 @@ public enum CombinationApprovals {
             callWithAllParameters,
             params1, params2, params3, params4, params5, params6, params7, params8,
             unused,
-            options: options, file: file, line: line
+            options: options, file: file, function: function, line: line
         )
     }
 
@@ -228,6 +236,7 @@ public enum CombinationApprovals {
         _ params9: [IN9],
         options: Options = Options(),
         file: StaticString = #filePath,
+        function: StaticString = #function,
         line: UInt = #line
     ) throws {
         var output = ""
@@ -253,6 +262,6 @@ public enum CombinationApprovals {
                 }
             }
         }
-        try Approvals.verify(output, options, file: file, line: line)
+        try Approvals.verify(output, options, file: file, function: function, line: line)
     }
 }

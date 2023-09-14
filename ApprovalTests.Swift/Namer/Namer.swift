@@ -2,9 +2,11 @@ import Foundation
 
 public class Namer: ApprovalNamer {
     private let fileName: String
+    private let functionName: String
 
-    public init(_ file: String) {
+    public init(_ file: String, _ function: String) {
         fileName = file
+        functionName = function
     }
 
     public func approvalName() -> String {
@@ -13,9 +15,8 @@ public class Namer: ApprovalNamer {
     }
 
     public func sourceFilePath() -> String {
-        let names = StackDemangler().extractNames()
         let baseName = (fileName as NSString).deletingPathExtension
-        return baseName + "." + names.testName
+      return baseName + "." + "\(functionName.dropLast(2))"
     }
 }
 
