@@ -10,8 +10,9 @@ public class Namer: ApprovalNamer {
     }
 
     public func approvalName() -> String {
-        let names = StackDemangler().extractNames()
-        return names.className + "." + names.testName
+        let fullName = sourceFilePath()
+        let lastSlashIndex = fullName.lastIndex(of: "/")!
+        return String(fullName[fullName.index(after: lastSlashIndex)...])
     }
 
     public func sourceFilePath() -> String {
@@ -42,64 +43,5 @@ private struct ClassAndMethod {
     private static func extractMethodName(_ classAndMethod: String) -> String {
         let testNameWithParens = String(classAndMethod.split(separator: ".").last!)
         return String(testNameWithParens.split(separator: "(").first!)
-    }
-}
-
-private class StackDemangler {
-    private let callStack = Thread.callStackSymbols
-
-    func extractNames() -> ClassAndMethod {
-        do {
-            let mangledName = mangledName(depth: findTestMethod())
-            let swiftSymbol = try parseMangledSwiftSymbol(mangledName)
-            let readableDescription = swiftSymbol.print(using: SymbolPrintOptions.simplified.union(.synthesizeSugarOnTypes))
-            let classAndMethod = String(readableDescription.split(separator: " ").last!)
-            return ClassAndMethod(classAndMethod: classAndMethod)
-        } catch {
-            print("Error in \(#function): \(error)")
-            return ClassAndMethod(className: "ERROR", testName: "ERROR")
-        }
-    }
-
-    private func mangledName(depth: Int) -> String {
-        let dollarSignIndex = callStack[depth].firstIndex(of: "$")!
-        let mangledNameAndOffset = callStack[depth].suffix(from: dollarSignIndex)
-        let firstSpaceIndex = mangledNameAndOffset.firstIndex(of: " ")!
-        return String(mangledNameAndOffset.prefix(upTo: firstSpaceIndex))
-    }
-
-    private func findTestMethod() -> Int {
-        let depth = searchDownForXCTestAssertion()
-        return searchUpForTestMethod(from: depth)
-    }
-
-    private func searchDownForXCTestAssertion() -> Int {
-        var depth = 0
-        while depth < callStack.count {
-            if isXCTestAssertion(depth) {
-                break
-            }
-            depth += 1
-        }
-        return depth
-    }
-
-    private func searchUpForTestMethod(from depth: Int) -> Int {
-        var depth = depth
-        while depth > 0 {
-            depth -= 1
-            if isTestMethod(depth) {
-                break
-            }
-        }
-        return depth
-    }
-
-    private func isXCTestAssertion(_ depth: Int) -> Bool {
-        callStack[depth].contains("XCTest")
-    }
-
-    private func isTestMethod(_ depth: Int) -> Bool {
-        callStack[depth].contains("test")
     }
 }

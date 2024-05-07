@@ -7,7 +7,7 @@ import XCTest
 
 final class ApprovalTests_SwiftTests: XCTestCase {
     func testApprovalName() throws {
-      let name = Approvals.makeNamer(forFile: "DUMMY", function: "testApprovalName")
+        let name = Approvals.makeNamer(forFile: #file, function: #function)
         XCTAssertEqual(name.approvalName(), "ApprovalTests_SwiftTests.testApprovalName")
     }
 
