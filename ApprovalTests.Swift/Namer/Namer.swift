@@ -16,7 +16,8 @@ public class Namer: ApprovalNamer {
 
     public func sourceFilePath() -> String {
         let baseName = (fileName as NSString).deletingPathExtension
-      return baseName + "." + "\(functionName.dropLast(2))"
+        let functionNameWithoutParentheses = functionName.dropLast(2)
+        return baseName + "." + "\(functionNameWithoutParentheses)"
     }
 }
 
