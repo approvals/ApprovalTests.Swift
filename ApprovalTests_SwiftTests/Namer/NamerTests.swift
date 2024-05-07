@@ -10,10 +10,14 @@ final class NamerTests: XCTestCase {
         try Approvals.verify("# Title\n> Quoted text", Approvals.Names.withParameters("story1").forFile.with(extensionWithDot: ".md"))
     }
 
+  func test_parameters_async() async throws {
+        try Approvals.verify("# Title\n> Quoted text", Approvals.Names.withParameters("story1").forFile.with(extensionWithDot: ".md"))
+    }
+
     func test_multipleParameters() throws {
         let foo = Approvals.Names.withParameters("story1")
                     .and(Approvals.Names.withAdditionalParameters("part1"))
-        let name: String = foo.getNamer("").sourceFilePath()
+      let name: String = foo.getNamer("", #function).sourceFilePath()
         XCTAssertEqual(name, ".test_multipleParameters.story1.part1")
     }
 
