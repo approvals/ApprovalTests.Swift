@@ -83,9 +83,9 @@ public struct Options {
         FileOptions(data)
     }
 
-    public func getNamer(_ path: String, _ function: String) -> ApprovalNamer {
+    public func getNamer(filePath: String, functionName: String) -> ApprovalNamer {
         let c = data[.namer] as? (String, String) -> ApprovalNamer ?? Approvals.makeNamer
-        return c(path, function)
+        return c(filePath, functionName)
     }
 }
 

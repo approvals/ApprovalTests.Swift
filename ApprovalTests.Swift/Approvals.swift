@@ -189,7 +189,7 @@ extension Approvals {
         function: StaticString = #function,
         line: UInt = #line
     ) throws {
-        let namer = options.getNamer(file.description, function.description)
+        let namer = options.getNamer(filePath: file.description, functionName: function.description)
         try verify(writer, namer, options, file: file, line: line)
     }
 

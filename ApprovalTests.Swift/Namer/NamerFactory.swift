@@ -8,7 +8,7 @@ public enum NamerFactory {
     }
 
     public static func withParameters(options: Options = Options(), _ parameters: [String]) -> Options {
-        let namer = options.getNamer("", "")
+        let namer = options.getNamer(filePath: "", functionName: "")
         var parameters = parameters
         if namer is ParameterizedNamer {
             let preParameters = (namer as! ParameterizedNamer).getParameters()
