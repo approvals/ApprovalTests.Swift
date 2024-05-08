@@ -3,7 +3,7 @@ import UIKit
 #endif
 
 public enum NamerFactory {
-    public static func withParameters(options: Options = Options(), _ parameters: String ...) -> Options {
+    public static func withParameters(options: Options = Options(), _ parameters: String...) -> Options {
         return withParameters(options: options, parameters)
     }
 
@@ -27,7 +27,7 @@ public enum NamerFactory {
         withParameters(options: options, getMachineName())
     }
 
-    public static func withAdditionalParameters(_ parameters: String ...) -> (Options) -> Options {
+    public static func withAdditionalParameters(_ parameters: String...) -> (Options) -> Options {
         return { (options: Options) -> Options in
             withParameters(options: options, parameters)
         }

@@ -12,7 +12,7 @@ final class ApprovalTests_SwiftTests: XCTestCase {
     }
 
     func testSourceFilePath() throws {
-      let name = Approvals.makeNamer(forFile: #file, function: #function)
+        let name = Approvals.makeNamer(forFile: #file, function: #function)
         let sourceFilePath = name.sourceFilePath()
         XCTAssertTrue(
             sourceFilePath.hasSuffix(
