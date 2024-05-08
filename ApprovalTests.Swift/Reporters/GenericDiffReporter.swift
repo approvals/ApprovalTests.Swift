@@ -40,10 +40,8 @@
             return fileName
         }
     }
-#endif
 
-#if os(macOS)
-
+#elseif os(macOS)
     import Foundation
 
     /**
