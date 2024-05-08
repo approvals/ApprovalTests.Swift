@@ -1,4 +1,4 @@
-#if os(OSX)
+#if os(macOS)
     import ApprovalTests_Swift
 #elseif os(iOS)
     import ApprovalTests_iOS

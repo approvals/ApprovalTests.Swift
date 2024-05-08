@@ -1,4 +1,4 @@
-#if os(OSX)
+#if os(macOS)
     import ApprovalTests_Swift
 #elseif os(iOS)
     import ApprovalTests_iOS
@@ -54,7 +54,7 @@ final class ReporterTests: XCTestCase {
         }
     #endif
 
-    #if os(OSX)
+    #if os(macOS)
         func test_clipboardReporterOnMac() throws {
             let reporter = ReportMoveCommandToClipboard()
 
@@ -67,7 +67,7 @@ final class ReporterTests: XCTestCase {
         }
     #endif
 
-    #if os(OSX)
+    #if os(macOS)
         func test_fileLaunchingOnMac() throws {
             let reporter = ReportByOpeningReceivedFile()
             let process = reporter.makeProcess(received: "r.html", approved: "a.html")
