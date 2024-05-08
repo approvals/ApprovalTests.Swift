@@ -21,27 +21,3 @@ public class Namer: ApprovalNamer {
         return baseName + "." + "\(functionNameWithoutParentheses)"
     }
 }
-
-private struct ClassAndMethod {
-    let className: String
-    let testName: String
-
-    init(classAndMethod: String) {
-        className = Self.extractClassName(classAndMethod)
-        testName = Self.extractMethodName(classAndMethod)
-    }
-
-    init(className: String, testName: String) {
-        self.className = className
-        self.testName = testName
-    }
-
-    private static func extractClassName(_ classAndMethod: String) -> String {
-        String(classAndMethod.split(separator: ".").first!)
-    }
-
-    private static func extractMethodName(_ classAndMethod: String) -> String {
-        let testNameWithParens = String(classAndMethod.split(separator: ".").last!)
-        return String(testNameWithParens.split(separator: "(").first!)
-    }
-}
