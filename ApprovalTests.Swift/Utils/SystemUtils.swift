@@ -1,13 +1,4 @@
-#if os(iOS)
-    import UIKit
-
-    public enum SystemUtils {
-        public static func pasteToClipboard(_ text: String) {
-            let pasteboard = UIPasteboard.general
-            pasteboard.string = text
-        }
-    }
-#elseif os(OSX)
+#if os(OSX)
     import AppKit
 
     public enum SystemUtils {
@@ -20,6 +11,17 @@
             }
         }
     }
+
+#elseif os(iOS)
+    import UIKit
+
+    public enum SystemUtils {
+        public static func pasteToClipboard(_ text: String) {
+            let pasteboard = UIPasteboard.general
+            pasteboard.string = text
+        }
+    }
+
 #else
     public enum SystemUtils {
         public static func pasteToClipboard(_ text: String) {
