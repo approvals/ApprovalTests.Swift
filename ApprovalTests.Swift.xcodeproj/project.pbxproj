@@ -280,14 +280,6 @@
 			path = ApprovalTests_iOSTests;
 			sourceTree = "<group>";
 		};
-		163E187F217FA9A500A54A48 /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				BB1705F1B761A7E6263D8FFB /* GenericDiffReporter.swift */,
-			);
-			path = macOS;
-			sourceTree = "<group>";
-		};
 		163E1880217FA9C700A54A48 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,6 +419,7 @@
 			children = (
 				BB170C818D93ED50B092E659 /* ExecutableReporter.swift */,
 				BB17059F97E2ED858F9C9A2F /* FirstWorkingReporter.swift */,
+				BB1705F1B761A7E6263D8FFB /* GenericDiffReporter.swift */,
 				BB1708EE2DD2D75D24452A4F /* GenericDiffReporterBase.swift */,
 				BB1705B9C16FF40144A3AC52 /* ReportByCallingScript.swift */,
 				BB17079958CB92B280C0B2FA /* ReportByOpeningReceivedFile.swift */,
@@ -438,7 +431,6 @@
 				BB170ABF2255D4F0B1D59D15 /* ReportWithEverything.swift */,
 				BB170F8F083E3D6B5172BF7A /* VariousReporters.swift */,
 				163E1880217FA9C700A54A48 /* iOS */,
-				163E187F217FA9A500A54A48 /* macOS */,
 			);
 			path = Reporters;
 			sourceTree = "<group>";
