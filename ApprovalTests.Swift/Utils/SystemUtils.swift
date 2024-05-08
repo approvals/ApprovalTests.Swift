@@ -7,7 +7,7 @@
             pasteboard.string = text
         }
     }
-#else
+#elseif os(OSX)
     import AppKit
 
     public enum SystemUtils {
@@ -18,6 +18,11 @@
             if !successful {
                 print("pasteToClipboard not successful")
             }
+        }
+    }
+#else
+    public enum SystemUtils {
+        public static func pasteToClipboard(_ text: String) {
         }
     }
 #endif
