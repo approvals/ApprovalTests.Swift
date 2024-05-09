@@ -1,4 +1,4 @@
-#if os(macOS)
+#if os(OSX)
     import AppKit
 
     public enum SystemUtils {
