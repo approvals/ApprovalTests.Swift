@@ -1,5 +1,4 @@
-#if os(iOS)
-
+#if canImport(UIKit)
     import UIKit
 
     public class UIWriter: ApprovalWriter {
@@ -31,5 +30,4 @@
             try! data.write(to: fileURL)
         }
     }
-
 #endif

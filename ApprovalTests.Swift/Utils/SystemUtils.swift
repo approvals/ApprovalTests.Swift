@@ -1,4 +1,4 @@
-#if os(macOS)
+#if canImport(AppKit)
     import AppKit
 
     public enum SystemUtils {
@@ -12,7 +12,7 @@
         }
     }
 
-#elseif os(iOS)
+#elseif canImport(UIKit)
     import UIKit
 
     public enum SystemUtils {

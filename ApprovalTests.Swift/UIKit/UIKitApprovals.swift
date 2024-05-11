@@ -1,5 +1,4 @@
-#if os(iOS)
-
+#if canImport(UIKit)
     import UIKit
 
     public enum UIKitApprovals {
@@ -21,5 +20,4 @@
             try verify(view: viewController.view!, options, file: file, line: line)
         }
     }
-
 #endif
