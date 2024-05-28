@@ -1,5 +1,7 @@
-# Default rules to disable
+# Default rules intentionally disabled
 --disable blankLinesBetweenScopes
+
+# Default rules to disable
 --disable braces
 --disable emptyBraces
 --disable indent
