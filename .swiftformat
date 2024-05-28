@@ -9,7 +9,6 @@
 --disable modifierOrder
 --disable opaqueGenericParameters
 --disable redundantReturn
---disable trailingSpace
 --disable unusedArguments
 --disable wrapMultilineStatementBraces
 

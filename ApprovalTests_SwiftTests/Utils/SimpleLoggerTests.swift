@@ -29,7 +29,7 @@ final class SimpleLoggerTests: XCTestCase {
         var dates: [Date] = [
             Date(timeIntervalSince1970: 0),
             Date(timeIntervalSince1970: 0.5),
-        ] 
+        ]
         SimpleLogger.timer = {
             let first = dates.first
             dates = Array(dates.dropFirst())

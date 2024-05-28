@@ -20,7 +20,7 @@
             return process
         }
     }
-    
+
 #elseif os(iOS)
     import Foundation
 
