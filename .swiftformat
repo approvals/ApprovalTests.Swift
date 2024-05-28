@@ -3,13 +3,11 @@
 --disable redundantStaticSelf
 
 # Default rules to disable
---disable braces
 --disable emptyBraces
 --disable indent
 --disable modifierOrder
 --disable opaqueGenericParameters
 --disable redundantReturn
 --disable unusedArguments
---disable wrapMultilineStatementBraces
 
 # Opt-in rules to enable
