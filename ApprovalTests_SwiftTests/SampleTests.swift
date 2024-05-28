@@ -8,7 +8,7 @@ import XCTest
 final class SampleTests: XCTestCase {
     private var getWords = ["Approval", "Tests"]
 
-    func testString() throws {
+  func testString() throws {
         var s = "Approval"
         s += "Tests"
         try Approvals.verify(s)
