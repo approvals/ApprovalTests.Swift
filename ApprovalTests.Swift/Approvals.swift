@@ -119,7 +119,7 @@ public enum Approvals {
         function: StaticString = #function,
         line: UInt = #line
     ) throws {
-      try verify(StringUtils.toJSON(object), options.forFile.with(extensionWithDot: ".json"), file: file, function: function, line: line)
+        try verify(StringUtils.toJSON(object), options.forFile.with(extensionWithDot: ".json"), file: file, function: function, line: line)
     }
 
     /**
