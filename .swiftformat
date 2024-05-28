@@ -1,5 +1,6 @@
 # Default rules intentionally disabled
 --disable blankLinesBetweenScopes
+--disable redundantStaticSelf
 
 # Default rules to disable
 --disable braces
@@ -8,7 +9,6 @@
 --disable modifierOrder
 --disable opaqueGenericParameters
 --disable redundantReturn
---disable redundantStaticSelf
 --disable trailingSpace
 --disable unusedArguments
 --disable wrapMultilineStatementBraces
