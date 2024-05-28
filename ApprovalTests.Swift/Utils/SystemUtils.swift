@@ -24,7 +24,6 @@
 
 #else
     public enum SystemUtils {
-        public static func pasteToClipboard(_ text: String) {
-        }
+        public static func pasteToClipboard(_ text: String) {}
     }
 #endif
