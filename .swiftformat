@@ -1,10 +1,5 @@
-# Default rules intentionally disabled
 --disable blankLinesBetweenScopes
---disable redundantStaticSelf
-
-# Default rules to disable
 --disable opaqueGenericParameters
 --disable redundantReturn
+--disable redundantStaticSelf
 --disable unusedArguments
-
-# Opt-in rules to enable
