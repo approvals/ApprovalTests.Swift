@@ -3,7 +3,6 @@
 --disable redundantStaticSelf
 
 # Default rules to disable
---disable modifierOrder
 --disable opaqueGenericParameters
 --disable redundantReturn
 --disable unusedArguments
