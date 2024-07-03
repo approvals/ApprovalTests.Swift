@@ -1,3 +1,5 @@
 #!/bin/bash
 
-xcodebuild test -project ApprovalTests.Swift.xcodeproj -scheme ApprovalTests.Swift
+SCHEME='ApprovalTests.Swift'
+
+xcodebuild test -scheme $SCHEME CODE_SIGNING_ALLOWED='NO'
