@@ -61,7 +61,7 @@ public class ReportWithTKDiff: GenericDiffReporter {
 public class ReportWithVisualStudioCode: GenericDiffReporter {
     public init() {
         super.init(
-            programPath: "/Applications/Visual\\ Studio\\ Code.app/Contents/Resources/app/bin/code",
+            programPath: "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code",
             arguments: { received, approved in
                 ["-d", received, approved]
             }
