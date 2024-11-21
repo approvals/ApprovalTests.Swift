@@ -51,7 +51,8 @@
             _ programPath: String
         ) -> String {
             let arguments2 = arguments(formatForCommandLine(received), formatForCommandLine(approved))
-            let process1 = "\(programPath) \(arguments2.joined(separator: " "))"
+            let programmPathEscaped = programPath.replacingOccurrences(of: " ", with: "\\ ")
+            let process1 = "\(programmPathEscaped) \(arguments2.joined(separator: " "))"
             let process = "#!/bin/bash\n\(process1)"
             return process
         }
