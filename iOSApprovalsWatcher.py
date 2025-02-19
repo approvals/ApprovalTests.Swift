@@ -30,7 +30,6 @@ class WatchedFile:
                 print(self)
                 os.chmod(self.path, os.stat(self.path).st_mode | stat.S_IEXEC) 
                 subprocess.Popen(self.path)
-                os.remove(self.path)
 
 
 def monitor_files(files):
