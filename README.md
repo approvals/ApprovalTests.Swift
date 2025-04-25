@@ -183,7 +183,7 @@ end
 
 ### Questions?
 
-Ask Llewellyn Falco [@LlewellynFalco](https://twitter.com/llewellynfalco) or Jon Reid [@qcoding](https://twitter.com/qcoding) on Twitter.
+Ask Llewellyn Falco [@LlewellynFalco](https://twitter.com/llewellynfalco) on Twitter, or Jon Reid on [BlueSky](https://bsky.app/profile/qcoding.bsky.social) or [Mastodon](https://iosdev.space/@qcoding).
 
 ### Documentation
 
