@@ -20,6 +20,8 @@ public struct ApprovalTextWriter: ApprovalWriter {
     public func writeReceivedFile(_ received: String) {
         let fileURL = URL(fileURLWithPath: received)
         do {
+            let parent = fileURL.deletingLastPathComponent()
+            print("Directory exists? \(FileManager.default.fileExists(atPath: parent.path))")
             try text.write(toFile: fileURL.path, atomically: true, encoding: .utf8)
         } catch {
             print("Error in \(#function) for received \"\(received)\": \(error)")
