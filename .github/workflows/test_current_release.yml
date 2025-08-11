@@ -9,7 +9,7 @@ jobs:
   buildAndTestMacOS:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
       with:
         repository: approvals/ApprovalTests.Swift.StarterProject.MacOS
         path: ApprovalTests.Swift.StarterProject.MacOS
@@ -24,7 +24,7 @@ jobs:
   buildAndTestiOs:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
       with:
         repository: approvals/ApprovalTests.Swift.StarterProject.iOs
         path: ApprovalTests.Swift.StarterProject.iOs
