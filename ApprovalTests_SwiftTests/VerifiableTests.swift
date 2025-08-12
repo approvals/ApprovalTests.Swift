@@ -17,7 +17,7 @@ class SampleMarkdown: Verifiable, CustomStringConvertible {
         VerifyParameters(options.forFile.with(extensionWithDot: ".md"))
     }
 
-    public var description: String {
+    var description: String {
         """
         | A | B |
         |---|---|

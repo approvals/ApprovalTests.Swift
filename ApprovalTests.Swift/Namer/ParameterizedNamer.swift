@@ -1,7 +1,7 @@
 class ParameterizedNamer: Namer {
     private let parameters: [String]
 
-    public init(_ filePath: String, _ function: String, _ parameters: [String]) {
+    init(_ filePath: String, _ function: String, _ parameters: [String]) {
         self.parameters = parameters
         super.init(filePath, function)
     }
