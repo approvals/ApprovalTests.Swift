@@ -129,7 +129,7 @@ See an example [package manifest](https://github.com/approvals/ApprovalTests.Swi
 Get the following dependency:
 
 <!-- snippet: package_include_approvals -->
-<a id='snippet-package_include_approvals'></a>
+<a id='snippet-https://raw.githubusercontent.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/main/Package.swift%23package_include_approvals'></a>
 ```swift
 dependencies: [
     .package(
@@ -138,13 +138,13 @@ dependencies: [
     ),
 ],
 ```
-<sup><a href='#snippet-package_include_approvals' title='Start of snippet'>anchor</a></sup>
+<sup><a href='https://raw.githubusercontent.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/main/Package.swift#package_include_approvals' title='Snippet source file'>anchor</a></sup>
 <!-- endSnippet -->
 
 Then add it to your test target:
 
 <!-- snippet: package_add_test_target -->
-<a id='snippet-package_add_test_target'></a>
+<a id='snippet-https://raw.githubusercontent.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/main/Package.swift%23package_add_test_target'></a>
 ```swift
 .testTarget(
     name: "ApprovalTests.Swift.StarterProject.MacOSTests",
@@ -153,7 +153,7 @@ Then add it to your test target:
         "ApprovalTests.Swift",
     ],
 ```
-<sup><a href='#snippet-package_add_test_target' title='Start of snippet'>anchor</a></sup>
+<sup><a href='https://raw.githubusercontent.com/approvals/ApprovalTests.Swift.StarterProject.MacOs/main/Package.swift#package_add_test_target' title='Snippet source file'>anchor</a></sup>
 <!-- endSnippet -->
 
 ### Carthage
